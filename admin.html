@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — Passaporte do Saber</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0F3D3E; --navy-deep:#0A2C2D; --paper:#F2E9D8;
+    --mustard:#E8A33D; --brick:#C1440E; --ok:#3C7A5C; --ink:#1C2B2B;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; padding:24px 16px 60px;
+    background:var(--navy); color:var(--ink);
+    font-family:'Nunito',sans-serif;
+  }
+  .wrap{max-width:900px; margin:0 auto;}
+  h1{
+    font-family:'Fraunces',serif; color:#FFF8EA; text-align:center;
+    font-size:32px; margin:0 0 4px;
+    text-shadow:0 2px 0 rgba(10,44,45,0.9);
+  }
+  .sub{text-align:center; color:var(--mustard); font-weight:800; margin-bottom:22px; font-size:14px;}
+
+  .panel{
+    background:var(--paper); border:3px solid var(--navy-deep);
+    border-radius:16px; padding:20px; margin-bottom:18px;
+  }
+  .panel h2{
+    font-family:'Fraunces',serif; font-size:20px; margin:0 0 14px;
+    color:var(--navy-deep); display:flex; align-items:center; gap:8px;
+  }
+  label{display:block; font-weight:800; font-size:13px; margin:12px 0 5px; color:var(--navy-deep);}
+  input[type=text], select, textarea{
+    width:100%; padding:11px 13px; border:2px solid var(--navy);
+    border-radius:10px; font-family:'Nunito',sans-serif;
+    font-size:15px; font-weight:600; background:#fff; color:var(--ink);
+  }
+  textarea{resize:vertical; min-height:70px;}
+  .row{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+  .row3{display:grid; grid-template-columns:80px 1fr 110px; gap:12px;}
+  @media(max-width:620px){ .row,.row3{grid-template-columns:1fr;} }
+
+  .btn{
+    border:none; padding:13px 20px; border-radius:12px;
+    font-family:'Nunito',sans-serif; font-weight:800; font-size:15px;
+    cursor:pointer; display:inline-flex; align-items:center; gap:7px;
+    margin:6px 6px 0 0;
+  }
+  .btn-primary{background:var(--brick); color:#fff; box-shadow:0 4px 0 #8f3309;}
+  .btn-primary:active{transform:translateY(2px); box-shadow:0 2px 0 #8f3309;}
+  .btn-ok{background:var(--ok); color:#fff; box-shadow:0 4px 0 #2b5c44;}
+  .btn-ok:active{transform:translateY(2px); box-shadow:0 2px 0 #2b5c44;}
+  .btn-alt{background:var(--mustard); color:var(--navy-deep); box-shadow:0 4px 0 #b97d20;}
+  .btn-alt:active{transform:translateY(2px); box-shadow:0 2px 0 #b97d20;}
+  .btn-ghost{background:#fff; color:var(--navy-deep); border:2px solid var(--navy);}
+  .btn-danger{background:#fff; color:var(--brick); border:2px solid var(--brick); font-size:13px; padding:8px 12px;}
+
+  .opt-row{display:flex; align-items:center; gap:10px; margin-bottom:8px;}
+  .opt-row input[type=radio]{width:22px; height:22px; accent-color:var(--ok); flex-shrink:0;}
+  .opt-row input[type=text]{flex:1;}
+
+  .q-item{
+    background:#fff; border:2px solid rgba(15,61,62,0.25);
+    border-radius:10px; padding:12px 14px; margin-bottom:9px;
+  }
+  .q-item .q-top{display:flex; justify-content:space-between; gap:10px; align-items:flex-start;}
+  .q-tema{
+    background:var(--navy); color:var(--paper); font-size:11px;
+    font-weight:800; padding:3px 9px; border-radius:99px;
+    text-transform:uppercase; white-space:nowrap;
+  }
+  .q-text{font-weight:700; margin:7px 0 4px; font-size:14.5px;}
+  .q-ans{font-size:13px; color:var(--ok); font-weight:800;}
+
+  .subject-pill{
+    display:inline-flex; align-items:center; gap:7px;
+    background:#fff; border:2px solid var(--navy); color:var(--navy-deep);
+    padding:9px 14px; border-radius:99px; margin:0 7px 7px 0;
+    cursor:pointer; font-weight:800; font-size:14px;
+  }
+  .subject-pill.active{background:var(--navy); color:var(--paper);}
+  .subject-pill .cnt{
+    background:var(--mustard); color:var(--navy-deep);
+    border-radius:99px; padding:1px 8px; font-size:12px;
+  }
+
+  .msg{
+    padding:12px 15px; border-radius:10px; font-weight:800;
+    margin:12px 0; font-size:14px; display:none;
+  }
+  .msg.ok{background:#d6f0e0; color:#1d5138; border-left:5px solid var(--ok); display:block;}
+  .msg.err{background:#fbdcd0; color:#7d2c07; border-left:5px solid var(--brick); display:block;}
+
+  .hint{font-size:13px; color:#3f5252; font-weight:600; margin-top:6px; line-height:1.45;}
+  .divider{height:2px; background:rgba(15,61,62,0.15); margin:18px 0;}
+  .empty{text-align:center; padding:26px 10px; color:#5a6a6a; font-weight:700;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Painel do Roteiro</h1>
+  <div class="sub">Passaporte do Saber · editor de conteúdo</div>
+
+  <!-- ================= CARREGAR ================= -->
+  <div class="panel">
+    <h2>📂 Carregar conteúdo</h2>
+    <div class="hint">
+      Escolha os arquivos <b>.json</b> da pasta <code>data/</code> do repositório para editar o que já existe.
+      Seu trabalho fica salvo automaticamente neste navegador enquanto você edita.
+    </div>
+    <label>Arquivos JSON das matérias</label>
+    <input type="file" id="fileInput" accept=".json" multiple>
+    <div>
+      <button class="btn btn-ghost" onclick="loadFiles()">Carregar arquivos</button>
+      <button class="btn btn-ghost" onclick="limparTudo()">Começar do zero</button>
+    </div>
+    <div id="msgLoad" class="msg"></div>
+  </div>
+
+  <!-- ================= MATÉRIAS ================= -->
+  <div class="panel">
+    <h2>📚 Matérias</h2>
+    <div id="pills"></div>
+    <div class="divider"></div>
+
+    <h2 style="font-size:17px;">➕ Nova matéria / editar selecionada</h2>
+    <div class="row3">
+      <div>
+        <label>Ícone</label>
+        <input type="text" id="sIcon" placeholder="📖" maxlength="4">
+      </div>
+      <div>
+        <label>Nome da matéria</label>
+        <input type="text" id="sName" placeholder="Língua Portuguesa">
+      </div>
+      <div>
+        <label>Ano / série</label>
+        <select id="sAno">
+          <option value="1">1º ano</option>
+          <option value="2">2º ano</option>
+          <option value="3">3º ano</option>
+          <option value="4" selected>4º ano</option>
+          <option value="5">5º ano</option>
+          <option value="6">6º ano</option>
+          <option value="7">7º ano</option>
+          <option value="8">8º ano</option>
+          <option value="9">9º ano</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <label>Data da prova (DD/MM)</label>
+        <input type="text" id="sDate" placeholder="13/08" maxlength="5">
+      </div>
+      <div>
+        <label>Identificador (sem espaços)</label>
+        <input type="text" id="sId" placeholder="port">
+      </div>
+    </div>
+    <label>Tópicos (aparece embaixo do nome no menu)</label>
+    <input type="text" id="sTopics" placeholder="Pronomes · Porquês · Adjetivos">
+    <div>
+      <button class="btn btn-ok" onclick="salvarMateria()">💾 Salvar matéria</button>
+      <button class="btn btn-ghost" onclick="limparFormMateria()">Limpar campos</button>
+      <button class="btn btn-danger" onclick="excluirMateria()">🗑 Excluir matéria selecionada</button>
+    </div>
+    <div id="msgSubject" class="msg"></div>
+  </div>
+
+  <!-- ================= PERGUNTAS ================= -->
+  <div class="panel">
+    <h2>✏️ Perguntas <span id="qSubjectName" style="font-size:14px; font-weight:700; color:#5a6a6a;"></span></h2>
+
+    <label>Tema (agrupa as perguntas, ex.: "Pronomes pessoais")</label>
+    <input type="text" id="qTema" placeholder="Pronomes pessoais">
+
+    <label>Pergunta</label>
+    <textarea id="qText" placeholder="Complete: ___ vamos viajar amanhã."></textarea>
+    <div class="hint">
+      Dica: use <code>&lt;em&gt;palavra&lt;/em&gt;</code> para destacar em vermelho e
+      <code>&lt;b&gt;palavra&lt;/b&gt;</code> para negrito.
+    </div>
+
+    <label>Alternativas — marque a bolinha da resposta certa</label>
+    <div id="optsBox"></div>
+    <button class="btn btn-ghost" onclick="addOpt()" style="font-size:13px; padding:8px 14px;">+ alternativa</button>
+
+    <label>Explicação (aparece depois que ele responde)</label>
+    <textarea id="qFb" placeholder="“Nós” representa o grupo que fala..."></textarea>
+
+    <div>
+      <button class="btn btn-ok" onclick="salvarPergunta()">💾 Salvar pergunta</button>
+      <button class="btn btn-ghost" onclick="limparFormPergunta()">Limpar campos</button>
+    </div>
+    <div id="msgQuestion" class="msg"></div>
+
+    <div class="divider"></div>
+    <div id="qList"></div>
+  </div>
+
+  <!-- ================= EXPORTAR ================= -->
+  <div class="panel">
+    <h2>📤 Exportar para o repositório</h2>
+    <div class="hint">
+      Baixe os arquivos e coloque-os na pasta <code>data/</code> do repositório.
+      Depois rode <code>node scripts/build.js</code> para gerar o jogo atualizado.
+    </div>
+    <div>
+      <button class="btn btn-primary" onclick="exportarTudo()">⬇️ Baixar todos os JSONs</button>
+      <button class="btn btn-alt" onclick="exportarAtual()">⬇️ Baixar só a matéria selecionada</button>
+    </div>
+    <div id="msgExport" class="msg"></div>
+  </div>
+</div>
+
+<script>
+const STORAGE_KEY = 'passaporte-admin-v1';
+let subjects = [];
+let currentId = null;
+let editingQuestionIndex = null;
+
+// ---------- persistência local ----------
+function save(){
+  try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(subjects)); }catch(e){}
+}
+function load(){
+  try{
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if(raw) subjects = JSON.parse(raw);
+  }catch(e){ subjects = []; }
+}
+
+function msg(id, text, ok){
+  const el = document.getElementById(id);
+  el.className = 'msg ' + (ok ? 'ok' : 'err');
+  el.textContent = text;
+  setTimeout(()=>{ el.className = 'msg'; }, 4000);
+}
+
+// ---------- carregar arquivos ----------
+function loadFiles(){
+  const files = document.getElementById('fileInput').files;
+  if(!files.length){ msg('msgLoad','Escolha pelo menos um arquivo .json',false); return; }
+  let carregados = 0, erros = [];
+  let pendentes = files.length;
+
+  Array.from(files).forEach(file => {
+    const reader = new FileReader();
+    reader.onload = e => {
+      try{
+        const data = JSON.parse(e.target.result);
+        if(!data.id || !Array.isArray(data.questions)) throw new Error('formato inválido');
+        const existente = subjects.findIndex(s => s.id === data.id);
+        if(existente >= 0) subjects[existente] = data;
+        else subjects.push(data);
+        carregados++;
+      }catch(err){
+        erros.push(file.name);
+      }
+      if(--pendentes === 0) finalizar();
+    };
+    reader.onerror = () => { erros.push(file.name); if(--pendentes === 0) finalizar(); };
+    reader.readAsText(file);
+  });
+
+  function finalizar(){
+    save(); render();
+    if(erros.length) msg('msgLoad', carregados+' carregado(s). Falharam: '+erros.join(', '), false);
+    else msg('msgLoad', carregados+' matéria(s) carregada(s) com sucesso!', true);
+  }
+}
+
+function limparTudo(){
+  if(!confirm('Isso apaga tudo que está no editor agora. Os arquivos do repositório não são afetados. Continuar?')) return;
+  subjects = []; currentId = null;
+  save(); render();
+}
+
+// ---------- matérias ----------
+function render(){
+  renderPills();
+  renderQuestionForm();
+  renderQuestionList();
+}
+
+function renderPills(){
+  const box = document.getElementById('pills');
+  if(!subjects.length){
+    box.innerHTML = '<div class="empty">Nenhuma matéria ainda. Carregue os JSONs ou crie uma abaixo.</div>';
+    return;
+  }
+  // agrupa por ano
+  const anos = [...new Set(subjects.map(s => s.ano || 4))].sort((a,b)=>a-b);
+  box.innerHTML = anos.map(ano => {
+    const doAno = subjects.filter(s => (s.ano||4) === ano);
+    return `<div style="margin-bottom:10px;">
+      <div style="font-weight:900; font-size:13px; color:var(--navy-deep); margin-bottom:6px;">${ano}º ANO</div>
+      ${doAno.map(s => `
+        <span class="subject-pill ${s.id===currentId?'active':''}" onclick="selecionar('${s.id}')">
+          ${s.icon||'📘'} ${s.name}
+          <span class="cnt">${s.questions.length}</span>
+        </span>
+      `).join('')}
+    </div>`;
+  }).join('');
+}
+
+function selecionar(id){
+  currentId = id;
+  const s = subjects.find(x => x.id === id);
+  if(s){
+    document.getElementById('sIcon').value = s.icon || '';
+    document.getElementById('sName').value = s.name || '';
+    document.getElementById('sDate').value = s.date || '';
+    document.getElementById('sId').value = s.id || '';
+    document.getElementById('sAno').value = s.ano || 4;
+    document.getElementById('sTopics').value = s.topics || '';
+  }
+  editingQuestionIndex = null;
+  limparFormPergunta();
+  render();
+}
+
+function salvarMateria(){
+  const icon = document.getElementById('sIcon').value.trim();
+  const name = document.getElementById('sName').value.trim();
+  const date = document.getElementById('sDate').value.trim();
+  const id   = document.getElementById('sId').value.trim().toLowerCase().replace(/[^a-z0-9_-]/g,'');
+  const ano  = parseInt(document.getElementById('sAno').value,10);
+  const topics = document.getElementById('sTopics').value.trim();
+
+  if(!name){ msg('msgSubject','Preencha o nome da matéria.',false); return; }
+  if(!id){ msg('msgSubject','Preencha o identificador (ex.: port, mat).',false); return; }
+  if(date && !/^\d{2}\/\d{2}$/.test(date)){ msg('msgSubject','Data deve estar no formato DD/MM.',false); return; }
+
+  const existente = subjects.findIndex(s => s.id === id);
+  if(existente >= 0){
+    subjects[existente] = {...subjects[existente], icon, name, date, id, ano, topics};
+    msg('msgSubject','Matéria atualizada!',true);
+  } else {
+    subjects.push({id, icon, name, date, ano, topics, questions:[]});
+    msg('msgSubject','Matéria criada!',true);
+  }
+  currentId = id;
+  save(); render();
+}
+
+function excluirMateria(){
+  if(!currentId){ msg('msgSubject','Selecione uma matéria primeiro.',false); return; }
+  const s = subjects.find(x=>x.id===currentId);
+  if(!confirm(`Excluir "${s.name}" e suas ${s.questions.length} perguntas do editor?`)) return;
+  subjects = subjects.filter(x => x.id !== currentId);
+  currentId = null;
+  limparFormMateria();
+  save(); render();
+  msg('msgSubject','Matéria excluída do editor.',true);
+}
+
+function limparFormMateria(){
+  ['sIcon','sName','sDate','sId','sTopics'].forEach(i=>document.getElementById(i).value='');
+  document.getElementById('sAno').value = 4;
+}
+
+// ---------- perguntas ----------
+function renderQuestionForm(){
+  const s = subjects.find(x => x.id === currentId);
+  document.getElementById('qSubjectName').textContent = s ? '— ' + s.name : '— selecione uma matéria acima';
+  if(!document.getElementById('optsBox').children.length){
+    resetOpts();
+  }
+}
+
+function resetOpts(){
+  const box = document.getElementById('optsBox');
+  box.innerHTML = '';
+  for(let i=0;i<4;i++) addOpt();
+}
+
+function addOpt(){
+  const box = document.getElementById('optsBox');
+  if(box.children.length >= 5) return;
+  const i = box.children.length;
+  const div = document.createElement('div');
+  div.className = 'opt-row';
+  div.innerHTML = `
+    <input type="radio" name="correctOpt" value="${i}" ${i===0?'checked':''} title="Resposta certa">
+    <input type="text" class="opt-input" placeholder="Alternativa ${i+1}">
+    <button class="btn btn-danger" style="margin:0;" onclick="this.parentNode.remove(); reindexOpts();">✕</button>
+  `;
+  box.appendChild(div);
+}
+
+function reindexOpts(){
+  document.querySelectorAll('#optsBox .opt-row').forEach((row,i)=>{
+    row.querySelector('input[type=radio]').value = i;
+    row.querySelector('.opt-input').placeholder = 'Alternativa '+(i+1);
+  });
+}
+
+function salvarPergunta(){
+  const s = subjects.find(x => x.id === currentId);
+  if(!s){ msg('msgQuestion','Selecione uma matéria primeiro.',false); return; }
+
+  const tema = document.getElementById('qTema').value.trim();
+  const q    = document.getElementById('qText').value.trim();
+  const fb   = document.getElementById('qFb').value.trim();
+  const opts = Array.from(document.querySelectorAll('#optsBox .opt-input'))
+                    .map(i=>i.value.trim());
+  const radio = document.querySelector('#optsBox input[type=radio]:checked');
+  const correct = radio ? parseInt(radio.value,10) : -1;
+
+  if(!tema){ msg('msgQuestion','Preencha o tema.',false); return; }
+  if(!q){ msg('msgQuestion','Preencha a pergunta.',false); return; }
+  const preenchidas = opts.filter(o=>o);
+  if(preenchidas.length < 2){ msg('msgQuestion','Preencha pelo menos 2 alternativas.',false); return; }
+  if(opts.some(o=>!o)){ msg('msgQuestion','Há alternativa em branco — preencha ou remova com o ✕.',false); return; }
+  if(correct < 0 || correct >= opts.length){ msg('msgQuestion','Marque qual alternativa é a correta.',false); return; }
+  if(!fb){ msg('msgQuestion','Preencha a explicação — é o que ensina quando ele erra.',false); return; }
+
+  const nova = {tema, q, opts, correct, fb};
+  if(editingQuestionIndex !== null){
+    s.questions[editingQuestionIndex] = nova;
+    msg('msgQuestion','Pergunta atualizada!',true);
+    editingQuestionIndex = null;
+  } else {
+    s.questions.push(nova);
+    msg('msgQuestion','Pergunta adicionada!',true);
+  }
+  save();
+  limparFormPergunta();
+  render();
+}
+
+function limparFormPergunta(){
+  document.getElementById('qText').value = '';
+  document.getElementById('qFb').value = '';
+  resetOpts();
+  editingQuestionIndex = null;
+}
+
+function editarPergunta(i){
+  const s = subjects.find(x => x.id === currentId);
+  const q = s.questions[i];
+  document.getElementById('qTema').value = q.tema;
+  document.getElementById('qText').value = q.q;
+  document.getElementById('qFb').value = q.fb;
+  const box = document.getElementById('optsBox');
+  box.innerHTML = '';
+  q.opts.forEach((opt,j)=>{
+    const div = document.createElement('div');
+    div.className = 'opt-row';
+    div.innerHTML = `
+      <input type="radio" name="correctOpt" value="${j}" ${j===q.correct?'checked':''}>
+      <input type="text" class="opt-input" value="${opt.replace(/"/g,'&quot;')}">
+      <button class="btn btn-danger" style="margin:0;" onclick="this.parentNode.remove(); reindexOpts();">✕</button>
+    `;
+    box.appendChild(div);
+  });
+  editingQuestionIndex = i;
+  window.scrollTo({top: document.getElementById('qTema').offsetTop - 80, behavior:'smooth'});
+}
+
+function excluirPergunta(i){
+  const s = subjects.find(x => x.id === currentId);
+  if(!confirm('Excluir esta pergunta?')) return;
+  s.questions.splice(i,1);
+  save(); render();
+}
+
+function renderQuestionList(){
+  const box = document.getElementById('qList');
+  const s = subjects.find(x => x.id === currentId);
+  if(!s){ box.innerHTML = ''; return; }
+  if(!s.questions.length){
+    box.innerHTML = '<div class="empty">Nenhuma pergunta nesta matéria ainda.</div>';
+    return;
+  }
+  box.innerHTML = `<div style="font-weight:900; margin-bottom:10px;">
+      ${s.questions.length} pergunta(s) em ${s.name}
+    </div>` +
+    s.questions.map((q,i)=>`
+      <div class="q-item">
+        <div class="q-top">
+          <span class="q-tema">${q.tema}</span>
+          <span style="white-space:nowrap;">
+            <button class="btn btn-danger" style="margin:0; border-color:var(--navy); color:var(--navy-deep);" onclick="editarPergunta(${i})">✏️</button>
+            <button class="btn btn-danger" style="margin:0;" onclick="excluirPergunta(${i})">🗑</button>
+          </span>
+        </div>
+        <div class="q-text">${q.q}</div>
+        <div class="q-ans">✓ ${q.opts[q.correct]}</div>
+      </div>
+    `).join('');
+}
+
+// ---------- exportar ----------
+function baixar(nome, conteudo){
+  const blob = new Blob([conteudo], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = nome;
+  document.body.appendChild(a); a.click();
+  document.body.removeChild(a);
+  setTimeout(()=>URL.revokeObjectURL(url), 1000);
+}
+
+function validar(s){
+  const problemas = [];
+  s.questions.forEach((q,i)=>{
+    if(q.correct < 0 || q.correct >= q.opts.length) problemas.push(`${s.name} #${i+1}: resposta correta inválida`);
+    if(!q.fb) problemas.push(`${s.name} #${i+1}: sem explicação`);
+  });
+  return problemas;
+}
+
+function exportarTudo(){
+  if(!subjects.length){ msg('msgExport','Nada para exportar.',false); return; }
+  let problemas = [];
+  subjects.forEach(s => problemas = problemas.concat(validar(s)));
+  if(problemas.length){ msg('msgExport','Corrija antes: '+problemas[0],false); return; }
+  subjects.forEach(s => baixar(s.id+'.json', JSON.stringify(s,null,2)));
+  msg('msgExport', subjects.length+' arquivo(s) baixado(s). Coloque-os na pasta data/ do repositório.', true);
+}
+
+function exportarAtual(){
+  const s = subjects.find(x => x.id === currentId);
+  if(!s){ msg('msgExport','Selecione uma matéria primeiro.',false); return; }
+  const problemas = validar(s);
+  if(problemas.length){ msg('msgExport','Corrija antes: '+problemas[0],false); return; }
+  baixar(s.id+'.json', JSON.stringify(s,null,2));
+  msg('msgExport', s.id+'.json baixado!', true);
+}
+
+// ---------- início ----------
+load();
+render();
+</script>
+</body>
+</html>

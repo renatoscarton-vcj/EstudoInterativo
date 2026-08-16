@@ -1,0 +1,250 @@
+{
+  "id": "ipc2",
+  "icon": "🦜",
+  "name": "Language Arts + Science (IPC)",
+  "date": "24/08",
+  "ano": 4,
+  "topics": "Was/Were · Why & Because · Animal habitats",
+  "questions": [
+    {
+      "tema": "Was / Were",
+      "q": "Complete: <em>I ___ at school yesterday.</em>",
+      "opts": [
+        "was",
+        "were",
+        "is",
+        "are"
+      ],
+      "correct": 0,
+      "fb": "Com <b>I</b>, <b>he</b>, <b>she</b>, <b>it</b> usamos <b>was</b>. Com <b>you</b>, <b>we</b>, <b>they</b> usamos <b>were</b>."
+    },
+    {
+      "tema": "Was / Were",
+      "q": "Complete: <em>They ___ very happy at the party.</em>",
+      "opts": [
+        "was",
+        "were",
+        "is",
+        "am"
+      ],
+      "correct": 1,
+      "fb": "“They” é plural → usamos <b>were</b>."
+    },
+    {
+      "tema": "Was / Were",
+      "q": "Complete: <em>She ___ in the rainforest last week.</em>",
+      "opts": [
+        "were",
+        "was",
+        "are",
+        "am"
+      ],
+      "correct": 1,
+      "fb": "“She” é singular → usamos <b>was</b>."
+    },
+    {
+      "tema": "Was / Were",
+      "q": "Qual é a forma <b>negativa</b> de “was”?",
+      "opts": [
+        "wasn't",
+        "weren't",
+        "isn't",
+        "don't"
+      ],
+      "correct": 0,
+      "fb": "was + not = <b>wasn't</b>. E were + not = <b>weren't</b>."
+    },
+    {
+      "tema": "Was / Were",
+      "q": "Complete a frase negativa: <em>We ___ at home yesterday.</em>",
+      "opts": [
+        "wasn't",
+        "weren't",
+        "isn't",
+        "aren't"
+      ],
+      "correct": 1,
+      "fb": "“We” é plural → weren't (were + not)."
+    },
+    {
+      "tema": "Why & Because",
+      "q": "Qual palavra usamos para <b>perguntar</b> o motivo em inglês?",
+      "opts": [
+        "What",
+        "Where",
+        "Why",
+        "When"
+      ],
+      "correct": 2,
+      "fb": "<b>Why</b> = por quê? Serve para perguntar a razão de alguma coisa."
+    },
+    {
+      "tema": "Why & Because",
+      "q": "Qual palavra usamos para <b>responder</b> um “Why”?",
+      "opts": [
+        "Because",
+        "Before",
+        "But",
+        "By"
+      ],
+      "correct": 0,
+      "fb": "<b>Because</b> = porque. É a palavra que introduz a explicação."
+    },
+    {
+      "tema": "Why & Because",
+      "q": "Complete: <em>“Why do you like the rainforest?” — “___ it has many animals.”</em>",
+      "opts": [
+        "But",
+        "Because",
+        "Where",
+        "When"
+      ],
+      "correct": 1,
+      "fb": "A resposta a um “Why” começa com <b>Because</b>."
+    },
+    {
+      "tema": "Why & Because",
+      "q": "Complete: <em>Tunico left the forest ___ there were no trees left.</em>",
+      "opts": [
+        "why",
+        "because",
+        "what",
+        "who"
+      ],
+      "correct": 1,
+      "fb": "Aqui explicamos o motivo → usamos <b>because</b>."
+    },
+    {
+      "tema": "Animal habitats",
+      "q": "What is a <em>habitat</em>?",
+      "opts": [
+        "A type of food",
+        "The place where an animal lives",
+        "A kind of tree",
+        "An animal's name"
+      ],
+      "correct": 1,
+      "fb": "Habitat é o lugar onde um animal vive e encontra o que precisa para sobreviver."
+    },
+    {
+      "tema": "Animal habitats",
+      "q": "Where does a <em>fish</em> live?",
+      "opts": [
+        "In the desert",
+        "In the water",
+        "In a tree",
+        "In a cave only"
+      ],
+      "correct": 1,
+      "fb": "Peixes vivem na água — rios, lagos e oceanos são seus habitats."
+    },
+    {
+      "tema": "Animal habitats",
+      "q": "Which animal lives in a <em>web</em>?",
+      "opts": [
+        "A bird",
+        "A spider",
+        "A frog",
+        "A snake"
+      ],
+      "correct": 1,
+      "fb": "A aranha (spider) constrói e vive em uma teia (web)."
+    },
+    {
+      "tema": "Animal traits",
+      "q": "Which animal has a <em>pouch</em> (bolsa)?",
+      "opts": [
+        "A kangaroo",
+        "A lion",
+        "An eagle",
+        "A shark"
+      ],
+      "correct": 0,
+      "fb": "O canguru tem uma pouch (bolsa) onde carrega o filhote."
+    },
+    {
+      "tema": "Animal traits",
+      "q": "Which animal has <em>wings</em>?",
+      "opts": [
+        "A snake",
+        "A toucan",
+        "A fish",
+        "A cow"
+      ],
+      "correct": 1,
+      "fb": "O tucano (toucan) é uma ave e tem wings (asas) — assim como o Tunico do livro!"
+    },
+    {
+      "tema": "Animal traits",
+      "q": "Which animal has <em>fur</em>?",
+      "opts": [
+        "A bear",
+        "A snake",
+        "A fish",
+        "A frog"
+      ],
+      "correct": 0,
+      "fb": "O urso (bear) tem fur — pelo grosso que ajuda a manter o calor."
+    },
+    {
+      "tema": "Animal traits",
+      "q": "Which animal has <em>horns</em>?",
+      "opts": [
+        "A goat",
+        "A parrot",
+        "A dolphin",
+        "A butterfly"
+      ],
+      "correct": 0,
+      "fb": "A cabra (goat) tem horns (chifres)."
+    },
+    {
+      "tema": "Rainforest",
+      "q": "Which animals are common in the <em>rainforest</em>?",
+      "opts": [
+        "Polar bears and penguins",
+        "Toucans, monkeys and jaguars",
+        "Camels and ostriches",
+        "Sheep and cows"
+      ],
+      "correct": 1,
+      "fb": "Tucanos, macacos e onças são animais típicos da floresta tropical."
+    },
+    {
+      "tema": "Rainforest",
+      "q": "What is the main cause of the rainforest <em>disappearing</em>?",
+      "opts": [
+        "Too much rain",
+        "Deforestation caused by humans",
+        "Too many animals",
+        "Cold weather"
+      ],
+      "correct": 1,
+      "fb": "O desmatamento (deforestation) causado pela ação humana é a principal causa do desaparecimento das florestas."
+    },
+    {
+      "tema": "Habitats",
+      "q": "Which habitat feels <em>cold</em>?",
+      "opts": [
+        "The desert",
+        "The Arctic (polar habitat)",
+        "The rainforest",
+        "The savanna"
+      ],
+      "correct": 1,
+      "fb": "O Ártico e as regiões polares são os habitats frios."
+    },
+    {
+      "tema": "Habitats",
+      "q": "Which habitat is <em>dark</em>?",
+      "opts": [
+        "A cave",
+        "A beach",
+        "A field",
+        "A garden"
+      ],
+      "correct": 0,
+      "fb": "A caverna (cave) é um habitat escuro, onde vivem morcegos e outros animais adaptados."
+    }
+  ]
+}

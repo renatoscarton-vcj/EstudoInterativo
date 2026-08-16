@@ -1,0 +1,502 @@
+{
+  "id": "port",
+  "icon": "📖",
+  "name": "Língua Portuguesa",
+  "date": "13/08",
+  "ano": 4,
+  "topics": "Pronomes · Porquês · Adjetivos · C e Ç · Relato de viagem",
+  "questions": [
+    {
+      "tema": "Pronomes pessoais",
+      "q": "Complete: <em>___ vamos viajar de avião amanhã.</em>",
+      "opts": [
+        "Eu",
+        "Nós",
+        "Elas",
+        "Tu"
+      ],
+      "correct": 1,
+      "fb": "“Nós” é o pronome pessoal que representa o grupo que fala — mais de uma pessoa, incluindo quem fala."
+    },
+    {
+      "tema": "Pronomes pessoais",
+      "q": "Qual pronome substitui <em>“Maria e João”</em> na frase “Maria e João foram ao aeroporto”?",
+      "opts": [
+        "Ela",
+        "Eles",
+        "Nós",
+        "Vós"
+      ],
+      "correct": 1,
+      "fb": "“Maria e João” são duas pessoas de quem se fala (não quem fala) — por isso o pronome é “Eles”."
+    },
+    {
+      "tema": "Pronomes pessoais",
+      "q": "Na frase <em>“Ela guardou a mala no quarto”</em>, qual é o pronome pessoal?",
+      "opts": [
+        "guardou",
+        "mala",
+        "Ela",
+        "quarto"
+      ],
+      "correct": 2,
+      "fb": "“Ela” é o pronome pessoal: substitui o nome de quem guardou a mala."
+    },
+    {
+      "tema": "Pronomes pessoais",
+      "q": "Complete: <em>“___, vocês trouxeram o passaporte?”</em>",
+      "opts": [
+        "Eu",
+        "Ele",
+        "Vós",
+        "Nós"
+      ],
+      "correct": 2,
+      "fb": "“Vós” corresponde a “vocês” — é o pronome usado para falar com um grupo de pessoas."
+    },
+    {
+      "tema": "Pronomes pessoais",
+      "q": "Qual pronome pessoal representa apenas quem está falando, sozinho?",
+      "opts": [
+        "Eu",
+        "Nós",
+        "Eles",
+        "Tu"
+      ],
+      "correct": 0,
+      "fb": "“Eu” é sempre a 1ª pessoa do singular — quem fala, sozinho."
+    },
+    {
+      "tema": "Porquês",
+      "q": "Complete: <em>“___ você chegou atrasado hoje?”</em>",
+      "opts": [
+        "Porque",
+        "Por que",
+        "Por quê",
+        "Porquê"
+      ],
+      "correct": 1,
+      "fb": "“Por que” (separado, sem acento) é usado em perguntas — equivale a “por qual motivo”."
+    },
+    {
+      "tema": "Porquês",
+      "q": "Complete: <em>“Não fui à escola ___ estava doente.”</em>",
+      "opts": [
+        "porque",
+        "por que",
+        "por quê",
+        "porquê"
+      ],
+      "correct": 0,
+      "fb": "“Porque” (junto, sem acento) é usado para dar uma explicação ou resposta."
+    },
+    {
+      "tema": "Porquês",
+      "q": "Complete: <em>“Ele não quis ir à festa, ___?”</em>",
+      "opts": [
+        "porque",
+        "por que",
+        "por quê",
+        "porquê"
+      ],
+      "correct": 2,
+      "fb": "“Por quê” (separado, com acento) aparece no final da frase, em perguntas."
+    },
+    {
+      "tema": "Porquês",
+      "q": "Complete: <em>“Ninguém sabe o ___ da mudança de plano.”</em>",
+      "opts": [
+        "porque",
+        "por que",
+        "por quê",
+        "porquê"
+      ],
+      "correct": 3,
+      "fb": "“Porquê” (junto, com acento) funciona como substantivo — vem precedido de “o”, “um”, “esse”."
+    },
+    {
+      "tema": "Porquês",
+      "q": "Qual forma usamos para <b>explicar</b> um motivo, sem fazer pergunta?",
+      "opts": [
+        "Porque",
+        "Por que",
+        "Por quê",
+        "Porquê"
+      ],
+      "correct": 0,
+      "fb": "“Porque” explica — é a resposta de um “por quê?”."
+    },
+    {
+      "tema": "Adjetivos -íssimo/-inho",
+      "q": "Qual é o superlativo de <em>“alto”</em>?",
+      "opts": [
+        "Altinho",
+        "Altíssimo",
+        "Altzinho",
+        "Altão"
+      ],
+      "correct": 1,
+      "fb": "O sufixo “-íssimo” aumenta a intensidade: alto → altíssimo (muito alto)."
+    },
+    {
+      "tema": "Adjetivos -íssimo/-inho",
+      "q": "Qual é o diminutivo de <em>“bonito”</em>?",
+      "opts": [
+        "Bonitíssimo",
+        "Bonitão",
+        "Bonitinho",
+        "Bonitudo"
+      ],
+      "correct": 2,
+      "fb": "O sufixo “-inho” diminui ou suaviza: bonito → bonitinho."
+    },
+    {
+      "tema": "Adjetivos -íssimo/-inho",
+      "q": "Transforme <em>“gostoso”</em> no superlativo com -íssimo:",
+      "opts": [
+        "Gostosinho",
+        "Gostosíssimo",
+        "Gostosão",
+        "Gostosuço"
+      ],
+      "correct": 1,
+      "fb": "gostoso → gostosíssimo (extremamente gostoso)."
+    },
+    {
+      "tema": "Adjetivos -íssimo/-inho",
+      "q": "Transforme <em>“pequeno”</em> no diminutivo com -inho:",
+      "opts": [
+        "Pequenininho",
+        "Pequeníssimo",
+        "Pequenão",
+        "Pequenoso"
+      ],
+      "correct": 0,
+      "fb": "pequeno → pequenininho (bem pequenininho mesmo!)."
+    },
+    {
+      "tema": "Adjetivos -íssimo/-inho",
+      "q": "Transforme <em>“legal”</em> no superlativo com -íssimo:",
+      "opts": [
+        "Legalzinho",
+        "Legalíssimo",
+        "Legalão",
+        "Legalzão"
+      ],
+      "correct": 1,
+      "fb": "legal → legalíssimo (muitíssimo legal)."
+    },
+    {
+      "tema": "Palavras com C e Ç",
+      "q": "Complete: <em>“A ma___ã caiu da árvore.”</em>",
+      "opts": [
+        "cã",
+        "çã",
+        "ssã",
+        "zã"
+      ],
+      "correct": 1,
+      "fb": "maçã se escreve com “ç” antes do “ã” (som de “ss”)."
+    },
+    {
+      "tema": "Palavras com C e Ç",
+      "q": "Qual está escrita corretamente?",
+      "opts": [
+        "Cedo",
+        "Çedo",
+        "Cêdo",
+        "Çêdo"
+      ],
+      "correct": 0,
+      "fb": "Antes de “e” e “i”, usamos apenas “c” (sem cedilha) para o som de “ss”: ce-do."
+    },
+    {
+      "tema": "Palavras com C e Ç",
+      "q": "Complete: <em>“Aquela mo___a é muito simpática.”</em>",
+      "opts": [
+        "ca",
+        "ça",
+        "ssa",
+        "za"
+      ],
+      "correct": 1,
+      "fb": "moça: “ç” antes de “a” para manter o som de “ss”."
+    },
+    {
+      "tema": "Palavras com C e Ç",
+      "q": "Qual está escrita corretamente?",
+      "opts": [
+        "Cinema",
+        "Çinema",
+        "Cínema",
+        "Cinéma"
+      ],
+      "correct": 0,
+      "fb": "Antes de “i”, o som de “ss” já é natural com “c” — não se usa cedilha: ci-ne-ma."
+    },
+    {
+      "tema": "Palavras com C e Ç",
+      "q": "Antes de quais vogais usamos a cedilha (ç)?",
+      "opts": [
+        "Antes de e e i",
+        "Antes de a, o e u",
+        "Antes de todas as vogais",
+        "Nunca se usa cedilha"
+      ],
+      "correct": 1,
+      "fb": "A cedilha aparece antes de a, o e u (caça, moço, açúcar). Antes de e e i, o “c” sozinho já tem som de “ss”."
+    },
+    {
+      "tema": "Relato de viagem",
+      "q": "O que é um <em>relato de viagem</em>?",
+      "opts": [
+        "Uma lista de compras",
+        "Um texto que conta experiências vividas durante uma viagem",
+        "Um mapa desenhado à mão",
+        "Uma receita de outro país"
+      ],
+      "correct": 1,
+      "fb": "O relato de viagem conta, de forma pessoal, o que alguém viveu, viu e sentiu durante uma viagem."
+    },
+    {
+      "tema": "Relato de viagem",
+      "q": "Quem geralmente conta a história em um relato de viagem?",
+      "opts": [
+        "Um narrador que não viajou",
+        "A própria pessoa que viveu a viagem (1ª pessoa)",
+        "Um personagem inventado",
+        "Sempre um jornalista de TV"
+      ],
+      "correct": 1,
+      "fb": "O relato de viagem costuma ser escrito em 1ª pessoa, por quem realmente viveu a experiência."
+    },
+    {
+      "tema": "Relato de viagem",
+      "q": "Qual destas NÃO é característica de um relato de viagem?",
+      "opts": [
+        "Contar fatos vividos pelo autor",
+        "Descrever lugares e sensações",
+        "Seguir uma ordem cronológica",
+        "Ter fórmulas matemáticas como conteúdo principal"
+      ],
+      "correct": 3,
+      "fb": "Relatos de viagem são textos narrativos e descritivos — não têm fórmulas matemáticas como foco."
+    },
+    {
+      "tema": "Relato de viagem",
+      "q": "Em um relato de viagem, os verbos costumam estar em qual tempo?",
+      "opts": [
+        "Futuro",
+        "Presente do subjuntivo",
+        "Passado (pretérito)",
+        "Imperativo"
+      ],
+      "correct": 2,
+      "fb": "Como o relato conta uma experiência já vivida, os verbos costumam estar no passado: “fomos”, “vimos”, “sentimos”."
+    },
+    {
+      "tema": "Relato de viagem",
+      "q": "Além dos fatos, o que um bom relato de viagem costuma trazer?",
+      "opts": [
+        "Apenas horários de voo",
+        "Impressões pessoais e sentimentos sobre o vivido",
+        "Somente números de documentos",
+        "Nenhuma opinião do autor"
+      ],
+      "correct": 1,
+      "fb": "O relato não é só uma lista de fatos — traz também como a pessoa se sentiu diante do que viveu."
+    },
+    {
+      "tema": "Uso do dicionário",
+      "q": "As palavras no dicionário aparecem em que ordem?",
+      "opts": [
+        "Ordem de tamanho",
+        "Ordem alfabética",
+        "Ordem do texto",
+        "Ordem aleatória"
+      ],
+      "correct": 1,
+      "fb": "O dicionário segue a ordem alfabética — por isso saber o alfabeto de cor ajuda a achar palavras rápido."
+    },
+    {
+      "tema": "Uso do dicionário",
+      "q": "Para procurar <em>“embarcar”</em>, o que buscamos primeiro?",
+      "opts": [
+        "A palavra “desembarcar”",
+        "A letra inicial: E",
+        "A última letra",
+        "O sinônimo"
+      ],
+      "correct": 1,
+      "fb": "Primeiro localizamos a letra inicial (E), depois seguimos a ordem alfabética das letras seguintes."
+    },
+    {
+      "tema": "Uso do dicionário",
+      "q": "O que aparece logo depois da palavra, indicando se é substantivo, adjetivo ou verbo?",
+      "opts": [
+        "O preço do livro",
+        "A classe gramatical abreviada (s.m., adj., v.)",
+        "O nome do autor",
+        "A cor da capa"
+      ],
+      "correct": 1,
+      "fb": "Logo após a palavra, o dicionário indica a classe gramatical de forma abreviada."
+    },
+    {
+      "tema": "Uso do dicionário",
+      "q": "Se uma palavra tem vários significados, como o dicionário os organiza?",
+      "opts": [
+        "Só mostra o primeiro",
+        "Numerados dentro do mesmo verbete",
+        "Em ordem alfabética dos significados",
+        "Sempre em outra página"
+      ],
+      "correct": 1,
+      "fb": "Quando há vários significados, eles vêm numerados dentro do mesmo verbete."
+    },
+    {
+      "tema": "Biografia",
+      "q": "O que é uma biografia?",
+      "opts": [
+        "Uma receita culinária",
+        "Um texto que conta a vida real de uma pessoa",
+        "Um poema sobre a natureza",
+        "Uma lista de tarefas"
+      ],
+      "correct": 1,
+      "fb": "A biografia narra fatos reais da vida de uma pessoa, geralmente contados por outra pessoa."
+    },
+    {
+      "tema": "Biografia",
+      "q": "Qual é a diferença entre <em>biografia</em> e <em>autobiografia</em>?",
+      "opts": [
+        "Não há diferença",
+        "Na autobiografia a própria pessoa conta sua vida; na biografia, outra pessoa conta",
+        "Biografia é sempre sobre animais",
+        "Autobiografia é sempre inventada"
+      ],
+      "correct": 1,
+      "fb": "Na autobiografia o autor fala de si mesmo; na biografia, alguém escreve sobre a vida de outra pessoa."
+    },
+    {
+      "tema": "Biografia",
+      "q": "Uma biografia costuma seguir qual ordem?",
+      "opts": [
+        "Ordem alfabética",
+        "Ordem cronológica (do nascimento em diante)",
+        "Ordem de tamanho das frases",
+        "Nenhuma ordem"
+      ],
+      "correct": 1,
+      "fb": "Biografias normalmente seguem a linha do tempo da vida da pessoa."
+    },
+    {
+      "tema": "Brincadeiras a bordo",
+      "q": "Quem são as autoras do relato “Brincadeiras a bordo”?",
+      "opts": [
+        "Laura, Tamara e Marininha Klink",
+        "Marina e Laura Antártica",
+        "Tamara e as amigas do colégio",
+        "Não é revelado no texto"
+      ],
+      "correct": 0,
+      "fb": "O texto é das irmãs Klink — Laura, Tamara e Marininha — do livro “Férias na Antártica”."
+    },
+    {
+      "tema": "Brincadeiras a bordo",
+      "q": "Para onde as irmãs Klink estavam viajando de barco?",
+      "opts": [
+        "Para o Caribe",
+        "Para a Antártica",
+        "Para a Europa",
+        "Para a Amazônia"
+      ],
+      "correct": 1,
+      "fb": "A viagem contada no relato é rumo à Antártica."
+    },
+    {
+      "tema": "Brincadeiras a bordo",
+      "q": "Segundo o texto, o que muda muito rápido na Antártica?",
+      "opts": [
+        "A cor do mar",
+        "O tempo — um lugar calmo pode virar tempestade",
+        "O idioma falado",
+        "O tamanho do barco"
+      ],
+      "correct": 1,
+      "fb": "O texto diz que o tempo muda muito rápido, e um lugar paradisíaco pode virar tempestade de repente."
+    },
+    {
+      "tema": "Brincadeiras a bordo",
+      "q": "No glossário do texto, o que significa <em>“paradisíaco”</em>?",
+      "opts": [
+        "Muito frio e gelado",
+        "Extremamente agradável, encantador",
+        "Perigoso e assustador",
+        "Distante e desconhecido"
+      ],
+      "correct": 1,
+      "fb": "Paradisíaco: extremamente agradável, encantador — como o glossário da página explica."
+    },
+    {
+      "tema": "Brincadeiras a bordo",
+      "q": "No glossário do texto, o que são <em>“icebergs”</em>?",
+      "opts": [
+        "Tipos de pinguim",
+        "Barcos de pesca",
+        "Massas de gelo que flutuam no mar",
+        "Roupas de frio"
+      ],
+      "correct": 2,
+      "fb": "Icebergs: massas de gelo que flutuam no mar, conforme o boxe do texto."
+    },
+    {
+      "tema": "Brincadeiras a bordo",
+      "q": "Qual brincadeira elas inventavam colocando papel debaixo dos pés?",
+      "opts": [
+        "Pular corda",
+        "Patins improvisados, para escorregar com o barco balançando",
+        "Jogo de tabuleiro",
+        "Corrida de saco"
+      ],
+      "correct": 1,
+      "fb": "Elas improvisavam patins com papel debaixo dos pés para escorregar quando o barco balançava."
+    },
+    {
+      "tema": "Brincadeiras a bordo",
+      "q": "Qual brincadeira o texto cita como só possível em lugares como a Antártica?",
+      "opts": [
+        "Jogar futebol na areia",
+        "Pegar pedaços de gelo pendurados e fingir que são picolés",
+        "Andar de bicicleta na cidade",
+        "Nadar na piscina"
+      ],
+      "correct": 1,
+      "fb": "O texto cita: pegar pedaços compridos de gelo pendurados nas pedras e fingir que são picolés."
+    },
+    {
+      "tema": "Brincadeiras a bordo",
+      "q": "Qual esporte radical na neve é citado no texto?",
+      "opts": [
+        "Surfe",
+        "Skate",
+        "Snowboard",
+        "Patinação artística"
+      ],
+      "correct": 2,
+      "fb": "O texto cita o snowboard entre as brincadeiras possíveis quando o tempo melhorava."
+    },
+    {
+      "tema": "Brincadeiras a bordo",
+      "q": "No trecho da página 161, quem conta sobre fazer receitas no barco?",
+      "opts": [
+        "Laura",
+        "Tamara",
+        "Marininha",
+        "O professor"
+      ],
+      "correct": 1,
+      "fb": "O segundo trecho é assinado por Tamara, que conta sobre o livro de receitas encontrado no barco."
+    }
+  ]
+}

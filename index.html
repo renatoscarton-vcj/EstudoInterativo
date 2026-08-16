@@ -1,0 +1,3134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Scarton Software">
+<meta name="copyright" content="© 2026 Scarton Software. Todos os direitos reservados.">
+<meta name="description" content="Passaporte do Saber — jogo de revisão para provas escolares. Scarton Software.">
+<meta name="theme-color" content="#0F3D3E">
+<!--
+  Passaporte do Saber™
+  © 2026 Scarton Software. Todos os direitos reservados.
+  Este software e seu conteúdo são protegidos por direitos autorais.
+  Uso, cópia, modificação ou distribuição sem autorização expressa são proibidos.
+-->
+<title>Passaporte do Saber — Avaliações 2º Período</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;900&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0F3D3E;
+    --navy-deep:#0A2C2D;
+    --paper:#F2E9D8;
+    --mustard:#E8A33D;
+    --brick:#C1440E;
+    --ok:#3C7A5C;
+    --ink:#1C2B2B;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    min-height:100vh;
+    background:
+      radial-gradient(circle at 20% 10%, rgba(232,163,61,0.15), transparent 40%),
+      radial-gradient(circle at 85% 85%, rgba(193,68,14,0.15), transparent 45%),
+      var(--navy);
+    font-family:'Nunito', 'Segoe UI', Roboto, system-ui, sans-serif;
+    color:var(--ink);
+    display:flex;
+    justify-content:center;
+    padding:18px 12px 40px;
+  }
+  .app{width:100%; max-width:540px;}
+
+  header.top{text-align:center; color:var(--paper); margin-bottom:18px;}
+  header.top .eyebrow{
+    font-size:13px; letter-spacing:2px; text-transform:uppercase;
+    color:var(--mustard); font-weight:900;
+    text-shadow:0 1px 3px rgba(0,0,0,0.4);
+  }
+  header.top h1{
+    font-family:'Fraunces', Georgia, 'Times New Roman', serif; font-weight:900;
+    font-size:clamp(30px,8.5vw,40px); margin:6px 0 0; line-height:1.02;
+    color:#FFF8EA;
+    letter-spacing:-0.5px;
+    text-shadow:
+      0 2px 0 rgba(10,44,45,0.9),
+      0 4px 14px rgba(0,0,0,0.5);
+  }
+  header.top h1 .accent{
+    color:var(--mustard);
+    display:block;
+    font-size:0.82em;
+  }
+  .title-rule{
+    width:70px; height:4px; border-radius:99px;
+    background:var(--mustard);
+    margin:12px auto 0;
+    box-shadow:0 2px 8px rgba(232,163,61,0.5);
+  }
+
+  .menu-intro{
+    color:#FFF8EA; text-align:center; font-size:15px;
+    font-weight:700; opacity:1; margin-bottom:18px;
+    text-shadow:0 1px 4px rgba(0,0,0,0.35);
+  }
+  .subject-card{
+    display:flex; align-items:center; gap:14px;
+    background:var(--paper);
+    border:3px solid var(--navy-deep);
+    border-radius:16px;
+    padding:14px 16px;
+    margin-bottom:12px;
+    cursor:pointer;
+    text-align:left;
+    width:100%;
+    font-family:'Nunito', 'Segoe UI', Roboto, system-ui, sans-serif;
+    transition:transform .12s ease;
+  }
+  .subject-card:active{transform:scale(0.98);}
+  .subject-card:hover{background:#fff8ec;}
+  .sc-icon{font-size:30px; line-height:1;}
+  .sc-body{flex:1;}
+  .sc-name{
+    font-family:'Fraunces', Georgia, 'Times New Roman', serif; font-weight:700;
+    font-size:16px; color:var(--navy-deep); line-height:1.2;
+  }
+  .sc-topics{font-size:14px; color:#2f4141; margin-top:5px; font-weight:700; line-height:1.35;}
+  .sc-date{
+    background:var(--navy); color:#FFF8EA;
+    font-size:16px; font-weight:900; letter-spacing:0.5px;
+    padding:9px 13px; border-radius:14px; white-space:nowrap;
+    text-align:center; line-height:1.25;
+  }
+  .sc-date small{display:block; font-size:12px; opacity:1; letter-spacing:1px; font-weight:800;}
+  .sc-date.past{
+    background:var(--ok);
+    border:2px solid #2b5c44;
+    box-shadow:0 0 0 3px rgba(60,122,92,0.25);
+  }
+  .sc-date.past small{
+    opacity:1; color:#fff; font-weight:900; font-size:13px; letter-spacing:0.5px;
+  }
+  .sc-date.past .check{
+    display:block; font-size:20px; line-height:1; margin-bottom:1px;
+  }
+  .subject-card.done{border-color:var(--ok);}
+  .subject-card.done .sc-name::after{
+    content:"✓";
+    color:var(--ok);
+    font-weight:900;
+    margin-left:7px;
+    font-size:15px;
+  }
+
+  .route{
+    display:flex; gap:7px; justify-content:center;
+    margin:14px 0 14px; flex-wrap:wrap;
+  }
+  .stop{
+    width:36px; height:36px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    font-size:15px; font-weight:900;
+    background:#FFF8EA;
+    color:var(--navy-deep);
+    border:3px solid var(--paper);
+    box-shadow:0 2px 6px rgba(0,0,0,0.3);
+  }
+  .stop.correct{background:#3FA06B; color:#fff; border-color:#8FE3B4;}
+  .stop.wrong{background:#E0501A; color:#fff; border-color:#FFAE8C;}
+  .stop.current{
+    box-shadow:0 0 0 4px var(--mustard), 0 3px 8px rgba(0,0,0,0.4);
+    transform:scale(1.18);
+    z-index:2;
+  }
+
+  .vehicle-bar{
+    display:flex; align-items:center; gap:12px;
+    background:#0A2C2D;
+    border:3px solid var(--mustard);
+    border-radius:14px; padding:12px 15px; margin-bottom:6px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.3);
+  }
+  .vehicle-icon{font-size:30px; line-height:1; filter:drop-shadow(0 3px 3px rgba(0,0,0,0.3));}
+  .vehicle-icon.pulse{animation:pulse 0.7s ease;}
+  @keyframes pulse{
+    0%{transform:scale(1);}
+    35%{transform:scale(1.5) rotate(-8deg);}
+    65%{transform:scale(1.5) rotate(8deg);}
+    100%{transform:scale(1);}
+  }
+  .vehicle-info{flex:1;}
+  .vehicle-name{color:#FFF8EA; font-weight:900; font-size:15px; text-shadow:0 1px 3px rgba(0,0,0,0.35);}
+  .vehicle-track{height:9px; border-radius:99px; background:rgba(10,44,45,0.45); margin-top:6px; overflow:hidden;}
+  .vehicle-fill{height:100%; background:var(--mustard); border-radius:99px; transition:width .4s ease; box-shadow:0 0 8px rgba(232,163,61,0.6);}
+  .vehicle-sub{color:#FFF8EA; font-size:13px; font-weight:700; opacity:1; margin:6px 0 14px 2px; text-shadow:0 1px 3px rgba(0,0,0,0.35);}
+  .evolve-banner{
+    background:var(--mustard); color:var(--navy-deep);
+    font-weight:800; font-size:14px; text-align:center;
+    padding:10px; border-radius:12px; margin-bottom:10px;
+    animation:dropIn .4s ease;
+  }
+  @keyframes dropIn{
+    from{opacity:0; transform:translateY(-10px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+
+  .card{
+    background:var(--paper); border-radius:18px;
+    padding:22px 20px 26px;
+    box-shadow:0 18px 40px rgba(0,0,0,0.35);
+    position:relative; border:3px solid var(--navy-deep);
+  }
+  .card::before{
+    content:""; position:absolute; inset:8px;
+    border:2px dashed rgba(15,61,62,0.55);
+    border-radius:12px; pointer-events:none;
+  }
+  .topic-tag{
+    display:inline-block; background:var(--navy); color:var(--paper);
+    font-size:13px; font-weight:900; letter-spacing:0.8px; text-transform:uppercase;
+    padding:5px 12px; border-radius:999px; margin-bottom:14px;
+  }
+  .question{
+    font-family:'Fraunces', Georgia, 'Times New Roman', serif; font-weight:700;
+    font-size:18px; line-height:1.4; margin:0 0 18px; color:var(--navy-deep);
+  }
+  .question em{color:var(--brick); font-style:normal; border-bottom:3px solid var(--mustard);}
+  .options{display:flex; flex-direction:column; gap:10px;}
+  .opt{
+    display:flex; align-items:center; gap:10px;
+    text-align:left; font-family:'Nunito', 'Segoe UI', Roboto, system-ui, sans-serif;
+    font-size:15.5px; font-weight:700;
+    padding:13px 16px; border-radius:12px;
+    border:2px solid var(--navy); background:#fff; color:var(--navy-deep);
+    cursor:pointer; transition:transform .12s ease, background .15s ease;
+  }
+  .opt:active{transform:scale(0.98);}
+  .opt.correct{background:var(--ok); border-color:var(--ok); color:#fff;}
+  .opt.wrong{background:var(--brick); border-color:var(--brick); color:#fff;}
+  .opt[disabled]{cursor:default;}
+  .opt:not([disabled]):hover{background:#fff8ec;}
+  .opt-mark{font-size:17px; font-weight:900; width:18px; flex-shrink:0;}
+
+  .feedback{
+    margin-top:16px; font-size:15.5px; font-weight:700; color:var(--navy-deep);
+    background:#FBE6C2; border-left:6px solid var(--mustard);
+    padding:13px 16px; border-radius:10px; line-height:1.45;
+  }
+
+  /* ---------- NAVEGAÇÃO ---------- */
+  .nav-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:18px;
+  }
+  .nav-row .btn-next{grid-column:1 / -1;}
+
+  .btn{
+    border:none;
+    padding:15px 18px;
+    border-radius:14px;
+    font-family:'Nunito', 'Segoe UI', Roboto, system-ui, sans-serif;
+    font-weight:800;
+    font-size:15px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+    min-height:52px;
+    transition:transform .12s ease, background .15s ease;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .btn-back{
+    background:var(--paper);
+    color:var(--navy-deep);
+    border:3px solid var(--navy-deep);
+    box-shadow:0 5px 0 rgba(10,44,45,0.55);
+  }
+  .btn-back:not(:disabled):hover{background:#fff8ec;}
+  .btn-back:not(:disabled):active{transform:translateY(3px); box-shadow:0 2px 0 rgba(10,44,45,0.55);}
+
+  .btn-home{
+    background:var(--mustard);
+    color:var(--navy-deep);
+    border:3px solid #b97d20;
+    box-shadow:0 5px 0 #b97d20;
+  }
+  .btn-home:hover{background:#f0b45c;}
+  .btn-home:active{transform:translateY(3px); box-shadow:0 2px 0 #b97d20;}
+
+  .btn-next{
+    background:var(--brick);
+    color:#fff;
+    border:3px solid #8f3309;
+    box-shadow:0 5px 0 #8f3309;
+    font-size:16px;
+  }
+  .btn-next:not(:disabled):hover{background:#d64d10;}
+  .btn-next:not(:disabled):active{transform:translateY(3px); box-shadow:0 2px 0 #8f3309;}
+
+  .btn:disabled{opacity:0.3; cursor:default; box-shadow:none;}
+
+  .top-nav{
+    display:flex; justify-content:center; align-items:center;
+    margin-bottom:12px;
+  }
+  .subject-label{
+    color:var(--mustard); font-weight:900; font-size:13px;
+    letter-spacing:1.5px; text-transform:uppercase; text-align:center;
+    text-shadow:0 1px 4px rgba(0,0,0,0.45);
+  }
+
+  .end-screen{
+    background:var(--paper); border-radius:18px; padding:30px 22px;
+    text-align:center; box-shadow:0 18px 40px rgba(0,0,0,0.35);
+    border:3px solid var(--navy-deep);
+  }
+  .end-screen h2{font-family:'Fraunces', Georgia, 'Times New Roman', serif; font-size:26px; color:var(--navy-deep); margin-top:0;}
+  .end-screen p{font-size:16px; font-weight:700; color:var(--ink); line-height:1.45;}
+  .stamp{font-size:60px; margin:6px 0;}
+  .result-msg{font-family:'Fraunces', Georgia, 'Times New Roman', serif; font-weight:900; font-size:22px; color:var(--brick); margin:10px 0;}
+  .review{
+    text-align:left; background:#fff; border-radius:12px;
+    padding:14px 18px; margin:16px 0; font-size:14.5px;
+    max-height:260px; overflow-y:auto;
+    border:2px solid rgba(15,61,62,0.25);
+    line-height:1.4;
+  }
+  .r-item{padding:9px 0; border-bottom:2px solid #eee; display:flex; gap:10px; align-items:flex-start;}
+  .r-item:last-child{border-bottom:none;}
+  .r-mark{font-weight:900; font-size:18px; flex-shrink:0;}
+  .r-ok{color:var(--ok);}
+  .r-bad{color:var(--brick);}
+  .end-actions{
+    display:grid; grid-template-columns:1fr; gap:10px; margin-top:6px;
+  }
+  @media (min-width:600px){
+    .end-actions{grid-template-columns:1fr 1fr; }
+    .end-actions .btn:first-child{grid-column:1 / -1;}
+  }
+
+  /* ---------- FILTRO DE ANO ---------- */
+  .ano-filtro{
+    display:flex; gap:8px; justify-content:center;
+    flex-wrap:wrap; margin-bottom:18px;
+  }
+  .ano-btn{
+    background:#0A2C2D; color:#FFF8EA;
+    border:3px solid var(--mustard);
+    padding:10px 18px; border-radius:99px;
+    font-family:'Nunito', 'Segoe UI', Roboto, system-ui, sans-serif; font-weight:900; font-size:15px;
+    cursor:pointer; transition:transform .12s ease;
+  }
+  .ano-btn:active{transform:scale(0.96);}
+  .ano-btn.active{background:var(--mustard); color:var(--navy-deep);}
+
+  /* ---------- AÇÕES EXTRAS NO CARD ---------- */
+  .subject-block{
+    margin-bottom:26px;
+    background:rgba(10,44,45,0.55);
+    border-radius:18px;
+    padding:6px;
+    border:2px solid rgba(232,163,61,0.35);
+  }
+  .subject-block .subject-card{
+    margin-bottom:0;
+    border-radius:13px;
+  }
+  .card-extras{
+    display:flex; gap:7px; flex-wrap:wrap;
+    margin-top:6px; padding:0 2px 2px;
+  }
+  .mini-btn{
+    border:none; padding:11px 14px; border-radius:11px;
+    font-family:'Nunito', 'Segoe UI', Roboto, system-ui, sans-serif; font-weight:900; font-size:14px;
+    cursor:pointer; flex:1; min-width:140px;
+  }
+  .mini-btn.retomar{
+    background:var(--mustard); color:var(--navy-deep);
+    box-shadow:0 4px 0 #b97d20;
+  }
+  .mini-btn.retomar:active{transform:translateY(2px); box-shadow:0 2px 0 #b97d20;}
+  .mini-btn.revisar{
+    background:#FFF8EA; color:var(--brick);
+    border:3px solid var(--brick); box-shadow:0 4px 0 #8f3309;
+  }
+  .mini-btn.revisar:active{transform:translateY(2px); box-shadow:0 2px 0 #8f3309;}
+
+  /* ---------- FAIXA DE MODO REVISÃO ---------- */
+  .revisao-flag{
+    background:var(--brick); color:#fff;
+    font-weight:900; font-size:14px; text-align:center;
+    padding:10px 14px; border-radius:12px; margin-bottom:12px;
+    border:3px solid #8f3309;
+  }
+
+  /* ---------- RODAPÉ ---------- */
+  .rodape{
+    text-align:center; color:#FFF8EA; font-size:13px;
+    font-weight:700; margin-top:26px; line-height:1.6;
+    text-shadow:0 1px 3px rgba(0,0,0,0.4);
+  }
+  .rodape a{color:var(--mustard);}
+
+  /* ---------- BANNER DO PASSAPORTE ---------- */
+  .passaporte-banner{
+    display:flex; align-items:center; gap:14px; width:100%;
+    background:#0A2C2D; border:3px solid var(--mustard);
+    border-radius:16px; padding:14px 18px; margin-bottom:16px;
+    cursor:pointer; font-family:'Nunito', 'Segoe UI', Roboto, system-ui, sans-serif; text-align:left;
+    box-shadow:0 4px 14px rgba(0,0,0,0.3);
+  }
+  .passaporte-banner:active{transform:scale(0.98);}
+  .pb-icon{font-size:32px;}
+  .pb-texto{flex:1; color:#FFF8EA;}
+  .pb-texto b{font-size:17px; font-weight:900; display:block;}
+  .pb-texto small{font-size:13.5px; color:var(--mustard); font-weight:700;}
+  .pb-seta{color:var(--mustard); font-size:30px; font-weight:900; line-height:1;}
+
+  /* ---------- COLEÇÃO DE CARIMBOS ---------- */
+  .passaporte-resumo{
+    display:flex; gap:12px; margin-bottom:16px;
+  }
+  .pr-item{
+    flex:1; background:#0A2C2D; border:3px solid var(--mustard);
+    border-radius:14px; padding:14px 10px; text-align:center; color:#FFF8EA;
+  }
+  .pr-item b{display:block; font-size:30px; font-family:'Fraunces', Georgia, 'Times New Roman', serif; color:var(--mustard);}
+  .pr-item span{font-size:13px; font-weight:700;}
+
+  .carimbo-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:11px; margin-bottom:18px;
+  }
+  .carimbo{
+    background:var(--paper); border:3px solid var(--navy-deep);
+    border-radius:14px; padding:14px 11px; text-align:center;
+  }
+  .carimbo.ganho{border-color:var(--ok); box-shadow:0 0 0 3px rgba(60,122,92,0.25);}
+  .carimbo.bloqueado{background:#c9c2b4;}
+  .carimbo.bloqueado .carimbo-icon{opacity:0.45;}
+  .carimbo-icon{font-size:38px; line-height:1; margin-bottom:6px;}
+  .carimbo-nome{font-family:'Fraunces', Georgia, 'Times New Roman', serif; font-weight:900; font-size:14.5px; color:var(--navy-deep);}
+  .carimbo-desc{font-size:12.5px; color:#3f5252; font-weight:600; margin-top:4px; line-height:1.3;}
+
+  .carimbos-novos{
+    background:#FBE6C2; border:3px solid var(--mustard);
+    border-radius:14px; padding:14px; margin:16px 0; text-align:left;
+  }
+  .cn-titulo{
+    font-family:'Fraunces', Georgia, 'Times New Roman', serif; font-weight:900; font-size:17px;
+    color:var(--navy-deep); text-align:center; margin-bottom:10px;
+  }
+  .cn-item{display:flex; align-items:center; gap:11px; padding:7px 0; font-size:14px;}
+  .cn-icon{font-size:30px;}
+  .cn-item small{color:#3f5252; font-weight:600;}
+
+  /* ---------- MODO ESTUDO ---------- */
+  .estudo-progresso{margin-bottom:14px;}
+  .estudo-track{
+    height:11px; background:rgba(10,44,45,0.5); border-radius:99px;
+    overflow:hidden; border:2px solid var(--mustard);
+  }
+  .estudo-fill{
+    height:100%; background:var(--mustard); border-radius:99px;
+    transition:width .3s ease;
+  }
+  .estudo-contador{
+    color:#FFF8EA; font-weight:800; font-size:14px;
+    text-align:center; margin-top:7px;
+    text-shadow:0 1px 3px rgba(0,0,0,0.4);
+  }
+  .flashcard{cursor:pointer; min-height:210px;}
+  .flashcard.virado{border-color:var(--ok);}
+  .virar-dica{
+    text-align:center; color:#3f5252; font-weight:800;
+    font-size:15px; margin-top:26px; padding:14px;
+    background:rgba(15,61,62,0.08); border-radius:12px;
+  }
+  .resposta-box{
+    background:var(--ok); color:#fff; border-radius:12px;
+    padding:14px 16px; margin-top:6px;
+  }
+  .resposta-label{
+    font-size:12px; font-weight:900; letter-spacing:1.5px;
+    text-transform:uppercase; opacity:0.9;
+  }
+  .resposta-texto{font-size:18px; font-weight:800; margin-top:4px; line-height:1.3;}
+
+  .mini-btn.estudar{
+    background:#0A2C2D; color:#FFF8EA;
+    border:3px solid var(--mustard); box-shadow:0 4px 0 #b97d20;
+  }
+  .mini-btn.estudar:active{transform:translateY(2px); box-shadow:0 2px 0 #b97d20;}
+
+  /* ---------- MAPA DE PONTOS FRACOS ---------- */
+  .mapa-temas{
+    background:#fff; border:3px solid var(--navy-deep);
+    border-radius:14px; padding:16px 14px; margin:18px 0; text-align:left;
+  }
+  .mt-titulo{
+    font-family:'Fraunces', Georgia, 'Times New Roman', serif; font-weight:900; font-size:17px;
+    color:var(--navy-deep); text-align:center; margin-bottom:14px; line-height:1.3;
+  }
+  .mt-linha{
+    padding:12px; border-radius:12px; margin-bottom:10px;
+    border:2px solid rgba(15,61,62,0.2); background:#FAF6EE;
+  }
+  .mt-linha:last-child{margin-bottom:0;}
+  .mt-linha.fraco{border-color:var(--brick); background:#FDEDE5;}
+  .mt-linha.medio{border-color:var(--mustard); background:#FDF3E2;}
+  .mt-linha.forte{border-color:var(--ok); background:#EAF6EF;}
+
+  .mt-topo{display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:8px;}
+  .mt-nome{font-weight:900; font-size:15px; color:var(--navy-deep); line-height:1.25;}
+  .mt-placar{
+    font-weight:900; font-size:15px; white-space:nowrap;
+    background:var(--navy-deep); color:#FFF8EA;
+    padding:3px 11px; border-radius:99px;
+  }
+  .mt-track{
+    height:11px; background:rgba(10,44,45,0.15);
+    border-radius:99px; overflow:hidden;
+  }
+  .mt-fill{height:100%; border-radius:99px;}
+  .mt-linha.fraco .mt-fill{background:var(--brick);}
+  .mt-linha.medio .mt-fill{background:var(--mustard);}
+  .mt-linha.forte .mt-fill{background:var(--ok);}
+
+  .mt-btn{
+    width:100%; margin-top:10px; border:none;
+    background:var(--navy-deep); color:#FFF8EA;
+    padding:11px; border-radius:10px; cursor:pointer;
+    font-family:'Nunito', 'Segoe UI', Roboto, system-ui, sans-serif; font-weight:900; font-size:14px;
+    box-shadow:0 4px 0 rgba(0,0,0,0.35);
+  }
+  .mt-btn:active{transform:translateY(2px); box-shadow:0 2px 0 rgba(0,0,0,0.35);}
+  .mt-ok{
+    margin-top:8px; font-weight:900; font-size:14px;
+    color:var(--ok); text-align:center;
+  }
+
+  .tema-flag{
+    background:var(--navy-deep); color:#FFF8EA;
+    border:3px solid var(--mustard); border-radius:12px;
+    padding:11px 14px; margin-bottom:12px;
+    font-weight:800; font-size:14.5px; text-align:center;
+  }
+  .tema-flag b{color:var(--mustard);}
+
+  /* ---------- AVISO DE ARMAZENAMENTO ---------- */
+  .aviso-storage{
+    background:#FDEDE5; border:3px solid var(--brick);
+    border-radius:14px; padding:14px 16px; margin-bottom:16px;
+    color:var(--navy-deep);
+  }
+  .aviso-storage b{display:block; font-size:15.5px; margin-bottom:5px; color:var(--brick);}
+  .aviso-storage span{font-size:14px; font-weight:600; line-height:1.45; display:block;}
+
+  /* ---------- PERFIS DE ALUNO ---------- */
+  .perfil-barra{
+    display:flex; align-items:center; gap:11px; width:100%;
+    background:rgba(255,248,234,0.15); border:2px solid rgba(232,163,61,0.6);
+    border-radius:14px; padding:10px 15px; margin-bottom:12px;
+    cursor:pointer; font-family:'Nunito', 'Segoe UI', Roboto, system-ui, sans-serif; color:#FFF8EA;
+  }
+  .perfil-barra:active{transform:scale(0.98);}
+  .pba-icone{font-size:26px;}
+  .pba-texto{flex:1; text-align:left; font-size:14.5px; font-weight:700;}
+  .pba-texto b{color:var(--mustard); font-size:16px;}
+  .pba-trocar{
+    color:var(--navy-deep); background:var(--mustard);
+    font-weight:900; font-size:13px; padding:5px 12px; border-radius:99px;
+  }
+
+  .perfil-lista{margin-bottom:18px;}
+  .perfil-card{
+    display:flex; gap:8px; align-items:stretch; margin-bottom:10px;
+  }
+  .perfil-principal{
+    flex:1; display:flex; align-items:center; gap:14px;
+    background:var(--paper); border:3px solid var(--navy-deep);
+    border-radius:14px; padding:14px 16px; cursor:pointer;
+    font-family:'Nunito', 'Segoe UI', Roboto, system-ui, sans-serif; text-align:left;
+  }
+  .perfil-card.ativo .perfil-principal{
+    border-color:var(--ok); box-shadow:0 0 0 3px rgba(60,122,92,0.3);
+  }
+  .perfil-icone{font-size:32px;}
+  .perfil-nome{font-family:'Fraunces', Georgia, 'Times New Roman', serif; font-weight:900; font-size:19px; color:var(--navy-deep);}
+  .perfil-nome small{font-family:'Nunito', 'Segoe UI', Roboto, system-ui, sans-serif; font-size:13px; color:var(--ok); font-weight:800;}
+  .perfil-excluir{
+    background:var(--paper); border:3px solid var(--brick); color:var(--brick);
+    border-radius:14px; padding:0 15px; font-size:20px; cursor:pointer;
+  }
+
+  .perfil-novo, .backup-box{
+    background:var(--paper); border:3px solid var(--navy-deep);
+    border-radius:16px; padding:18px; margin-bottom:14px;
+  }
+  .pn-titulo{
+    font-family:'Fraunces', Georgia, 'Times New Roman', serif; font-weight:900; font-size:18px;
+    color:var(--navy-deep); margin-bottom:12px;
+  }
+  .perfil-input{
+    width:100%; padding:13px 15px; border:3px solid var(--navy);
+    border-radius:12px; font-family:'Nunito', 'Segoe UI', Roboto, system-ui, sans-serif;
+    font-size:17px; font-weight:700; margin-bottom:12px;
+  }
+  .icone-grid{
+    display:grid; grid-template-columns:repeat(6,1fr); gap:7px; margin-bottom:14px;
+  }
+  .icone-opt{
+    font-size:24px; padding:9px 0; cursor:pointer;
+    background:#fff; border:3px solid rgba(15,61,62,0.25); border-radius:11px;
+  }
+  .icone-opt.sel{border-color:var(--ok); background:#EAF6EF;}
+  .backup-texto{font-size:14px; font-weight:600; color:#3f5252; line-height:1.45; margin:0 0 13px;}
+
+  /* ---------- RODAPÉ / MARCA ---------- */
+  .marca{
+    font-family:'Fraunces', Georgia, 'Times New Roman', serif; font-weight:900; font-size:17px;
+    color:var(--mustard); letter-spacing:0.5px;
+  }
+  .marca-sub{font-size:13px; margin-top:3px; color:#FFF8EA;}
+  .copyright{font-size:12px; margin-top:7px; color:rgba(255,248,234,0.8); font-weight:600;}
+
+  /* ---------- TABLET ---------- */
+  @media (min-width:600px){
+    body{padding:28px 24px 50px;}
+    .app{max-width:660px;}
+    header.top h1{font-size:46px;}
+    .title-rule{width:90px; height:5px;}
+    .menu-intro{font-size:16px;}
+    .subject-card{padding:18px 20px; gap:18px;}
+    .sc-icon{font-size:36px;}
+    .sc-name{font-size:20px;}
+    .sc-topics{font-size:15px;}
+    .sc-date{font-size:18px; padding:11px 16px;}
+    .sc-date small{font-size:13px;}
+    .card{padding:28px 26px 30px;}
+    .question{font-size:21px;}
+    .opt{font-size:17px; padding:15px 18px;}
+    .stop{width:42px; height:42px; font-size:17px;}
+    .nav-row{
+      grid-template-columns:1fr 1fr 1.3fr;
+    }
+    .nav-row .btn-next{grid-column:auto;}
+    .btn{min-height:58px; font-size:16px;}
+    .vehicle-icon{font-size:36px;}
+    .carimbo-grid{grid-template-columns:repeat(3,1fr);}
+    .carimbo-icon{font-size:44px;}
+    .flashcard{min-height:250px;}
+    .resposta-texto{font-size:21px;}
+    .feedback{font-size:17px;}
+    .topic-tag{font-size:14px;}
+    .vehicle-name{font-size:17px;}
+    .vehicle-sub{font-size:15px;}
+    .subject-label{font-size:15px;}
+  }
+
+  /* ---------- DESKTOP ---------- */
+  @media (min-width:1000px){
+    body{padding:40px 24px 60px;}
+    .app{max-width:760px;}
+    header.top h1{font-size:54px;}
+    .title-rule{width:110px;}
+    header.top .eyebrow{font-size:14px;}
+    .card{padding:34px 34px 36px; border-radius:22px;}
+    .question{font-size:24px;}
+    .opt{font-size:18px; padding:16px 20px; border-radius:14px;}
+    .opt:not([disabled]):hover{transform:translateX(3px);}
+    .subject-card{padding:20px 24px; border-radius:18px;}
+    .subject-card:hover{transform:translateX(4px);}
+    .sc-name{font-size:21px;}
+    .sc-topics{font-size:15.5px;}
+    .end-screen{padding:40px 34px;}
+    .review{max-height:320px; font-size:15.5px;}
+    .btn{min-height:60px;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .opt,.btn,.vehicle-fill,.subject-card{transition:none;}
+    .vehicle-icon.pulse,.evolve-banner{animation:none;}
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="eyebrow">Avaliação Sistematizada · 2º Período 2026</div>
+    <h1>Passaporte<span class="accent">do Saber</span></h1>
+    <div class="title-rule"></div>
+  </header>
+  <div id="screen"></div>
+
+  <div class="rodape">
+    <div class="marca">Scarton Software</div>
+    <div class="marca-sub">Passaporte do Saber™ · atualizado em 16/08/2026</div>
+    <div class="copyright">© 2026 Scarton Software · Todos os direitos reservados</div>
+  </div>
+</div>
+
+<script>
+
+const subjects = [
+  {
+    "id": "hist",
+    "icon": "🗺️",
+    "name": "História e Geografia",
+    "date": "11/08",
+    "ano": 4,
+    "topics": "Povos indígenas · Colonização · Tempo e clima",
+    "questions": [
+      {
+        "tema": "Povos indígenas",
+        "q": "Todos os povos indígenas do Brasil são iguais entre si?",
+        "opts": [
+          "Sim, são todos idênticos",
+          "Não — têm línguas, costumes e modos de vida diferentes",
+          "Sim, falam todos a mesma língua",
+          "Não existem diferenças culturais"
+        ],
+        "correct": 1,
+        "fb": "Existem centenas de povos indígenas no Brasil, cada um com sua língua, seus costumes e seu jeito de viver."
+      },
+      {
+        "tema": "Povos indígenas",
+        "q": "Quais são os dois grandes <em>troncos linguísticos</em> indígenas estudados?",
+        "opts": [
+          "Tupi e Macro-Jê",
+          "Latim e Grego",
+          "Guarani e Português",
+          "Aruák e Inglês"
+        ],
+        "correct": 0,
+        "fb": "Tupi e Macro-Jê são os dois maiores troncos linguísticos — grandes “famílias” de línguas indígenas."
+      },
+      {
+        "tema": "Povos indígenas",
+        "q": "Como se chama a habitação coletiva típica de muitos povos indígenas?",
+        "opts": [
+          "Iglu",
+          "Oca",
+          "Palafita",
+          "Castelo"
+        ],
+        "correct": 1,
+        "fb": "A oca é uma casa grande, feita de madeira e palha, onde várias famílias vivem juntas."
+      },
+      {
+        "tema": "Povos indígenas",
+        "q": "Qual destes é um costume compartilhado por muitos povos indígenas?",
+        "opts": [
+          "Viver em grandes cidades de concreto",
+          "Viver em aldeias, em contato próximo com a natureza",
+          "Usar apenas moeda de ouro",
+          "Morar sozinhos, longe uns dos outros"
+        ],
+        "correct": 1,
+        "fb": "Viver em aldeias e ter uma relação próxima com a natureza é um traço comum a muitos povos indígenas."
+      },
+      {
+        "tema": "Povos indígenas",
+        "q": "Nas sociedades indígenas, quais tarefas eram tradicionalmente feitas pelos homens?",
+        "opts": [
+          "Cuidar apenas das crianças",
+          "Caçar, pescar e abrir clareiras na mata",
+          "Somente cozinhar",
+          "Apenas tecer redes"
+        ],
+        "correct": 1,
+        "fb": "Tradicionalmente os homens caçavam, pescavam e abriam clareiras; as mulheres cuidavam da roça, do preparo dos alimentos e da cerâmica."
+      },
+      {
+        "tema": "Colonização",
+        "q": "O que era o <em>escambo</em> praticado entre indígenas e portugueses?",
+        "opts": [
+          "Uma festa religiosa",
+          "A troca de produtos e serviços, sem uso de dinheiro",
+          "Um tipo de canoa",
+          "Um instrumento musical"
+        ],
+        "correct": 1,
+        "fb": "Escambo é a troca direta de mercadorias: os indígenas cortavam pau-brasil e recebiam objetos como facas, espelhos e machados."
+      },
+      {
+        "tema": "Colonização",
+        "q": "Para que servia principalmente o <em>pau-brasil</em> levado pelos portugueses?",
+        "opts": [
+          "Para fazer papel",
+          "Para produzir um corante vermelho que tingia tecidos",
+          "Para fabricar vidro",
+          "Para produzir açúcar"
+        ],
+        "correct": 1,
+        "fb": "Do pau-brasil se extraía um corante vermelho muito valorizado na Europa para tingir tecidos."
+      },
+      {
+        "tema": "Colonização",
+        "q": "Qual foi uma <b>desvantagem</b> do contato entre indígenas e portugueses?",
+        "opts": [
+          "Os indígenas ganharam mais terras",
+          "Muitos morreram por doenças trazidas pelos europeus e foram escravizados",
+          "Os portugueses foram embora rapidamente",
+          "Não houve nenhuma consequência ruim"
+        ],
+        "correct": 1,
+        "fb": "O contato trouxe doenças desconhecidas (gripe, sarampo), escravização e perda de territórios para os povos indígenas."
+      },
+      {
+        "tema": "Tempo e clima",
+        "q": "Qual é a diferença entre <em>tempo atmosférico</em> e <em>clima</em>?",
+        "opts": [
+          "São exatamente a mesma coisa",
+          "Tempo é a condição do momento; clima é o padrão observado por muitos anos",
+          "Tempo dura anos; clima dura horas",
+          "Clima só existe no inverno"
+        ],
+        "correct": 1,
+        "fb": "O tempo atmosférico muda de um dia para o outro; o clima é o padrão que se repete ao longo de muitos anos num lugar."
+      },
+      {
+        "tema": "Tempo e clima",
+        "q": "Quais são as três grandes <em>zonas climáticas</em> da Terra?",
+        "opts": [
+          "Norte, Sul e Central",
+          "Polar, Temperada e Tropical",
+          "Seca, Molhada e Média",
+          "Alta, Média e Baixa"
+        ],
+        "correct": 1,
+        "fb": "A Terra se divide em zona polar (mais fria), zona temperada (intermediária) e zona tropical (mais quente)."
+      },
+      {
+        "tema": "Tempo e clima",
+        "q": "Qual zona climática fica próxima à Linha do Equador e é a mais quente?",
+        "opts": [
+          "Zona polar",
+          "Zona temperada",
+          "Zona tropical",
+          "Zona glacial"
+        ],
+        "correct": 2,
+        "fb": "A zona tropical fica ao redor da Linha do Equador, recebe os raios solares mais diretos e por isso é a mais quente."
+      },
+      {
+        "tema": "Tempo e clima",
+        "q": "Qual tipo de clima predomina na maior parte do Brasil?",
+        "opts": [
+          "Polar",
+          "Tropical",
+          "Desértico",
+          "Frio de montanha"
+        ],
+        "correct": 1,
+        "fb": "O Brasil está em grande parte na zona tropical, com clima quente e chuvas bem marcadas ao longo do ano."
+      }
+    ]
+  },
+  {
+    "id": "port",
+    "icon": "📖",
+    "name": "Língua Portuguesa",
+    "date": "13/08",
+    "ano": 4,
+    "topics": "Pronomes · Porquês · Adjetivos · C e Ç · Relato de viagem",
+    "questions": [
+      {
+        "tema": "Pronomes pessoais",
+        "q": "Complete: <em>___ vamos viajar de avião amanhã.</em>",
+        "opts": [
+          "Eu",
+          "Nós",
+          "Elas",
+          "Tu"
+        ],
+        "correct": 1,
+        "fb": "“Nós” é o pronome pessoal que representa o grupo que fala — mais de uma pessoa, incluindo quem fala."
+      },
+      {
+        "tema": "Pronomes pessoais",
+        "q": "Qual pronome substitui <em>“Maria e João”</em> na frase “Maria e João foram ao aeroporto”?",
+        "opts": [
+          "Ela",
+          "Eles",
+          "Nós",
+          "Vós"
+        ],
+        "correct": 1,
+        "fb": "“Maria e João” são duas pessoas de quem se fala (não quem fala) — por isso o pronome é “Eles”."
+      },
+      {
+        "tema": "Pronomes pessoais",
+        "q": "Na frase <em>“Ela guardou a mala no quarto”</em>, qual é o pronome pessoal?",
+        "opts": [
+          "guardou",
+          "mala",
+          "Ela",
+          "quarto"
+        ],
+        "correct": 2,
+        "fb": "“Ela” é o pronome pessoal: substitui o nome de quem guardou a mala."
+      },
+      {
+        "tema": "Pronomes pessoais",
+        "q": "Complete: <em>“___, vocês trouxeram o passaporte?”</em>",
+        "opts": [
+          "Eu",
+          "Ele",
+          "Vós",
+          "Nós"
+        ],
+        "correct": 2,
+        "fb": "“Vós” corresponde a “vocês” — é o pronome usado para falar com um grupo de pessoas."
+      },
+      {
+        "tema": "Pronomes pessoais",
+        "q": "Qual pronome pessoal representa apenas quem está falando, sozinho?",
+        "opts": [
+          "Eu",
+          "Nós",
+          "Eles",
+          "Tu"
+        ],
+        "correct": 0,
+        "fb": "“Eu” é sempre a 1ª pessoa do singular — quem fala, sozinho."
+      },
+      {
+        "tema": "Porquês",
+        "q": "Complete: <em>“___ você chegou atrasado hoje?”</em>",
+        "opts": [
+          "Porque",
+          "Por que",
+          "Por quê",
+          "Porquê"
+        ],
+        "correct": 1,
+        "fb": "“Por que” (separado, sem acento) é usado em perguntas — equivale a “por qual motivo”."
+      },
+      {
+        "tema": "Porquês",
+        "q": "Complete: <em>“Não fui à escola ___ estava doente.”</em>",
+        "opts": [
+          "porque",
+          "por que",
+          "por quê",
+          "porquê"
+        ],
+        "correct": 0,
+        "fb": "“Porque” (junto, sem acento) é usado para dar uma explicação ou resposta."
+      },
+      {
+        "tema": "Porquês",
+        "q": "Complete: <em>“Ele não quis ir à festa, ___?”</em>",
+        "opts": [
+          "porque",
+          "por que",
+          "por quê",
+          "porquê"
+        ],
+        "correct": 2,
+        "fb": "“Por quê” (separado, com acento) aparece no final da frase, em perguntas."
+      },
+      {
+        "tema": "Porquês",
+        "q": "Complete: <em>“Ninguém sabe o ___ da mudança de plano.”</em>",
+        "opts": [
+          "porque",
+          "por que",
+          "por quê",
+          "porquê"
+        ],
+        "correct": 3,
+        "fb": "“Porquê” (junto, com acento) funciona como substantivo — vem precedido de “o”, “um”, “esse”."
+      },
+      {
+        "tema": "Porquês",
+        "q": "Qual forma usamos para <b>explicar</b> um motivo, sem fazer pergunta?",
+        "opts": [
+          "Porque",
+          "Por que",
+          "Por quê",
+          "Porquê"
+        ],
+        "correct": 0,
+        "fb": "“Porque” explica — é a resposta de um “por quê?”."
+      },
+      {
+        "tema": "Adjetivos -íssimo/-inho",
+        "q": "Qual é o superlativo de <em>“alto”</em>?",
+        "opts": [
+          "Altinho",
+          "Altíssimo",
+          "Altzinho",
+          "Altão"
+        ],
+        "correct": 1,
+        "fb": "O sufixo “-íssimo” aumenta a intensidade: alto → altíssimo (muito alto)."
+      },
+      {
+        "tema": "Adjetivos -íssimo/-inho",
+        "q": "Qual é o diminutivo de <em>“bonito”</em>?",
+        "opts": [
+          "Bonitíssimo",
+          "Bonitão",
+          "Bonitinho",
+          "Bonitudo"
+        ],
+        "correct": 2,
+        "fb": "O sufixo “-inho” diminui ou suaviza: bonito → bonitinho."
+      },
+      {
+        "tema": "Adjetivos -íssimo/-inho",
+        "q": "Transforme <em>“gostoso”</em> no superlativo com -íssimo:",
+        "opts": [
+          "Gostosinho",
+          "Gostosíssimo",
+          "Gostosão",
+          "Gostosuço"
+        ],
+        "correct": 1,
+        "fb": "gostoso → gostosíssimo (extremamente gostoso)."
+      },
+      {
+        "tema": "Adjetivos -íssimo/-inho",
+        "q": "Transforme <em>“pequeno”</em> no diminutivo com -inho:",
+        "opts": [
+          "Pequenininho",
+          "Pequeníssimo",
+          "Pequenão",
+          "Pequenoso"
+        ],
+        "correct": 0,
+        "fb": "pequeno → pequenininho (bem pequenininho mesmo!)."
+      },
+      {
+        "tema": "Adjetivos -íssimo/-inho",
+        "q": "Transforme <em>“legal”</em> no superlativo com -íssimo:",
+        "opts": [
+          "Legalzinho",
+          "Legalíssimo",
+          "Legalão",
+          "Legalzão"
+        ],
+        "correct": 1,
+        "fb": "legal → legalíssimo (muitíssimo legal)."
+      },
+      {
+        "tema": "Palavras com C e Ç",
+        "q": "Complete: <em>“A ma___ã caiu da árvore.”</em>",
+        "opts": [
+          "cã",
+          "çã",
+          "ssã",
+          "zã"
+        ],
+        "correct": 1,
+        "fb": "maçã se escreve com “ç” antes do “ã” (som de “ss”)."
+      },
+      {
+        "tema": "Palavras com C e Ç",
+        "q": "Qual está escrita corretamente?",
+        "opts": [
+          "Cedo",
+          "Çedo",
+          "Cêdo",
+          "Çêdo"
+        ],
+        "correct": 0,
+        "fb": "Antes de “e” e “i”, usamos apenas “c” (sem cedilha) para o som de “ss”: ce-do."
+      },
+      {
+        "tema": "Palavras com C e Ç",
+        "q": "Complete: <em>“Aquela mo___a é muito simpática.”</em>",
+        "opts": [
+          "ca",
+          "ça",
+          "ssa",
+          "za"
+        ],
+        "correct": 1,
+        "fb": "moça: “ç” antes de “a” para manter o som de “ss”."
+      },
+      {
+        "tema": "Palavras com C e Ç",
+        "q": "Qual está escrita corretamente?",
+        "opts": [
+          "Cinema",
+          "Çinema",
+          "Cínema",
+          "Cinéma"
+        ],
+        "correct": 0,
+        "fb": "Antes de “i”, o som de “ss” já é natural com “c” — não se usa cedilha: ci-ne-ma."
+      },
+      {
+        "tema": "Palavras com C e Ç",
+        "q": "Antes de quais vogais usamos a cedilha (ç)?",
+        "opts": [
+          "Antes de e e i",
+          "Antes de a, o e u",
+          "Antes de todas as vogais",
+          "Nunca se usa cedilha"
+        ],
+        "correct": 1,
+        "fb": "A cedilha aparece antes de a, o e u (caça, moço, açúcar). Antes de e e i, o “c” sozinho já tem som de “ss”."
+      },
+      {
+        "tema": "Relato de viagem",
+        "q": "O que é um <em>relato de viagem</em>?",
+        "opts": [
+          "Uma lista de compras",
+          "Um texto que conta experiências vividas durante uma viagem",
+          "Um mapa desenhado à mão",
+          "Uma receita de outro país"
+        ],
+        "correct": 1,
+        "fb": "O relato de viagem conta, de forma pessoal, o que alguém viveu, viu e sentiu durante uma viagem."
+      },
+      {
+        "tema": "Relato de viagem",
+        "q": "Quem geralmente conta a história em um relato de viagem?",
+        "opts": [
+          "Um narrador que não viajou",
+          "A própria pessoa que viveu a viagem (1ª pessoa)",
+          "Um personagem inventado",
+          "Sempre um jornalista de TV"
+        ],
+        "correct": 1,
+        "fb": "O relato de viagem costuma ser escrito em 1ª pessoa, por quem realmente viveu a experiência."
+      },
+      {
+        "tema": "Relato de viagem",
+        "q": "Qual destas NÃO é característica de um relato de viagem?",
+        "opts": [
+          "Contar fatos vividos pelo autor",
+          "Descrever lugares e sensações",
+          "Seguir uma ordem cronológica",
+          "Ter fórmulas matemáticas como conteúdo principal"
+        ],
+        "correct": 3,
+        "fb": "Relatos de viagem são textos narrativos e descritivos — não têm fórmulas matemáticas como foco."
+      },
+      {
+        "tema": "Relato de viagem",
+        "q": "Em um relato de viagem, os verbos costumam estar em qual tempo?",
+        "opts": [
+          "Futuro",
+          "Presente do subjuntivo",
+          "Passado (pretérito)",
+          "Imperativo"
+        ],
+        "correct": 2,
+        "fb": "Como o relato conta uma experiência já vivida, os verbos costumam estar no passado: “fomos”, “vimos”, “sentimos”."
+      },
+      {
+        "tema": "Relato de viagem",
+        "q": "Além dos fatos, o que um bom relato de viagem costuma trazer?",
+        "opts": [
+          "Apenas horários de voo",
+          "Impressões pessoais e sentimentos sobre o vivido",
+          "Somente números de documentos",
+          "Nenhuma opinião do autor"
+        ],
+        "correct": 1,
+        "fb": "O relato não é só uma lista de fatos — traz também como a pessoa se sentiu diante do que viveu."
+      },
+      {
+        "tema": "Uso do dicionário",
+        "q": "As palavras no dicionário aparecem em que ordem?",
+        "opts": [
+          "Ordem de tamanho",
+          "Ordem alfabética",
+          "Ordem do texto",
+          "Ordem aleatória"
+        ],
+        "correct": 1,
+        "fb": "O dicionário segue a ordem alfabética — por isso saber o alfabeto de cor ajuda a achar palavras rápido."
+      },
+      {
+        "tema": "Uso do dicionário",
+        "q": "Para procurar <em>“embarcar”</em>, o que buscamos primeiro?",
+        "opts": [
+          "A palavra “desembarcar”",
+          "A letra inicial: E",
+          "A última letra",
+          "O sinônimo"
+        ],
+        "correct": 1,
+        "fb": "Primeiro localizamos a letra inicial (E), depois seguimos a ordem alfabética das letras seguintes."
+      },
+      {
+        "tema": "Uso do dicionário",
+        "q": "O que aparece logo depois da palavra, indicando se é substantivo, adjetivo ou verbo?",
+        "opts": [
+          "O preço do livro",
+          "A classe gramatical abreviada (s.m., adj., v.)",
+          "O nome do autor",
+          "A cor da capa"
+        ],
+        "correct": 1,
+        "fb": "Logo após a palavra, o dicionário indica a classe gramatical de forma abreviada."
+      },
+      {
+        "tema": "Uso do dicionário",
+        "q": "Se uma palavra tem vários significados, como o dicionário os organiza?",
+        "opts": [
+          "Só mostra o primeiro",
+          "Numerados dentro do mesmo verbete",
+          "Em ordem alfabética dos significados",
+          "Sempre em outra página"
+        ],
+        "correct": 1,
+        "fb": "Quando há vários significados, eles vêm numerados dentro do mesmo verbete."
+      },
+      {
+        "tema": "Biografia",
+        "q": "O que é uma biografia?",
+        "opts": [
+          "Uma receita culinária",
+          "Um texto que conta a vida real de uma pessoa",
+          "Um poema sobre a natureza",
+          "Uma lista de tarefas"
+        ],
+        "correct": 1,
+        "fb": "A biografia narra fatos reais da vida de uma pessoa, geralmente contados por outra pessoa."
+      },
+      {
+        "tema": "Biografia",
+        "q": "Qual é a diferença entre <em>biografia</em> e <em>autobiografia</em>?",
+        "opts": [
+          "Não há diferença",
+          "Na autobiografia a própria pessoa conta sua vida; na biografia, outra pessoa conta",
+          "Biografia é sempre sobre animais",
+          "Autobiografia é sempre inventada"
+        ],
+        "correct": 1,
+        "fb": "Na autobiografia o autor fala de si mesmo; na biografia, alguém escreve sobre a vida de outra pessoa."
+      },
+      {
+        "tema": "Biografia",
+        "q": "Uma biografia costuma seguir qual ordem?",
+        "opts": [
+          "Ordem alfabética",
+          "Ordem cronológica (do nascimento em diante)",
+          "Ordem de tamanho das frases",
+          "Nenhuma ordem"
+        ],
+        "correct": 1,
+        "fb": "Biografias normalmente seguem a linha do tempo da vida da pessoa."
+      },
+      {
+        "tema": "Brincadeiras a bordo",
+        "q": "Quem são as autoras do relato “Brincadeiras a bordo”?",
+        "opts": [
+          "Laura, Tamara e Marininha Klink",
+          "Marina e Laura Antártica",
+          "Tamara e as amigas do colégio",
+          "Não é revelado no texto"
+        ],
+        "correct": 0,
+        "fb": "O texto é das irmãs Klink — Laura, Tamara e Marininha — do livro “Férias na Antártica”."
+      },
+      {
+        "tema": "Brincadeiras a bordo",
+        "q": "Para onde as irmãs Klink estavam viajando de barco?",
+        "opts": [
+          "Para o Caribe",
+          "Para a Antártica",
+          "Para a Europa",
+          "Para a Amazônia"
+        ],
+        "correct": 1,
+        "fb": "A viagem contada no relato é rumo à Antártica."
+      },
+      {
+        "tema": "Brincadeiras a bordo",
+        "q": "Segundo o texto, o que muda muito rápido na Antártica?",
+        "opts": [
+          "A cor do mar",
+          "O tempo — um lugar calmo pode virar tempestade",
+          "O idioma falado",
+          "O tamanho do barco"
+        ],
+        "correct": 1,
+        "fb": "O texto diz que o tempo muda muito rápido, e um lugar paradisíaco pode virar tempestade de repente."
+      },
+      {
+        "tema": "Brincadeiras a bordo",
+        "q": "No glossário do texto, o que significa <em>“paradisíaco”</em>?",
+        "opts": [
+          "Muito frio e gelado",
+          "Extremamente agradável, encantador",
+          "Perigoso e assustador",
+          "Distante e desconhecido"
+        ],
+        "correct": 1,
+        "fb": "Paradisíaco: extremamente agradável, encantador — como o glossário da página explica."
+      },
+      {
+        "tema": "Brincadeiras a bordo",
+        "q": "No glossário do texto, o que são <em>“icebergs”</em>?",
+        "opts": [
+          "Tipos de pinguim",
+          "Barcos de pesca",
+          "Massas de gelo que flutuam no mar",
+          "Roupas de frio"
+        ],
+        "correct": 2,
+        "fb": "Icebergs: massas de gelo que flutuam no mar, conforme o boxe do texto."
+      },
+      {
+        "tema": "Brincadeiras a bordo",
+        "q": "Qual brincadeira elas inventavam colocando papel debaixo dos pés?",
+        "opts": [
+          "Pular corda",
+          "Patins improvisados, para escorregar com o barco balançando",
+          "Jogo de tabuleiro",
+          "Corrida de saco"
+        ],
+        "correct": 1,
+        "fb": "Elas improvisavam patins com papel debaixo dos pés para escorregar quando o barco balançava."
+      },
+      {
+        "tema": "Brincadeiras a bordo",
+        "q": "Qual brincadeira o texto cita como só possível em lugares como a Antártica?",
+        "opts": [
+          "Jogar futebol na areia",
+          "Pegar pedaços de gelo pendurados e fingir que são picolés",
+          "Andar de bicicleta na cidade",
+          "Nadar na piscina"
+        ],
+        "correct": 1,
+        "fb": "O texto cita: pegar pedaços compridos de gelo pendurados nas pedras e fingir que são picolés."
+      },
+      {
+        "tema": "Brincadeiras a bordo",
+        "q": "Qual esporte radical na neve é citado no texto?",
+        "opts": [
+          "Surfe",
+          "Skate",
+          "Snowboard",
+          "Patinação artística"
+        ],
+        "correct": 2,
+        "fb": "O texto cita o snowboard entre as brincadeiras possíveis quando o tempo melhorava."
+      },
+      {
+        "tema": "Brincadeiras a bordo",
+        "q": "No trecho da página 161, quem conta sobre fazer receitas no barco?",
+        "opts": [
+          "Laura",
+          "Tamara",
+          "Marininha",
+          "O professor"
+        ],
+        "correct": 1,
+        "fb": "O segundo trecho é assinado por Tamara, que conta sobre o livro de receitas encontrado no barco."
+      }
+    ]
+  },
+  {
+    "id": "cien",
+    "icon": "🌿",
+    "name": "Ciências",
+    "date": "17/08",
+    "ano": 4,
+    "topics": "Relações entre seres vivos · Cadeia alimentar · Biomas",
+    "questions": [
+      {
+        "tema": "Relações ecológicas",
+        "q": "O que é uma relação ecológica <em>harmônica</em>?",
+        "opts": [
+          "Aquela em que os dois se prejudicam",
+          "Aquela em que pelo menos um se beneficia e nenhum é prejudicado",
+          "Aquela em que um mata o outro",
+          "Aquela que só acontece entre plantas"
+        ],
+        "correct": 1,
+        "fb": "Nas relações harmônicas ninguém sai prejudicado — pelo menos um dos seres é beneficiado."
+      },
+      {
+        "tema": "Relações ecológicas",
+        "q": "Por que a <em>cooperação</em> é uma relação harmônica?",
+        "opts": [
+          "Porque um animal engana o outro",
+          "Porque os dois trabalham juntos e ambos ganham com isso",
+          "Porque um se alimenta do outro",
+          "Porque eles brigam por comida"
+        ],
+        "correct": 1,
+        "fb": "Na cooperação os seres vivos se ajudam e os dois se beneficiam — ninguém sai perdendo."
+      },
+      {
+        "tema": "Relações ecológicas",
+        "q": "Qual é a característica dos animais que vivem em <em>sociedade</em>?",
+        "opts": [
+          "Vivem sozinhos e isolados",
+          "São da mesma espécie e dividem tarefas entre si",
+          "São de espécies diferentes que brigam",
+          "Vivem só dentro da água"
+        ],
+        "correct": 1,
+        "fb": "Animais em sociedade (formigas, abelhas, cupins) são da mesma espécie e cada grupo tem uma função."
+      },
+      {
+        "tema": "Relações ecológicas",
+        "q": "Qual destas é uma relação <em>desarmônica</em>?",
+        "opts": [
+          "Cooperação",
+          "Predatismo (um caça e come o outro)",
+          "Colônia",
+          "Sociedade"
+        ],
+        "correct": 1,
+        "fb": "No predatismo um ser vivo mata e come o outro — por isso é desarmônica, com prejuízo para um dos lados."
+      },
+      {
+        "tema": "Relações ecológicas",
+        "q": "O <em>parasitismo</em> é uma relação em que:",
+        "opts": [
+          "Os dois se beneficiam igualmente",
+          "Um vive à custa do outro, prejudicando-o",
+          "Nenhum dos dois é afetado",
+          "Os dois morrem juntos"
+        ],
+        "correct": 1,
+        "fb": "No parasitismo o parasita se alimenta do hospedeiro e o prejudica — como o carrapato no cachorro."
+      },
+      {
+        "tema": "Cadeia alimentar",
+        "q": "O que significam as <b>setas</b> em uma cadeia alimentar?",
+        "opts": [
+          "Apontam para quem é comido",
+          "Indicam para onde vai a energia — apontam para quem come",
+          "Mostram a direção do vento",
+          "Indicam o tamanho do animal"
+        ],
+        "correct": 1,
+        "fb": "A seta mostra o caminho da energia: aponta de quem é comido para quem come."
+      },
+      {
+        "tema": "Cadeia alimentar",
+        "q": "Quem são os <em>produtores</em> em uma cadeia alimentar?",
+        "opts": [
+          "Os leões e onças",
+          "As plantas, que produzem seu próprio alimento",
+          "Os fungos e bactérias",
+          "Os pássaros"
+        ],
+        "correct": 1,
+        "fb": "As plantas são produtoras porque fabricam seu próprio alimento pela fotossíntese — elas iniciam a cadeia."
+      },
+      {
+        "tema": "Cadeia alimentar",
+        "q": "Um animal <em>herbívoro</em> se alimenta de:",
+        "opts": [
+          "Outros animais",
+          "Plantas",
+          "Plantas e animais",
+          "Apenas insetos"
+        ],
+        "correct": 1,
+        "fb": "Herbívoros comem plantas: folhas, frutos, sementes. Exemplos: capivara, boi, veado."
+      },
+      {
+        "tema": "Cadeia alimentar",
+        "q": "Um animal <em>onívoro</em> se alimenta de:",
+        "opts": [
+          "Só plantas",
+          "Só carne",
+          "Plantas e animais",
+          "Apenas água"
+        ],
+        "correct": 2,
+        "fb": "Onívoros comem de tudo — plantas e animais. O ser humano e o porco são exemplos."
+      },
+      {
+        "tema": "Cadeia alimentar",
+        "q": "A onça-pintada, que caça outros animais, é classificada como:",
+        "opts": [
+          "Herbívora",
+          "Carnívora",
+          "Produtora",
+          "Decompositora"
+        ],
+        "correct": 1,
+        "fb": "Carnívoros se alimentam da carne de outros animais — a onça-pintada é um grande predador."
+      },
+      {
+        "tema": "Biomas brasileiros",
+        "q": "Qual é o <b>maior</b> bioma brasileiro?",
+        "opts": [
+          "Cerrado",
+          "Amazônia",
+          "Caatinga",
+          "Pantanal"
+        ],
+        "correct": 1,
+        "fb": "A Amazônia é o maior bioma do Brasil, com a maior floresta tropical do mundo."
+      },
+      {
+        "tema": "Biomas brasileiros",
+        "q": "Qual é o <b>segundo</b> maior bioma brasileiro?",
+        "opts": [
+          "Cerrado",
+          "Mata Atlântica",
+          "Pampa",
+          "Pantanal"
+        ],
+        "correct": 0,
+        "fb": "O Cerrado é o segundo maior bioma do Brasil, conhecido como a “savana brasileira”."
+      },
+      {
+        "tema": "Biomas brasileiros",
+        "q": "Em qual bioma encontramos a <em>vitória-régia</em>?",
+        "opts": [
+          "Caatinga",
+          "Pampa",
+          "Amazônia",
+          "Pantanal"
+        ],
+        "correct": 2,
+        "fb": "A vitória-régia é a planta aquática gigante típica dos rios da Amazônia."
+      },
+      {
+        "tema": "Biomas brasileiros",
+        "q": "Qual bioma é conhecido pelo clima seco, cactos e plantas que perdem as folhas?",
+        "opts": [
+          "Amazônia",
+          "Caatinga",
+          "Mata Atlântica",
+          "Pampa"
+        ],
+        "correct": 1,
+        "fb": "A Caatinga é o bioma do semiárido nordestino — seco, com cactos e plantas adaptadas à falta de água."
+      },
+      {
+        "tema": "Biomas brasileiros",
+        "q": "Qual bioma fica ao longo do litoral e é o mais desmatado do Brasil?",
+        "opts": [
+          "Cerrado",
+          "Mata Atlântica",
+          "Pantanal",
+          "Amazônia"
+        ],
+        "correct": 1,
+        "fb": "A Mata Atlântica acompanha o litoral brasileiro e restou pouca coisa dela por causa da ocupação humana."
+      },
+      {
+        "tema": "Biomas brasileiros",
+        "q": "Qual bioma é a maior área alagada do planeta?",
+        "opts": [
+          "Pantanal",
+          "Cerrado",
+          "Caatinga",
+          "Pampa"
+        ],
+        "correct": 0,
+        "fb": "O Pantanal é a maior planície alagável do mundo, com enchentes que mudam a paisagem todo ano."
+      },
+      {
+        "tema": "Biomas brasileiros",
+        "q": "Quais destes animais são típicos da Amazônia?",
+        "opts": [
+          "Pinguim e urso-polar",
+          "Boto-cor-de-rosa, arara e onça-pintada",
+          "Camelo e avestruz",
+          "Canguru e coala"
+        ],
+        "correct": 1,
+        "fb": "Boto-cor-de-rosa, araras, onças-pintadas e macacos são animais característicos da Amazônia."
+      }
+    ]
+  },
+  {
+    "id": "ipc1",
+    "icon": "📊",
+    "name": "Math + Humanities (IPC)",
+    "date": "19/08",
+    "ano": 4,
+    "topics": "Bar graph · Place value · Continentes · África",
+    "questions": [
+      {
+        "tema": "Place Value",
+        "q": "No número <em>472</em>, qual é o valor do algarismo 4?",
+        "opts": [
+          "4",
+          "40",
+          "400",
+          "4000"
+        ],
+        "correct": 2,
+        "fb": "O 4 está na casa das centenas (hundreds), então vale 400."
+      },
+      {
+        "tema": "Place Value",
+        "q": "No número <em>385</em>, o algarismo 8 está em qual casa?",
+        "opts": [
+          "Hundreds (centenas)",
+          "Tens (dezenas)",
+          "Ones (unidades)",
+          "Thousands (milhares)"
+        ],
+        "correct": 1,
+        "fb": "O 8 está na casa das dezenas (tens) e vale 80."
+      },
+      {
+        "tema": "Place Value",
+        "q": "Decompondo o número <em>629</em>, temos:",
+        "opts": [
+          "6 + 2 + 9",
+          "600 + 20 + 9",
+          "60 + 20 + 9",
+          "6000 + 200 + 90"
+        ],
+        "correct": 1,
+        "fb": "629 = 600 (hundreds) + 20 (tens) + 9 (ones)."
+      },
+      {
+        "tema": "Place Value",
+        "q": "Qual número é formado por 3 hundreds, 0 tens e 7 ones?",
+        "opts": [
+          "37",
+          "307",
+          "370",
+          "3007"
+        ],
+        "correct": 1,
+        "fb": "3 centenas (300) + 0 dezenas + 7 unidades = 307."
+      },
+      {
+        "tema": "Bar graph",
+        "q": "Em um gráfico de barras, o que indica a barra <b>mais alta</b>?",
+        "opts": [
+          "A menor quantidade",
+          "A maior quantidade",
+          "O valor médio",
+          "Nada em especial"
+        ],
+        "correct": 1,
+        "fb": "Quanto mais alta a barra, maior a quantidade que ela representa."
+      },
+      {
+        "tema": "Bar graph",
+        "q": "Num gráfico: Amazônia 40 árvores, Cerrado 25, Caatinga 15. Quantas a mais na Amazônia que na Caatinga?",
+        "opts": [
+          "15",
+          "25",
+          "40",
+          "55"
+        ],
+        "correct": 1,
+        "fb": "40 − 15 = 25 árvores a mais na Amazônia."
+      },
+      {
+        "tema": "Bar graph",
+        "q": "Para que serve o <em>título</em> de um gráfico?",
+        "opts": [
+          "Só para enfeitar",
+          "Para dizer sobre o que são os dados apresentados",
+          "Para indicar quem desenhou",
+          "Para mostrar a data"
+        ],
+        "correct": 1,
+        "fb": "O título explica o assunto do gráfico — é a primeira coisa a se ler para entender os dados."
+      },
+      {
+        "tema": "Word Problems",
+        "q": "Uma floresta tinha 850 árvores. Foram cortadas 320. Quantas restaram?",
+        "opts": [
+          "430",
+          "530",
+          "570",
+          "1170"
+        ],
+        "correct": 1,
+        "fb": "850 − 320 = 530 árvores restantes."
+      },
+      {
+        "tema": "Word Problems",
+        "q": "Um pesquisador contou 145 pássaros pela manhã e 168 à tarde. Quantos ao todo?",
+        "opts": [
+          "213",
+          "303",
+          "313",
+          "323"
+        ],
+        "correct": 2,
+        "fb": "145 + 168 = 313 pássaros no total."
+      },
+      {
+        "tema": "Continentes",
+        "q": "Quantos continentes existem, segundo a divisão que estudamos?",
+        "opts": [
+          "4",
+          "5",
+          "6",
+          "10"
+        ],
+        "correct": 2,
+        "fb": "São 6: América, Europa, Ásia, África, Oceania e Antártida."
+      },
+      {
+        "tema": "África",
+        "q": "Em qual continente fica <em>Ghana</em>?",
+        "opts": [
+          "Ásia",
+          "África",
+          "Europa",
+          "Oceania"
+        ],
+        "correct": 1,
+        "fb": "Ghana é um país da África Ocidental — cenário do livro “Red Shoes”."
+      },
+      {
+        "tema": "África",
+        "q": "O que significa <em>Sub-Saharan Africa</em> (África Subsaariana)?",
+        "opts": [
+          "A parte da África ao norte do deserto do Saara",
+          "A parte da África ao sul do deserto do Saara",
+          "Uma ilha perto da África",
+          "Um rio africano"
+        ],
+        "correct": 1,
+        "fb": "“Sub-Saharan” quer dizer “abaixo do Saara” — a região africana ao sul do grande deserto."
+      },
+      {
+        "tema": "África",
+        "q": "Qual é o maior deserto quente do mundo, localizado na África?",
+        "opts": [
+          "Deserto do Atacama",
+          "Deserto do Saara",
+          "Deserto do Gobi",
+          "Deserto da Namíbia"
+        ],
+        "correct": 1,
+        "fb": "O Saara é o maior deserto quente do planeta e ocupa boa parte do norte da África."
+      },
+      {
+        "tema": "África",
+        "q": "Uganda, país estudado no Booklet, fica em qual parte da África?",
+        "opts": [
+          "Norte",
+          "Leste (África Oriental)",
+          "Extremo sul",
+          "Oeste"
+        ],
+        "correct": 1,
+        "fb": "Uganda fica na África Oriental (leste do continente), na região dos Grandes Lagos."
+      }
+    ]
+  },
+  {
+    "id": "mat",
+    "icon": "🔢",
+    "name": "Matemática",
+    "date": "21/08",
+    "ano": 4,
+    "topics": "Adição · Subtração · Multiplicação · Frações",
+    "questions": [
+      {
+        "tema": "Nomes na adição",
+        "q": "Na conta <em>25 + 30 = 55</em>, como se chamam o 25 e o 30?",
+        "opts": [
+          "Parcelas",
+          "Total",
+          "Fatores",
+          "Restos"
+        ],
+        "correct": 0,
+        "fb": "Os números que somamos são as parcelas; o resultado (55) é o total ou soma."
+      },
+      {
+        "tema": "Nomes na adição",
+        "q": "Na adição, o resultado da conta recebe o nome de:",
+        "opts": [
+          "Produto",
+          "Total ou soma",
+          "Diferença",
+          "Quociente"
+        ],
+        "correct": 1,
+        "fb": "Na adição chamamos o resultado de total ou soma."
+      },
+      {
+        "tema": "Nomes na subtração",
+        "q": "Na subtração, o resultado da conta se chama:",
+        "opts": [
+          "Soma",
+          "Produto",
+          "Diferença ou resto",
+          "Parcela"
+        ],
+        "correct": 2,
+        "fb": "O resultado da subtração é a diferença (ou resto)."
+      },
+      {
+        "tema": "Adição com reagrupamento",
+        "q": "Quanto é <em>247 + 156</em>?",
+        "opts": [
+          "393",
+          "403",
+          "413",
+          "303"
+        ],
+        "correct": 1,
+        "fb": "7+6=13 (fica 3, vai 1); 4+5+1=10 (fica 0, vai 1); 2+1+1=4 → 403."
+      },
+      {
+        "tema": "Adição com reagrupamento",
+        "q": "Quanto é <em>368 + 275</em>?",
+        "opts": [
+          "533",
+          "633",
+          "643",
+          "553"
+        ],
+        "correct": 2,
+        "fb": "8+5=13 (fica 3, vai 1); 6+7+1=14 (fica 4, vai 1); 3+2+1=6 → 643."
+      },
+      {
+        "tema": "Adição com reagrupamento",
+        "q": "Na conta 48 + 37, ao somar 8 + 7 = 15, o que fazemos?",
+        "opts": [
+          "Escrevemos 15 embaixo do 8",
+          "Escrevemos o 5 e “vai 1” para a dezena",
+          "Apagamos tudo",
+          "Escrevemos só o 1"
+        ],
+        "correct": 1,
+        "fb": "Escrevemos o 5 nas unidades e levamos 1 dezena para a coluna seguinte — isso é o reagrupamento."
+      },
+      {
+        "tema": "Subtração",
+        "q": "Quanto é <em>325 − 148</em>?",
+        "opts": [
+          "167",
+          "177",
+          "187",
+          "223"
+        ],
+        "correct": 1,
+        "fb": "325 − 148 = 177 (é preciso pedir emprestado nas unidades e nas dezenas)."
+      },
+      {
+        "tema": "Subtração",
+        "q": "Quanto é <em>500 − 236</em>?",
+        "opts": [
+          "254",
+          "264",
+          "274",
+          "364"
+        ],
+        "correct": 1,
+        "fb": "500 − 236 = 264."
+      },
+      {
+        "tema": "Multiplicação",
+        "q": "Quanto é <em>7 × 8</em>?",
+        "opts": [
+          "48",
+          "54",
+          "56",
+          "64"
+        ],
+        "correct": 2,
+        "fb": "7 × 8 = 56. Vale decorar essa da tabuada do 7!"
+      },
+      {
+        "tema": "Multiplicação",
+        "q": "Quanto é <em>6 × 9</em>?",
+        "opts": [
+          "45",
+          "54",
+          "56",
+          "63"
+        ],
+        "correct": 1,
+        "fb": "6 × 9 = 54."
+      },
+      {
+        "tema": "Multiplicação",
+        "q": "Quanto é <em>9 × 7</em>?",
+        "opts": [
+          "56",
+          "63",
+          "72",
+          "81"
+        ],
+        "correct": 1,
+        "fb": "9 × 7 = 63."
+      },
+      {
+        "tema": "Decomposição",
+        "q": "Como podemos decompor o número <em>358</em>?",
+        "opts": [
+          "3 + 5 + 8",
+          "300 + 50 + 8",
+          "30 + 50 + 8",
+          "3000 + 500 + 80"
+        ],
+        "correct": 1,
+        "fb": "358 = 300 (centenas) + 50 (dezenas) + 8 (unidades)."
+      },
+      {
+        "tema": "Frações",
+        "q": "Como se lê a fração <em>½</em>?",
+        "opts": [
+          "Dois um",
+          "Um meio",
+          "Meio dois",
+          "Um dois"
+        ],
+        "correct": 1,
+        "fb": "½ se lê “um meio” — é uma parte de um inteiro dividido em 2."
+      },
+      {
+        "tema": "Frações",
+        "q": "Como se lê a fração <em>¼</em>?",
+        "opts": [
+          "Um quatro",
+          "Quatro um",
+          "Um quarto",
+          "Quarto um"
+        ],
+        "correct": 2,
+        "fb": "¼ se lê “um quarto” — uma parte de um inteiro dividido em 4."
+      },
+      {
+        "tema": "Frações",
+        "q": "Na fração <em>3/5</em>, o número 5 é chamado de:",
+        "opts": [
+          "Numerador",
+          "Denominador",
+          "Total",
+          "Parcela"
+        ],
+        "correct": 1,
+        "fb": "O de baixo é o denominador (em quantas partes dividimos); o de cima é o numerador (quantas pegamos)."
+      },
+      {
+        "tema": "Frações",
+        "q": "Uma pizza foi dividida em 4 pedaços iguais e Caio comeu 1. Que fração ele comeu?",
+        "opts": [
+          "1/2",
+          "1/3",
+          "1/4",
+          "3/4"
+        ],
+        "correct": 2,
+        "fb": "Ele comeu 1 pedaço de 4 → 1/4 (um quarto) da pizza."
+      },
+      {
+        "tema": "Frações",
+        "q": "Qual fração é <b>maior</b>: 1/2 ou 1/4?",
+        "opts": [
+          "1/2",
+          "1/4",
+          "São iguais",
+          "Não dá para comparar"
+        ],
+        "correct": 0,
+        "fb": "Quanto menor o denominador, maior o pedaço. Metade (1/2) é maior que um quarto (1/4)."
+      },
+      {
+        "tema": "Problemas",
+        "q": "Joana tinha 156 figurinhas e ganhou 87. Quantas ela tem agora?",
+        "opts": [
+          "233",
+          "243",
+          "253",
+          "143"
+        ],
+        "correct": 1,
+        "fb": "156 + 87 = 243 figurinhas."
+      },
+      {
+        "tema": "Problemas",
+        "q": "Numa caixa há 8 pacotes com 7 balas cada. Quantas balas ao todo?",
+        "opts": [
+          "15",
+          "49",
+          "56",
+          "64"
+        ],
+        "correct": 2,
+        "fb": "8 × 7 = 56 balas no total."
+      }
+    ]
+  },
+  {
+    "id": "ipc2",
+    "icon": "🦜",
+    "name": "Language Arts + Science (IPC)",
+    "date": "24/08",
+    "ano": 4,
+    "topics": "Was/Were · Why & Because · Animal habitats",
+    "questions": [
+      {
+        "tema": "Was / Were",
+        "q": "Complete: <em>I ___ at school yesterday.</em>",
+        "opts": [
+          "was",
+          "were",
+          "is",
+          "are"
+        ],
+        "correct": 0,
+        "fb": "Com <b>I</b>, <b>he</b>, <b>she</b>, <b>it</b> usamos <b>was</b>. Com <b>you</b>, <b>we</b>, <b>they</b> usamos <b>were</b>."
+      },
+      {
+        "tema": "Was / Were",
+        "q": "Complete: <em>They ___ very happy at the party.</em>",
+        "opts": [
+          "was",
+          "were",
+          "is",
+          "am"
+        ],
+        "correct": 1,
+        "fb": "“They” é plural → usamos <b>were</b>."
+      },
+      {
+        "tema": "Was / Were",
+        "q": "Complete: <em>She ___ in the rainforest last week.</em>",
+        "opts": [
+          "were",
+          "was",
+          "are",
+          "am"
+        ],
+        "correct": 1,
+        "fb": "“She” é singular → usamos <b>was</b>."
+      },
+      {
+        "tema": "Was / Were",
+        "q": "Qual é a forma <b>negativa</b> de “was”?",
+        "opts": [
+          "wasn't",
+          "weren't",
+          "isn't",
+          "don't"
+        ],
+        "correct": 0,
+        "fb": "was + not = <b>wasn't</b>. E were + not = <b>weren't</b>."
+      },
+      {
+        "tema": "Was / Were",
+        "q": "Complete a frase negativa: <em>We ___ at home yesterday.</em>",
+        "opts": [
+          "wasn't",
+          "weren't",
+          "isn't",
+          "aren't"
+        ],
+        "correct": 1,
+        "fb": "“We” é plural → weren't (were + not)."
+      },
+      {
+        "tema": "Why & Because",
+        "q": "Qual palavra usamos para <b>perguntar</b> o motivo em inglês?",
+        "opts": [
+          "What",
+          "Where",
+          "Why",
+          "When"
+        ],
+        "correct": 2,
+        "fb": "<b>Why</b> = por quê? Serve para perguntar a razão de alguma coisa."
+      },
+      {
+        "tema": "Why & Because",
+        "q": "Qual palavra usamos para <b>responder</b> um “Why”?",
+        "opts": [
+          "Because",
+          "Before",
+          "But",
+          "By"
+        ],
+        "correct": 0,
+        "fb": "<b>Because</b> = porque. É a palavra que introduz a explicação."
+      },
+      {
+        "tema": "Why & Because",
+        "q": "Complete: <em>“Why do you like the rainforest?” — “___ it has many animals.”</em>",
+        "opts": [
+          "But",
+          "Because",
+          "Where",
+          "When"
+        ],
+        "correct": 1,
+        "fb": "A resposta a um “Why” começa com <b>Because</b>."
+      },
+      {
+        "tema": "Why & Because",
+        "q": "Complete: <em>Tunico left the forest ___ there were no trees left.</em>",
+        "opts": [
+          "why",
+          "because",
+          "what",
+          "who"
+        ],
+        "correct": 1,
+        "fb": "Aqui explicamos o motivo → usamos <b>because</b>."
+      },
+      {
+        "tema": "Animal habitats",
+        "q": "What is a <em>habitat</em>?",
+        "opts": [
+          "A type of food",
+          "The place where an animal lives",
+          "A kind of tree",
+          "An animal's name"
+        ],
+        "correct": 1,
+        "fb": "Habitat é o lugar onde um animal vive e encontra o que precisa para sobreviver."
+      },
+      {
+        "tema": "Animal habitats",
+        "q": "Where does a <em>fish</em> live?",
+        "opts": [
+          "In the desert",
+          "In the water",
+          "In a tree",
+          "In a cave only"
+        ],
+        "correct": 1,
+        "fb": "Peixes vivem na água — rios, lagos e oceanos são seus habitats."
+      },
+      {
+        "tema": "Animal habitats",
+        "q": "Which animal lives in a <em>web</em>?",
+        "opts": [
+          "A bird",
+          "A spider",
+          "A frog",
+          "A snake"
+        ],
+        "correct": 1,
+        "fb": "A aranha (spider) constrói e vive em uma teia (web)."
+      },
+      {
+        "tema": "Animal traits",
+        "q": "Which animal has a <em>pouch</em> (bolsa)?",
+        "opts": [
+          "A kangaroo",
+          "A lion",
+          "An eagle",
+          "A shark"
+        ],
+        "correct": 0,
+        "fb": "O canguru tem uma pouch (bolsa) onde carrega o filhote."
+      },
+      {
+        "tema": "Animal traits",
+        "q": "Which animal has <em>wings</em>?",
+        "opts": [
+          "A snake",
+          "A toucan",
+          "A fish",
+          "A cow"
+        ],
+        "correct": 1,
+        "fb": "O tucano (toucan) é uma ave e tem wings (asas) — assim como o Tunico do livro!"
+      },
+      {
+        "tema": "Animal traits",
+        "q": "Which animal has <em>fur</em>?",
+        "opts": [
+          "A bear",
+          "A snake",
+          "A fish",
+          "A frog"
+        ],
+        "correct": 0,
+        "fb": "O urso (bear) tem fur — pelo grosso que ajuda a manter o calor."
+      },
+      {
+        "tema": "Animal traits",
+        "q": "Which animal has <em>horns</em>?",
+        "opts": [
+          "A goat",
+          "A parrot",
+          "A dolphin",
+          "A butterfly"
+        ],
+        "correct": 0,
+        "fb": "A cabra (goat) tem horns (chifres)."
+      },
+      {
+        "tema": "Rainforest",
+        "q": "Which animals are common in the <em>rainforest</em>?",
+        "opts": [
+          "Polar bears and penguins",
+          "Toucans, monkeys and jaguars",
+          "Camels and ostriches",
+          "Sheep and cows"
+        ],
+        "correct": 1,
+        "fb": "Tucanos, macacos e onças são animais típicos da floresta tropical."
+      },
+      {
+        "tema": "Rainforest",
+        "q": "What is the main cause of the rainforest <em>disappearing</em>?",
+        "opts": [
+          "Too much rain",
+          "Deforestation caused by humans",
+          "Too many animals",
+          "Cold weather"
+        ],
+        "correct": 1,
+        "fb": "O desmatamento (deforestation) causado pela ação humana é a principal causa do desaparecimento das florestas."
+      },
+      {
+        "tema": "Habitats",
+        "q": "Which habitat feels <em>cold</em>?",
+        "opts": [
+          "The desert",
+          "The Arctic (polar habitat)",
+          "The rainforest",
+          "The savanna"
+        ],
+        "correct": 1,
+        "fb": "O Ártico e as regiões polares são os habitats frios."
+      },
+      {
+        "tema": "Habitats",
+        "q": "Which habitat is <em>dark</em>?",
+        "opts": [
+          "A cave",
+          "A beach",
+          "A field",
+          "A garden"
+        ],
+        "correct": 0,
+        "fb": "A caverna (cave) é um habitat escuro, onde vivem morcegos e outros animais adaptados."
+      }
+    ]
+  }
+];
+
+// =========================================================
+//  EVOLUÇÃO DO TRANSPORTE
+// =========================================================
+const vehicles = [
+  {min:0,  icon:'🚶', name:'A pé'},
+  {min:3,  icon:'🚲', name:'De bicicleta'},
+  {min:6,  icon:'🛵', name:'De moto'},
+  {min:9,  icon:'🚗', name:'De carro'},
+  {min:12, icon:'🚂', name:'De trem'},
+  {min:15, icon:'⛵', name:'De barco'},
+  {min:18, icon:'✈️', name:'De avião'},
+  {min:24, icon:'🚀', name:'De foguete'},
+  {min:30, icon:'🛸', name:'Nave espacial'}
+];
+function getVehicleIndex(s){
+  let vi = 0;
+  vehicles.forEach((v,i)=>{ if(s >= v.min) vi = i; });
+  return vi;
+}
+
+// =========================================================
+//  VERIFICAÇÃO DE ARMAZENAMENTO
+//  No Chrome, abrir o arquivo direto do disco (file://) pode bloquear
+//  o localStorage. Sem isso, nada é salvo — melhor avisar do que
+//  deixar a criança perder o progresso sem entender o motivo.
+// =========================================================
+let armazenamentoOK = (function(){
+  try{
+    const teste = '__teste_passaporte__';
+    localStorage.setItem(teste, '1');
+    const leu = localStorage.getItem(teste) === '1';
+    localStorage.removeItem(teste);
+    return leu;
+  }catch(e){ return false; }
+})();
+
+function avisoArmazenamento(){
+  if(armazenamentoOK) return '';
+  return `
+    <div class="aviso-storage">
+      <b>⚠️ O progresso não será salvo neste modo</b>
+      <span>Este navegador está bloqueando o salvamento porque o arquivo foi aberto
+      direto do computador. Dá para jogar normalmente, mas os carimbos e o progresso
+      somem ao fechar. Para salvar, abra pelo link do jogo na internet.</span>
+    </div>`;
+}
+
+// =========================================================
+//  PERFIS DE ALUNO
+//  Cada aluno tem progresso e carimbos separados no mesmo aparelho.
+// =========================================================
+const PERFIS_KEY = 'passaporte-perfis-v1';
+const PERFIL_ATIVO_KEY = 'passaporte-perfil-ativo-v1';
+
+// usados quando o navegador bloqueia o armazenamento
+let perfisMemoria = [];
+let perfilMemoriaAtivo = null;
+
+function lerPerfis(){
+  if(!armazenamentoOK) return perfisMemoria;
+  try{ return JSON.parse(localStorage.getItem(PERFIS_KEY)) || []; }catch(e){ return []; }
+}
+function salvarPerfis(lista){
+  if(!armazenamentoOK){ perfisMemoria = lista; return; }
+  try{ localStorage.setItem(PERFIS_KEY, JSON.stringify(lista)); }catch(e){}
+}
+function perfilAtivo(){
+  if(!armazenamentoOK) return perfilMemoriaAtivo;
+  try{ return localStorage.getItem(PERFIL_ATIVO_KEY) || null; }catch(e){ return null; }
+}
+function definirPerfilAtivo(id){
+  if(!armazenamentoOK){ perfilMemoriaAtivo = id; return; }
+  try{ localStorage.setItem(PERFIL_ATIVO_KEY, id); }catch(e){}
+}
+function nomePerfilAtivo(){
+  const p = lerPerfis().find(x => x.id === perfilAtivo());
+  return p ? p.nome : '';
+}
+function iconePerfilAtivo(){
+  const p = lerPerfis().find(x => x.id === perfilAtivo());
+  return p ? p.icone : '🙂';
+}
+
+// todas as chaves de dados passam por aqui, para separar por aluno
+function chave(base){
+  const p = perfilAtivo();
+  return p ? `${base}::${p}` : base;
+}
+
+function criarPerfil(nome, icone){
+  const lista = lerPerfis();
+  // id único mesmo se dois perfis forem criados no mesmo milissegundo
+  let id;
+  do {
+    id = 'p' + Date.now().toString(36) + Math.random().toString(36).slice(2,8);
+  } while(lista.some(p => p.id === id));
+  lista.push({id, nome, icone: icone || '🙂', criadoEm: Date.now()});
+  salvarPerfis(lista);
+  definirPerfilAtivo(id);
+  return id;
+}
+
+function excluirPerfil(id){
+  const lista = lerPerfis().filter(p => p.id !== id);
+  salvarPerfis(lista);
+  // limpa os dados daquele aluno
+  try{
+    [STORAGE, CARIMBOS_KEY, STATS_KEY].forEach(base=>{
+      localStorage.removeItem(`${base}::${id}`);
+    });
+  }catch(e){}
+  if(perfilAtivo() === id){
+    definirPerfilAtivo(lista.length ? lista[0].id : '');
+  }
+}
+
+// ---------- backup: exportar / importar ----------
+function exportarProgresso(){
+  const dados = {
+    app: 'Passaporte do Saber',
+    versao: 1,
+    exportadoEm: new Date().toISOString(),
+    perfis: lerPerfis(),
+    dados: {}
+  };
+  lerPerfis().forEach(p => {
+    dados.dados[p.id] = {};
+    [STORAGE, CARIMBOS_KEY, STATS_KEY].forEach(base=>{
+      try{
+        const v = localStorage.getItem(`${base}::${p.id}`);
+        if(v) dados.dados[p.id][base] = v;
+      }catch(e){}
+    });
+  });
+
+  const blob = new Blob([JSON.stringify(dados,null,2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'passaporte-progresso-' + new Date().toISOString().slice(0,10) + '.json';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  setTimeout(()=>URL.revokeObjectURL(url), 1000);
+}
+
+function importarProgresso(file){
+  const reader = new FileReader();
+  reader.onload = e => {
+    try{
+      const d = JSON.parse(e.target.result);
+      if(!d.perfis || !d.dados) throw new Error('arquivo inválido');
+
+      const atuais = lerPerfis();
+      d.perfis.forEach(p => {
+        if(!atuais.find(x => x.id === p.id)) atuais.push(p);
+      });
+      salvarPerfis(atuais);
+
+      Object.keys(d.dados).forEach(pid => {
+        Object.keys(d.dados[pid]).forEach(base => {
+          try{ localStorage.setItem(`${base}::${pid}`, d.dados[pid][base]); }catch(er){}
+        });
+      });
+      alert('Progresso restaurado com sucesso!');
+      renderPerfis();
+    }catch(err){
+      alert('Não consegui ler este arquivo. Verifique se é um backup do Passaporte do Saber.');
+    }
+  };
+  reader.readAsText(file);
+}
+
+// =========================================================
+//  CARIMBOS DO PASSAPORTE (conquistas)
+// =========================================================
+const CARIMBOS = [
+  {id:'primeira',  icon:'🎫', nome:'Primeira Viagem',   desc:'Terminou uma matéria pela primeira vez'},
+  {id:'estudioso', icon:'📚', nome:'Estudioso',         desc:'Usou o Modo Estudo antes de jogar'},
+  {id:'nota10',    icon:'💯', nome:'Nota Máxima',       desc:'Acertou 100% de uma matéria'},
+  {id:'quase',     icon:'🌟', nome:'Quase Perfeito',    desc:'Acertou 80% ou mais de uma matéria'},
+  {id:'sequencia', icon:'🔥', nome:'Cinco Seguidas',    desc:'Acertou 5 perguntas seguidas'},
+  {id:'foguete',   icon:'🚀', nome:'Piloto de Foguete', desc:'Chegou ao foguete numa partida'},
+  {id:'cacador',   icon:'🎯', nome:'Caçador de Erros',  desc:'Zerou uma revisão dos próprios erros'},
+  {id:'explorador',icon:'🗺️', nome:'Explorador',        desc:'Jogou todas as matérias do seu ano'},
+  {id:'insistente',icon:'💪', nome:'Insistente',        desc:'Jogou a mesma matéria 3 vezes'},
+  {id:'maratona',  icon:'🏅', nome:'Maratonista',       desc:'Respondeu 100 perguntas no total'}
+];
+
+const CARIMBOS_KEY = 'passaporte-carimbos-v1';
+const STATS_KEY = 'passaporte-stats-v1';
+
+function lerCarimbos(){
+  try{ return JSON.parse(localStorage.getItem(chave(CARIMBOS_KEY))) || {}; }catch(e){ return {}; }
+}
+function lerStats(){
+  try{ return JSON.parse(localStorage.getItem(chave(STATS_KEY))) || {respondidas:0, partidas:{}}; }
+  catch(e){ return {respondidas:0, partidas:{}}; }
+}
+function salvarStats(s){
+  try{ localStorage.setItem(chave(STATS_KEY), JSON.stringify(s)); }catch(e){}
+}
+
+let carimbosNovos = [];   // ganhos nesta partida, para mostrar na tela final
+
+function darCarimbo(id){
+  const c = lerCarimbos();
+  if(c[id]) return false;              // já tinha
+  c[id] = Date.now();
+  try{ localStorage.setItem(chave(CARIMBOS_KEY), JSON.stringify(c)); }catch(e){}
+  carimbosNovos.push(CARIMBOS.find(x => x.id === id));
+  return true;
+}
+
+// maior sequência de acertos seguidos na partida
+function maiorSequencia(){
+  let max = 0, atual = 0;
+  order.forEach((q,i)=>{
+    if(answers[i] !== null && answers[i] === q.correct){ atual++; max = Math.max(max,atual); }
+    else if(answers[i] !== null){ atual = 0; }
+  });
+  return max;
+}
+
+function verificarCarimbos(){
+  const score = getScore();
+  const total = order.length;
+  const pct = total ? score/total : 0;
+
+  const stats = lerStats();
+  stats.respondidas = (stats.respondidas || 0) + answers.filter(a=>a!==null).length;
+  stats.partidas[current.id] = (stats.partidas[current.id] || 0) + 1;
+  salvarStats(stats);
+
+  darCarimbo('primeira');
+  if(pct === 1 && total >= 5) darCarimbo('nota10');
+  else if(pct >= 0.8) darCarimbo('quase');
+  if(maiorSequencia() >= 5) darCarimbo('sequencia');
+  if(getVehicleIndex(score) >= 7) darCarimbo('foguete');
+  if(modoRevisao && pct === 1) darCarimbo('cacador');
+  if(stats.partidas[current.id] >= 3) darCarimbo('insistente');
+  if(stats.respondidas >= 100) darCarimbo('maratona');
+
+  // explorador: jogou todas as matérias do mesmo ano
+  const doAno = subjects.filter(s => (s.ano||4) === (current.ano||4));
+  if(doAno.every(s => stats.partidas[s.id])) darCarimbo('explorador');
+}
+
+// =========================================================
+//  ESTADO
+// =========================================================
+let current = null;
+let order = [];
+let answers = [];
+let idx = 0;
+let vehicleIndex = 0;
+let justEvolved = false;
+let anoFiltro = null;
+let modoRevisao = false;
+let estudoIdx = 0;
+let estudoVirado = false;
+let temaEstudo = null;
+
+// =========================================================
+//  PROGRESSO SALVO (localStorage)
+// =========================================================
+const STORAGE = 'passaporte-progresso-v1';
+
+function lerProgresso(){
+  try{ return JSON.parse(localStorage.getItem(chave(STORAGE))) || {}; }
+  catch(e){ return {}; }
+}
+function salvarProgresso(subjectId, dados){
+  try{
+    const tudo = lerProgresso();
+    tudo[subjectId] = dados;
+    localStorage.setItem(chave(STORAGE), JSON.stringify(tudo));
+  }catch(e){ /* modo privado ou storage cheio — segue sem salvar */ }
+}
+function limparProgresso(subjectId){
+  try{
+    const tudo = lerProgresso();
+    delete tudo[subjectId];
+    localStorage.setItem(chave(STORAGE), JSON.stringify(tudo));
+  }catch(e){}
+}
+
+// guarda o estado atual da partida para poder retomar
+function persistirPartida(){
+  if(!current) return;
+  salvarProgresso(current.id, {
+    perguntas: order.map(q => q.q),   // identifica as perguntas pelo enunciado
+    answers: answers,
+    idx: idx,
+    modoRevisao: modoRevisao,
+    quando: Date.now()
+  });
+}
+
+// registra quais perguntas foram erradas, para o modo revisão
+function registrarErros(){
+  if(!current) return;
+  const erradas = order
+    .map((q,i) => (answers[i] !== null && answers[i] !== q.correct) ? q.q : null)
+    .filter(Boolean);
+  const tudo = lerProgresso();
+  const anterior = tudo[current.id] || {};
+  salvarProgresso(current.id, {
+    ...anterior,
+    erradas: erradas,
+    ultimoScore: getScore(),
+    ultimoTotal: order.length,
+    concluidoEm: Date.now()
+  });
+}
+
+function temErrosSalvos(subjectId){
+  const p = lerProgresso()[subjectId];
+  return p && Array.isArray(p.erradas) && p.erradas.length > 0;
+}
+function contarErrosSalvos(subjectId){
+  const p = lerProgresso()[subjectId];
+  return (p && p.erradas) ? p.erradas.length : 0;
+}
+function temPartidaEmAndamento(subjectId){
+  const p = lerProgresso()[subjectId];
+  return p && Array.isArray(p.answers) && p.answers.some(a => a !== null)
+           && p.answers.some(a => a === null);
+}
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i=a.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [a[i],a[j]]=[a[j],a[i]];
+  }
+  return a;
+}
+function getScore(){
+  return answers.reduce((acc,ans,i) => acc + (ans !== null && ans === order[i].correct ? 1 : 0), 0);
+}
+function isPast(ddmm){
+  const [d,m] = ddmm.split('/').map(Number);
+  const today = new Date();
+  const exam = new Date(today.getFullYear(), m-1, d);
+  const todayOnly = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+  return exam < todayOnly;
+}
+
+// =========================================================
+//  MAPA DE PONTOS FRACOS (desempenho por tema)
+// =========================================================
+function desempenhoPorTema(){
+  const mapa = {};
+  order.forEach((q,i)=>{
+    if(answers[i] === null) return;          // não respondida não conta
+    if(!mapa[q.tema]) mapa[q.tema] = {tema:q.tema, acertos:0, total:0};
+    mapa[q.tema].total++;
+    if(answers[i] === q.correct) mapa[q.tema].acertos++;
+  });
+  return Object.values(mapa)
+    .map(t => ({...t, pct: t.total ? t.acertos/t.total : 0}))
+    .sort((a,b) => a.pct - b.pct);           // pior primeiro
+}
+
+function nivelTema(pct){
+  if(pct >= 0.8) return {classe:'forte', rotulo:'Mandou bem', icone:'✅'};
+  if(pct >= 0.5) return {classe:'medio', rotulo:'Quase lá',   icone:'⚠️'};
+  return {classe:'fraco', rotulo:'Revisar',  icone:'📕'};
+}
+
+// estuda só as cartas de um tema específico
+function estudarTema(subjectId, tema){
+  current = subjects.find(s => s.id === subjectId);
+  if(!current) return;
+  const filtradas = current.questions.filter(q => q.tema === tema);
+  if(!filtradas.length){ iniciarEstudo(subjectId); return; }
+  order = filtradas;
+  estudoIdx = 0;
+  estudoVirado = false;
+  temaEstudo = tema;
+  darCarimbo('estudioso');
+  renderEstudo();
+}
+
+// =========================================================
+//  MODO ESTUDO (flashcards — ensina antes de testar)
+// =========================================================
+function iniciarEstudo(id){
+  current = subjects.find(s => s.id === id);
+  order = current.questions.slice();
+  estudoIdx = 0;
+  estudoVirado = false;
+  temaEstudo = null;
+  darCarimbo('estudioso');
+  renderEstudo();
+}
+
+function virarCarta(){
+  estudoVirado = !estudoVirado;
+  renderEstudo();
+}
+function estudoAnterior(){
+  if(estudoIdx > 0){ estudoIdx--; estudoVirado = false; renderEstudo(); }
+}
+function estudoProxima(){
+  if(estudoIdx < order.length - 1){ estudoIdx++; estudoVirado = false; renderEstudo(); }
+  else renderEstudoFim();
+}
+
+function renderEstudo(){
+  const q = order[estudoIdx];
+  const pct = Math.round(((estudoIdx+1)/order.length)*100);
+
+  document.getElementById('screen').innerHTML = `
+    <div class="top-nav">
+      <div class="subject-label">📚 Modo Estudo · ${temaEstudo ? temaEstudo : current.name}</div>
+    </div>
+
+    ${temaEstudo ? `<div class="tema-flag">📕 Revisando só: <b>${temaEstudo}</b></div>` : ''}
+
+    <div class="estudo-progresso">
+      <div class="estudo-track"><div class="estudo-fill" style="width:${pct}%"></div></div>
+      <div class="estudo-contador">Carta ${estudoIdx+1} de ${order.length}</div>
+    </div>
+
+    <div class="card flashcard ${estudoVirado ? 'virado' : ''}" onclick="virarCarta()">
+      <span class="topic-tag">${q.tema}</span>
+      <p class="question">${q.q}</p>
+
+      ${estudoVirado ? `
+        <div class="resposta-box">
+          <div class="resposta-label">Resposta</div>
+          <div class="resposta-texto">${q.opts[q.correct]}</div>
+        </div>
+        <div class="feedback">${q.fb}</div>
+      ` : `
+        <div class="virar-dica">👆 Toque no card para ver a resposta</div>
+      `}
+    </div>
+
+    <div class="nav-row">
+      <button class="btn btn-back" onclick="estudoAnterior()" ${estudoIdx===0?'disabled':''}>← Anterior</button>
+      <button class="btn btn-home" onclick="backToMenu()">🏠 Menu</button>
+      <button class="btn btn-next" onclick="estudoProxima()">
+        ${estudoIdx === order.length-1 ? '✅ Terminei' : 'Próxima →'}
+      </button>
+    </div>
+  `;
+}
+
+function renderEstudoFim(){
+  document.getElementById('screen').innerHTML = `
+    <div class="top-nav">
+      <div class="subject-label">📚 Modo Estudo · ${current.name}</div>
+    </div>
+    <div class="end-screen">
+      <div class="stamp">🧠</div>
+      <h2>Estudou tudo!</h2>
+      <p>Você passou pelas ${order.length} cartas de <b>${current.name}</b>.</p>
+      <p>Agora vem a melhor parte: testar se ficou na cabeça. Estudar e depois se testar
+      é o que faz a memória fixar de verdade.</p>
+      <div class="end-actions">
+        <button class="btn btn-next" onclick="startSubject('${current.id}')">🎮 Jogar agora</button>
+        <button class="btn btn-back" onclick="iniciarEstudo('${current.id}')">🔁 Estudar de novo</button>
+        <button class="btn btn-home" onclick="backToMenu()">🏠 Menu principal</button>
+      </div>
+    </div>
+  `;
+}
+
+// =========================================================
+//  MEU PASSAPORTE (coleção de carimbos)
+// =========================================================
+function renderPassaporte(){
+  const ganhos = lerCarimbos();
+  const stats = lerStats();
+  const qtd = Object.keys(ganhos).length;
+
+  const grid = CARIMBOS.map(c => {
+    const tem = !!ganhos[c.id];
+    return `
+      <div class="carimbo ${tem ? 'ganho' : 'bloqueado'}">
+        <div class="carimbo-icon">${tem ? c.icon : '❔'}</div>
+        <div class="carimbo-nome">${c.nome}</div>
+        <div class="carimbo-desc">${c.desc}</div>
+      </div>`;
+  }).join('');
+
+  document.getElementById('screen').innerHTML = `
+    <div class="top-nav">
+      <div class="subject-label">🛂 Meu Passaporte</div>
+    </div>
+
+    <div class="passaporte-resumo">
+      <div class="pr-item"><b>${qtd}</b><span>de ${CARIMBOS.length} carimbos</span></div>
+      <div class="pr-item"><b>${stats.respondidas||0}</b><span>perguntas respondidas</span></div>
+    </div>
+
+    <div class="carimbo-grid">${grid}</div>
+
+    <div class="nav-row" style="grid-template-columns:1fr;">
+      <button class="btn btn-home" onclick="backToMenu()">🏠 Voltar ao menu</button>
+    </div>
+  `;
+}
+
+// =========================================================
+//  TELA DE PERFIS
+// =========================================================
+const ICONES_PERFIL = ['🙂','🚀','🦊','🐢','🦁','🐼','🦄','⚽','🎸','🌟','🐙','🦖'];
+
+function renderPerfis(){
+  const perfis = lerPerfis();
+  const ativo = perfilAtivo();
+
+  const lista = perfis.length ? perfis.map(p => `
+    <div class="perfil-card ${p.id===ativo?'ativo':''}">
+      <button class="perfil-principal" onclick="trocarPerfil('${p.id}')">
+        <span class="perfil-icone">${p.icone}</span>
+        <span class="perfil-nome">${p.nome}${p.id===ativo?' <small>(em uso)</small>':''}</span>
+      </button>
+      <button class="perfil-excluir" onclick="confirmarExcluirPerfil('${p.id}', ${JSON.stringify(p.nome)})">🗑</button>
+    </div>
+  `).join('') : '<div class="menu-intro">Nenhum aluno cadastrado ainda.</div>';
+
+  document.getElementById('screen').innerHTML = `
+    <div class="top-nav"><div class="subject-label">👥 Quem vai estudar?</div></div>
+    ${avisoArmazenamento()}
+    <div class="perfil-lista">${lista}</div>
+
+    <div class="perfil-novo">
+      <div class="pn-titulo">➕ Adicionar aluno</div>
+      <input type="text" id="novoNome" class="perfil-input" placeholder="Nome do aluno" maxlength="20">
+      <div class="icone-grid">
+        ${ICONES_PERFIL.map((ic,i)=>`
+          <button class="icone-opt ${i===0?'sel':''}" onclick="selecionarIcone(this,'${ic}')">${ic}</button>
+        `).join('')}
+      </div>
+      <button class="btn btn-next" style="width:100%;" onclick="adicionarPerfil()">Criar perfil</button>
+    </div>
+
+    <div class="backup-box">
+      <div class="pn-titulo">💾 Backup do progresso</div>
+      <p class="backup-texto">
+        O progresso fica salvo neste aparelho. Para levar para outro aparelho
+        (ou não perder se limpar o navegador), baixe o backup e depois restaure.
+      </p>
+      <button class="btn btn-back" style="width:100%; margin-bottom:9px;" onclick="exportarProgresso()">⬇️ Baixar backup</button>
+      <label class="btn btn-home" style="width:100%; cursor:pointer;">
+        ⬆️ Restaurar backup
+        <input type="file" accept=".json" style="display:none"
+               onchange="if(this.files[0]) importarProgresso(this.files[0])">
+      </label>
+    </div>
+
+    ${perfis.length ? `
+      <div class="nav-row" style="grid-template-columns:1fr; margin-top:16px;">
+        <button class="btn btn-next" onclick="backToMenu()">🏠 Ir para as matérias</button>
+      </div>` : ''}
+  `;
+}
+
+let iconeEscolhido = ICONES_PERFIL[0];
+function selecionarIcone(el, ic){
+  iconeEscolhido = ic;
+  document.querySelectorAll('.icone-opt').forEach(b=>b.classList.remove('sel'));
+  el.classList.add('sel');
+}
+
+function adicionarPerfil(){
+  const nome = (document.getElementById('novoNome').value || '').trim();
+  if(!nome){ alert('Digite o nome do aluno.'); return; }
+  criarPerfil(nome, iconeEscolhido);
+  renderPerfis();
+}
+
+function trocarPerfil(id){
+  definirPerfilAtivo(id);
+  backToMenu();
+}
+
+function confirmarExcluirPerfil(id, nome){
+  if(!confirm(`Excluir o perfil de ${nome}? Todo o progresso e os carimbos dele serão apagados.`)) return;
+  excluirPerfil(id);
+  renderPerfis();
+}
+
+// =========================================================
+//  MENU
+// =========================================================
+function renderMenu(){
+  const anos = [...new Set(subjects.map(s => s.ano || 4))].sort((a,b)=>a-b);
+
+  // filtro de ano só aparece se houver mais de um ano cadastrado
+  const filtroHtml = anos.length > 1 ? `
+    <div class="ano-filtro">
+      <button class="ano-btn ${anoFiltro===null?'active':''}" onclick="setAno(null)">Todos</button>
+      ${anos.map(a=>`
+        <button class="ano-btn ${anoFiltro===a?'active':''}" onclick="setAno(${a})">${a}º ano</button>
+      `).join('')}
+    </div>` : '';
+
+  const visiveis = subjects.filter(s => anoFiltro === null || (s.ano||4) === anoFiltro);
+
+  const cards = visiveis.map(s => {
+    const past = isPast(s.date);
+    const erros = contarErrosSalvos(s.id);
+    const emAndamento = temPartidaEmAndamento(s.id);
+
+    const extras = [];
+    extras.push(`<button class="mini-btn estudar" onclick="event.stopPropagation(); iniciarEstudo('${s.id}')">📚 Estudar esta matéria</button>`);
+    if(emAndamento) extras.push(`<button class="mini-btn retomar" onclick="event.stopPropagation(); retomar('${s.id}')">▶️ Continuar</button>`);
+    if(erros) extras.push(`<button class="mini-btn revisar" onclick="event.stopPropagation(); revisarErros('${s.id}')">🎯 Só as ${erros} que errei</button>`);
+
+    return `
+    <div class="subject-block">
+      <button class="subject-card ${past ? 'done' : ''}" onclick="startSubject('${s.id}')">
+        <div class="sc-icon">${s.icon}</div>
+        <div class="sc-body">
+          <div class="sc-name">${s.name}</div>
+          <div class="sc-topics">${s.topics}</div>
+        </div>
+        <div class="sc-date ${past ? 'past' : ''}">
+          ${past ? '<span class="check">✅</span><small>FEITA</small>' : '<small>PROVA</small>'}${s.date}
+        </div>
+      </button>
+      ${extras.length ? `<div class="card-extras">${extras.join('')}</div>` : ''}
+    </div>`;
+  }).join('');
+
+  const ganhos = Object.keys(lerCarimbos()).length;
+
+  document.getElementById('screen').innerHTML = `
+    ${avisoArmazenamento()}
+    <button class="perfil-barra" onclick="renderPerfis()">
+      <span class="pba-icone">${iconePerfilAtivo()}</span>
+      <span class="pba-texto">Estudando como <b>${nomePerfilAtivo()}</b></span>
+      <span class="pba-trocar">trocar</span>
+    </button>
+
+    <button class="passaporte-banner" onclick="renderPassaporte()">
+      <span class="pb-icon">🛂</span>
+      <span class="pb-texto">
+        <b>Meu Passaporte</b>
+        <small>${ganhos} de ${CARIMBOS.length} carimbos conquistados</small>
+      </span>
+      <span class="pb-seta">›</span>
+    </button>
+
+    <div class="menu-intro">Escolha a matéria que você quer estudar hoje 👇</div>
+    ${filtroHtml}
+    ${cards || '<div class="menu-intro">Nenhuma matéria para este ano ainda.</div>'}
+  `;
+}
+
+function setAno(a){
+  anoFiltro = a;
+  renderMenu();
+}
+
+// retoma uma partida interrompida
+function retomar(id){
+  const p = lerProgresso()[id];
+  current = subjects.find(s => s.id === id);
+  if(!p || !current){ startSubject(id); return; }
+
+  // remonta a ordem exata das perguntas pelo enunciado salvo
+  const porEnunciado = {};
+  current.questions.forEach(q => { porEnunciado[q.q] = q; });
+  const remontada = (p.perguntas || []).map(txt => porEnunciado[txt]).filter(Boolean);
+
+  // se o conteúdo mudou desde a última vez, começa limpo
+  if(remontada.length !== (p.perguntas||[]).length){
+    limparProgresso(id);
+    startSubject(id);
+    return;
+  }
+
+  order = remontada;
+  answers = p.answers.slice(0, order.length);
+  while(answers.length < order.length) answers.push(null);
+  idx = Math.min(p.idx || 0, order.length - 1);
+  modoRevisao = !!p.modoRevisao;
+  vehicleIndex = getVehicleIndex(getScore());
+  justEvolved = false;
+  renderQuestion();
+}
+
+// joga só as perguntas erradas da última partida
+function revisarErros(id){
+  const p = lerProgresso()[id];
+  current = subjects.find(s => s.id === id);
+  if(!p || !p.erradas || !current) { startSubject(id); return; }
+
+  const set = new Set(p.erradas);
+  const soErradas = current.questions.filter(q => set.has(q.q));
+  if(!soErradas.length){ startSubject(id); return; }
+
+  order = shuffle(soErradas);
+  answers = new Array(order.length).fill(null);
+  idx = 0;
+  vehicleIndex = 0;
+  justEvolved = false;
+  modoRevisao = true;
+  renderQuestion();
+}
+
+function startSubject(id){
+  current = subjects.find(s => s.id === id);
+  order = shuffle(current.questions);
+  answers = new Array(order.length).fill(null);
+  idx = 0;
+  vehicleIndex = 0;
+  justEvolved = false;
+  modoRevisao = false;
+  renderQuestion();
+}
+
+function backToMenu(){
+  persistirPartida();
+  current = null;
+  modoRevisao = false;
+  renderMenu();
+}
+
+// =========================================================
+//  PERGUNTA
+// =========================================================
+function renderQuestion(){
+  const q = order[idx];
+  const given = answers[idx];
+  const isAnswered = given !== null;
+  const score = getScore();
+
+  const routeHtml = order.map((_, i) => {
+    let cls = 'stop';
+    if(answers[i] !== null){
+      cls += (answers[i] === order[i].correct) ? ' correct' : ' wrong';
+    }
+    if(i === idx) cls += ' current';
+    return `<div class="${cls}">${i+1}</div>`;
+  }).join('');
+
+  const v = vehicles[vehicleIndex];
+  const next = vehicles[vehicleIndex+1];
+  let pct = 100, sub = 'Nível máximo alcançado!';
+  if(next){
+    pct = Math.max(0, Math.min(100, Math.round(((score - v.min) / (next.min - v.min)) * 100)));
+    sub = `${Math.max(0, next.min - score)} acerto(s) até virar "${next.name}" ${next.icon}`;
+  }
+
+  const optsHtml = q.opts.map((opt, i) => {
+    let cls = 'opt', mark = '';
+    if(isAnswered){
+      if(i === q.correct){ cls += ' correct'; mark = '✓'; }
+      else if(i === given){ cls += ' wrong'; mark = '✕'; }
+    }
+    return `<button class="${cls}" ${isAnswered ? 'disabled' : ''} onclick="selectAnswer(${i})">
+      <span class="opt-mark">${mark}</span><span>${opt}</span>
+    </button>`;
+  }).join('');
+
+  const feedbackHtml = isAnswered
+    ? `<div class="feedback">${given === q.correct ? '🎉 Isso mesmo! ' : '✕ Ops — '}${q.fb}</div>`
+    : '';
+
+  const isLast = idx === order.length - 1;
+
+  document.getElementById('screen').innerHTML = `
+    <div class="top-nav">
+      <div class="subject-label">${current.icon} ${current.name} · Prova ${current.date}</div>
+    </div>
+
+    ${modoRevisao ? '<div class="revisao-flag">🎯 Modo revisão — só as que você errou</div>' : ''}
+
+    <div class="route">${routeHtml}</div>
+
+    ${justEvolved ? `<div class="evolve-banner">🎉 Evoluiu! Agora você viaja ${v.name.toLowerCase()} ${v.icon}</div>` : ''}
+
+    <div class="vehicle-bar">
+      <div class="vehicle-icon ${justEvolved ? 'pulse' : ''}">${v.icon}</div>
+      <div class="vehicle-info">
+        <div class="vehicle-name">${v.name}</div>
+        <div class="vehicle-track"><div class="vehicle-fill" style="width:${pct}%"></div></div>
+      </div>
+    </div>
+    <div class="vehicle-sub">${sub}</div>
+
+    <div class="card">
+      <span class="topic-tag">${q.tema}</span>
+      <p class="question">${q.q}</p>
+      <div class="options">${optsHtml}</div>
+      ${feedbackHtml}
+    </div>
+
+    <div class="nav-row">
+      <button class="btn btn-back" onclick="prevQuestion()" ${idx === 0 ? 'disabled' : ''}>← Anterior</button>
+      <button class="btn btn-home" onclick="backToMenu()">🏠 Menu</button>
+      <button class="btn btn-next" onclick="nextQuestion()" ${isAnswered ? '' : 'disabled'}>${isLast ? '🏁 Ver resultado' : 'Próxima →'}</button>
+    </div>
+  `;
+  justEvolved = false;
+}
+
+function selectAnswer(i){
+  if(answers[idx] !== null) return;
+  answers[idx] = i;
+  const oldVi = vehicleIndex;
+  vehicleIndex = getVehicleIndex(getScore());
+  justEvolved = vehicleIndex > oldVi;
+  persistirPartida();
+  renderQuestion();
+}
+
+function prevQuestion(){
+  if(idx > 0){ idx--; renderQuestion(); }
+}
+
+function nextQuestion(){
+  if(answers[idx] === null) return;
+  if(idx < order.length - 1){ idx++; renderQuestion(); }
+  else renderEnd();
+}
+
+// =========================================================
+//  RESULTADO
+// =========================================================
+function renderEnd(){
+  carimbosNovos = [];
+  if(!modoRevisao) registrarErros();
+  verificarCarimbos();
+  const score = getScore();
+  const total = order.length;
+  const pct = Math.round((score/total)*100);
+  let msg, stamp;
+  if(pct === 100){ msg = "Viagem perfeita! Passaporte cheio de carimbos!"; stamp="🏆"; }
+  else if(pct >= 80){ msg = "Excelente viagem! Só faltou pouquinho."; stamp="🌟"; }
+  else if(pct >= 60){ msg = "Boa viagem! Vale revisar alguns pontos."; stamp="🧭"; }
+  else { msg = "Ainda dá tempo de revisar antes da prova!"; stamp="📖"; }
+
+  const finalVehicle = vehicles[getVehicleIndex(score)];
+  const temas = desempenhoPorTema();
+
+  const reviewHtml = order.map((q, i) => {
+    const ok = answers[i] === q.correct;
+    return `<div class="r-item">
+      <span class="r-mark ${ok ? 'r-ok' : 'r-bad'}">${ok ? '✓' : '✕'}</span>
+      <span><b>${q.tema}</b> — ${q.q.replace(/<[^>]*>/g,'')}</span>
+    </div>`;
+  }).join('');
+
+  document.getElementById('screen').innerHTML = `
+    <div class="top-nav">
+      <div class="subject-label">${current.icon} ${current.name} · Prova ${current.date}</div>
+    </div>
+    <div class="end-screen">
+      <div class="stamp">${stamp}</div>
+      <h2>Chegamos ao destino!</h2>
+      <div class="result-msg">${score} de ${total} acertos (${pct}%)</div>
+      <p>Você terminou a viagem <b>${finalVehicle.name.toLowerCase()} ${finalVehicle.icon}</b></p>
+      <p>${msg}</p>
+      ${carimbosNovos.length ? `
+        <div class="carimbos-novos">
+          <div class="cn-titulo">🎉 ${carimbosNovos.length === 1 ? 'Novo carimbo!' : 'Novos carimbos!'}</div>
+          ${carimbosNovos.map(c=>`
+            <div class="cn-item">
+              <span class="cn-icon">${c.icon}</span>
+              <span><b>${c.nome}</b><br><small>${c.desc}</small></span>
+            </div>`).join('')}
+        </div>` : ''}
+      <div class="mapa-temas">
+        <div class="mt-titulo">🧭 Onde você está bem e onde precisa reforçar</div>
+        ${temas.map(t=>{
+          const n = nivelTema(t.pct);
+          return `
+          <div class="mt-linha ${n.classe}">
+            <div class="mt-topo">
+              <span class="mt-nome">${n.icone} ${t.tema}</span>
+              <span class="mt-placar">${t.acertos}/${t.total}</span>
+            </div>
+            <div class="mt-track"><div class="mt-fill" style="width:${Math.round(t.pct*100)}%"></div></div>
+            ${t.pct < 0.8
+              ? `<button class="mt-btn" onclick="estudarTema('${current.id}', ${JSON.stringify(t.tema)})">📚 Estudar este tema</button>`
+              : `<div class="mt-ok">${n.rotulo}</div>`}
+          </div>`;
+        }).join('')}
+      </div>
+
+      <div class="review">${reviewHtml}</div>
+      <div class="end-actions">
+        <button class="btn btn-next" onclick="reviewAnswers()">🔍 Revisar questões</button>
+        <button class="btn btn-back" onclick="startSubject('${current.id}')">🔁 Jogar de novo</button>
+        <button class="btn btn-home" onclick="backToMenu()">🏠 Menu principal</button>
+      </div>
+    </div>
+  `;
+}
+
+function reviewAnswers(){
+  idx = 0;
+  renderQuestion();
+}
+
+// ---------- início ----------
+// sem armazenamento (file:// bloqueado), cria um perfil temporário em memória
+// para o jogo continuar utilizável — só não persiste ao fechar.
+if(!armazenamentoOK){
+  perfisMemoria = [{id:'temp', nome:'Visitante', icone:'🙂'}];
+  perfilMemoriaAtivo = 'temp';
+  renderMenu();
+} else if(!lerPerfis().length || !perfilAtivo()){
+  renderPerfis();
+} else {
+  renderMenu();
+}
+</script>
+
+</body>
+</html>

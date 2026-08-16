@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Scarton Software">
+<meta name="copyright" content="© __BUILD_YEAR__ Scarton Software. Todos os direitos reservados.">
+<meta name="description" content="Passaporte do Saber — jogo de revisão para provas escolares. Scarton Software.">
+<meta name="theme-color" content="#0F3D3E">
+<!--
+  Passaporte do Saber™
+  © __BUILD_YEAR__ Scarton Software. Todos os direitos reservados.
+  Este software e seu conteúdo são protegidos por direitos autorais.
+  Uso, cópia, modificação ou distribuição sem autorização expressa são proibidos.
+-->
+<title>Passaporte do Saber — Avaliações 2º Período</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;900&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0F3D3E;
+    --navy-deep:#0A2C2D;
+    --paper:#F2E9D8;
+    --mustard:#E8A33D;
+    --brick:#C1440E;
+    --ok:#3C7A5C;
+    --ink:#1C2B2B;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    min-height:100vh;
+    background:
+      radial-gradient(circle at 20% 10%, rgba(232,163,61,0.15), transparent 40%),
+      radial-gradient(circle at 85% 85%, rgba(193,68,14,0.15), transparent 45%),
+      var(--navy);
+    font-family:'Nunito', 'Segoe UI', Roboto, system-ui, sans-serif;
+    color:var(--ink);
+    display:flex;
+    justify-content:center;
+    padding:18px 12px 40px;
+  }
+  .app{width:100%; max-width:540px;}
+
+  header.top{text-align:center; color:var(--paper); margin-bottom:18px;}
+  header.top .eyebrow{
+    font-size:13px; letter-spacing:2px; text-transform:uppercase;
+    color:var(--mustard); font-weight:900;
+    text-shadow:0 1px 3px rgba(0,0,0,0.4);
+  }
+  header.top h1{
+    font-family:'Fraunces', Georgia, 'Times New Roman', serif; font-weight:900;
+    font-size:clamp(30px,8.5vw,40px); margin:6px 0 0; line-height:1.02;
+    color:#FFF8EA;
+    letter-spacing:-0.5px;
+    text-shadow:
+      0 2px 0 rgba(10,44,45,0.9),
+      0 4px 14px rgba(0,0,0,0.5);
+  }
+  header.top h1 .accent{
+    color:var(--mustard);
+    display:block;
+    font-size:0.82em;
+  }
+  .title-rule{
+    width:70px; height:4px; border-radius:99px;
+    background:var(--mustard);
+    margin:12px auto 0;
+    box-shadow:0 2px 8px rgba(232,163,61,0.5);
+  }
+
+  .menu-intro{
+    color:#FFF8EA; text-align:center; font-size:15px;
+    font-weight:700; opacity:1; margin-bottom:18px;
+    text-shadow:0 1px 4px rgba(0,0,0,0.35);
+  }
+  .subject-card{
+    display:flex; align-items:center; gap:14px;
+    background:var(--paper);
+    border:3px solid var(--navy-deep);
+    border-radius:16px;
+    padding:14px 16px;
+    margin-bottom:12px;
+    cursor:pointer;
+    text-align:left;
+    width:100%;
+    font-family:'Nunito', 'Segoe UI', Roboto, system-ui, sans-serif;
+    transition:transform .12s ease;
+  }
+  .subject-card:active{transform:scale(0.98);}
+  .subject-card:hover{background:#fff8ec;}
+  .sc-icon{font-size:30px; line-height:1;}
+  .sc-body{flex:1;}
+  .sc-name{
+    font-family:'Fraunces', Georgia, 'Times New Roman', serif; font-weight:700;
+    font-size:16px; color:var(--navy-deep); line-height:1.2;
+  }
+  .sc-topics{font-size:14px; color:#2f4141; margin-top:5px; font-weight:700; line-height:1.35;}
+  .sc-date{
+    background:var(--navy); color:#FFF8EA;
+    font-size:16px; font-weight:900; letter-spacing:0.5px;
+    padding:9px 13px; border-radius:14px; white-space:nowrap;
+    text-align:center; line-height:1.25;
+  }
+  .sc-date small{display:block; font-size:12px; opacity:1; letter-spacing:1px; font-weight:800;}
+  .sc-date.past{
+    background:var(--ok);
+    border:2px solid #2b5c44;
+    box-shadow:0 0 0 3px rgba(60,122,92,0.25);
+  }
+  .sc-date.past small{
+    opacity:1; color:#fff; font-weight:900; font-size:13px; letter-spacing:0.5px;
+  }
+  .sc-date.past .check{
+    display:block; font-size:20px; line-height:1; margin-bottom:1px;
+  }
+  .subject-card.done{border-color:var(--ok);}
+  .subject-card.done .sc-name::after{
+    content:"✓";
+    color:var(--ok);
+    font-weight:900;
+    margin-left:7px;
+    font-size:15px;
+  }
+
+  .route{
+    display:flex; gap:7px; justify-content:center;
+    margin:14px 0 14px; flex-wrap:wrap;
+  }
+  .stop{
+    width:36px; height:36px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    font-size:15px; font-weight:900;
+    background:#FFF8EA;
+    color:var(--navy-deep);
+    border:3px solid var(--paper);
+    box-shadow:0 2px 6px rgba(0,0,0,0.3);
+  }
+  .stop.correct{background:#3FA06B; color:#fff; border-color:#8FE3B4;}
+  .stop.wrong{background:#E0501A; color:#fff; border-color:#FFAE8C;}
+  .stop.current{
+    box-shadow:0 0 0 4px var(--mustard), 0 3px 8px rgba(0,0,0,0.4);
+    transform:scale(1.18);
+    z-index:2;
+  }
+
+  .vehicle-bar{
+    display:flex; align-items:center; gap:12px;
+    background:#0A2C2D;
+    border:3px solid var(--mustard);
+    border-radius:14px; padding:12px 15px; margin-bottom:6px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.3);
+  }
+  .vehicle-icon{font-size:30px; line-height:1; filter:drop-shadow(0 3px 3px rgba(0,0,0,0.3));}
+  .vehicle-icon.pulse{animation:pulse 0.7s ease;}
+  @keyframes pulse{
+    0%{transform:scale(1);}
+    35%{transform:scale(1.5) rotate(-8deg);}
+    65%{transform:scale(1.5) rotate(8deg);}
+    100%{transform:scale(1);}
+  }
+  .vehicle-info{flex:1;}
+  .vehicle-name{color:#FFF8EA; font-weight:900; font-size:15px; text-shadow:0 1px 3px rgba(0,0,0,0.35);}
+  .vehicle-track{height:9px; border-radius:99px; background:rgba(10,44,45,0.45); margin-top:6px; overflow:hidden;}
+  .vehicle-fill{height:100%; background:var(--mustard); border-radius:99px; transition:width .4s ease; box-shadow:0 0 8px rgba(232,163,61,0.6);}
+  .vehicle-sub{color:#FFF8EA; font-size:13px; font-weight:700; opacity:1; margin:6px 0 14px 2px; text-shadow:0 1px 3px rgba(0,0,0,0.35);}
+  .evolve-banner{
+    background:var(--mustard); color:var(--navy-deep);
+    font-weight:800; font-size:14px; text-align:center;
+    padding:10px; border-radius:12px; margin-bottom:10px;
+    animation:dropIn .4s ease;
+  }
+  @keyframes dropIn{
+    from{opacity:0; transform:translateY(-10px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+
+  .card{
+    background:var(--paper); border-radius:18px;
+    padding:22px 20px 26px;
+    box-shadow:0 18px 40px rgba(0,0,0,0.35);
+    position:relative; border:3px solid var(--navy-deep);
+  }
+  .card::before{
+    content:""; position:absolute; inset:8px;
+    border:2px dashed rgba(15,61,62,0.55);
+    border-radius:12px; pointer-events:none;
+  }
+  .topic-tag{
+    display:inline-block; background:var(--navy); color:var(--paper);
+    font-size:13px; font-weight:900; letter-spacing:0.8px; text-transform:uppercase;
+    padding:5px 12px; border-radius:999px; margin-bottom:14px;
+  }
+  .question{
+    font-family:'Fraunces', Georgia, 'Times New Roman', serif; font-weight:700;
+    font-size:18px; line-height:1.4; margin:0 0 18px; color:var(--navy-deep);
+  }
+  .question em{color:var(--brick); font-style:normal; border-bottom:3px solid var(--mustard);}
+  .options{display:flex; flex-direction:column; gap:10px;}
+  .opt{
+    display:flex; align-items:center; gap:10px;
+    text-align:left; font-family:'Nunito', 'Segoe UI', Roboto, system-ui, sans-serif;
+    font-size:15.5px; font-weight:700;
+    padding:13px 16px; border-radius:12px;
+    border:2px solid var(--navy); background:#fff; color:var(--navy-deep);
+    cursor:pointer; transition:transform .12s ease, background .15s ease;
+  }
+  .opt:active{transform:scale(0.98);}
+  .opt.correct{background:var(--ok); border-color:var(--ok); color:#fff;}
+  .opt.wrong{background:var(--brick); border-color:var(--brick); color:#fff;}
+  .opt[disabled]{cursor:default;}
+  .opt:not([disabled]):hover{background:#fff8ec;}
+  .opt-mark{font-size:17px; font-weight:900; width:18px; flex-shrink:0;}
+
+  .feedback{
+    margin-top:16px; font-size:15.5px; font-weight:700; color:var(--navy-deep);
+    background:#FBE6C2; border-left:6px solid var(--mustard);
+    padding:13px 16px; border-radius:10px; line-height:1.45;
+  }
+
+  /* ---------- NAVEGAÇÃO ---------- */
+  .nav-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:18px;
+  }
+  .nav-row .btn-next{grid-column:1 / -1;}
+
+  .btn{
+    border:none;
+    padding:15px 18px;
+    border-radius:14px;
+    font-family:'Nunito', 'Segoe UI', Roboto, system-ui, sans-serif;
+    font-weight:800;
+    font-size:15px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+    min-height:52px;
+    transition:transform .12s ease, background .15s ease;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .btn-back{
+    background:var(--paper);
+    color:var(--navy-deep);
+    border:3px solid var(--navy-deep);
+    box-shadow:0 5px 0 rgba(10,44,45,0.55);
+  }
+  .btn-back:not(:disabled):hover{background:#fff8ec;}
+  .btn-back:not(:disabled):active{transform:translateY(3px); box-shadow:0 2px 0 rgba(10,44,45,0.55);}
+
+  .btn-home{
+    background:var(--mustard);
+    color:var(--navy-deep);
+    border:3px solid #b97d20;
+    box-shadow:0 5px 0 #b97d20;
+  }
+  .btn-home:hover{background:#f0b45c;}
+  .btn-home:active{transform:translateY(3px); box-shadow:0 2px 0 #b97d20;}
+
+  .btn-next{
+    background:var(--brick);
+    color:#fff;
+    border:3px solid #8f3309;
+    box-shadow:0 5px 0 #8f3309;
+    font-size:16px;
+  }
+  .btn-next:not(:disabled):hover{background:#d64d10;}
+  .btn-next:not(:disabled):active{transform:translateY(3px); box-shadow:0 2px 0 #8f3309;}
+
+  .btn:disabled{opacity:0.3; cursor:default; box-shadow:none;}
+
+  .top-nav{
+    display:flex; justify-content:center; align-items:center;
+    margin-bottom:12px;
+  }
+  .subject-label{
+    color:var(--mustard); font-weight:900; font-size:13px;
+    letter-spacing:1.5px; text-transform:uppercase; text-align:center;
+    text-shadow:0 1px 4px rgba(0,0,0,0.45);
+  }
+
+  .end-screen{
+    background:var(--paper); border-radius:18px; padding:30px 22px;
+    text-align:center; box-shadow:0 18px 40px rgba(0,0,0,0.35);
+    border:3px solid var(--navy-deep);
+  }
+  .end-screen h2{font-family:'Fraunces', Georgia, 'Times New Roman', serif; font-size:26px; color:var(--navy-deep); margin-top:0;}
+  .end-screen p{font-size:16px; font-weight:700; color:var(--ink); line-height:1.45;}
+  .stamp{font-size:60px; margin:6px 0;}
+  .result-msg{font-family:'Fraunces', Georgia, 'Times New Roman', serif; font-weight:900; font-size:22px; color:var(--brick); margin:10px 0;}
+  .review{
+    text-align:left; background:#fff; border-radius:12px;
+    padding:14px 18px; margin:16px 0; font-size:14.5px;
+    max-height:260px; overflow-y:auto;
+    border:2px solid rgba(15,61,62,0.25);
+    line-height:1.4;
+  }
+  .r-item{padding:9px 0; border-bottom:2px solid #eee; display:flex; gap:10px; align-items:flex-start;}
+  .r-item:last-child{border-bottom:none;}
+  .r-mark{font-weight:900; font-size:18px; flex-shrink:0;}
+  .r-ok{color:var(--ok);}
+  .r-bad{color:var(--brick);}
+  .end-actions{
+    display:grid; grid-template-columns:1fr; gap:10px; margin-top:6px;
+  }
+  @media (min-width:600px){
+    .end-actions{grid-template-columns:1fr 1fr; }
+    .end-actions .btn:first-child{grid-column:1 / -1;}
+  }
+
+  /* ---------- FILTRO DE ANO ---------- */
+  .ano-filtro{
+    display:flex; gap:8px; justify-content:center;
+    flex-wrap:wrap; margin-bottom:18px;
+  }
+  .ano-btn{
+    background:#0A2C2D; color:#FFF8EA;
+    border:3px solid var(--mustard);
+    padding:10px 18px; border-radius:99px;
+    font-family:'Nunito', 'Segoe UI', Roboto, system-ui, sans-serif; font-weight:900; font-size:15px;
+    cursor:pointer; transition:transform .12s ease;
+  }
+  .ano-btn:active{transform:scale(0.96);}
+  .ano-btn.active{background:var(--mustard); color:var(--navy-deep);}
+
+  /* ---------- AÇÕES EXTRAS NO CARD ---------- */
+  .subject-block{
+    margin-bottom:26px;
+    background:rgba(10,44,45,0.55);
+    border-radius:18px;
+    padding:6px;
+    border:2px solid rgba(232,163,61,0.35);
+  }
+  .subject-block .subject-card{
+    margin-bottom:0;
+    border-radius:13px;
+  }
+  .card-extras{
+    display:flex; gap:7px; flex-wrap:wrap;
+    margin-top:6px; padding:0 2px 2px;
+  }
+  .mini-btn{
+    border:none; padding:11px 14px; border-radius:11px;
+    font-family:'Nunito', 'Segoe UI', Roboto, system-ui, sans-serif; font-weight:900; font-size:14px;
+    cursor:pointer; flex:1; min-width:140px;
+  }
+  .mini-btn.retomar{
+    background:var(--mustard); color:var(--navy-deep);
+    box-shadow:0 4px 0 #b97d20;
+  }
+  .mini-btn.retomar:active{transform:translateY(2px); box-shadow:0 2px 0 #b97d20;}
+  .mini-btn.revisar{
+    background:#FFF8EA; color:var(--brick);
+    border:3px solid var(--brick); box-shadow:0 4px 0 #8f3309;
+  }
+  .mini-btn.revisar:active{transform:translateY(2px); box-shadow:0 2px 0 #8f3309;}
+
+  /* ---------- FAIXA DE MODO REVISÃO ---------- */
+  .revisao-flag{
+    background:var(--brick); color:#fff;
+    font-weight:900; font-size:14px; text-align:center;
+    padding:10px 14px; border-radius:12px; margin-bottom:12px;
+    border:3px solid #8f3309;
+  }
+
+  /* ---------- RODAPÉ ---------- */
+  .rodape{
+    text-align:center; color:#FFF8EA; font-size:13px;
+    font-weight:700; margin-top:26px; line-height:1.6;
+    text-shadow:0 1px 3px rgba(0,0,0,0.4);
+  }
+  .rodape a{color:var(--mustard);}
+
+  /* ---------- BANNER DO PASSAPORTE ---------- */
+  .passaporte-banner{
+    display:flex; align-items:center; gap:14px; width:100%;
+    background:#0A2C2D; border:3px solid var(--mustard);
+    border-radius:16px; padding:14px 18px; margin-bottom:16px;
+    cursor:pointer; font-family:'Nunito', 'Segoe UI', Roboto, system-ui, sans-serif; text-align:left;
+    box-shadow:0 4px 14px rgba(0,0,0,0.3);
+  }
+  .passaporte-banner:active{transform:scale(0.98);}
+  .pb-icon{font-size:32px;}
+  .pb-texto{flex:1; color:#FFF8EA;}
+  .pb-texto b{font-size:17px; font-weight:900; display:block;}
+  .pb-texto small{font-size:13.5px; color:var(--mustard); font-weight:700;}
+  .pb-seta{color:var(--mustard); font-size:30px; font-weight:900; line-height:1;}
+
+  /* ---------- COLEÇÃO DE CARIMBOS ---------- */
+  .passaporte-resumo{
+    display:flex; gap:12px; margin-bottom:16px;
+  }
+  .pr-item{
+    flex:1; background:#0A2C2D; border:3px solid var(--mustard);
+    border-radius:14px; padding:14px 10px; text-align:center; color:#FFF8EA;
+  }
+  .pr-item b{display:block; font-size:30px; font-family:'Fraunces', Georgia, 'Times New Roman', serif; color:var(--mustard);}
+  .pr-item span{font-size:13px; font-weight:700;}
+
+  .carimbo-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:11px; margin-bottom:18px;
+  }
+  .carimbo{
+    background:var(--paper); border:3px solid var(--navy-deep);
+    border-radius:14px; padding:14px 11px; text-align:center;
+  }
+  .carimbo.ganho{border-color:var(--ok); box-shadow:0 0 0 3px rgba(60,122,92,0.25);}
+  .carimbo.bloqueado{background:#c9c2b4;}
+  .carimbo.bloqueado .carimbo-icon{opacity:0.45;}
+  .carimbo-icon{font-size:38px; line-height:1; margin-bottom:6px;}
+  .carimbo-nome{font-family:'Fraunces', Georgia, 'Times New Roman', serif; font-weight:900; font-size:14.5px; color:var(--navy-deep);}
+  .carimbo-desc{font-size:12.5px; color:#3f5252; font-weight:600; margin-top:4px; line-height:1.3;}
+
+  .carimbos-novos{
+    background:#FBE6C2; border:3px solid var(--mustard);
+    border-radius:14px; padding:14px; margin:16px 0; text-align:left;
+  }
+  .cn-titulo{
+    font-family:'Fraunces', Georgia, 'Times New Roman', serif; font-weight:900; font-size:17px;
+    color:var(--navy-deep); text-align:center; margin-bottom:10px;
+  }
+  .cn-item{display:flex; align-items:center; gap:11px; padding:7px 0; font-size:14px;}
+  .cn-icon{font-size:30px;}
+  .cn-item small{color:#3f5252; font-weight:600;}
+
+  /* ---------- MODO ESTUDO ---------- */
+  .estudo-progresso{margin-bottom:14px;}
+  .estudo-track{
+    height:11px; background:rgba(10,44,45,0.5); border-radius:99px;
+    overflow:hidden; border:2px solid var(--mustard);
+  }
+  .estudo-fill{
+    height:100%; background:var(--mustard); border-radius:99px;
+    transition:width .3s ease;
+  }
+  .estudo-contador{
+    color:#FFF8EA; font-weight:800; font-size:14px;
+    text-align:center; margin-top:7px;
+    text-shadow:0 1px 3px rgba(0,0,0,0.4);
+  }
+  .flashcard{cursor:pointer; min-height:210px;}
+  .flashcard.virado{border-color:var(--ok);}
+  .virar-dica{
+    text-align:center; color:#3f5252; font-weight:800;
+    font-size:15px; margin-top:26px; padding:14px;
+    background:rgba(15,61,62,0.08); border-radius:12px;
+  }
+  .resposta-box{
+    background:var(--ok); color:#fff; border-radius:12px;
+    padding:14px 16px; margin-top:6px;
+  }
+  .resposta-label{
+    font-size:12px; font-weight:900; letter-spacing:1.5px;
+    text-transform:uppercase; opacity:0.9;
+  }
+  .resposta-texto{font-size:18px; font-weight:800; margin-top:4px; line-height:1.3;}
+
+  .mini-btn.estudar{
+    background:#0A2C2D; color:#FFF8EA;
+    border:3px solid var(--mustard); box-shadow:0 4px 0 #b97d20;
+  }
+  .mini-btn.estudar:active{transform:translateY(2px); box-shadow:0 2px 0 #b97d20;}
+
+  /* ---------- MAPA DE PONTOS FRACOS ---------- */
+  .mapa-temas{
+    background:#fff; border:3px solid var(--navy-deep);
+    border-radius:14px; padding:16px 14px; margin:18px 0; text-align:left;
+  }
+  .mt-titulo{
+    font-family:'Fraunces', Georgia, 'Times New Roman', serif; font-weight:900; font-size:17px;
+    color:var(--navy-deep); text-align:center; margin-bottom:14px; line-height:1.3;
+  }
+  .mt-linha{
+    padding:12px; border-radius:12px; margin-bottom:10px;
+    border:2px solid rgba(15,61,62,0.2); background:#FAF6EE;
+  }
+  .mt-linha:last-child{margin-bottom:0;}
+  .mt-linha.fraco{border-color:var(--brick); background:#FDEDE5;}
+  .mt-linha.medio{border-color:var(--mustard); background:#FDF3E2;}
+  .mt-linha.forte{border-color:var(--ok); background:#EAF6EF;}
+
+  .mt-topo{display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:8px;}
+  .mt-nome{font-weight:900; font-size:15px; color:var(--navy-deep); line-height:1.25;}
+  .mt-placar{
+    font-weight:900; font-size:15px; white-space:nowrap;
+    background:var(--navy-deep); color:#FFF8EA;
+    padding:3px 11px; border-radius:99px;
+  }
+  .mt-track{
+    height:11px; background:rgba(10,44,45,0.15);
+    border-radius:99px; overflow:hidden;
+  }
+  .mt-fill{height:100%; border-radius:99px;}
+  .mt-linha.fraco .mt-fill{background:var(--brick);}
+  .mt-linha.medio .mt-fill{background:var(--mustard);}
+  .mt-linha.forte .mt-fill{background:var(--ok);}
+
+  .mt-btn{
+    width:100%; margin-top:10px; border:none;
+    background:var(--navy-deep); color:#FFF8EA;
+    padding:11px; border-radius:10px; cursor:pointer;
+    font-family:'Nunito', 'Segoe UI', Roboto, system-ui, sans-serif; font-weight:900; font-size:14px;
+    box-shadow:0 4px 0 rgba(0,0,0,0.35);
+  }
+  .mt-btn:active{transform:translateY(2px); box-shadow:0 2px 0 rgba(0,0,0,0.35);}
+  .mt-ok{
+    margin-top:8px; font-weight:900; font-size:14px;
+    color:var(--ok); text-align:center;
+  }
+
+  .tema-flag{
+    background:var(--navy-deep); color:#FFF8EA;
+    border:3px solid var(--mustard); border-radius:12px;
+    padding:11px 14px; margin-bottom:12px;
+    font-weight:800; font-size:14.5px; text-align:center;
+  }
+  .tema-flag b{color:var(--mustard);}
+
+  /* ---------- AVISO DE ARMAZENAMENTO ---------- */
+  .aviso-storage{
+    background:#FDEDE5; border:3px solid var(--brick);
+    border-radius:14px; padding:14px 16px; margin-bottom:16px;
+    color:var(--navy-deep);
+  }
+  .aviso-storage b{display:block; font-size:15.5px; margin-bottom:5px; color:var(--brick);}
+  .aviso-storage span{font-size:14px; font-weight:600; line-height:1.45; display:block;}
+
+  /* ---------- PERFIS DE ALUNO ---------- */
+  .perfil-barra{
+    display:flex; align-items:center; gap:11px; width:100%;
+    background:rgba(255,248,234,0.15); border:2px solid rgba(232,163,61,0.6);
+    border-radius:14px; padding:10px 15px; margin-bottom:12px;
+    cursor:pointer; font-family:'Nunito', 'Segoe UI', Roboto, system-ui, sans-serif; color:#FFF8EA;
+  }
+  .perfil-barra:active{transform:scale(0.98);}
+  .pba-icone{font-size:26px;}
+  .pba-texto{flex:1; text-align:left; font-size:14.5px; font-weight:700;}
+  .pba-texto b{color:var(--mustard); font-size:16px;}
+  .pba-trocar{
+    color:var(--navy-deep); background:var(--mustard);
+    font-weight:900; font-size:13px; padding:5px 12px; border-radius:99px;
+  }
+
+  .perfil-lista{margin-bottom:18px;}
+  .perfil-card{
+    display:flex; gap:8px; align-items:stretch; margin-bottom:10px;
+  }
+  .perfil-principal{
+    flex:1; display:flex; align-items:center; gap:14px;
+    background:var(--paper); border:3px solid var(--navy-deep);
+    border-radius:14px; padding:14px 16px; cursor:pointer;
+    font-family:'Nunito', 'Segoe UI', Roboto, system-ui, sans-serif; text-align:left;
+  }
+  .perfil-card.ativo .perfil-principal{
+    border-color:var(--ok); box-shadow:0 0 0 3px rgba(60,122,92,0.3);
+  }
+  .perfil-icone{font-size:32px;}
+  .perfil-nome{font-family:'Fraunces', Georgia, 'Times New Roman', serif; font-weight:900; font-size:19px; color:var(--navy-deep);}
+  .perfil-nome small{font-family:'Nunito', 'Segoe UI', Roboto, system-ui, sans-serif; font-size:13px; color:var(--ok); font-weight:800;}
+  .perfil-excluir{
+    background:var(--paper); border:3px solid var(--brick); color:var(--brick);
+    border-radius:14px; padding:0 15px; font-size:20px; cursor:pointer;
+  }
+
+  .perfil-novo, .backup-box{
+    background:var(--paper); border:3px solid var(--navy-deep);
+    border-radius:16px; padding:18px; margin-bottom:14px;
+  }
+  .pn-titulo{
+    font-family:'Fraunces', Georgia, 'Times New Roman', serif; font-weight:900; font-size:18px;
+    color:var(--navy-deep); margin-bottom:12px;
+  }
+  .perfil-input{
+    width:100%; padding:13px 15px; border:3px solid var(--navy);
+    border-radius:12px; font-family:'Nunito', 'Segoe UI', Roboto, system-ui, sans-serif;
+    font-size:17px; font-weight:700; margin-bottom:12px;
+  }
+  .icone-grid{
+    display:grid; grid-template-columns:repeat(6,1fr); gap:7px; margin-bottom:14px;
+  }
+  .icone-opt{
+    font-size:24px; padding:9px 0; cursor:pointer;
+    background:#fff; border:3px solid rgba(15,61,62,0.25); border-radius:11px;
+  }
+  .icone-opt.sel{border-color:var(--ok); background:#EAF6EF;}
+  .backup-texto{font-size:14px; font-weight:600; color:#3f5252; line-height:1.45; margin:0 0 13px;}
+
+  /* ---------- RODAPÉ / MARCA ---------- */
+  .marca{
+    font-family:'Fraunces', Georgia, 'Times New Roman', serif; font-weight:900; font-size:17px;
+    color:var(--mustard); letter-spacing:0.5px;
+  }
+  .marca-sub{font-size:13px; margin-top:3px; color:#FFF8EA;}
+  .copyright{font-size:12px; margin-top:7px; color:rgba(255,248,234,0.8); font-weight:600;}
+
+  /* ---------- TABLET ---------- */
+  @media (min-width:600px){
+    body{padding:28px 24px 50px;}
+    .app{max-width:660px;}
+    header.top h1{font-size:46px;}
+    .title-rule{width:90px; height:5px;}
+    .menu-intro{font-size:16px;}
+    .subject-card{padding:18px 20px; gap:18px;}
+    .sc-icon{font-size:36px;}
+    .sc-name{font-size:20px;}
+    .sc-topics{font-size:15px;}
+    .sc-date{font-size:18px; padding:11px 16px;}
+    .sc-date small{font-size:13px;}
+    .card{padding:28px 26px 30px;}
+    .question{font-size:21px;}
+    .opt{font-size:17px; padding:15px 18px;}
+    .stop{width:42px; height:42px; font-size:17px;}
+    .nav-row{
+      grid-template-columns:1fr 1fr 1.3fr;
+    }
+    .nav-row .btn-next{grid-column:auto;}
+    .btn{min-height:58px; font-size:16px;}
+    .vehicle-icon{font-size:36px;}
+    .carimbo-grid{grid-template-columns:repeat(3,1fr);}
+    .carimbo-icon{font-size:44px;}
+    .flashcard{min-height:250px;}
+    .resposta-texto{font-size:21px;}
+    .feedback{font-size:17px;}
+    .topic-tag{font-size:14px;}
+    .vehicle-name{font-size:17px;}
+    .vehicle-sub{font-size:15px;}
+    .subject-label{font-size:15px;}
+  }
+
+  /* ---------- DESKTOP ---------- */
+  @media (min-width:1000px){
+    body{padding:40px 24px 60px;}
+    .app{max-width:760px;}
+    header.top h1{font-size:54px;}
+    .title-rule{width:110px;}
+    header.top .eyebrow{font-size:14px;}
+    .card{padding:34px 34px 36px; border-radius:22px;}
+    .question{font-size:24px;}
+    .opt{font-size:18px; padding:16px 20px; border-radius:14px;}
+    .opt:not([disabled]):hover{transform:translateX(3px);}
+    .subject-card{padding:20px 24px; border-radius:18px;}
+    .subject-card:hover{transform:translateX(4px);}
+    .sc-name{font-size:21px;}
+    .sc-topics{font-size:15.5px;}
+    .end-screen{padding:40px 34px;}
+    .review{max-height:320px; font-size:15.5px;}
+    .btn{min-height:60px;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .opt,.btn,.vehicle-fill,.subject-card{transition:none;}
+    .vehicle-icon.pulse,.evolve-banner{animation:none;}
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="eyebrow">Avaliação Sistematizada · 2º Período 2026</div>
+    <h1>Passaporte<span class="accent">do Saber</span></h1>
+    <div class="title-rule"></div>
+  </header>
+  <div id="screen"></div>
+
+  <div class="rodape">
+    <div class="marca">Scarton Software</div>
+    <div class="marca-sub">Passaporte do Saber™ · atualizado em __BUILD_DATE__</div>
+    <div class="copyright">© __BUILD_YEAR__ Scarton Software · Todos os direitos reservados</div>
+  </div>
+</div>
+
+<script>
+
+// __SUBJECTS__
+
+// =========================================================
+//  EVOLUÇÃO DO TRANSPORTE
+// =========================================================
+const vehicles = [
+  {min:0,  icon:'🚶', name:'A pé'},
+  {min:3,  icon:'🚲', name:'De bicicleta'},
+  {min:6,  icon:'🛵', name:'De moto'},
+  {min:9,  icon:'🚗', name:'De carro'},
+  {min:12, icon:'🚂', name:'De trem'},
+  {min:15, icon:'⛵', name:'De barco'},
+  {min:18, icon:'✈️', name:'De avião'},
+  {min:24, icon:'🚀', name:'De foguete'},
+  {min:30, icon:'🛸', name:'Nave espacial'}
+];
+function getVehicleIndex(s){
+  let vi = 0;
+  vehicles.forEach((v,i)=>{ if(s >= v.min) vi = i; });
+  return vi;
+}
+
+// =========================================================
+//  VERIFICAÇÃO DE ARMAZENAMENTO
+//  No Chrome, abrir o arquivo direto do disco (file://) pode bloquear
+//  o localStorage. Sem isso, nada é salvo — melhor avisar do que
+//  deixar a criança perder o progresso sem entender o motivo.
+// =========================================================
+let armazenamentoOK = (function(){
+  try{
+    const teste = '__teste_passaporte__';
+    localStorage.setItem(teste, '1');
+    const leu = localStorage.getItem(teste) === '1';
+    localStorage.removeItem(teste);
+    return leu;
+  }catch(e){ return false; }
+})();
+
+function avisoArmazenamento(){
+  if(armazenamentoOK) return '';
+  return `
+    <div class="aviso-storage">
+      <b>⚠️ O progresso não será salvo neste modo</b>
+      <span>Este navegador está bloqueando o salvamento porque o arquivo foi aberto
+      direto do computador. Dá para jogar normalmente, mas os carimbos e o progresso
+      somem ao fechar. Para salvar, abra pelo link do jogo na internet.</span>
+    </div>`;
+}
+
+// =========================================================
+//  PERFIS DE ALUNO
+//  Cada aluno tem progresso e carimbos separados no mesmo aparelho.
+// =========================================================
+const PERFIS_KEY = 'passaporte-perfis-v1';
+const PERFIL_ATIVO_KEY = 'passaporte-perfil-ativo-v1';
+
+// usados quando o navegador bloqueia o armazenamento
+let perfisMemoria = [];
+let perfilMemoriaAtivo = null;
+
+function lerPerfis(){
+  if(!armazenamentoOK) return perfisMemoria;
+  try{ return JSON.parse(localStorage.getItem(PERFIS_KEY)) || []; }catch(e){ return []; }
+}
+function salvarPerfis(lista){
+  if(!armazenamentoOK){ perfisMemoria = lista; return; }
+  try{ localStorage.setItem(PERFIS_KEY, JSON.stringify(lista)); }catch(e){}
+}
+function perfilAtivo(){
+  if(!armazenamentoOK) return perfilMemoriaAtivo;
+  try{ return localStorage.getItem(PERFIL_ATIVO_KEY) || null; }catch(e){ return null; }
+}
+function definirPerfilAtivo(id){
+  if(!armazenamentoOK){ perfilMemoriaAtivo = id; return; }
+  try{ localStorage.setItem(PERFIL_ATIVO_KEY, id); }catch(e){}
+}
+function nomePerfilAtivo(){
+  const p = lerPerfis().find(x => x.id === perfilAtivo());
+  return p ? p.nome : '';
+}
+function iconePerfilAtivo(){
+  const p = lerPerfis().find(x => x.id === perfilAtivo());
+  return p ? p.icone : '🙂';
+}
+
+// todas as chaves de dados passam por aqui, para separar por aluno
+function chave(base){
+  const p = perfilAtivo();
+  return p ? `${base}::${p}` : base;
+}
+
+function criarPerfil(nome, icone){
+  const lista = lerPerfis();
+  // id único mesmo se dois perfis forem criados no mesmo milissegundo
+  let id;
+  do {
+    id = 'p' + Date.now().toString(36) + Math.random().toString(36).slice(2,8);
+  } while(lista.some(p => p.id === id));
+  lista.push({id, nome, icone: icone || '🙂', criadoEm: Date.now()});
+  salvarPerfis(lista);
+  definirPerfilAtivo(id);
+  return id;
+}
+
+function excluirPerfil(id){
+  const lista = lerPerfis().filter(p => p.id !== id);
+  salvarPerfis(lista);
+  // limpa os dados daquele aluno
+  try{
+    [STORAGE, CARIMBOS_KEY, STATS_KEY].forEach(base=>{
+      localStorage.removeItem(`${base}::${id}`);
+    });
+  }catch(e){}
+  if(perfilAtivo() === id){
+    definirPerfilAtivo(lista.length ? lista[0].id : '');
+  }
+}
+
+// ---------- backup: exportar / importar ----------
+function exportarProgresso(){
+  const dados = {
+    app: 'Passaporte do Saber',
+    versao: 1,
+    exportadoEm: new Date().toISOString(),
+    perfis: lerPerfis(),
+    dados: {}
+  };
+  lerPerfis().forEach(p => {
+    dados.dados[p.id] = {};
+    [STORAGE, CARIMBOS_KEY, STATS_KEY].forEach(base=>{
+      try{
+        const v = localStorage.getItem(`${base}::${p.id}`);
+        if(v) dados.dados[p.id][base] = v;
+      }catch(e){}
+    });
+  });
+
+  const blob = new Blob([JSON.stringify(dados,null,2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'passaporte-progresso-' + new Date().toISOString().slice(0,10) + '.json';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  setTimeout(()=>URL.revokeObjectURL(url), 1000);
+}
+
+function importarProgresso(file){
+  const reader = new FileReader();
+  reader.onload = e => {
+    try{
+      const d = JSON.parse(e.target.result);
+      if(!d.perfis || !d.dados) throw new Error('arquivo inválido');
+
+      const atuais = lerPerfis();
+      d.perfis.forEach(p => {
+        if(!atuais.find(x => x.id === p.id)) atuais.push(p);
+      });
+      salvarPerfis(atuais);
+
+      Object.keys(d.dados).forEach(pid => {
+        Object.keys(d.dados[pid]).forEach(base => {
+          try{ localStorage.setItem(`${base}::${pid}`, d.dados[pid][base]); }catch(er){}
+        });
+      });
+      alert('Progresso restaurado com sucesso!');
+      renderPerfis();
+    }catch(err){
+      alert('Não consegui ler este arquivo. Verifique se é um backup do Passaporte do Saber.');
+    }
+  };
+  reader.readAsText(file);
+}
+
+// =========================================================
+//  CARIMBOS DO PASSAPORTE (conquistas)
+// =========================================================
+const CARIMBOS = [
+  {id:'primeira',  icon:'🎫', nome:'Primeira Viagem',   desc:'Terminou uma matéria pela primeira vez'},
+  {id:'estudioso', icon:'📚', nome:'Estudioso',         desc:'Usou o Modo Estudo antes de jogar'},
+  {id:'nota10',    icon:'💯', nome:'Nota Máxima',       desc:'Acertou 100% de uma matéria'},
+  {id:'quase',     icon:'🌟', nome:'Quase Perfeito',    desc:'Acertou 80% ou mais de uma matéria'},
+  {id:'sequencia', icon:'🔥', nome:'Cinco Seguidas',    desc:'Acertou 5 perguntas seguidas'},
+  {id:'foguete',   icon:'🚀', nome:'Piloto de Foguete', desc:'Chegou ao foguete numa partida'},
+  {id:'cacador',   icon:'🎯', nome:'Caçador de Erros',  desc:'Zerou uma revisão dos próprios erros'},
+  {id:'explorador',icon:'🗺️', nome:'Explorador',        desc:'Jogou todas as matérias do seu ano'},
+  {id:'insistente',icon:'💪', nome:'Insistente',        desc:'Jogou a mesma matéria 3 vezes'},
+  {id:'maratona',  icon:'🏅', nome:'Maratonista',       desc:'Respondeu 100 perguntas no total'}
+];
+
+const CARIMBOS_KEY = 'passaporte-carimbos-v1';
+const STATS_KEY = 'passaporte-stats-v1';
+
+function lerCarimbos(){
+  try{ return JSON.parse(localStorage.getItem(chave(CARIMBOS_KEY))) || {}; }catch(e){ return {}; }
+}
+function lerStats(){
+  try{ return JSON.parse(localStorage.getItem(chave(STATS_KEY))) || {respondidas:0, partidas:{}}; }
+  catch(e){ return {respondidas:0, partidas:{}}; }
+}
+function salvarStats(s){
+  try{ localStorage.setItem(chave(STATS_KEY), JSON.stringify(s)); }catch(e){}
+}
+
+let carimbosNovos = [];   // ganhos nesta partida, para mostrar na tela final
+
+function darCarimbo(id){
+  const c = lerCarimbos();
+  if(c[id]) return false;              // já tinha
+  c[id] = Date.now();
+  try{ localStorage.setItem(chave(CARIMBOS_KEY), JSON.stringify(c)); }catch(e){}
+  carimbosNovos.push(CARIMBOS.find(x => x.id === id));
+  return true;
+}
+
+// maior sequência de acertos seguidos na partida
+function maiorSequencia(){
+  let max = 0, atual = 0;
+  order.forEach((q,i)=>{
+    if(answers[i] !== null && answers[i] === q.correct){ atual++; max = Math.max(max,atual); }
+    else if(answers[i] !== null){ atual = 0; }
+  });
+  return max;
+}
+
+function verificarCarimbos(){
+  const score = getScore();
+  const total = order.length;
+  const pct = total ? score/total : 0;
+
+  const stats = lerStats();
+  stats.respondidas = (stats.respondidas || 0) + answers.filter(a=>a!==null).length;
+  stats.partidas[current.id] = (stats.partidas[current.id] || 0) + 1;
+  salvarStats(stats);
+
+  darCarimbo('primeira');
+  if(pct === 1 && total >= 5) darCarimbo('nota10');
+  else if(pct >= 0.8) darCarimbo('quase');
+  if(maiorSequencia() >= 5) darCarimbo('sequencia');
+  if(getVehicleIndex(score) >= 7) darCarimbo('foguete');
+  if(modoRevisao && pct === 1) darCarimbo('cacador');
+  if(stats.partidas[current.id] >= 3) darCarimbo('insistente');
+  if(stats.respondidas >= 100) darCarimbo('maratona');
+
+  // explorador: jogou todas as matérias do mesmo ano
+  const doAno = subjects.filter(s => (s.ano||4) === (current.ano||4));
+  if(doAno.every(s => stats.partidas[s.id])) darCarimbo('explorador');
+}
+
+// =========================================================
+//  ESTADO
+// =========================================================
+let current = null;
+let order = [];
+let answers = [];
+let idx = 0;
+let vehicleIndex = 0;
+let justEvolved = false;
+let anoFiltro = null;
+let modoRevisao = false;
+let estudoIdx = 0;
+let estudoVirado = false;
+let temaEstudo = null;
+
+// =========================================================
+//  PROGRESSO SALVO (localStorage)
+// =========================================================
+const STORAGE = 'passaporte-progresso-v1';
+
+function lerProgresso(){
+  try{ return JSON.parse(localStorage.getItem(chave(STORAGE))) || {}; }
+  catch(e){ return {}; }
+}
+function salvarProgresso(subjectId, dados){
+  try{
+    const tudo = lerProgresso();
+    tudo[subjectId] = dados;
+    localStorage.setItem(chave(STORAGE), JSON.stringify(tudo));
+  }catch(e){ /* modo privado ou storage cheio — segue sem salvar */ }
+}
+function limparProgresso(subjectId){
+  try{
+    const tudo = lerProgresso();
+    delete tudo[subjectId];
+    localStorage.setItem(chave(STORAGE), JSON.stringify(tudo));
+  }catch(e){}
+}
+
+// guarda o estado atual da partida para poder retomar
+function persistirPartida(){
+  if(!current) return;
+  salvarProgresso(current.id, {
+    perguntas: order.map(q => q.q),   // identifica as perguntas pelo enunciado
+    answers: answers,
+    idx: idx,
+    modoRevisao: modoRevisao,
+    quando: Date.now()
+  });
+}
+
+// registra quais perguntas foram erradas, para o modo revisão
+function registrarErros(){
+  if(!current) return;
+  const erradas = order
+    .map((q,i) => (answers[i] !== null && answers[i] !== q.correct) ? q.q : null)
+    .filter(Boolean);
+  const tudo = lerProgresso();
+  const anterior = tudo[current.id] || {};
+  salvarProgresso(current.id, {
+    ...anterior,
+    erradas: erradas,
+    ultimoScore: getScore(),
+    ultimoTotal: order.length,
+    concluidoEm: Date.now()
+  });
+}
+
+function temErrosSalvos(subjectId){
+  const p = lerProgresso()[subjectId];
+  return p && Array.isArray(p.erradas) && p.erradas.length > 0;
+}
+function contarErrosSalvos(subjectId){
+  const p = lerProgresso()[subjectId];
+  return (p && p.erradas) ? p.erradas.length : 0;
+}
+function temPartidaEmAndamento(subjectId){
+  const p = lerProgresso()[subjectId];
+  return p && Array.isArray(p.answers) && p.answers.some(a => a !== null)
+           && p.answers.some(a => a === null);
+}
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i=a.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [a[i],a[j]]=[a[j],a[i]];
+  }
+  return a;
+}
+function getScore(){
+  return answers.reduce((acc,ans,i) => acc + (ans !== null && ans === order[i].correct ? 1 : 0), 0);
+}
+function isPast(ddmm){
+  const [d,m] = ddmm.split('/').map(Number);
+  const today = new Date();
+  const exam = new Date(today.getFullYear(), m-1, d);
+  const todayOnly = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+  return exam < todayOnly;
+}
+
+// =========================================================
+//  MAPA DE PONTOS FRACOS (desempenho por tema)
+// =========================================================
+function desempenhoPorTema(){
+  const mapa = {};
+  order.forEach((q,i)=>{
+    if(answers[i] === null) return;          // não respondida não conta
+    if(!mapa[q.tema]) mapa[q.tema] = {tema:q.tema, acertos:0, total:0};
+    mapa[q.tema].total++;
+    if(answers[i] === q.correct) mapa[q.tema].acertos++;
+  });
+  return Object.values(mapa)
+    .map(t => ({...t, pct: t.total ? t.acertos/t.total : 0}))
+    .sort((a,b) => a.pct - b.pct);           // pior primeiro
+}
+
+function nivelTema(pct){
+  if(pct >= 0.8) return {classe:'forte', rotulo:'Mandou bem', icone:'✅'};
+  if(pct >= 0.5) return {classe:'medio', rotulo:'Quase lá',   icone:'⚠️'};
+  return {classe:'fraco', rotulo:'Revisar',  icone:'📕'};
+}
+
+// estuda só as cartas de um tema específico
+function estudarTema(subjectId, tema){
+  current = subjects.find(s => s.id === subjectId);
+  if(!current) return;
+  const filtradas = current.questions.filter(q => q.tema === tema);
+  if(!filtradas.length){ iniciarEstudo(subjectId); return; }
+  order = filtradas;
+  estudoIdx = 0;
+  estudoVirado = false;
+  temaEstudo = tema;
+  darCarimbo('estudioso');
+  renderEstudo();
+}
+
+// =========================================================
+//  MODO ESTUDO (flashcards — ensina antes de testar)
+// =========================================================
+function iniciarEstudo(id){
+  current = subjects.find(s => s.id === id);
+  order = current.questions.slice();
+  estudoIdx = 0;
+  estudoVirado = false;
+  temaEstudo = null;
+  darCarimbo('estudioso');
+  renderEstudo();
+}
+
+function virarCarta(){
+  estudoVirado = !estudoVirado;
+  renderEstudo();
+}
+function estudoAnterior(){
+  if(estudoIdx > 0){ estudoIdx--; estudoVirado = false; renderEstudo(); }
+}
+function estudoProxima(){
+  if(estudoIdx < order.length - 1){ estudoIdx++; estudoVirado = false; renderEstudo(); }
+  else renderEstudoFim();
+}
+
+function renderEstudo(){
+  const q = order[estudoIdx];
+  const pct = Math.round(((estudoIdx+1)/order.length)*100);
+
+  document.getElementById('screen').innerHTML = `
+    <div class="top-nav">
+      <div class="subject-label">📚 Modo Estudo · ${temaEstudo ? temaEstudo : current.name}</div>
+    </div>
+
+    ${temaEstudo ? `<div class="tema-flag">📕 Revisando só: <b>${temaEstudo}</b></div>` : ''}
+
+    <div class="estudo-progresso">
+      <div class="estudo-track"><div class="estudo-fill" style="width:${pct}%"></div></div>
+      <div class="estudo-contador">Carta ${estudoIdx+1} de ${order.length}</div>
+    </div>
+
+    <div class="card flashcard ${estudoVirado ? 'virado' : ''}" onclick="virarCarta()">
+      <span class="topic-tag">${q.tema}</span>
+      <p class="question">${q.q}</p>
+
+      ${estudoVirado ? `
+        <div class="resposta-box">
+          <div class="resposta-label">Resposta</div>
+          <div class="resposta-texto">${q.opts[q.correct]}</div>
+        </div>
+        <div class="feedback">${q.fb}</div>
+      ` : `
+        <div class="virar-dica">👆 Toque no card para ver a resposta</div>
+      `}
+    </div>
+
+    <div class="nav-row">
+      <button class="btn btn-back" onclick="estudoAnterior()" ${estudoIdx===0?'disabled':''}>← Anterior</button>
+      <button class="btn btn-home" onclick="backToMenu()">🏠 Menu</button>
+      <button class="btn btn-next" onclick="estudoProxima()">
+        ${estudoIdx === order.length-1 ? '✅ Terminei' : 'Próxima →'}
+      </button>
+    </div>
+  `;
+}
+
+function renderEstudoFim(){
+  document.getElementById('screen').innerHTML = `
+    <div class="top-nav">
+      <div class="subject-label">📚 Modo Estudo · ${current.name}</div>
+    </div>
+    <div class="end-screen">
+      <div class="stamp">🧠</div>
+      <h2>Estudou tudo!</h2>
+      <p>Você passou pelas ${order.length} cartas de <b>${current.name}</b>.</p>
+      <p>Agora vem a melhor parte: testar se ficou na cabeça. Estudar e depois se testar
+      é o que faz a memória fixar de verdade.</p>
+      <div class="end-actions">
+        <button class="btn btn-next" onclick="startSubject('${current.id}')">🎮 Jogar agora</button>
+        <button class="btn btn-back" onclick="iniciarEstudo('${current.id}')">🔁 Estudar de novo</button>
+        <button class="btn btn-home" onclick="backToMenu()">🏠 Menu principal</button>
+      </div>
+    </div>
+  `;
+}
+
+// =========================================================
+//  MEU PASSAPORTE (coleção de carimbos)
+// =========================================================
+function renderPassaporte(){
+  const ganhos = lerCarimbos();
+  const stats = lerStats();
+  const qtd = Object.keys(ganhos).length;
+
+  const grid = CARIMBOS.map(c => {
+    const tem = !!ganhos[c.id];
+    return `
+      <div class="carimbo ${tem ? 'ganho' : 'bloqueado'}">
+        <div class="carimbo-icon">${tem ? c.icon : '❔'}</div>
+        <div class="carimbo-nome">${c.nome}</div>
+        <div class="carimbo-desc">${c.desc}</div>
+      </div>`;
+  }).join('');
+
+  document.getElementById('screen').innerHTML = `
+    <div class="top-nav">
+      <div class="subject-label">🛂 Meu Passaporte</div>
+    </div>
+
+    <div class="passaporte-resumo">
+      <div class="pr-item"><b>${qtd}</b><span>de ${CARIMBOS.length} carimbos</span></div>
+      <div class="pr-item"><b>${stats.respondidas||0}</b><span>perguntas respondidas</span></div>
+    </div>
+
+    <div class="carimbo-grid">${grid}</div>
+
+    <div class="nav-row" style="grid-template-columns:1fr;">
+      <button class="btn btn-home" onclick="backToMenu()">🏠 Voltar ao menu</button>
+    </div>
+  `;
+}
+
+// =========================================================
+//  TELA DE PERFIS
+// =========================================================
+const ICONES_PERFIL = ['🙂','🚀','🦊','🐢','🦁','🐼','🦄','⚽','🎸','🌟','🐙','🦖'];
+
+function renderPerfis(){
+  const perfis = lerPerfis();
+  const ativo = perfilAtivo();
+
+  const lista = perfis.length ? perfis.map(p => `
+    <div class="perfil-card ${p.id===ativo?'ativo':''}">
+      <button class="perfil-principal" onclick="trocarPerfil('${p.id}')">
+        <span class="perfil-icone">${p.icone}</span>
+        <span class="perfil-nome">${p.nome}${p.id===ativo?' <small>(em uso)</small>':''}</span>
+      </button>
+      <button class="perfil-excluir" onclick="confirmarExcluirPerfil('${p.id}', ${JSON.stringify(p.nome)})">🗑</button>
+    </div>
+  `).join('') : '<div class="menu-intro">Nenhum aluno cadastrado ainda.</div>';
+
+  document.getElementById('screen').innerHTML = `
+    <div class="top-nav"><div class="subject-label">👥 Quem vai estudar?</div></div>
+    ${avisoArmazenamento()}
+    <div class="perfil-lista">${lista}</div>
+
+    <div class="perfil-novo">
+      <div class="pn-titulo">➕ Adicionar aluno</div>
+      <input type="text" id="novoNome" class="perfil-input" placeholder="Nome do aluno" maxlength="20">
+      <div class="icone-grid">
+        ${ICONES_PERFIL.map((ic,i)=>`
+          <button class="icone-opt ${i===0?'sel':''}" onclick="selecionarIcone(this,'${ic}')">${ic}</button>
+        `).join('')}
+      </div>
+      <button class="btn btn-next" style="width:100%;" onclick="adicionarPerfil()">Criar perfil</button>
+    </div>
+
+    <div class="backup-box">
+      <div class="pn-titulo">💾 Backup do progresso</div>
+      <p class="backup-texto">
+        O progresso fica salvo neste aparelho. Para levar para outro aparelho
+        (ou não perder se limpar o navegador), baixe o backup e depois restaure.
+      </p>
+      <button class="btn btn-back" style="width:100%; margin-bottom:9px;" onclick="exportarProgresso()">⬇️ Baixar backup</button>
+      <label class="btn btn-home" style="width:100%; cursor:pointer;">
+        ⬆️ Restaurar backup
+        <input type="file" accept=".json" style="display:none"
+               onchange="if(this.files[0]) importarProgresso(this.files[0])">
+      </label>
+    </div>
+
+    ${perfis.length ? `
+      <div class="nav-row" style="grid-template-columns:1fr; margin-top:16px;">
+        <button class="btn btn-next" onclick="backToMenu()">🏠 Ir para as matérias</button>
+      </div>` : ''}
+  `;
+}
+
+let iconeEscolhido = ICONES_PERFIL[0];
+function selecionarIcone(el, ic){
+  iconeEscolhido = ic;
+  document.querySelectorAll('.icone-opt').forEach(b=>b.classList.remove('sel'));
+  el.classList.add('sel');
+}
+
+function adicionarPerfil(){
+  const nome = (document.getElementById('novoNome').value || '').trim();
+  if(!nome){ alert('Digite o nome do aluno.'); return; }
+  criarPerfil(nome, iconeEscolhido);
+  renderPerfis();
+}
+
+function trocarPerfil(id){
+  definirPerfilAtivo(id);
+  backToMenu();
+}
+
+function confirmarExcluirPerfil(id, nome){
+  if(!confirm(`Excluir o perfil de ${nome}? Todo o progresso e os carimbos dele serão apagados.`)) return;
+  excluirPerfil(id);
+  renderPerfis();
+}
+
+// =========================================================
+//  MENU
+// =========================================================
+function renderMenu(){
+  const anos = [...new Set(subjects.map(s => s.ano || 4))].sort((a,b)=>a-b);
+
+  // filtro de ano só aparece se houver mais de um ano cadastrado
+  const filtroHtml = anos.length > 1 ? `
+    <div class="ano-filtro">
+      <button class="ano-btn ${anoFiltro===null?'active':''}" onclick="setAno(null)">Todos</button>
+      ${anos.map(a=>`
+        <button class="ano-btn ${anoFiltro===a?'active':''}" onclick="setAno(${a})">${a}º ano</button>
+      `).join('')}
+    </div>` : '';
+
+  const visiveis = subjects.filter(s => anoFiltro === null || (s.ano||4) === anoFiltro);
+
+  const cards = visiveis.map(s => {
+    const past = isPast(s.date);
+    const erros = contarErrosSalvos(s.id);
+    const emAndamento = temPartidaEmAndamento(s.id);
+
+    const extras = [];
+    extras.push(`<button class="mini-btn estudar" onclick="event.stopPropagation(); iniciarEstudo('${s.id}')">📚 Estudar esta matéria</button>`);
+    if(emAndamento) extras.push(`<button class="mini-btn retomar" onclick="event.stopPropagation(); retomar('${s.id}')">▶️ Continuar</button>`);
+    if(erros) extras.push(`<button class="mini-btn revisar" onclick="event.stopPropagation(); revisarErros('${s.id}')">🎯 Só as ${erros} que errei</button>`);
+
+    return `
+    <div class="subject-block">
+      <button class="subject-card ${past ? 'done' : ''}" onclick="startSubject('${s.id}')">
+        <div class="sc-icon">${s.icon}</div>
+        <div class="sc-body">
+          <div class="sc-name">${s.name}</div>
+          <div class="sc-topics">${s.topics}</div>
+        </div>
+        <div class="sc-date ${past ? 'past' : ''}">
+          ${past ? '<span class="check">✅</span><small>FEITA</small>' : '<small>PROVA</small>'}${s.date}
+        </div>
+      </button>
+      ${extras.length ? `<div class="card-extras">${extras.join('')}</div>` : ''}
+    </div>`;
+  }).join('');
+
+  const ganhos = Object.keys(lerCarimbos()).length;
+
+  document.getElementById('screen').innerHTML = `
+    ${avisoArmazenamento()}
+    <button class="perfil-barra" onclick="renderPerfis()">
+      <span class="pba-icone">${iconePerfilAtivo()}</span>
+      <span class="pba-texto">Estudando como <b>${nomePerfilAtivo()}</b></span>
+      <span class="pba-trocar">trocar</span>
+    </button>
+
+    <button class="passaporte-banner" onclick="renderPassaporte()">
+      <span class="pb-icon">🛂</span>
+      <span class="pb-texto">
+        <b>Meu Passaporte</b>
+        <small>${ganhos} de ${CARIMBOS.length} carimbos conquistados</small>
+      </span>
+      <span class="pb-seta">›</span>
+    </button>
+
+    <div class="menu-intro">Escolha a matéria que você quer estudar hoje 👇</div>
+    ${filtroHtml}
+    ${cards || '<div class="menu-intro">Nenhuma matéria para este ano ainda.</div>'}
+  `;
+}
+
+function setAno(a){
+  anoFiltro = a;
+  renderMenu();
+}
+
+// retoma uma partida interrompida
+function retomar(id){
+  const p = lerProgresso()[id];
+  current = subjects.find(s => s.id === id);
+  if(!p || !current){ startSubject(id); return; }
+
+  // remonta a ordem exata das perguntas pelo enunciado salvo
+  const porEnunciado = {};
+  current.questions.forEach(q => { porEnunciado[q.q] = q; });
+  const remontada = (p.perguntas || []).map(txt => porEnunciado[txt]).filter(Boolean);
+
+  // se o conteúdo mudou desde a última vez, começa limpo
+  if(remontada.length !== (p.perguntas||[]).length){
+    limparProgresso(id);
+    startSubject(id);
+    return;
+  }
+
+  order = remontada;
+  answers = p.answers.slice(0, order.length);
+  while(answers.length < order.length) answers.push(null);
+  idx = Math.min(p.idx || 0, order.length - 1);
+  modoRevisao = !!p.modoRevisao;
+  vehicleIndex = getVehicleIndex(getScore());
+  justEvolved = false;
+  renderQuestion();
+}
+
+// joga só as perguntas erradas da última partida
+function revisarErros(id){
+  const p = lerProgresso()[id];
+  current = subjects.find(s => s.id === id);
+  if(!p || !p.erradas || !current) { startSubject(id); return; }
+
+  const set = new Set(p.erradas);
+  const soErradas = current.questions.filter(q => set.has(q.q));
+  if(!soErradas.length){ startSubject(id); return; }
+
+  order = shuffle(soErradas);
+  answers = new Array(order.length).fill(null);
+  idx = 0;
+  vehicleIndex = 0;
+  justEvolved = false;
+  modoRevisao = true;
+  renderQuestion();
+}
+
+function startSubject(id){
+  current = subjects.find(s => s.id === id);
+  order = shuffle(current.questions);
+  answers = new Array(order.length).fill(null);
+  idx = 0;
+  vehicleIndex = 0;
+  justEvolved = false;
+  modoRevisao = false;
+  renderQuestion();
+}
+
+function backToMenu(){
+  persistirPartida();
+  current = null;
+  modoRevisao = false;
+  renderMenu();
+}
+
+// =========================================================
+//  PERGUNTA
+// =========================================================
+function renderQuestion(){
+  const q = order[idx];
+  const given = answers[idx];
+  const isAnswered = given !== null;
+  const score = getScore();
+
+  const routeHtml = order.map((_, i) => {
+    let cls = 'stop';
+    if(answers[i] !== null){
+      cls += (answers[i] === order[i].correct) ? ' correct' : ' wrong';
+    }
+    if(i === idx) cls += ' current';
+    return `<div class="${cls}">${i+1}</div>`;
+  }).join('');
+
+  const v = vehicles[vehicleIndex];
+  const next = vehicles[vehicleIndex+1];
+  let pct = 100, sub = 'Nível máximo alcançado!';
+  if(next){
+    pct = Math.max(0, Math.min(100, Math.round(((score - v.min) / (next.min - v.min)) * 100)));
+    sub = `${Math.max(0, next.min - score)} acerto(s) até virar "${next.name}" ${next.icon}`;
+  }
+
+  const optsHtml = q.opts.map((opt, i) => {
+    let cls = 'opt', mark = '';
+    if(isAnswered){
+      if(i === q.correct){ cls += ' correct'; mark = '✓'; }
+      else if(i === given){ cls += ' wrong'; mark = '✕'; }
+    }
+    return `<button class="${cls}" ${isAnswered ? 'disabled' : ''} onclick="selectAnswer(${i})">
+      <span class="opt-mark">${mark}</span><span>${opt}</span>
+    </button>`;
+  }).join('');
+
+  const feedbackHtml = isAnswered
+    ? `<div class="feedback">${given === q.correct ? '🎉 Isso mesmo! ' : '✕ Ops — '}${q.fb}</div>`
+    : '';
+
+  const isLast = idx === order.length - 1;
+
+  document.getElementById('screen').innerHTML = `
+    <div class="top-nav">
+      <div class="subject-label">${current.icon} ${current.name} · Prova ${current.date}</div>
+    </div>
+
+    ${modoRevisao ? '<div class="revisao-flag">🎯 Modo revisão — só as que você errou</div>' : ''}
+
+    <div class="route">${routeHtml}</div>
+
+    ${justEvolved ? `<div class="evolve-banner">🎉 Evoluiu! Agora você viaja ${v.name.toLowerCase()} ${v.icon}</div>` : ''}
+
+    <div class="vehicle-bar">
+      <div class="vehicle-icon ${justEvolved ? 'pulse' : ''}">${v.icon}</div>
+      <div class="vehicle-info">
+        <div class="vehicle-name">${v.name}</div>
+        <div class="vehicle-track"><div class="vehicle-fill" style="width:${pct}%"></div></div>
+      </div>
+    </div>
+    <div class="vehicle-sub">${sub}</div>
+
+    <div class="card">
+      <span class="topic-tag">${q.tema}</span>
+      <p class="question">${q.q}</p>
+      <div class="options">${optsHtml}</div>
+      ${feedbackHtml}
+    </div>
+
+    <div class="nav-row">
+      <button class="btn btn-back" onclick="prevQuestion()" ${idx === 0 ? 'disabled' : ''}>← Anterior</button>
+      <button class="btn btn-home" onclick="backToMenu()">🏠 Menu</button>
+      <button class="btn btn-next" onclick="nextQuestion()" ${isAnswered ? '' : 'disabled'}>${isLast ? '🏁 Ver resultado' : 'Próxima →'}</button>
+    </div>
+  `;
+  justEvolved = false;
+}
+
+function selectAnswer(i){
+  if(answers[idx] !== null) return;
+  answers[idx] = i;
+  const oldVi = vehicleIndex;
+  vehicleIndex = getVehicleIndex(getScore());
+  justEvolved = vehicleIndex > oldVi;
+  persistirPartida();
+  renderQuestion();
+}
+
+function prevQuestion(){
+  if(idx > 0){ idx--; renderQuestion(); }
+}
+
+function nextQuestion(){
+  if(answers[idx] === null) return;
+  if(idx < order.length - 1){ idx++; renderQuestion(); }
+  else renderEnd();
+}
+
+// =========================================================
+//  RESULTADO
+// =========================================================
+function renderEnd(){
+  carimbosNovos = [];
+  if(!modoRevisao) registrarErros();
+  verificarCarimbos();
+  const score = getScore();
+  const total = order.length;
+  const pct = Math.round((score/total)*100);
+  let msg, stamp;
+  if(pct === 100){ msg = "Viagem perfeita! Passaporte cheio de carimbos!"; stamp="🏆"; }
+  else if(pct >= 80){ msg = "Excelente viagem! Só faltou pouquinho."; stamp="🌟"; }
+  else if(pct >= 60){ msg = "Boa viagem! Vale revisar alguns pontos."; stamp="🧭"; }
+  else { msg = "Ainda dá tempo de revisar antes da prova!"; stamp="📖"; }
+
+  const finalVehicle = vehicles[getVehicleIndex(score)];
+  const temas = desempenhoPorTema();
+
+  const reviewHtml = order.map((q, i) => {
+    const ok = answers[i] === q.correct;
+    return `<div class="r-item">
+      <span class="r-mark ${ok ? 'r-ok' : 'r-bad'}">${ok ? '✓' : '✕'}</span>
+      <span><b>${q.tema}</b> — ${q.q.replace(/<[^>]*>/g,'')}</span>
+    </div>`;
+  }).join('');
+
+  document.getElementById('screen').innerHTML = `
+    <div class="top-nav">
+      <div class="subject-label">${current.icon} ${current.name} · Prova ${current.date}</div>
+    </div>
+    <div class="end-screen">
+      <div class="stamp">${stamp}</div>
+      <h2>Chegamos ao destino!</h2>
+      <div class="result-msg">${score} de ${total} acertos (${pct}%)</div>
+      <p>Você terminou a viagem <b>${finalVehicle.name.toLowerCase()} ${finalVehicle.icon}</b></p>
+      <p>${msg}</p>
+      ${carimbosNovos.length ? `
+        <div class="carimbos-novos">
+          <div class="cn-titulo">🎉 ${carimbosNovos.length === 1 ? 'Novo carimbo!' : 'Novos carimbos!'}</div>
+          ${carimbosNovos.map(c=>`
+            <div class="cn-item">
+              <span class="cn-icon">${c.icon}</span>
+              <span><b>${c.nome}</b><br><small>${c.desc}</small></span>
+            </div>`).join('')}
+        </div>` : ''}
+      <div class="mapa-temas">
+        <div class="mt-titulo">🧭 Onde você está bem e onde precisa reforçar</div>
+        ${temas.map(t=>{
+          const n = nivelTema(t.pct);
+          return `
+          <div class="mt-linha ${n.classe}">
+            <div class="mt-topo">
+              <span class="mt-nome">${n.icone} ${t.tema}</span>
+              <span class="mt-placar">${t.acertos}/${t.total}</span>
+            </div>
+            <div class="mt-track"><div class="mt-fill" style="width:${Math.round(t.pct*100)}%"></div></div>
+            ${t.pct < 0.8
+              ? `<button class="mt-btn" onclick="estudarTema('${current.id}', ${JSON.stringify(t.tema)})">📚 Estudar este tema</button>`
+              : `<div class="mt-ok">${n.rotulo}</div>`}
+          </div>`;
+        }).join('')}
+      </div>
+
+      <div class="review">${reviewHtml}</div>
+      <div class="end-actions">
+        <button class="btn btn-next" onclick="reviewAnswers()">🔍 Revisar questões</button>
+        <button class="btn btn-back" onclick="startSubject('${current.id}')">🔁 Jogar de novo</button>
+        <button class="btn btn-home" onclick="backToMenu()">🏠 Menu principal</button>
+      </div>
+    </div>
+  `;
+}
+
+function reviewAnswers(){
+  idx = 0;
+  renderQuestion();
+}
+
+// ---------- início ----------
+// sem armazenamento (file:// bloqueado), cria um perfil temporário em memória
+// para o jogo continuar utilizável — só não persiste ao fechar.
+if(!armazenamentoOK){
+  perfisMemoria = [{id:'temp', nome:'Visitante', icone:'🙂'}];
+  perfilMemoriaAtivo = 'temp';
+  renderMenu();
+} else if(!lerPerfis().length || !perfilAtivo()){
+  renderPerfis();
+} else {
+  renderMenu();
+}
+</script>
+
+</body>
+</html>

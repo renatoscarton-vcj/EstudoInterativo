@@ -1,0 +1,238 @@
+{
+  "id": "mat",
+  "icon": "🔢",
+  "name": "Matemática",
+  "date": "21/08",
+  "ano": 4,
+  "topics": "Adição · Subtração · Multiplicação · Frações",
+  "questions": [
+    {
+      "tema": "Nomes na adição",
+      "q": "Na conta <em>25 + 30 = 55</em>, como se chamam o 25 e o 30?",
+      "opts": [
+        "Parcelas",
+        "Total",
+        "Fatores",
+        "Restos"
+      ],
+      "correct": 0,
+      "fb": "Os números que somamos são as parcelas; o resultado (55) é o total ou soma."
+    },
+    {
+      "tema": "Nomes na adição",
+      "q": "Na adição, o resultado da conta recebe o nome de:",
+      "opts": [
+        "Produto",
+        "Total ou soma",
+        "Diferença",
+        "Quociente"
+      ],
+      "correct": 1,
+      "fb": "Na adição chamamos o resultado de total ou soma."
+    },
+    {
+      "tema": "Nomes na subtração",
+      "q": "Na subtração, o resultado da conta se chama:",
+      "opts": [
+        "Soma",
+        "Produto",
+        "Diferença ou resto",
+        "Parcela"
+      ],
+      "correct": 2,
+      "fb": "O resultado da subtração é a diferença (ou resto)."
+    },
+    {
+      "tema": "Adição com reagrupamento",
+      "q": "Quanto é <em>247 + 156</em>?",
+      "opts": [
+        "393",
+        "403",
+        "413",
+        "303"
+      ],
+      "correct": 1,
+      "fb": "7+6=13 (fica 3, vai 1); 4+5+1=10 (fica 0, vai 1); 2+1+1=4 → 403."
+    },
+    {
+      "tema": "Adição com reagrupamento",
+      "q": "Quanto é <em>368 + 275</em>?",
+      "opts": [
+        "533",
+        "633",
+        "643",
+        "553"
+      ],
+      "correct": 2,
+      "fb": "8+5=13 (fica 3, vai 1); 6+7+1=14 (fica 4, vai 1); 3+2+1=6 → 643."
+    },
+    {
+      "tema": "Adição com reagrupamento",
+      "q": "Na conta 48 + 37, ao somar 8 + 7 = 15, o que fazemos?",
+      "opts": [
+        "Escrevemos 15 embaixo do 8",
+        "Escrevemos o 5 e “vai 1” para a dezena",
+        "Apagamos tudo",
+        "Escrevemos só o 1"
+      ],
+      "correct": 1,
+      "fb": "Escrevemos o 5 nas unidades e levamos 1 dezena para a coluna seguinte — isso é o reagrupamento."
+    },
+    {
+      "tema": "Subtração",
+      "q": "Quanto é <em>325 − 148</em>?",
+      "opts": [
+        "167",
+        "177",
+        "187",
+        "223"
+      ],
+      "correct": 1,
+      "fb": "325 − 148 = 177 (é preciso pedir emprestado nas unidades e nas dezenas)."
+    },
+    {
+      "tema": "Subtração",
+      "q": "Quanto é <em>500 − 236</em>?",
+      "opts": [
+        "254",
+        "264",
+        "274",
+        "364"
+      ],
+      "correct": 1,
+      "fb": "500 − 236 = 264."
+    },
+    {
+      "tema": "Multiplicação",
+      "q": "Quanto é <em>7 × 8</em>?",
+      "opts": [
+        "48",
+        "54",
+        "56",
+        "64"
+      ],
+      "correct": 2,
+      "fb": "7 × 8 = 56. Vale decorar essa da tabuada do 7!"
+    },
+    {
+      "tema": "Multiplicação",
+      "q": "Quanto é <em>6 × 9</em>?",
+      "opts": [
+        "45",
+        "54",
+        "56",
+        "63"
+      ],
+      "correct": 1,
+      "fb": "6 × 9 = 54."
+    },
+    {
+      "tema": "Multiplicação",
+      "q": "Quanto é <em>9 × 7</em>?",
+      "opts": [
+        "56",
+        "63",
+        "72",
+        "81"
+      ],
+      "correct": 1,
+      "fb": "9 × 7 = 63."
+    },
+    {
+      "tema": "Decomposição",
+      "q": "Como podemos decompor o número <em>358</em>?",
+      "opts": [
+        "3 + 5 + 8",
+        "300 + 50 + 8",
+        "30 + 50 + 8",
+        "3000 + 500 + 80"
+      ],
+      "correct": 1,
+      "fb": "358 = 300 (centenas) + 50 (dezenas) + 8 (unidades)."
+    },
+    {
+      "tema": "Frações",
+      "q": "Como se lê a fração <em>½</em>?",
+      "opts": [
+        "Dois um",
+        "Um meio",
+        "Meio dois",
+        "Um dois"
+      ],
+      "correct": 1,
+      "fb": "½ se lê “um meio” — é uma parte de um inteiro dividido em 2."
+    },
+    {
+      "tema": "Frações",
+      "q": "Como se lê a fração <em>¼</em>?",
+      "opts": [
+        "Um quatro",
+        "Quatro um",
+        "Um quarto",
+        "Quarto um"
+      ],
+      "correct": 2,
+      "fb": "¼ se lê “um quarto” — uma parte de um inteiro dividido em 4."
+    },
+    {
+      "tema": "Frações",
+      "q": "Na fração <em>3/5</em>, o número 5 é chamado de:",
+      "opts": [
+        "Numerador",
+        "Denominador",
+        "Total",
+        "Parcela"
+      ],
+      "correct": 1,
+      "fb": "O de baixo é o denominador (em quantas partes dividimos); o de cima é o numerador (quantas pegamos)."
+    },
+    {
+      "tema": "Frações",
+      "q": "Uma pizza foi dividida em 4 pedaços iguais e Caio comeu 1. Que fração ele comeu?",
+      "opts": [
+        "1/2",
+        "1/3",
+        "1/4",
+        "3/4"
+      ],
+      "correct": 2,
+      "fb": "Ele comeu 1 pedaço de 4 → 1/4 (um quarto) da pizza."
+    },
+    {
+      "tema": "Frações",
+      "q": "Qual fração é <b>maior</b>: 1/2 ou 1/4?",
+      "opts": [
+        "1/2",
+        "1/4",
+        "São iguais",
+        "Não dá para comparar"
+      ],
+      "correct": 0,
+      "fb": "Quanto menor o denominador, maior o pedaço. Metade (1/2) é maior que um quarto (1/4)."
+    },
+    {
+      "tema": "Problemas",
+      "q": "Joana tinha 156 figurinhas e ganhou 87. Quantas ela tem agora?",
+      "opts": [
+        "233",
+        "243",
+        "253",
+        "143"
+      ],
+      "correct": 1,
+      "fb": "156 + 87 = 243 figurinhas."
+    },
+    {
+      "tema": "Problemas",
+      "q": "Numa caixa há 8 pacotes com 7 balas cada. Quantas balas ao todo?",
+      "opts": [
+        "15",
+        "49",
+        "56",
+        "64"
+      ],
+      "correct": 2,
+      "fb": "8 × 7 = 56 balas no total."
+    }
+  ]
+}
