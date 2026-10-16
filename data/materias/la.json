@@ -14,9 +14,9 @@
       "texto": "A <b>noun</b> names a person, a place, an animal or a thing. <i>(Substantivo)</i>",
       "pontos": [
         "<b>Common nouns:</b> any one of a kind: <em>girl, city, dog</em>.",
-        "<b>Proper nouns:</b> a special name. They start with a <b>capital letter</b>: <em>Liz, London, Brazil</em>."
+        "<b>Proper nouns:</b> a special name. They start with a <b>capital letter</b>: <em>Lis, London, Brazil</em>."
       ],
-      "quem": "Liz",
+      "quem": "Lis",
       "fala": "My name is a proper noun, so it starts with a capital L!"
     },
     {
@@ -65,7 +65,7 @@
         "Consonant + <b>y</b>: change to <b>-ies</b>: <em>baby → babies</em>.",
         "Irregular: <em>child → children, tooth → teeth, foot → feet, mouse → mice</em>."
       ],
-      "quem": "Mia",
+      "quem": "Nico",
       "fala": "One mouse, two mice! English plurals can be tricky."
     },
     {
@@ -89,7 +89,7 @@
         "Antonyms: <em>hot × cold</em>, <em>early × late</em>, <em>full × empty</em>.",
         "<b>Conjunctions</b> join ideas: <b>and</b> (add), <b>but</b> (contrast), <b>because</b> (reason), <b>so</b> (result), <b>or</b> (choice)."
       ],
-      "quem": "Caio",
+      "quem": "Bia",
       "fala": "I was glad, which means happy, because we won the game!"
     }
   ],
@@ -104,14 +104,14 @@
     {"tema": "Simple past", "q": "What is the past of <b>play</b>?", "opts": ["plays", "played", "playing", "plaied"], "correct": 1, "fb": "Play is a regular verb: just add -ed → played."},
     {"tema": "Simple past", "q": "What is the past of <b>go</b>?", "opts": ["goed", "went", "goes", "going"], "correct": 1, "fb": "Go is irregular: go → went. Example: We went to the zoo."},
     {"tema": "Simple past", "q": "Complete: <em>Yesterday, Elise ___ a big pizza.</em>", "opts": ["eat", "eats", "ate", "eating"], "correct": 2, "fb": "“Yesterday” tells us it is the past. Eat is irregular: eat → ate."},
-    {"tema": "Simple past", "q": "Complete: <em>Caio and Manu ___ at the museum last Saturday.</em>", "opts": ["was", "were", "is", "am"], "correct": 1, "fb": "Caio and Manu = they. With they, we use were."},
+    {"tema": "Simple past", "q": "Complete: <em>Nico and Manu ___ at the museum last Saturday.</em>", "opts": ["was", "were", "is", "am"], "correct": 1, "fb": "Nico and Manu = they. With they, we use were."},
     {"tema": "Simple past", "q": "Complete: <em>The weather ___ sunny yesterday.</em>", "opts": ["were", "was", "are", "be"], "correct": 1, "fb": "The weather = it. With it, the past is was."},
     {"tema": "Simple past", "q": "What is the past of <b>study</b>?", "opts": ["studyed", "studied", "studed", "studies"], "correct": 1, "fb": "Consonant + y: change y to i and add -ed → studied."},
     {"tema": "Plurals", "q": "What is the plural of <b>box</b>?", "opts": ["boxs", "boxes", "boxies", "box"], "correct": 1, "fb": "Words ending in x add -es: boxes."},
     {"tema": "Plurals", "q": "What is the plural of <b>child</b>?", "opts": ["childs", "children", "childes", "childrens"], "correct": 1, "fb": "Child is irregular: one child, two children."},
     {"tema": "Plurals", "q": "What is the plural of <b>baby</b>?", "opts": ["babys", "babies", "babyes", "babis"], "correct": 1, "fb": "Consonant + y: change to -ies → babies."},
     {"tema": "Plurals", "q": "What is the plural of <b>tooth</b>?", "opts": ["tooths", "teeth", "toothes", "teeths"], "correct": 1, "fb": "Tooth is irregular: one tooth, many teeth (like foot → feet)."},
-    {"tema": "Punctuation and capitals", "q": "Which sentence is written correctly?", "opts": ["on monday, liz went to school.", "On Monday, Liz went to school.", "On monday, Liz went to School.", "on Monday, liz went to school."], "correct": 1, "fb": "Capital letters: the first word, names (Liz) and days of the week (Monday)."},
+    {"tema": "Punctuation and capitals", "q": "Which sentence is written correctly?", "opts": ["on monday, liz went to school.", "On Monday, Lis went to school.", "On monday, Lis went to School.", "on Monday, liz went to school."], "correct": 1, "fb": "Capital letters: the first word, names (Lis) and days of the week (Monday)."},
     {"tema": "Punctuation and capitals", "q": "Which word must <b>always</b> start with a capital letter in English?", "opts": ["dog", "October", "school", "happy"], "correct": 1, "fb": "Months and days always start with a capital in English: October, Monday."},
     {"tema": "Punctuation and capitals", "q": "Which end mark goes here? <em>Where is my backpack</em>", "opts": [".", "?", "!", ","], "correct": 1, "fb": "It is a question, so it ends with a question mark."},
     {"tema": "Punctuation and capitals", "q": "<em>Wow, we won the game</em> — which end mark shows strong feeling?", "opts": [".", "?", "!", ","], "correct": 2, "fb": "The exclamation mark shows strong feeling: Wow, we won the game!"},
@@ -119,10 +119,10 @@
     {"tema": "Synonyms and antonyms", "q": "Which word is a <b>synonym</b> for <em>happy</em>?", "opts": ["sad", "glad", "angry", "tired"], "correct": 1, "fb": "Synonyms mean almost the same: happy = glad. Sad is the antonym."},
     {"tema": "Synonyms and antonyms", "q": "What is the <b>antonym</b> of <em>hot</em>?", "opts": ["warm", "cold", "sunny", "big"], "correct": 1, "fb": "Antonyms are opposites: hot × cold."},
     {"tema": "Synonyms and antonyms", "q": "What is the opposite of <em>early</em>?", "opts": ["late", "soon", "fast", "first"], "correct": 0, "fb": "Early × late. (Cedo × tarde.)"},
-    {"tema": "Synonyms and antonyms", "q": "Complete: <em>Mia stayed home ___ it was raining a lot.</em>", "opts": ["but", "because", "or", "so"], "correct": 1, "fb": "“Because” gives the reason: Mia stayed home because it was raining."},
+    {"tema": "Synonyms and antonyms", "q": "Complete: <em>Bia stayed home ___ it was raining a lot.</em>", "opts": ["but", "because", "or", "so"], "correct": 1, "fb": "“Because” gives the reason: Bia stayed home because it was raining."},
     {"tema": "Synonyms and antonyms", "q": "Complete: <em>I like apples, ___ I don't like bananas.</em>", "opts": ["because", "but", "so", "or"], "correct": 1, "fb": "“But” shows a contrast between two ideas."},
-    {"tema": "Reading", "q": "Read: <em>Liz has a small garden. Every morning, Liz waters the tomatoes and the sunflowers. The sunflowers are taller than Liz!</em> What does Liz do every morning?", "opts": ["Plays soccer", "Waters the plants", "Eats tomatoes", "Paints sunflowers"], "correct": 1, "fb": "The text says: “Every morning, Liz waters the tomatoes and the sunflowers.”"},
-    {"tema": "Reading", "q": "Read again: <em>The sunflowers are taller than Liz!</em> Which is taller?", "opts": ["Liz", "The sunflowers", "The tomatoes", "The garden"], "correct": 1, "fb": "“Taller than Liz” means the sunflowers are taller."},
+    {"tema": "Reading", "q": "Read: <em>Lis has a small garden. Every morning, Lis waters the tomatoes and the sunflowers. The sunflowers are taller than Lis!</em> What does Lis do every morning?", "opts": ["Plays soccer", "Waters the plants", "Eats tomatoes", "Paints sunflowers"], "correct": 1, "fb": "The text says: “Every morning, Lis waters the tomatoes and the sunflowers.”"},
+    {"tema": "Reading", "q": "Read again: <em>The sunflowers are taller than Lis!</em> Which is taller?", "opts": ["Lis", "The sunflowers", "The tomatoes", "The garden"], "correct": 1, "fb": "“Taller than Lis” means the sunflowers are taller."},
     {"tema": "Reading", "q": "<em>do not</em> can be written as:", "opts": ["don't", "doesn't", "didn't", "dont"], "correct": 0, "fb": "Contraction: do + not = don't. The apostrophe (') takes the place of the letter o."}
   ]
 }

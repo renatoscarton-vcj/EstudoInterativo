@@ -58,7 +58,7 @@
         "Beber <b>água tratada ou filtrada</b> e lavar bem frutas e verduras.",
         "Cobrir a boca com o braço ao tossir ou espirrar."
       ],
-      "quem": "Joana",
+      "quem": "Nico",
       "fala": "Lavo as mãos cantando “parabéns” duas vezes. Assim dá o tempo certinho!"
     },
     {
@@ -71,7 +71,7 @@
         "<b>Consumidores secundários:</b> comem os primários.",
         "<b>Decompositores:</b> fungos e bactérias que decompõem restos de todos."
       ],
-      "quem": "Liz",
+      "quem": "Lis",
       "fala": "Capim → gafanhoto → sapo → cobra. O capim é o produtor, e tudo começa no Sol!"
     },
     {
@@ -96,7 +96,7 @@
         "<b>Reversíveis:</b> dá para voltar ao que era: gelo derrete e congela de novo; chocolate derrete e endurece.",
         "<b>Irreversíveis:</b> não voltam mais: bolo assado, papel queimado, ovo frito, prego enferrujado."
       ],
-      "quem": "Mia",
+      "quem": "Bia",
       "fala": "Depois que o bolo vai ao forno, não tem como desassar! Isso é irreversível."
     },
     {
@@ -116,7 +116,7 @@
     {"tema": "Microscópio", "q": "Para que serve o microscópio?", "opts": ["Ver coisas muito distantes, como estrelas", "Aumentar a imagem de coisas muito pequenas", "Medir a temperatura", "Pesar objetos"], "correct": 1, "fb": "O microscópio aumenta a imagem de coisas minúsculas. Para ver estrelas usamos o telescópio."},
     {"tema": "Microscópio", "q": "No trabalho em grupo, Elise olhou pela parte de cima do microscópio, onde se coloca o olho. Essa parte se chama:", "opts": ["Objetiva", "Ocular", "Platina", "Base"], "correct": 1, "fb": "A ocular é a lente onde colocamos o olho."},
     {"tema": "Microscópio", "q": "Onde se coloca a lâmina com o material a ser observado?", "opts": ["Na ocular", "Na platina", "No revólver", "No braço"], "correct": 1, "fb": "A platina é a “mesinha” do microscópio, onde fica a lâmina."},
-    {"tema": "Microscópio", "q": "Para girar e trocar as lentes objetivas, Caio mexeu no:", "opts": ["Revólver", "Parafuso micrométrico", "Espelho", "Braço"], "correct": 0, "fb": "O revólver segura as objetivas e gira para trocar o aumento."},
+    {"tema": "Microscópio", "q": "Para girar e trocar as lentes objetivas, Nico mexeu no:", "opts": ["Revólver", "Parafuso micrométrico", "Espelho", "Braço"], "correct": 0, "fb": "O revólver segura as objetivas e gira para trocar o aumento."},
     {"tema": "Microscópio", "q": "Qual parafuso serve para o ajuste <b>fino</b> do foco?", "opts": ["Macrométrico", "Micrométrico", "Revólver", "Ocular"], "correct": 1, "fb": "O micrométrico faz o ajuste fino. O macrométrico faz o ajuste grosso (movimentos maiores)."},
     {"tema": "Microscópio", "q": "Qual é o jeito certo de carregar um microscópio?", "opts": ["Pela ocular, com uma mão só", "Segurando pelo braço e apoiando a base", "Pela platina", "Pelas lentes objetivas"], "correct": 1, "fb": "Use as duas mãos: uma no braço e outra embaixo da base. Assim ele não cai e as lentes não se sujam."},
     {"tema": "Microscópio", "q": "A plaquinha de vidro bem fina que cobre a amostra na lâmina se chama:", "opts": ["Lamínula", "Platina", "Objetiva", "Lupa"], "correct": 0, "fb": "A lamínula cobre e protege a amostra sobre a lâmina."},
@@ -132,7 +132,7 @@
     {"tema": "Cadeia alimentar", "q": "Na cadeia <em>capim → gafanhoto → sapo → cobra</em>, quem é o <b>produtor</b>?", "opts": ["Capim", "Gafanhoto", "Sapo", "Cobra"], "correct": 0, "fb": "O capim é uma planta e produz o próprio alimento com a luz do Sol."},
     {"tema": "Cadeia alimentar", "q": "Na mesma cadeia <em>capim → gafanhoto → sapo → cobra</em>, quem é o <b>consumidor primário</b>?", "opts": ["Capim", "Gafanhoto", "Sapo", "Cobra"], "correct": 1, "fb": "O consumidor primário é o primeiro a comer o produtor: o gafanhoto, que é herbívoro."},
     {"tema": "Cadeia alimentar", "q": "Por que as plantas são chamadas de <b>produtoras</b>?", "opts": ["Porque produzem o próprio alimento usando a luz do Sol", "Porque comem outros seres vivos", "Porque vivem muito tempo", "Porque não precisam de água"], "correct": 0, "fb": "Pela fotossíntese, as plantas usam luz, água e gás carbônico para produzir seu alimento."},
-    {"tema": "Misturas", "q": "Théo misturou água e óleo num copo. Formou-se uma mistura:", "opts": ["Homogênea", "Heterogênea", "Que vira gelo", "Que desaparece"], "correct": 1, "fb": "Dá para ver o óleo separado em cima da água: é uma mistura heterogênea."},
+    {"tema": "Misturas", "q": "Bia misturou água e óleo num copo. Formou-se uma mistura:", "opts": ["Homogênea", "Heterogênea", "Que vira gelo", "Que desaparece"], "correct": 1, "fb": "Dá para ver o óleo separado em cima da água: é uma mistura heterogênea."},
     {"tema": "Misturas", "q": "Água com açúcar bem dissolvido é uma mistura:", "opts": ["Homogênea", "Heterogênea", "De sólidos", "Impossível"], "correct": 0, "fb": "O açúcar dissolvido não aparece mais: a mistura parece uma coisa só, é homogênea."},
     {"tema": "Misturas", "q": "Para separar a areia da água, Manu usou um filtro de papel. Esse método é a:", "opts": ["Evaporação", "Filtração", "Catação", "Imantação"], "correct": 1, "fb": "Na filtração, o líquido passa pelo filtro e o sólido (a areia) fica retido."},
     {"tema": "Misturas", "q": "Nas salinas, o sal é separado da água do mar pela:", "opts": ["Filtração", "Evaporação", "Peneiração", "Catação"], "correct": 1, "fb": "O Sol aquece a água, que evapora, e o sal fica no fundo."},

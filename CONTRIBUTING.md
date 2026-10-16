@@ -22,7 +22,7 @@ Se você usa GitHub, pode abrir um Pull Request direto com os arquivos alterados
   sem entender nada.
 - **Uma ideia por pergunta.** Evite enunciados que cobram duas coisas ao mesmo tempo.
 - **Linguagem da idade.** Escreva como você explicaria para a criança, não como está no livro.
-- **Use a turma do Passaporte** nas histórias: Caio, Joana, Manu, Elise, Théo, Liz, Mia e Gael.
+- **Use a turma do Passaporte** nas histórias: Caio, Joana, Manu, Elise, Théo, Lis, Mia, Gael, Nico e Bia.
   Não acrescente outros nomes de crianças sem autorização das famílias.
 - **Evite pronomes de gênero para a turma** (ele/ela, he/she): prefira repetir o nome.
 

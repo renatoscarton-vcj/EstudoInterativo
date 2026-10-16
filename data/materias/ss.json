@@ -58,7 +58,7 @@
         "A <b>timeline</b> shows events in the <b>order they happened</b>.",
         "<b>Primary sources</b> come from the time of the event: old letters, photos, diaries."
       ],
-      "quem": "Liz",
+      "quem": "Lis",
       "fala": "Our family tree for the Mostra Cultural has four generations!"
     },
     {
@@ -82,7 +82,7 @@
         "<b>Services</b> are jobs people do for others: a haircut, a doctor visit, a bus ride.",
         "<b>Producers</b> make goods or give services. <b>Consumers</b> buy and use them."
       ],
-      "quem": "Mia",
+      "quem": "Nico",
       "fala": "The bread from the bakery is a good. The haircut at the salon is a service!"
     },
     {
@@ -94,7 +94,7 @@
         "<b>Rights:</b> things everyone deserves, like going to school.",
         "<b>Responsibilities:</b> things we should do, like doing homework and respecting others."
       ],
-      "quem": "Manu",
+      "quem": "Bia",
       "fala": "Picking up trash in the schoolyard is a responsibility we all share!"
     },
     {
@@ -127,8 +127,8 @@
     {"tema": "Communities", "q": "Firefighters, doctors and teachers are called community...", "opts": ["helpers", "consumers", "continents", "visitors"], "correct": 0, "fb": "Community helpers are people whose jobs help everyone in the community."},
     {"tema": "Needs and wants", "q": "Which one is a <b>need</b>?", "opts": ["a video game", "clean water", "a new toy", "candy"], "correct": 1, "fb": "We need clean water to live. The others are wants."},
     {"tema": "Needs and wants", "q": "Which one is a <b>want</b>?", "opts": ["food", "a home", "a skateboard", "warm clothes"], "correct": 2, "fb": "A skateboard is fun, but we can live without it: it is a want."},
-    {"tema": "Needs and wants", "q": "Elise wants a book that costs R$ 40. Elise saves R$ 10 each week. How many weeks will it take?", "opts": ["2", "3", "4", "5"], "correct": 2, "fb": "40 ÷ 10 = 4 weeks of saving."},
-    {"tema": "Goods and services", "q": "A haircut is an example of a...", "opts": ["good", "service", "need", "natural resource"], "correct": 1, "fb": "A haircut is work someone does for you: a service."},
+    {"tema": "Needs and wants", "q": "Nico wants a book that costs R$ 40. Nico saves R$ 10 each week. How many weeks will it take?", "opts": ["2", "3", "4", "5"], "correct": 2, "fb": "40 ÷ 10 = 4 weeks of saving."},
+    {"tema": "Goods and services", "q": "Bia got a haircut at the salon. A haircut is an example of a...", "opts": ["good", "service", "need", "natural resource"], "correct": 1, "fb": "A haircut is work someone does for you: a service."},
     {"tema": "Goods and services", "q": "A loaf of bread from the bakery is a...", "opts": ["good", "service", "map", "law"], "correct": 0, "fb": "You can touch bread, so it is a good."},
     {"tema": "Family history", "q": "A <b>family tree</b> shows...", "opts": ["the plants in a garden", "the members and generations of a family", "a map of the city", "the school rules"], "correct": 1, "fb": "A family tree shows who is in the family and how they are related. (Árvore genealógica.)"},
     {"tema": "Family history", "q": "Your grandparents' parents are your...", "opts": ["cousins", "great-grandparents", "uncles", "siblings"], "correct": 1, "fb": "Great-grandparents = bisavós."},

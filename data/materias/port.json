@@ -67,7 +67,7 @@
         "<b>Sinônimos</b> têm sentido parecido: <em>alegre = contente</em>, <em>bonito = belo</em>.",
         "<b>Antônimos</b> têm sentido contrário: <em>cheio × vazio</em>, <em>corajoso × medroso</em>, <em>cedo × tarde</em>."
       ],
-      "quem": "Manu",
+      "quem": "Bia",
       "fala": "Hoje estou contente, que é o mesmo que alegre. O contrário seria triste!"
     },
     {
@@ -91,7 +91,7 @@
         "Entre vogais, <b>S</b> sozinho tem som de Z (<em>casa</em>). Para o som de S, usamos <b>SS</b> (<em>pássaro</em>) ou <b>Ç</b>.",
         "O <b>Ç</b> só aparece antes de <b>A, O, U</b> e <b>nunca</b> começa palavra: <em>açúcar, poço, caçula</em>."
       ],
-      "quem": "Gael",
+      "quem": "Nico",
       "fala": "Carro com RR é veículo; caro com R é o que custa muito. Uma letra muda tudo!"
     },
     {
@@ -105,7 +105,7 @@
         "<b>Poema:</b> escrito em <b>versos</b> (linhas) e <b>estrofes</b> (grupos de versos).",
         "<b>Convite:</b> chama alguém para um evento, com data, hora e local."
       ],
-      "quem": "Liz",
+      "quem": "Lis",
       "fala": "No Flipbook da Mostra Cultural, cada página pode ser um gênero diferente!"
     }
   ],
@@ -124,22 +124,22 @@
     {"tema": "Verbos e tempos verbais", "q": "Qual verbo indica um <b>fenômeno da natureza</b>?", "opts": ["chover", "pular", "pensar", "escrever"], "correct": 0, "fb": "Chover, ventar, trovejar e nevar são fenômenos da natureza. Os outros são ações de pessoas."},
     {"tema": "Pontuação", "q": "Qual sinal combina com o final da frase <em>Que dia lindo para um piquenique</em>?", "opts": ["?", "!", ":", ","], "correct": 1, "fb": "A frase mostra emoção e admiração, então pede ponto de exclamação: Que dia lindo para um piquenique!"},
     {"tema": "Pontuação", "q": "Qual sinal termina a frase <em>Você vai à Mostra Cultural</em>?", "opts": ["Ponto final", "Ponto de interrogação", "Vírgula", "Travessão"], "correct": 1, "fb": "É uma pergunta, então termina com ponto de interrogação: Você vai à Mostra Cultural?"},
-    {"tema": "Pontuação", "q": "Em um diálogo, qual sinal no começo da linha mostra a fala de um personagem?", "opts": ["Travessão (—)", "Vírgula", "Ponto final", "Parênteses"], "correct": 0, "fb": "O travessão marca a fala do personagem: — Vamos brincar? perguntou Liz."},
+    {"tema": "Pontuação", "q": "Em um diálogo, qual sinal no começo da linha mostra a fala de um personagem?", "opts": ["Travessão (—)", "Vírgula", "Ponto final", "Parênteses"], "correct": 0, "fb": "O travessão marca a fala do personagem: — Vamos brincar? perguntou Lis."},
     {"tema": "Pontuação", "q": "Qual frase está com as vírgulas no lugar certo?", "opts": ["Caio, comprou lápis borracha régua e cola.", "Caio comprou lápis, borracha, régua e cola.", "Caio comprou, lápis borracha régua, e cola.", "Caio comprou lápis borracha régua e, cola."], "correct": 1, "fb": "A vírgula separa os itens de uma lista. Antes do “e” do último item, normalmente não vai vírgula."},
     {"tema": "Sinônimos e antônimos", "q": "Qual é o <b>sinônimo</b> de <em>alegre</em>?", "opts": ["triste", "contente", "bravo", "cansado"], "correct": 1, "fb": "Sinônimos têm sentido parecido: alegre e contente. Triste é o antônimo (o contrário)."},
     {"tema": "Sinônimos e antônimos", "q": "Qual é o <b>antônimo</b> de <em>corajoso</em>?", "opts": ["valente", "medroso", "forte", "ousado"], "correct": 1, "fb": "Antônimo é o contrário: corajoso × medroso. Valente e ousado são sinônimos de corajoso."},
-    {"tema": "Sinônimos e antônimos", "q": "Joana disse que a sala estava <em>vazia</em>. O contrário de vazia é:", "opts": ["cheia", "limpa", "grande", "escura"], "correct": 0, "fb": "Vazia × cheia são antônimos. Limpa, grande e escura falam de outras características."},
+    {"tema": "Sinônimos e antônimos", "q": "Bia disse que a sala estava <em>vazia</em>. O contrário de vazia é:", "opts": ["cheia", "limpa", "grande", "escura"], "correct": 0, "fb": "Vazia × cheia são antônimos. Limpa, grande e escura falam de outras características."},
     {"tema": "Sílaba tônica e acentuação", "q": "Em qual palavra a sílaba mais forte é a <b>última</b> (oxítona)?", "opts": ["mesa", "café", "lâmpada", "livro"], "correct": 1, "fb": "Ca-FÉ: a última sílaba é a mais forte, então é oxítona. Mesa e livro são paroxítonas; lâmpada é proparoxítona."},
     {"tema": "Sílaba tônica e acentuação", "q": "Qual palavra é <b>proparoxítona</b>?", "opts": ["pássaro", "janela", "sofá", "caderno"], "correct": 0, "fb": "PÁS-sa-ro: a sílaba forte é a antepenúltima. Toda proparoxítona tem acento!"},
-    {"tema": "Ortografia", "q": "Qual palavra completa a frase? <em>Manu foi de ___ até a praia.</em>", "opts": ["caro", "carro", "carrro", "karro"], "correct": 1, "fb": "Entre vogais, o som forte do R é escrito com RR: carro. “Caro” (com um R) quer dizer que custa muito."},
+    {"tema": "Ortografia", "q": "Qual palavra completa a frase? <em>Nico foi de ___ até a praia.</em>", "opts": ["caro", "carro", "carrro", "karro"], "correct": 1, "fb": "Entre vogais, o som forte do R é escrito com RR: carro. “Caro” (com um R) quer dizer que custa muito."},
     {"tema": "Ortografia", "q": "Qual palavra está escrita corretamente?", "opts": ["pásaro", "pássaro", "páçaro", "pázaro"], "correct": 1, "fb": "Entre vogais, um S sozinho tem som de Z. Para o som de S, usamos SS: pássaro."},
     {"tema": "Ortografia", "q": "Em qual palavra o <b>Ç</b> foi usado corretamente?", "opts": ["çebola", "açúcar", "çinema", "çapato"], "correct": 1, "fb": "O Ç só vem antes de A, O e U e nunca começa palavra. Por isso: açúcar, mas cebola, cinema e sapato."},
     {"tema": "Gêneros textuais", "q": "Théo escreveu um texto contando a vida de Santos Dumont: onde nasceu, o que inventou e quando morreu. Esse texto é uma:", "opts": ["receita", "biografia", "fábula", "notícia"], "correct": 1, "fb": "Biografia conta a história da vida de uma pessoa real, em ordem de acontecimentos."},
     {"tema": "Gêneros textuais", "q": "“A Cigarra e a Formiga” tem animais que falam e termina com um ensinamento. Que tipo de texto é?", "opts": ["Fábula", "Notícia", "Receita", "Bilhete"], "correct": 0, "fb": "Fábulas são histórias curtas, muitas vezes com animais, que terminam com uma moral (um ensinamento)."},
     {"tema": "Gêneros textuais", "q": "Num poema, cada linha se chama ___ e cada grupo de linhas se chama ___.", "opts": ["verso / estrofe", "estrofe / verso", "parágrafo / capítulo", "rima / título"], "correct": 0, "fb": "Verso é cada linha do poema. Estrofe é um conjunto de versos."},
     {"tema": "Gêneros textuais", "q": "Qual é a principal função de uma <b>notícia</b>?", "opts": ["Contar uma história inventada com moral", "Informar um fato real que aconteceu", "Ensinar a preparar uma comida", "Chamar alguém para uma festa"], "correct": 1, "fb": "A notícia informa um fato real: o que aconteceu, quando, onde e com quem."},
-    {"tema": "Gêneros textuais", "q": "Liz quer chamar as famílias para a Mostra Cultural do dia 17/10. Qual gênero é o mais adequado?", "opts": ["Convite", "Poema", "Biografia", "Fábula"], "correct": 0, "fb": "O convite chama alguém para um evento e informa data, horário e local."},
-    {"tema": "Interpretação de texto", "q": "Leia: <em>Elise acordou cedo, pegou o guarda-chuva e saiu apressada. Lá fora, as nuvens estavam escuras.</em> Por que Elise levou o guarda-chuva?", "opts": ["Porque fazia muito sol", "Porque parecia que ia chover", "Porque ia à praia", "Porque o guarda-chuva era novo"], "correct": 1, "fb": "As nuvens escuras são a pista: parecia que ia chover. Ler as pistas do texto é inferir!"},
+    {"tema": "Gêneros textuais", "q": "Lis quer chamar as famílias para a Mostra Cultural do dia 17/10. Qual gênero é o mais adequado?", "opts": ["Convite", "Poema", "Biografia", "Fábula"], "correct": 0, "fb": "O convite chama alguém para um evento e informa data, horário e local."},
+    {"tema": "Interpretação de texto", "q": "Leia: <em>Elise acordou cedo, pegou o guarda-chuva e saiu com pressa. Lá fora, as nuvens estavam escuras.</em> Por que Elise levou o guarda-chuva?", "opts": ["Porque fazia muito sol", "Porque parecia que ia chover", "Porque ia à praia", "Porque o guarda-chuva era novo"], "correct": 1, "fb": "As nuvens escuras são a pista: parecia que ia chover. Ler as pistas do texto é inferir!"},
     {"tema": "Interpretação de texto", "q": "Leia: <em>Gael e Caio dividiram o último pedaço de bolo ao meio. Os dois sorriram.</em> O que a atitude mostra?", "opts": ["Que os dois brigaram", "Que os dois sabem dividir", "Que o bolo estava ruim", "Que ninguém queria bolo"], "correct": 1, "fb": "Dividir ao meio e sorrir mostra generosidade e amizade. O texto não diz isso com essas palavras, mas dá as pistas."}
   ]
 }

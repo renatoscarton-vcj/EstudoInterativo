@@ -31,7 +31,7 @@
         "<b>Perpendiculares:</b> se cruzam formando 4 ângulos retos, como o sinal de mais: <em>+</em>.",
         "<b>Concorrentes:</b> se cruzam em um ponto, formando qualquer ângulo: <em>✕</em>."
       ],
-      "quem": "Liz",
+      "quem": "Lis",
       "fala": "As linhas do meu caderno são paralelas. A margem cruza todas elas formando ângulo reto: perpendiculares!"
     },
     {
@@ -44,7 +44,7 @@
         "<b>Cilindro</b> (lata) e <b>esfera</b> (bola) rolam porque têm partes arredondadas.",
         "<b>Pirâmide:</b> base de polígono e faces triangulares que se encontram num ponto."
       ],
-      "quem": "Théo",
+      "quem": "Nico",
       "fala": "A placa de PARE tem 8 lados: é um octógono. O favo de mel tem 6: hexágono!"
     },
     {
@@ -105,7 +105,7 @@
         "1 hora = 60 minutos; meia hora = 30 minutos.",
         "1 quilograma (kg) = 1.000 gramas (g)."
       ],
-      "quem": "Joana",
+      "quem": "Bia",
       "fala": "Uma hora e meia de Mostra Cultural são 60 + 30 = 90 minutos de diversão!"
     }
   ],
@@ -114,13 +114,13 @@
     {"tema": "Ângulos", "q": "Quanto mede um ângulo <b>reto</b>?", "opts": ["45°", "90°", "180°", "360°"], "correct": 1, "fb": "Ângulo reto mede 90°, ou seja, ¼ de volta."},
     {"tema": "Ângulos", "q": "Um ângulo de <b>40°</b> é:", "opts": ["Agudo", "Reto", "Obtuso", "Raso"], "correct": 0, "fb": "Todo ângulo menor que 90° é agudo."},
     {"tema": "Ângulos", "q": "Um ângulo de <b>130°</b> é:", "opts": ["Agudo", "Reto", "Obtuso", "Raso"], "correct": 2, "fb": "Ângulos maiores que 90° e menores que 180° são obtusos."},
-    {"tema": "Ângulos", "q": "Joana deu <b>meia-volta</b> para olhar para trás. Quantos graus Joana girou?", "opts": ["90°", "180°", "270°", "360°"], "correct": 1, "fb": "Meia-volta é metade de 360°, ou seja, 180°: um ângulo raso."},
+    {"tema": "Ângulos", "q": "Bia deu <b>meia-volta</b> para olhar para trás. Quantos graus Bia girou?", "opts": ["90°", "180°", "270°", "360°"], "correct": 1, "fb": "Meia-volta é metade de 360°, ou seja, 180°: um ângulo raso."},
     {"tema": "Ângulos", "q": "Quantos graus tem uma <b>volta completa</b>?", "opts": ["90°", "180°", "360°", "100°"], "correct": 2, "fb": "Uma volta inteira tem 360°. Meia-volta tem 180° e ¼ de volta tem 90°."},
     {"tema": "Ângulos", "q": "Às <b>3 horas</b> em ponto, os ponteiros do relógio formam um ângulo:", "opts": ["Agudo", "Reto", "Obtuso", "Raso"], "correct": 1, "fb": "Às 3h, um ponteiro aponta para o 12 e o outro para o 3: ¼ de volta, 90°, ângulo reto."},
     {"tema": "Ângulos", "q": "Às <b>6 horas</b> em ponto, os ponteiros formam um ângulo:", "opts": ["Reto", "Raso", "Agudo", "Obtuso"], "correct": 1, "fb": "Às 6h os ponteiros apontam para lados opostos (12 e 6), formando uma linha reta: 180°, ângulo raso."},
     {"tema": "Retas", "q": "Os trilhos de um trem são um exemplo de retas:", "opts": ["Perpendiculares", "Paralelas", "Concorrentes", "Curvas"], "correct": 1, "fb": "Retas paralelas nunca se cruzam, como os dois trilhos do trem."},
     {"tema": "Retas", "q": "Duas ruas que se cruzam formando 4 ângulos retos são:", "opts": ["Paralelas", "Perpendiculares", "Curvas", "Iguais"], "correct": 1, "fb": "Retas que se cruzam formando ângulos retos (90°) são perpendiculares."},
-    {"tema": "Figuras geométricas", "q": "Théo desenhou o formato de um favo de mel, com <b>6 lados</b>. Essa figura é um:", "opts": ["Pentágono", "Hexágono", "Octógono", "Quadrado"], "correct": 1, "fb": "Polígono de 6 lados é hexágono. Pentágono tem 5 e octógono tem 8."},
+    {"tema": "Figuras geométricas", "q": "Nico desenhou o formato de um favo de mel, com <b>6 lados</b>. Essa figura é um:", "opts": ["Pentágono", "Hexágono", "Octógono", "Quadrado"], "correct": 1, "fb": "Polígono de 6 lados é hexágono. Pentágono tem 5 e octógono tem 8."},
     {"tema": "Figuras geométricas", "q": "A placa de trânsito PARE tem o formato de um:", "opts": ["Hexágono", "Octógono", "Pentágono", "Triângulo"], "correct": 1, "fb": "A placa PARE tem 8 lados: é um octógono."},
     {"tema": "Figuras geométricas", "q": "Quantas faces tem um <b>cubo</b> (como um dado)?", "opts": ["4", "6", "8", "12"], "correct": 1, "fb": "O cubo tem 6 faces quadradas, 12 arestas e 8 vértices."},
     {"tema": "Figuras geométricas", "q": "Qual sólido geométrico rola e tem o formato de uma lata?", "opts": ["Cubo", "Cilindro", "Pirâmide", "Prisma"], "correct": 1, "fb": "O cilindro tem duas bases redondas e uma parte arredondada, por isso rola."},
@@ -133,7 +133,7 @@
     {"tema": "Multiplicação", "q": "Qual é o <b>triplo</b> de 15?", "opts": ["30", "45", "18", "60"], "correct": 1, "fb": "Triplo é multiplicar por 3: 15 × 3 = 45."},
     {"tema": "Divisão", "q": "Caio repartiu 36 figurinhas igualmente entre 4 amigos. Quantas cada um recebeu?", "opts": ["8", "9", "12", "32"], "correct": 1, "fb": "36 ÷ 4 = 9, porque 4 × 9 = 36."},
     {"tema": "Divisão", "q": "Na divisão <em>17 ÷ 5</em>, o quociente e o resto são:", "opts": ["3 e 2", "3 e 1", "4 e 2", "2 e 7"], "correct": 0, "fb": "5 × 3 = 15 e sobram 2 para chegar a 17. Quociente 3, resto 2."},
-    {"tema": "Frações", "q": "Liz comeu 3 pedaços de uma pizza cortada em 8 pedaços iguais. Que fração Liz comeu?", "opts": ["3/8", "8/3", "3/5", "5/8"], "correct": 0, "fb": "O denominador é o total de partes (8) e o numerador é quantas foram comidas (3): 3/8."},
+    {"tema": "Frações", "q": "Lis comeu 3 pedaços de uma pizza cortada em 8 pedaços iguais. Que fração Lis comeu?", "opts": ["3/8", "8/3", "3/5", "5/8"], "correct": 0, "fb": "O denominador é o total de partes (8) e o numerador é quantas foram comidas (3): 3/8."},
     {"tema": "Frações", "q": "Na fração <b>2/5</b>, o 5 é o:", "opts": ["Numerador", "Denominador", "Inteiro", "Resto"], "correct": 1, "fb": "O número de baixo é o denominador: mostra em quantas partes iguais o inteiro foi dividido."},
     {"tema": "Frações", "q": "Quanto é a <b>metade</b> de 50 reais?", "opts": ["5 reais", "20 reais", "25 reais", "100 reais"], "correct": 2, "fb": "Metade é dividir por 2: 50 ÷ 2 = 25 reais."},
     {"tema": "Medidas", "q": "Quantos centímetros tem 1 metro?", "opts": ["10", "100", "1.000", "60"], "correct": 1, "fb": "1 metro = 100 centímetros."},

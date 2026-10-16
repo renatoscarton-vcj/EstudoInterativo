@@ -53,7 +53,7 @@
         "<b>Equivalent fractions</b> are equal: 1/2 = 2/4 = 4/8.",
         "Same numerator? The <b>smaller</b> denominator is the <b>bigger</b> fraction: 1/2 > 1/4."
       ],
-      "quem": "Théo",
+      "quem": "Bia",
       "fala": "I'd rather have 1/2 of a pizza than 1/8. Bigger slice!"
     },
     {
@@ -65,7 +65,7 @@
         "<b>Parallel</b> lines never meet. <b>Perpendicular</b> lines meet at a right angle.",
         "<b>Triangle</b> (3 sides), <b>quadrilateral</b> (4), <b>pentagon</b> (5), <b>hexagon</b> (6), <b>octagon</b> (8)."
       ],
-      "quem": "Liz",
+      "quem": "Lis",
       "fala": "Ângulo reto is “right angle”. Same idea, new words!"
     },
     {
@@ -88,7 +88,7 @@
         "<b>Half past</b>: 30 minutes after (3:30).",
         "<b>Quarter to</b>: 15 minutes before the next hour (8:45 = quarter to 9)."
       ],
-      "quem": "Manu",
+      "quem": "Nico",
       "fala": "Half past three means three thirty. Snack time!"
     }
   ],
@@ -104,12 +104,12 @@
     {"tema": "Multiplication and division", "q": "<b>7 × 8</b> = ?", "opts": ["54", "56", "63", "48"], "correct": 1, "fb": "7 × 8 = 56. Tip: 5, 6, 7, 8 → 56 = 7 × 8!"},
     {"tema": "Multiplication and division", "q": "Joana planted 4 rows of flowers with 9 flowers in each row. How many flowers in all?", "opts": ["13", "32", "36", "45"], "correct": 2, "fb": "4 rows × 9 flowers = 36 flowers."},
     {"tema": "Multiplication and division", "q": "<b>45 ÷ 5</b> = ?", "opts": ["8", "9", "7", "10"], "correct": 1, "fb": "45 ÷ 5 = 9, because 5 × 9 = 45."},
-    {"tema": "Multiplication and division", "q": "Gael shares 29 cookies equally among 4 friends. How many cookies are <b>left over</b>?", "opts": ["0", "1", "3", "4"], "correct": 1, "fb": "4 × 7 = 28. 29 − 28 = 1 cookie left over (the remainder)."},
+    {"tema": "Multiplication and division", "q": "Nico shares 29 cookies equally among 4 friends. How many cookies are <b>left over</b>?", "opts": ["0", "1", "3", "4"], "correct": 1, "fb": "4 × 7 = 28. 29 − 28 = 1 cookie left over (the remainder)."},
     {"tema": "Multiplication and division", "q": "In <em>20 ÷ 4 = 5</em>, the answer 5 is the...", "opts": ["dividend", "divisor", "quotient", "factor"], "correct": 2, "fb": "The answer to a division is the quotient. 20 is the dividend and 4 is the divisor."},
     {"tema": "Fractions", "q": "Which fraction is equal to <b>1/2</b>?", "opts": ["2/3", "2/4", "1/4", "3/5"], "correct": 1, "fb": "2/4 is the same as 1/2: two of four equal parts is half."},
     {"tema": "Fractions", "q": "Which fraction is the <b>biggest</b>?", "opts": ["1/4", "1/2", "1/8", "1/10"], "correct": 1, "fb": "Same numerator (1): the fewer the parts, the bigger each part. 1/2 is the biggest."},
     {"tema": "Fractions", "q": "What is the <b>denominator</b> of 3/4?", "opts": ["3", "4", "7", "1"], "correct": 1, "fb": "The denominator is the bottom number: 4."},
-    {"tema": "Fractions", "q": "A pizza has 8 slices. Théo eats 1/4 of the pizza. How many slices does Théo eat?", "opts": ["1", "2", "4", "6"], "correct": 1, "fb": "1/4 of 8 = 8 ÷ 4 = 2 slices."},
+    {"tema": "Fractions", "q": "A pizza has 8 slices. Bia eats 1/4 of the pizza. How many slices does Bia eat?", "opts": ["1", "2", "4", "6"], "correct": 1, "fb": "1/4 of 8 = 8 ÷ 4 = 2 slices."},
     {"tema": "Angles and shapes", "q": "An angle <b>smaller</b> than a right angle is...", "opts": ["obtuse", "acute", "straight", "a circle"], "correct": 1, "fb": "Acute angles are smaller than 90°."},
     {"tema": "Angles and shapes", "q": "A shape with <b>5 sides</b> is a...", "opts": ["hexagon", "pentagon", "octagon", "quadrilateral"], "correct": 1, "fb": "Pentagon = 5 sides. Hexagon = 6, octagon = 8."},
     {"tema": "Angles and shapes", "q": "Lines that never meet, like railroad tracks, are...", "opts": ["perpendicular", "parallel", "intersecting", "curved"], "correct": 1, "fb": "Parallel lines never meet. (Paralelas.)"},
@@ -119,6 +119,6 @@
     {"tema": "Time", "q": "How many minutes are in one hour?", "opts": ["30", "60", "100", "24"], "correct": 1, "fb": "1 hour = 60 minutes."},
     {"tema": "Time", "q": "<em>Half past 3</em> means...", "opts": ["3:30", "3:15", "3:45", "2:30"], "correct": 0, "fb": "Half past = 30 minutes after the hour: 3:30."},
     {"tema": "Time", "q": "<em>Quarter past 9</em> means...", "opts": ["9:15", "9:45", "9:25", "8:45"], "correct": 0, "fb": "Quarter past = 15 minutes after: 9:15."},
-    {"tema": "Word problems", "q": "Caio has 125 stickers. Liz gives Caio 48 more. Then Caio gives 30 to Mia. How many stickers does Caio have now?", "opts": ["143", "173", "203", "155"], "correct": 0, "fb": "125 + 48 = 173. Then 173 − 30 = 143."}
+    {"tema": "Word problems", "q": "Caio has 125 stickers. Lis gives Caio 48 more. Then Caio gives 30 to Mia. How many stickers does Caio have now?", "opts": ["143", "173", "203", "155"], "correct": 0, "fb": "125 + 48 = 173. Then 173 − 30 = 143."}
   ]
 }

@@ -31,7 +31,7 @@
         "<b>Orais:</b> histórias contadas, entrevistas com os mais velhos.",
         "<b>Materiais:</b> objetos, roupas, ferramentas, construções."
       ],
-      "quem": "Liz",
+      "quem": "Lis",
       "fala": "Entrevistei minha avó sobre a infância dela. Essa conversa virou uma fonte oral!"
     },
     {
@@ -43,7 +43,7 @@
         "Os séculos são escritos em números romanos: estamos no <b>século XXI</b> (anos 2001 a 2100).",
         "A linha do tempo mostra os fatos na <b>ordem em que aconteceram</b>."
       ],
-      "quem": "Théo",
+      "quem": "Bia",
       "fala": "Meu bisavô nasceu no século XX. Eu nasci no século XXI!"
     },
     {
@@ -80,7 +80,7 @@
         "<b>Escala:</b> ajuda a calcular as distâncias reais.",
         "<b>Rosa dos ventos:</b> mostra as direções. Pontos cardeais: <b>Norte, Sul, Leste, Oeste</b>. Colaterais: <b>Nordeste, Noroeste, Sudeste, Sudoeste</b>."
       ],
-      "quem": "Caio",
+      "quem": "Nico",
       "fala": "Entre o Norte e o Leste fica o Nordeste. É só juntar os nomes!"
     },
     {
@@ -111,9 +111,9 @@
   "questions": [
     {"tema": "Família e árvore genealógica", "q": "Os pais da mãe de Gael são os ___ de Gael.", "opts": ["Tios", "Avós", "Primos", "Bisavós"], "correct": 1, "fb": "Os pais dos nossos pais são nossos avós."},
     {"tema": "Família e árvore genealógica", "q": "Os pais dos seus avós são os seus:", "opts": ["Tios", "Bisavós", "Primos", "Sobrinhos"], "correct": 1, "fb": "Subindo mais uma geração na árvore depois dos avós, chegamos aos bisavós."},
-    {"tema": "Família e árvore genealógica", "q": "Os filhos dos tios de Joana são os ___ de Joana.", "opts": ["Irmãos", "Primos", "Sobrinhos", "Netos"], "correct": 1, "fb": "Os filhos dos nossos tios são nossos primos."},
+    {"tema": "Família e árvore genealógica", "q": "Os filhos dos tios de Bia são os ___ de Bia.", "opts": ["Irmãos", "Primos", "Sobrinhos", "Netos"], "correct": 1, "fb": "Os filhos dos nossos tios são nossos primos."},
     {"tema": "Família e árvore genealógica", "q": "Na árvore genealógica, os <b>antepassados</b> são:", "opts": ["Os familiares que vieram antes de nós", "Os amigos da escola", "Os vizinhos", "Os filhos e netos"], "correct": 0, "fb": "Antepassados são os familiares das gerações anteriores: pais, avós, bisavós..."},
-    {"tema": "Fontes históricas", "q": "Liz entrevistou a avó sobre como era a escola antigamente. Essa entrevista é uma fonte histórica:", "opts": ["Oral", "Escrita", "Material", "Visual"], "correct": 0, "fb": "Histórias contadas e entrevistas são fontes orais."},
+    {"tema": "Fontes históricas", "q": "Lis entrevistou a avó sobre como era a escola antigamente. Essa entrevista é uma fonte histórica:", "opts": ["Oral", "Escrita", "Material", "Visual"], "correct": 0, "fb": "Histórias contadas e entrevistas são fontes orais."},
     {"tema": "Fontes históricas", "q": "Uma certidão de nascimento antiga é uma fonte histórica:", "opts": ["Oral", "Escrita", "Material", "Sonora"], "correct": 1, "fb": "Documentos com texto, como certidões e cartas, são fontes escritas."},
     {"tema": "Fontes históricas", "q": "Um ferro de passar roupa a carvão, guardado pelo bisavô de Caio, é uma fonte:", "opts": ["Material", "Oral", "Escrita", "Visual"], "correct": 0, "fb": "Objetos são fontes materiais: mostram como as pessoas viviam."},
     {"tema": "Fontes históricas", "q": "Uma fotografia antiga do casamento dos avós é uma fonte:", "opts": ["Visual", "Oral", "Material", "Sonora"], "correct": 0, "fb": "Fotos, pinturas e desenhos são fontes visuais."},
@@ -123,7 +123,7 @@
     {"tema": "Nômades e sedentários", "q": "Os primeiros grupos humanos mudavam de lugar em busca de alimento. Eles eram:", "opts": ["Sedentários", "Nômades", "Imigrantes", "Industriais"], "correct": 1, "fb": "Nômades não têm moradia fixa: mudam de lugar para caçar, pescar e coletar."},
     {"tema": "Nômades e sedentários", "q": "O que fez muitos grupos humanos deixarem de ser nômades?", "opts": ["A invenção do avião", "A agricultura e a criação de animais", "A internet", "A construção de shoppings"], "correct": 1, "fb": "Plantando e criando animais, as pessoas podiam ficar num lugar fixo. Assim surgiram as aldeias."},
     {"tema": "Migrações", "q": "Uma pessoa que <b>chega</b> a um país para morar é chamada de:", "opts": ["Emigrante", "Imigrante", "Nômade", "Turista"], "correct": 1, "fb": "Imigrante é quem entra (chega). Emigrante é quem sai do seu país."},
-    {"tema": "Migrações", "q": "A família de Théo se mudou da Bahia para São Paulo. Isso é uma migração:", "opts": ["Interna", "Internacional", "Marítima", "Nômade"], "correct": 0, "fb": "Mudar de um estado para outro dentro do mesmo país é migração interna."},
+    {"tema": "Migrações", "q": "A família de Nico se mudou da Bahia para São Paulo. Isso é uma migração:", "opts": ["Interna", "Internacional", "Marítima", "Nômade"], "correct": 0, "fb": "Mudar de um estado para outro dentro do mesmo país é migração interna."},
     {"tema": "Migrações", "q": "Por que muitos italianos e japoneses vieram para o Brasil no fim do século XIX e começo do século XX?", "opts": ["Para trabalhar nas lavouras, principalmente de café", "Para participar da Copa do Mundo", "Para passar férias nas praias", "Porque foram convidados para governar"], "correct": 0, "fb": "Muitos imigrantes vieram trabalhar nas fazendas, especialmente nas plantações de café."},
     {"tema": "Migrações", "q": "Quem já vivia nas terras que hoje formam o Brasil antes da chegada dos portugueses?", "opts": ["Os povos indígenas", "Os japoneses", "Os italianos", "Os alemães"], "correct": 0, "fb": "Os povos indígenas já viviam aqui havia milhares de anos quando os portugueses chegaram, em 1500."},
     {"tema": "Migrações", "q": "A maioria dos africanos chegou ao Brasil:", "opts": ["Como turistas", "Trazida à força e escravizada", "Com bons salários", "Como comerciantes ricos"], "correct": 1, "fb": "Milhões de africanos foram trazidos à força e escravizados. Mesmo assim, deixaram uma contribuição enorme na cultura brasileira."},
