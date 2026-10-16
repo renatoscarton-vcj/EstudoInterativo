@@ -26,9 +26,9 @@
       "pontos": [
         "Action verbs: <em>run, jump, read, swim</em>.",
         "Being verbs: <em>am, is, are, was, were</em>.",
-        "<em>Theo <b>kicks</b> the ball.</em> “Kicks” is the verb."
+        "<em>Théo <b>kicks</b> the ball.</em> “Kicks” is the verb."
       ],
-      "quem": "Theo",
+      "quem": "Théo",
       "fala": "I run, I jump, I kick! Verbs are the action of the sentence."
     },
     {
@@ -96,7 +96,7 @@
   "questions": [
     {"tema": "Nouns", "q": "Which word is a <b>proper noun</b>?", "opts": ["city", "Mia", "dog", "school"], "correct": 1, "fb": "Mia is a special name, so it is a proper noun and starts with a capital letter. (Substantivo próprio.)"},
     {"tema": "Nouns", "q": "Find the <b>noun</b>: <em>The happy cat sleeps.</em>", "opts": ["happy", "cat", "sleeps", "the"], "correct": 1, "fb": "“Cat” is an animal, so it is a noun. “Happy” is an adjective and “sleeps” is a verb."},
-    {"tema": "Verbs", "q": "Find the <b>verb</b>: <em>Theo kicks the ball.</em>", "opts": ["Theo", "kicks", "ball", "the"], "correct": 1, "fb": "“Kicks” is the action Theo does, so it is the verb."},
+    {"tema": "Verbs", "q": "Find the <b>verb</b>: <em>Théo kicks the ball.</em>", "opts": ["Théo", "kicks", "ball", "the"], "correct": 1, "fb": "“Kicks” is the action Théo does, so it is the verb."},
     {"tema": "Verbs", "q": "Which word is an <b>action verb</b>?", "opts": ["swim", "blue", "table", "slowly"], "correct": 0, "fb": "“Swim” is something you do. Blue is an adjective, table is a noun."},
     {"tema": "Adjectives", "q": "Find the <b>adjective</b>: <em>Joana has a beautiful garden.</em>", "opts": ["Joana", "has", "beautiful", "garden"], "correct": 2, "fb": "“Beautiful” describes the garden, so it is an adjective."},
     {"tema": "Adjectives", "q": "Complete: <em>An elephant is ___ than a mouse.</em>", "opts": ["big", "bigger", "biggest", "more big"], "correct": 1, "fb": "To compare two things we use -er: bigger. (Big doubles the g: big → bigger.)"},

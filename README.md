@@ -6,7 +6,7 @@ Jogo de revisão para provas do ensino fundamental. Funciona **offline**, em qua
 navegador — celular, tablet, Chromebook ou computador. Sem instalação, sem conta, sem servidor.
 
 Feito para o **4º ano do Ensino Fundamental**: mostra o calendário de avaliações da escola,
-ensina cada assunto com lições curtas contadas pela turma (Caio, Joana, Manu, Elise, Theo, Liz,
+ensina cada assunto com lições curtas contadas pela turma (Caio, Joana, Manu, Elise, Théo, Liz,
 Mia e Gael) e testa tudo com desafios em que cada acerto faz o meio de transporte evoluir,
 de "a pé" até "nave espacial".
 

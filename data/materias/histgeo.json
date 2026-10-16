@@ -43,7 +43,7 @@
         "Os séculos são escritos em números romanos: estamos no <b>século XXI</b> (anos 2001 a 2100).",
         "A linha do tempo mostra os fatos na <b>ordem em que aconteceram</b>."
       ],
-      "quem": "Theo",
+      "quem": "Théo",
       "fala": "Meu bisavô nasceu no século XX. Eu nasci no século XXI!"
     },
     {
@@ -123,7 +123,7 @@
     {"tema": "Nômades e sedentários", "q": "Os primeiros grupos humanos mudavam de lugar em busca de alimento. Eles eram:", "opts": ["Sedentários", "Nômades", "Imigrantes", "Industriais"], "correct": 1, "fb": "Nômades não têm moradia fixa: mudam de lugar para caçar, pescar e coletar."},
     {"tema": "Nômades e sedentários", "q": "O que fez muitos grupos humanos deixarem de ser nômades?", "opts": ["A invenção do avião", "A agricultura e a criação de animais", "A internet", "A construção de shoppings"], "correct": 1, "fb": "Plantando e criando animais, as pessoas podiam ficar num lugar fixo. Assim surgiram as aldeias."},
     {"tema": "Migrações", "q": "Uma pessoa que <b>chega</b> a um país para morar é chamada de:", "opts": ["Emigrante", "Imigrante", "Nômade", "Turista"], "correct": 1, "fb": "Imigrante é quem entra (chega). Emigrante é quem sai do seu país."},
-    {"tema": "Migrações", "q": "A família de Theo se mudou da Bahia para São Paulo. Isso é uma migração:", "opts": ["Interna", "Internacional", "Marítima", "Nômade"], "correct": 0, "fb": "Mudar de um estado para outro dentro do mesmo país é migração interna."},
+    {"tema": "Migrações", "q": "A família de Théo se mudou da Bahia para São Paulo. Isso é uma migração:", "opts": ["Interna", "Internacional", "Marítima", "Nômade"], "correct": 0, "fb": "Mudar de um estado para outro dentro do mesmo país é migração interna."},
     {"tema": "Migrações", "q": "Por que muitos italianos e japoneses vieram para o Brasil no fim do século XIX e começo do século XX?", "opts": ["Para trabalhar nas lavouras, principalmente de café", "Para participar da Copa do Mundo", "Para passar férias nas praias", "Porque foram convidados para governar"], "correct": 0, "fb": "Muitos imigrantes vieram trabalhar nas fazendas, especialmente nas plantações de café."},
     {"tema": "Migrações", "q": "Quem já vivia nas terras que hoje formam o Brasil antes da chegada dos portugueses?", "opts": ["Os povos indígenas", "Os japoneses", "Os italianos", "Os alemães"], "correct": 0, "fb": "Os povos indígenas já viviam aqui havia milhares de anos quando os portugueses chegaram, em 1500."},
     {"tema": "Migrações", "q": "A maioria dos africanos chegou ao Brasil:", "opts": ["Como turistas", "Trazida à força e escravizada", "Com bons salários", "Como comerciantes ricos"], "correct": 1, "fb": "Milhões de africanos foram trazidos à força e escravizados. Mesmo assim, deixaram uma contribuição enorme na cultura brasileira."},
@@ -135,7 +135,7 @@
     {"tema": "Brasil", "q": "Qual é a capital do Brasil?", "opts": ["Rio de Janeiro", "São Paulo", "Brasília", "Salvador"], "correct": 2, "fb": "Brasília é a capital desde 1960 e fica no Distrito Federal."},
     {"tema": "Brasil", "q": "O Brasil está dividido em 26 estados e:", "opts": ["O Distrito Federal", "3 territórios", "5 países", "10 capitais"], "correct": 0, "fb": "São 26 estados mais o Distrito Federal, onde fica Brasília."},
     {"tema": "Campo e cidade", "q": "Qual atividade é típica da zona <b>rural</b>?", "opts": ["Fábrica de carros", "Plantação de soja e criação de gado", "Shopping center", "Metrô"], "correct": 1, "fb": "Agricultura e pecuária são atividades do campo, a zona rural."},
-    {"tema": "Campo e cidade", "q": "Theo mora num prédio, perto de lojas, hospital e muitas ruas asfaltadas. Theo vive na zona:", "opts": ["Rural", "Urbana", "De floresta", "Desértica"], "correct": 1, "fb": "Prédios, comércio e muitos serviços são características da zona urbana (cidade)."},
+    {"tema": "Campo e cidade", "q": "Théo mora num prédio, perto de lojas, hospital e muitas ruas asfaltadas. Théo vive na zona:", "opts": ["Rural", "Urbana", "De floresta", "Desértica"], "correct": 1, "fb": "Prédios, comércio e muitos serviços são características da zona urbana (cidade)."},
     {"tema": "Campo e cidade", "q": "O leite tirado na fazenda vira queijo na fábrica e é vendido no supermercado. Isso mostra que campo e cidade:", "opts": ["Não têm relação", "Dependem um do outro", "São iguais", "Competem entre si"], "correct": 1, "fb": "O campo fornece alimentos e matérias-primas; a cidade transforma, vende e fornece máquinas e serviços."}
   ]
 }

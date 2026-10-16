@@ -45,7 +45,7 @@
         "A <b>penicilina</b>, um remédio, foi descoberta a partir de um fungo.",
         "<b>Decompositores</b> (fungos e bactérias) transformam restos de seres vivos em nutrientes para o solo."
       ],
-      "quem": "Theo",
+      "quem": "Théo",
       "fala": "Quem diria que o meu pão de queijo e o iogurte têm a ajuda de seres invisíveis?"
     },
     {
@@ -132,7 +132,7 @@
     {"tema": "Cadeia alimentar", "q": "Na cadeia <em>capim → gafanhoto → sapo → cobra</em>, quem é o <b>produtor</b>?", "opts": ["Capim", "Gafanhoto", "Sapo", "Cobra"], "correct": 0, "fb": "O capim é uma planta e produz o próprio alimento com a luz do Sol."},
     {"tema": "Cadeia alimentar", "q": "Na mesma cadeia <em>capim → gafanhoto → sapo → cobra</em>, quem é o <b>consumidor primário</b>?", "opts": ["Capim", "Gafanhoto", "Sapo", "Cobra"], "correct": 1, "fb": "O consumidor primário é o primeiro a comer o produtor: o gafanhoto, que é herbívoro."},
     {"tema": "Cadeia alimentar", "q": "Por que as plantas são chamadas de <b>produtoras</b>?", "opts": ["Porque produzem o próprio alimento usando a luz do Sol", "Porque comem outros seres vivos", "Porque vivem muito tempo", "Porque não precisam de água"], "correct": 0, "fb": "Pela fotossíntese, as plantas usam luz, água e gás carbônico para produzir seu alimento."},
-    {"tema": "Misturas", "q": "Theo misturou água e óleo num copo. Formou-se uma mistura:", "opts": ["Homogênea", "Heterogênea", "Que vira gelo", "Que desaparece"], "correct": 1, "fb": "Dá para ver o óleo separado em cima da água: é uma mistura heterogênea."},
+    {"tema": "Misturas", "q": "Théo misturou água e óleo num copo. Formou-se uma mistura:", "opts": ["Homogênea", "Heterogênea", "Que vira gelo", "Que desaparece"], "correct": 1, "fb": "Dá para ver o óleo separado em cima da água: é uma mistura heterogênea."},
     {"tema": "Misturas", "q": "Água com açúcar bem dissolvido é uma mistura:", "opts": ["Homogênea", "Heterogênea", "De sólidos", "Impossível"], "correct": 0, "fb": "O açúcar dissolvido não aparece mais: a mistura parece uma coisa só, é homogênea."},
     {"tema": "Misturas", "q": "Para separar a areia da água, Manu usou um filtro de papel. Esse método é a:", "opts": ["Evaporação", "Filtração", "Catação", "Imantação"], "correct": 1, "fb": "Na filtração, o líquido passa pelo filtro e o sólido (a areia) fica retido."},
     {"tema": "Misturas", "q": "Nas salinas, o sal é separado da água do mar pela:", "opts": ["Filtração", "Evaporação", "Peneiração", "Catação"], "correct": 1, "fb": "O Sol aquece a água, que evapora, e o sal fica no fundo."},

@@ -37,12 +37,12 @@
       "titulo": "Verbos: ação, estado e natureza",
       "texto": "Verbo é a palavra que indica <b>ação</b> (correr, ler), <b>estado</b> (ser, estar, ficar) ou <b>fenômeno da natureza</b> (chover, ventar, trovejar).",
       "pontos": [
-        "<b>Passado:</b> já aconteceu: <em>Theo jogou</em>.",
-        "<b>Presente:</b> está acontecendo: <em>Theo joga</em>.",
-        "<b>Futuro:</b> ainda vai acontecer: <em>Theo jogará</em>.",
+        "<b>Passado:</b> já aconteceu: <em>Théo jogou</em>.",
+        "<b>Presente:</b> está acontecendo: <em>Théo joga</em>.",
+        "<b>Futuro:</b> ainda vai acontecer: <em>Théo jogará</em>.",
         "<b>Infinitivo</b> é a forma do dicionário, terminada em <b>-ar, -er, -ir</b>: <em>cantar, comer, partir</em>."
       ],
-      "quem": "Theo",
+      "quem": "Théo",
       "fala": "Ontem eu corri, hoje eu corro e amanhã eu correrei. O verbo muda com o tempo!"
     },
     {
@@ -111,7 +111,7 @@
   ],
   "questions": [
     {"tema": "Substantivos", "q": "Na frase <em>Caio levou a bola para Recife</em>, quais palavras são substantivos próprios?", "opts": ["Caio e Recife", "bola e Recife", "levou e bola", "Caio e bola"], "correct": 0, "fb": "Substantivos próprios nomeiam um ser ou lugar específico e começam com maiúscula: Caio (pessoa) e Recife (cidade). “Bola” é substantivo comum."},
-    {"tema": "Substantivos", "q": "Qual destas palavras é um substantivo <b>comum</b>?", "opts": ["Theo", "Amazonas", "escola", "Brasil"], "correct": 2, "fb": "“Escola” nomeia qualquer escola, por isso é comum. Theo, Amazonas e Brasil são nomes específicos: substantivos próprios."},
+    {"tema": "Substantivos", "q": "Qual destas palavras é um substantivo <b>comum</b>?", "opts": ["Théo", "Amazonas", "escola", "Brasil"], "correct": 2, "fb": "“Escola” nomeia qualquer escola, por isso é comum. Théo, Amazonas e Brasil são nomes específicos: substantivos próprios."},
     {"tema": "Substantivos", "q": "Joana viu muitos peixes nadando juntos no aquário. Um grupo de peixes se chama:", "opts": ["Alcateia", "Cardume", "Enxame", "Rebanho"], "correct": 1, "fb": "Cardume é o coletivo de peixes. Alcateia = lobos; enxame = abelhas; rebanho = ovelhas ou gado."},
     {"tema": "Substantivos", "q": "Manu adora olhar o céu à noite. O conjunto de estrelas se chama:", "opts": ["Constelação", "Arquipélago", "Biblioteca", "Frota"], "correct": 0, "fb": "Constelação é o coletivo de estrelas. Arquipélago = ilhas; biblioteca = livros; frota = navios ou veículos."},
     {"tema": "Adjetivos", "q": "Na frase <em>Mia ganhou um gato peludo e brincalhão</em>, os adjetivos são:", "opts": ["ganhou e gato", "peludo e brincalhão", "Mia e gato", "um e e"], "correct": 1, "fb": "Peludo e brincalhão dizem como o gato é, então são adjetivos. “Gato” é substantivo e “ganhou” é verbo."},
@@ -119,7 +119,7 @@
     {"tema": "Adjetivos", "q": "Qual palavra é um adjetivo?", "opts": ["corajoso", "correr", "cidade", "ontem"], "correct": 0, "fb": "“Corajoso” dá uma característica a alguém. Correr é verbo, cidade é substantivo e ontem indica tempo."},
     {"tema": "Verbos e tempos verbais", "q": "Qual é o verbo na frase <em>Gael correu até o portão</em>?", "opts": ["Gael", "correu", "até", "portão"], "correct": 1, "fb": "“Correu” indica a ação que Gael fez. É o verbo correr no passado."},
     {"tema": "Verbos e tempos verbais", "q": "Em <em>Amanhã, Elise visitará a avó</em>, o verbo está no:", "opts": ["passado", "presente", "futuro", "infinitivo"], "correct": 2, "fb": "“Visitará” é algo que ainda vai acontecer, por isso está no futuro. A palavra “amanhã” também dá a pista."},
-    {"tema": "Verbos e tempos verbais", "q": "Qual frase está no <b>passado</b>?", "opts": ["Theo joga futebol.", "Theo jogou futebol.", "Theo jogará futebol.", "Theo vai jogar futebol."], "correct": 1, "fb": "“Jogou” mostra uma ação que já aconteceu. “Joga” é presente; “jogará” e “vai jogar” são futuro."},
+    {"tema": "Verbos e tempos verbais", "q": "Qual frase está no <b>passado</b>?", "opts": ["Théo joga futebol.", "Théo jogou futebol.", "Théo jogará futebol.", "Théo vai jogar futebol."], "correct": 1, "fb": "“Jogou” mostra uma ação que já aconteceu. “Joga” é presente; “jogará” e “vai jogar” são futuro."},
     {"tema": "Verbos e tempos verbais", "q": "Qual verbo está no <b>infinitivo</b> (a forma do dicionário)?", "opts": ["estudamos", "estudar", "estudou", "estudarão"], "correct": 1, "fb": "O infinitivo termina em -ar, -er ou -ir e é a forma que procuramos no dicionário: estudar."},
     {"tema": "Verbos e tempos verbais", "q": "Qual verbo indica um <b>fenômeno da natureza</b>?", "opts": ["chover", "pular", "pensar", "escrever"], "correct": 0, "fb": "Chover, ventar, trovejar e nevar são fenômenos da natureza. Os outros são ações de pessoas."},
     {"tema": "Pontuação", "q": "Qual sinal combina com o final da frase <em>Que dia lindo para um piquenique</em>?", "opts": ["?", "!", ":", ","], "correct": 1, "fb": "A frase mostra emoção e admiração, então pede ponto de exclamação: Que dia lindo para um piquenique!"},
@@ -134,7 +134,7 @@
     {"tema": "Ortografia", "q": "Qual palavra completa a frase? <em>Manu foi de ___ até a praia.</em>", "opts": ["caro", "carro", "carrro", "karro"], "correct": 1, "fb": "Entre vogais, o som forte do R é escrito com RR: carro. “Caro” (com um R) quer dizer que custa muito."},
     {"tema": "Ortografia", "q": "Qual palavra está escrita corretamente?", "opts": ["pásaro", "pássaro", "páçaro", "pázaro"], "correct": 1, "fb": "Entre vogais, um S sozinho tem som de Z. Para o som de S, usamos SS: pássaro."},
     {"tema": "Ortografia", "q": "Em qual palavra o <b>Ç</b> foi usado corretamente?", "opts": ["çebola", "açúcar", "çinema", "çapato"], "correct": 1, "fb": "O Ç só vem antes de A, O e U e nunca começa palavra. Por isso: açúcar, mas cebola, cinema e sapato."},
-    {"tema": "Gêneros textuais", "q": "Theo escreveu um texto contando a vida de Santos Dumont: onde nasceu, o que inventou e quando morreu. Esse texto é uma:", "opts": ["receita", "biografia", "fábula", "notícia"], "correct": 1, "fb": "Biografia conta a história da vida de uma pessoa real, em ordem de acontecimentos."},
+    {"tema": "Gêneros textuais", "q": "Théo escreveu um texto contando a vida de Santos Dumont: onde nasceu, o que inventou e quando morreu. Esse texto é uma:", "opts": ["receita", "biografia", "fábula", "notícia"], "correct": 1, "fb": "Biografia conta a história da vida de uma pessoa real, em ordem de acontecimentos."},
     {"tema": "Gêneros textuais", "q": "“A Cigarra e a Formiga” tem animais que falam e termina com um ensinamento. Que tipo de texto é?", "opts": ["Fábula", "Notícia", "Receita", "Bilhete"], "correct": 0, "fb": "Fábulas são histórias curtas, muitas vezes com animais, que terminam com uma moral (um ensinamento)."},
     {"tema": "Gêneros textuais", "q": "Num poema, cada linha se chama ___ e cada grupo de linhas se chama ___.", "opts": ["verso / estrofe", "estrofe / verso", "parágrafo / capítulo", "rima / título"], "correct": 0, "fb": "Verso é cada linha do poema. Estrofe é um conjunto de versos."},
     {"tema": "Gêneros textuais", "q": "Qual é a principal função de uma <b>notícia</b>?", "opts": ["Contar uma história inventada com moral", "Informar um fato real que aconteceu", "Ensinar a preparar uma comida", "Chamar alguém para uma festa"], "correct": 1, "fb": "A notícia informa um fato real: o que aconteceu, quando, onde e com quem."},

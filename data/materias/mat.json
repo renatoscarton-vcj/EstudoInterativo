@@ -44,7 +44,7 @@
         "<b>Cilindro</b> (lata) e <b>esfera</b> (bola) rolam porque têm partes arredondadas.",
         "<b>Pirâmide:</b> base de polígono e faces triangulares que se encontram num ponto."
       ],
-      "quem": "Theo",
+      "quem": "Théo",
       "fala": "A placa de PARE tem 8 lados: é um octógono. O favo de mel tem 6: hexágono!"
     },
     {
@@ -120,7 +120,7 @@
     {"tema": "Ângulos", "q": "Às <b>6 horas</b> em ponto, os ponteiros formam um ângulo:", "opts": ["Reto", "Raso", "Agudo", "Obtuso"], "correct": 1, "fb": "Às 6h os ponteiros apontam para lados opostos (12 e 6), formando uma linha reta: 180°, ângulo raso."},
     {"tema": "Retas", "q": "Os trilhos de um trem são um exemplo de retas:", "opts": ["Perpendiculares", "Paralelas", "Concorrentes", "Curvas"], "correct": 1, "fb": "Retas paralelas nunca se cruzam, como os dois trilhos do trem."},
     {"tema": "Retas", "q": "Duas ruas que se cruzam formando 4 ângulos retos são:", "opts": ["Paralelas", "Perpendiculares", "Curvas", "Iguais"], "correct": 1, "fb": "Retas que se cruzam formando ângulos retos (90°) são perpendiculares."},
-    {"tema": "Figuras geométricas", "q": "Theo desenhou o formato de um favo de mel, com <b>6 lados</b>. Essa figura é um:", "opts": ["Pentágono", "Hexágono", "Octógono", "Quadrado"], "correct": 1, "fb": "Polígono de 6 lados é hexágono. Pentágono tem 5 e octógono tem 8."},
+    {"tema": "Figuras geométricas", "q": "Théo desenhou o formato de um favo de mel, com <b>6 lados</b>. Essa figura é um:", "opts": ["Pentágono", "Hexágono", "Octógono", "Quadrado"], "correct": 1, "fb": "Polígono de 6 lados é hexágono. Pentágono tem 5 e octógono tem 8."},
     {"tema": "Figuras geométricas", "q": "A placa de trânsito PARE tem o formato de um:", "opts": ["Hexágono", "Octógono", "Pentágono", "Triângulo"], "correct": 1, "fb": "A placa PARE tem 8 lados: é um octógono."},
     {"tema": "Figuras geométricas", "q": "Quantas faces tem um <b>cubo</b> (como um dado)?", "opts": ["4", "6", "8", "12"], "correct": 1, "fb": "O cubo tem 6 faces quadradas, 12 arestas e 8 vértices."},
     {"tema": "Figuras geométricas", "q": "Qual sólido geométrico rola e tem o formato de uma lata?", "opts": ["Cubo", "Cilindro", "Pirâmide", "Prisma"], "correct": 1, "fb": "O cilindro tem duas bases redondas e uma parte arredondada, por isso rola."},

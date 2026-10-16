@@ -2,7 +2,10 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Passaporte">
 <meta name="author" content="Alaris IA">
 <meta name="copyright" content="© 2026 Alaris IA. Todos os direitos reservados.">
 <meta name="description" content="Passaporte do Saber — jogo de estudos para o 4º ano, com calendário de avaliações, lições e desafios. Desenvolvido por Alaris IA.">
@@ -66,7 +69,13 @@
     overflow-x:hidden;
   }
   .app{width:100%; max-width:560px; margin:0 auto;}
-  button{font-family:inherit; color:inherit;}
+  button{font-family:inherit; color:inherit; touch-action:manipulation; -webkit-tap-highlight-color:transparent;}
+  @media (hover:hover){
+    .btn:not(:disabled):hover{filter:brightness(1.05);}
+    .cal-dia.tem:hover{border-color:var(--line);}
+    .mat-tile:hover{transform:translateY(-3px) rotate(-0.6deg);}
+    .opcao:not([disabled]):hover{background:#F7F6FF;}
+  }
   button:focus-visible, .btn:focus-visible, input:focus-visible{outline:4px solid var(--sol); outline-offset:2px;}
 
   /* ---------- TOPO ---------- */
@@ -101,7 +110,7 @@
   }
   .secao-titulo{
     font-family:var(--fd); font-weight:800; font-size:22px; line-height:1.1;
-    margin:22px 2px 10px; display:flex; align-items:center; gap:8px;
+    margin:22px 2px 10px; display:flex; align-items:center; gap:4px 8px; flex-wrap:wrap;
   }
   .secao-titulo small{font-family:var(--fb); font-size:13px; font-weight:800; color:var(--ink-2); margin-left:auto;}
 
@@ -116,7 +125,6 @@
     -webkit-tap-highlight-color:transparent;
   }
   .btn:not(:disabled):active{transform:translateY(4px); box-shadow:0 1px 0 var(--line);}
-  .btn:not(:disabled):hover{filter:brightness(1.05);}
   .btn:disabled{opacity:0.35; cursor:default;}
   .btn-primario{background:var(--violeta); color:#fff;}
   .btn-sol{background:var(--sol); color:var(--ink);}
@@ -208,7 +216,6 @@
   .cal-dia.fds{background:#F2F2FA;}
   .cal-dia.passado{opacity:0.55;}
   .cal-dia.tem{cursor:pointer; border-color:#B9BBE3;}
-  .cal-dia.tem:hover{border-color:var(--line);}
   .cal-dia.hoje{border:3px solid var(--violeta); box-shadow:0 0 0 3px rgba(91,63,217,0.25); opacity:1;}
   .cal-dia.sel{border:3px solid var(--line); background:#FFF6D6; opacity:1;}
   .cal-num{font-size:13px; font-weight:900; line-height:1; padding:2px 3px;}
@@ -279,7 +286,6 @@
     box-shadow:var(--sombra); padding:0; overflow:hidden; display:flex; flex-direction:column;
     transition:transform .12s ease;
   }
-  .mat-tile:hover{transform:translateY(-3px) rotate(-0.6deg);}
   .mat-tile:active{transform:translateY(3px); box-shadow:0 2px 0 rgba(30,27,75,0.14);}
   .mat-topo{padding:12px 12px 10px; color:#fff; display:flex; align-items:flex-start; justify-content:space-between; gap:6px;}
   .mat-ic{font-size:36px; line-height:1; filter:drop-shadow(0 2px 0 rgba(0,0,0,0.2));}
@@ -402,7 +408,8 @@
   .veiculo-nome{font-weight:900; font-size:15px;}
   .veiculo-trilho{height:10px; border-radius:99px; background:rgba(255,255,255,0.18); margin-top:5px; overflow:hidden;}
   .veiculo-barra{height:100%; background:var(--sol); border-radius:99px; transition:width .4s ease;}
-  .veiculo-sub{font-size:13px; font-weight:800; color:var(--ink-2); margin:0 2px 12px;}
+  .veiculo-sub{font-size:12.5px; font-weight:800; color:#C9C6F0; margin-top:5px;}
+  .veiculo{margin-bottom:12px;}
   .evoluiu-banner{
     background:var(--sol); border:3px solid var(--line); border-radius:14px;
     padding:8px 12px; text-align:center; font-weight:900; margin-bottom:10px; animation:cai .4s ease;
@@ -421,7 +428,6 @@
     padding:10px 12px; font-weight:800; font-size:16.5px; line-height:1.3; min-height:56px;
     box-shadow:0 4px 0 var(--line); transition:transform .08s ease;
   }
-  .opcao:not([disabled]):hover{background:#F7F6FF;}
   .opcao:not([disabled]):active{transform:translateY(3px); box-shadow:0 1px 0 var(--line);}
   .opcao[disabled]{cursor:default;}
   .letra{
@@ -446,8 +452,47 @@
   .retorno.ok{background:#E3FAEF;}
   .retorno.nao{background:#FFF0E1;}
   .retorno b{display:block; font-family:var(--fd); font-size:19px; font-weight:800; margin-bottom:2px;}
-  .nav-jogo{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:16px;}
-  .nav-jogo .btn-proxima{grid-column:1 / -1;}
+  .nav-jogo{display:grid; grid-template-columns:1fr 1fr 1.4fr; gap:10px; margin-top:16px;}
+  .retorno{scroll-margin-bottom:110px;}
+  .voltar-ic{
+    width:44px; height:44px; flex-shrink:0; border-radius:14px; border:3px solid var(--line);
+    background:#fff; font-size:20px; font-weight:900; cursor:pointer; box-shadow:0 3px 0 var(--line);
+  }
+  .voltar-ic:active{transform:translateY(2px); box-shadow:0 1px 0 var(--line);}
+
+  /* ---------- CELULAR ---------- */
+  @media (max-width:599px){
+    body{padding-left:max(12px, env(safe-area-inset-left)); padding-right:max(12px, env(safe-area-inset-right));}
+    /* nas telas de estudo e jogo, esconde cabeçalho e rodapé e fixa os botões embaixo */
+    body.foco .topo, body.foco .rodape{display:none;}
+    body.foco{padding-top:max(10px, env(safe-area-inset-top));}
+    body.foco .nav-jogo{
+      position:sticky; bottom:0; z-index:20;
+      grid-template-columns:56px 56px 1fr;
+      margin:16px -12px 0; padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+      background:rgba(238,240,255,0.96); border-top:3px solid var(--line);
+      -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);
+    }
+    body.foco .nav-jogo .rot{display:none;}
+    body.foco .nav-jogo .btn{padding:10px 6px; font-size:17px;}
+    .card{padding:14px;}
+    .pergunta{font-size:19.5px; margin:8px 0 12px;}
+    .opcao{min-height:52px; padding:8px 10px; font-size:16px;}
+    .opcoes{gap:9px;}
+    .veiculo{padding:8px 12px; gap:10px;}
+    .veiculo-ic{font-size:24px;}
+    .host{margin-bottom:6px;}
+    .host .avatar{width:40px; height:40px; font-size:20px;}
+    .licao h3{font-size:22px;}
+    .licao p{font-size:16px;}
+    .mat-hero{padding:16px;}
+    .mat-hero h2{font-size:26px;}
+    .ola-nome{font-size:21px;}
+    .proximo-titulo{font-size:17.5px;}
+    .agenda-item{flex-wrap:wrap;}
+    .agenda-txt{flex-basis:calc(100% - 70px);}
+    .agenda-falta{margin-left:68px;}
+  }
 
   .xp-voa{
     position:fixed; z-index:50; pointer-events:none; font-family:var(--fd); font-weight:800; font-size:26px;
@@ -567,8 +612,6 @@
     .carimbos{grid-template-columns:repeat(3,1fr);}
     .acoes{grid-template-columns:1fr 1fr;}
     .acoes .btn:first-child{grid-column:1 / -1;}
-    .nav-jogo{grid-template-columns:1fr 1fr 1.4fr;}
-    .nav-jogo .btn-proxima{grid-column:auto;}
   }
   @media (min-width:1000px){
     .app{max-width:860px;}
@@ -652,12 +695,12 @@ const subjects = [
     "titulo": "Verbos: ação, estado e natureza",
     "texto": "Verbo é a palavra que indica <b>ação</b> (correr, ler), <b>estado</b> (ser, estar, ficar) ou <b>fenômeno da natureza</b> (chover, ventar, trovejar).",
     "pontos": [
-     "<b>Passado:</b> já aconteceu: <em>Theo jogou</em>.",
-     "<b>Presente:</b> está acontecendo: <em>Theo joga</em>.",
-     "<b>Futuro:</b> ainda vai acontecer: <em>Theo jogará</em>.",
+     "<b>Passado:</b> já aconteceu: <em>Théo jogou</em>.",
+     "<b>Presente:</b> está acontecendo: <em>Théo joga</em>.",
+     "<b>Futuro:</b> ainda vai acontecer: <em>Théo jogará</em>.",
      "<b>Infinitivo</b> é a forma do dicionário, terminada em <b>-ar, -er, -ir</b>: <em>cantar, comer, partir</em>."
     ],
-    "quem": "Theo",
+    "quem": "Théo",
     "fala": "Ontem eu corri, hoje eu corro e amanhã eu correrei. O verbo muda com o tempo!"
    },
    {
@@ -741,13 +784,13 @@ const subjects = [
     "tema": "Substantivos",
     "q": "Qual destas palavras é um substantivo <b>comum</b>?",
     "opts": [
-     "Theo",
+     "Théo",
      "Amazonas",
      "escola",
      "Brasil"
     ],
     "correct": 2,
-    "fb": "“Escola” nomeia qualquer escola, por isso é comum. Theo, Amazonas e Brasil são nomes específicos: substantivos próprios."
+    "fb": "“Escola” nomeia qualquer escola, por isso é comum. Théo, Amazonas e Brasil são nomes específicos: substantivos próprios."
    },
    {
     "tema": "Substantivos",
@@ -837,10 +880,10 @@ const subjects = [
     "tema": "Verbos e tempos verbais",
     "q": "Qual frase está no <b>passado</b>?",
     "opts": [
-     "Theo joga futebol.",
-     "Theo jogou futebol.",
-     "Theo jogará futebol.",
-     "Theo vai jogar futebol."
+     "Théo joga futebol.",
+     "Théo jogou futebol.",
+     "Théo jogará futebol.",
+     "Théo vai jogar futebol."
     ],
     "correct": 1,
     "fb": "“Jogou” mostra uma ação que já aconteceu. “Joga” é presente; “jogará” e “vai jogar” são futuro."
@@ -1015,7 +1058,7 @@ const subjects = [
    },
    {
     "tema": "Gêneros textuais",
-    "q": "Theo escreveu um texto contando a vida de Santos Dumont: onde nasceu, o que inventou e quando morreu. Esse texto é uma:",
+    "q": "Théo escreveu um texto contando a vida de Santos Dumont: onde nasceu, o que inventou e quando morreu. Esse texto é uma:",
     "opts": [
      "receita",
      "biografia",
@@ -1145,7 +1188,7 @@ const subjects = [
      "<b>Cilindro</b> (lata) e <b>esfera</b> (bola) rolam porque têm partes arredondadas.",
      "<b>Pirâmide:</b> base de polígono e faces triangulares que se encontram num ponto."
     ],
-    "quem": "Theo",
+    "quem": "Théo",
     "fala": "A placa de PARE tem 8 lados: é um octógono. O favo de mel tem 6: hexágono!"
    },
    {
@@ -1333,7 +1376,7 @@ const subjects = [
    },
    {
     "tema": "Figuras geométricas",
-    "q": "Theo desenhou o formato de um favo de mel, com <b>6 lados</b>. Essa figura é um:",
+    "q": "Théo desenhou o formato de um favo de mel, com <b>6 lados</b>. Essa figura é um:",
     "opts": [
      "Pentágono",
      "Hexágono",
@@ -1620,7 +1663,7 @@ const subjects = [
      "A <b>penicilina</b>, um remédio, foi descoberta a partir de um fungo.",
      "<b>Decompositores</b> (fungos e bactérias) transformam restos de seres vivos em nutrientes para o solo."
     ],
-    "quem": "Theo",
+    "quem": "Théo",
     "fala": "Quem diria que o meu pão de queijo e o iogurte têm a ajuda de seres invisíveis?"
    },
    {
@@ -1918,7 +1961,7 @@ const subjects = [
    },
    {
     "tema": "Misturas",
-    "q": "Theo misturou água e óleo num copo. Formou-se uma mistura:",
+    "q": "Théo misturou água e óleo num copo. Formou-se uma mistura:",
     "opts": [
      "Homogênea",
      "Heterogênea",
@@ -2059,7 +2102,7 @@ const subjects = [
      "Os séculos são escritos em números romanos: estamos no <b>século XXI</b> (anos 2001 a 2100).",
      "A linha do tempo mostra os fatos na <b>ordem em que aconteceram</b>."
     ],
-    "quem": "Theo",
+    "quem": "Théo",
     "fala": "Meu bisavô nasceu no século XX. Eu nasci no século XXI!"
    },
    {
@@ -2295,7 +2338,7 @@ const subjects = [
    },
    {
     "tema": "Migrações",
-    "q": "A família de Theo se mudou da Bahia para São Paulo. Isso é uma migração:",
+    "q": "A família de Théo se mudou da Bahia para São Paulo. Isso é uma migração:",
     "opts": [
      "Interna",
      "Internacional",
@@ -2439,7 +2482,7 @@ const subjects = [
    },
    {
     "tema": "Campo e cidade",
-    "q": "Theo mora num prédio, perto de lojas, hospital e muitas ruas asfaltadas. Theo vive na zona:",
+    "q": "Théo mora num prédio, perto de lojas, hospital e muitas ruas asfaltadas. Théo vive na zona:",
     "opts": [
      "Rural",
      "Urbana",
@@ -2491,9 +2534,9 @@ const subjects = [
     "pontos": [
      "Action verbs: <em>run, jump, read, swim</em>.",
      "Being verbs: <em>am, is, are, was, were</em>.",
-     "<em>Theo <b>kicks</b> the ball.</em> “Kicks” is the verb."
+     "<em>Théo <b>kicks</b> the ball.</em> “Kicks” is the verb."
     ],
-    "quem": "Theo",
+    "quem": "Théo",
     "fala": "I run, I jump, I kick! Verbs are the action of the sentence."
    },
    {
@@ -2585,15 +2628,15 @@ const subjects = [
    },
    {
     "tema": "Verbs",
-    "q": "Find the <b>verb</b>: <em>Theo kicks the ball.</em>",
+    "q": "Find the <b>verb</b>: <em>Théo kicks the ball.</em>",
     "opts": [
-     "Theo",
+     "Théo",
      "kicks",
      "ball",
      "the"
     ],
     "correct": 1,
-    "fb": "“Kicks” is the action Theo does, so it is the verb."
+    "fb": "“Kicks” is the action Théo does, so it is the verb."
    },
    {
     "tema": "Verbs",
@@ -2976,7 +3019,7 @@ const subjects = [
      "<b>Equivalent fractions</b> are equal: 1/2 = 2/4 = 4/8.",
      "Same numerator? The <b>smaller</b> denominator is the <b>bigger</b> fraction: 1/2 > 1/4."
     ],
-    "quem": "Theo",
+    "quem": "Théo",
     "fala": "I'd rather have 1/2 of a pizza than 1/8. Bigger slice!"
    },
    {
@@ -3210,7 +3253,7 @@ const subjects = [
    },
    {
     "tema": "Fractions",
-    "q": "A pizza has 8 slices. Theo eats 1/4 of the pizza. How many slices does Theo eat?",
+    "q": "A pizza has 8 slices. Théo eats 1/4 of the pizza. How many slices does Théo eat?",
     "opts": [
      "1",
      "2",
@@ -3427,7 +3470,7 @@ const subjects = [
      "<b>Brain:</b> controls the body. The <b>skull</b> protects it.",
      "The <b>skeleton</b> holds us up and protects our organs."
     ],
-    "quem": "Theo",
+    "quem": "Théo",
     "fala": "When I run, my heart beats faster to send more blood to my muscles!"
    },
    {
@@ -3879,7 +3922,7 @@ const subjects = [
      "<b>Independence Day:</b> September 7th (1822).",
      "<b>October 12th:</b> Our Lady of Aparecida holiday and Children's Day."
     ],
-    "quem": "Theo",
+    "quem": "Théo",
     "fala": "September 7th was a holiday in our school calendar. Now I know why!"
    }
   ],
@@ -4365,7 +4408,7 @@ const TURMA = [
   {nome:'Joana', bicho:'🦋', cor:'#FF6FA3'},
   {nome:'Manu',  bicho:'🐢', cor:'#39C27E'},
   {nome:'Elise', bicho:'🦉', cor:'#A78BFA'},
-  {nome:'Theo',  bicho:'🐙', cor:'#5AA9FF'},
+  {nome:'Théo',  bicho:'🐙', cor:'#5AA9FF'},
   {nome:'Liz',   bicho:'🌻', cor:'#FFD23F'},
   {nome:'Mia',   bicho:'🐱', cor:'#F472B6'},
   {nome:'Gael',  bicho:'🦖', cor:'#2DD4BF'}
@@ -4840,10 +4883,11 @@ function temasDe(s){ return [...new Set(s.questions.map(q => q.tema))]; }
 // =========================================================
 //  NAVEGAÇÃO
 // =========================================================
-function tela(html){
+function tela(html, foco, manterPosicao){
+  document.body.classList.toggle('foco', !!foco);
   const el = document.getElementById('screen');
   el.innerHTML = html;
-  window.scrollTo({top:0, behavior: reduzMovimento ? 'auto' : 'smooth'});
+  if(!manterPosicao) window.scrollTo({top:0, behavior:'auto'});
 }
 function irPara(destino){
   persistirPartida();
@@ -5064,6 +5108,7 @@ function renderMenu(manterRolagem){
   `;
   if(manterRolagem){
     const y = window.scrollY;
+    document.body.classList.remove('foco');
     document.getElementById('screen').innerHTML = html;
     window.scrollTo(0, y);
   } else tela(html);
@@ -5169,11 +5214,11 @@ function renderLicao(){
       </div>` : ''}
     </article>
     <div class="nav-jogo">
-      <button class="btn btn-claro" onclick="licaoAnterior()" ${licaoIdx===0?'disabled':''}>← Anterior</button>
-      <button class="btn btn-sol" onclick="jogarTema('${s.id}', ${temasDe(s).indexOf(l.tema)})" ${temasDe(s).includes(l.tema)?'':'disabled'}>🎯 Testar tema</button>
+      <button class="btn btn-claro" onclick="licaoAnterior()" ${licaoIdx===0?'disabled':''} aria-label="Lição anterior">←<span class="rot"> Anterior</span></button>
+      <button class="btn btn-sol" onclick="jogarTema('${s.id}', ${temasDe(s).indexOf(l.tema)})" ${temasDe(s).includes(l.tema)?'':'disabled'} aria-label="Testar este tema">🎯<span class="rot"> Testar tema</span></button>
       <button class="btn btn-primario btn-proxima" onclick="licaoProxima()">${ultimo ? '🏁 Terminei!' : 'Próxima →'}</button>
     </div>
-  `);
+  `, true);
 }
 function licaoAnterior(){ if(licaoIdx > 0){ licaoIdx--; renderLicao(); } }
 function licaoProxima(){
@@ -5216,9 +5261,9 @@ function renderEstudo(){
   const q = order[estudoIdx];
   const pct = Math.round(((estudoIdx+1)/order.length)*100);
   tela(`
-    <button class="voltar" onclick="renderMateria('${current.id}')">← ${current.name}</button>
     ${temaEstudo ? `<div class="faixa-modo tema">📕 Revisando só: ${temaEstudo}</div>` : ''}
     <div class="jogo-topo">
+      <button class="voltar-ic" onclick="renderMateria('${current.id}')" aria-label="Voltar para ${esc(current.name)}">←</button>
       <div class="progresso" role="progressbar" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100"><div class="progresso-barra" style="width:${pct}%"></div></div>
       <span class="contador">${estudoIdx+1}/${order.length}</span>
     </div>
@@ -5231,11 +5276,11 @@ function renderEstudo(){
       ` : `<span class="virar">👆 Toque na carta para ver a resposta</span>`}
     </button>
     <div class="nav-jogo">
-      <button class="btn btn-claro" onclick="estudoAnterior()" ${estudoIdx===0?'disabled':''}>← Anterior</button>
-      <button class="btn btn-sol" onclick="renderMateria('${current.id}')">🏠 Matéria</button>
+      <button class="btn btn-claro" onclick="estudoAnterior()" ${estudoIdx===0?'disabled':''} aria-label="Carta anterior">←<span class="rot"> Anterior</span></button>
+      <button class="btn btn-sol" onclick="renderMateria('${current.id}')" aria-label="Voltar para a matéria">🏠<span class="rot"> Matéria</span></button>
       <button class="btn btn-primario btn-proxima" onclick="estudoProxima()">${estudoIdx === order.length-1 ? '✅ Terminei' : 'Próxima →'}</button>
     </div>
-  `);
+  `, true);
 }
 function renderEstudoFim(){
   tela(`
@@ -5386,13 +5431,14 @@ function renderQuestion(){
   }
 
   const isLast = idx === order.length - 1;
+  const sair = current.id === 'surpresa' ? 'backToMenu()' : `renderMateria('${current.id}')`;
   const titulo = temaJogo && temaJogo !== 'Surpresa' ? `${current.icon} ${temaJogo}` : `${current.icon} ${current.name}`;
 
   tela(`
-    <button class="voltar" onclick="${current.id === 'surpresa' ? 'backToMenu()' : `renderMateria('${current.id}')`}">← ${current.id === 'surpresa' ? 'Início' : current.name}</button>
     ${modoRevisao ? '<div class="faixa-modo">🎯 Modo revisão: só as que você errou</div>' : ''}
     ${temaJogo ? `<div class="faixa-modo tema">${titulo}</div>` : ''}
     <div class="jogo-topo">
+      <button class="voltar-ic" onclick="${sair}" aria-label="Pausar e sair">←</button>
       <div class="progresso" role="progressbar" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso"><div class="progresso-barra" style="width:${pct}%"></div></div>
       <span class="contador">${idx+1}/${order.length}</span>
       <span class="combo ${seq >= 3 && animarResposta === 'ok' ? 'quente' : ''}" aria-label="Sequência de acertos">🔥 ${seq}</span>
@@ -5404,9 +5450,9 @@ function renderQuestion(){
       <div class="veiculo-info">
         <div class="veiculo-nome">${v.name} · ${score} acerto${score===1?'':'s'}</div>
         <div class="veiculo-trilho"><div class="veiculo-barra" style="width:${vpct}%"></div></div>
+        <div class="veiculo-sub">${sub}</div>
       </div>
     </div>
-    <div class="veiculo-sub">${sub}</div>
 
     <div class="card ${animarResposta === 'nao' ? 'treme' : ''}">
       <div class="host">
@@ -5419,11 +5465,11 @@ function renderQuestion(){
     </div>
 
     <div class="nav-jogo">
-      <button class="btn btn-claro" onclick="prevQuestion()" ${idx === 0 ? 'disabled' : ''}>← Anterior</button>
-      <button class="btn btn-sol" onclick="${current.id === 'surpresa' ? 'backToMenu()' : `renderMateria('${current.id}')`}">⏸ Pausar</button>
+      <button class="btn btn-claro" onclick="prevQuestion()" ${idx === 0 ? 'disabled' : ''} aria-label="Pergunta anterior">←<span class="rot"> Anterior</span></button>
+      <button class="btn btn-sol" onclick="${sair}" aria-label="Pausar e voltar">🏠<span class="rot"> Pausar</span></button>
       <button class="btn btn-primario btn-proxima" onclick="nextQuestion()" ${respondida ? '' : 'disabled'}>${isLast ? '🏁 Ver resultado' : 'Próxima →'}</button>
     </div>
-  `);
+  `, true, animarResposta !== null);
   justEvolved = false;
   animarResposta = null;
 }

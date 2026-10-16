@@ -53,7 +53,7 @@
         "<b>Equivalent fractions</b> are equal: 1/2 = 2/4 = 4/8.",
         "Same numerator? The <b>smaller</b> denominator is the <b>bigger</b> fraction: 1/2 > 1/4."
       ],
-      "quem": "Theo",
+      "quem": "Théo",
       "fala": "I'd rather have 1/2 of a pizza than 1/8. Bigger slice!"
     },
     {
@@ -109,7 +109,7 @@
     {"tema": "Fractions", "q": "Which fraction is equal to <b>1/2</b>?", "opts": ["2/3", "2/4", "1/4", "3/5"], "correct": 1, "fb": "2/4 is the same as 1/2: two of four equal parts is half."},
     {"tema": "Fractions", "q": "Which fraction is the <b>biggest</b>?", "opts": ["1/4", "1/2", "1/8", "1/10"], "correct": 1, "fb": "Same numerator (1): the fewer the parts, the bigger each part. 1/2 is the biggest."},
     {"tema": "Fractions", "q": "What is the <b>denominator</b> of 3/4?", "opts": ["3", "4", "7", "1"], "correct": 1, "fb": "The denominator is the bottom number: 4."},
-    {"tema": "Fractions", "q": "A pizza has 8 slices. Theo eats 1/4 of the pizza. How many slices does Theo eat?", "opts": ["1", "2", "4", "6"], "correct": 1, "fb": "1/4 of 8 = 8 ÷ 4 = 2 slices."},
+    {"tema": "Fractions", "q": "A pizza has 8 slices. Théo eats 1/4 of the pizza. How many slices does Théo eat?", "opts": ["1", "2", "4", "6"], "correct": 1, "fb": "1/4 of 8 = 8 ÷ 4 = 2 slices."},
     {"tema": "Angles and shapes", "q": "An angle <b>smaller</b> than a right angle is...", "opts": ["obtuse", "acute", "straight", "a circle"], "correct": 1, "fb": "Acute angles are smaller than 90°."},
     {"tema": "Angles and shapes", "q": "A shape with <b>5 sides</b> is a...", "opts": ["hexagon", "pentagon", "octagon", "quadrilateral"], "correct": 1, "fb": "Pentagon = 5 sides. Hexagon = 6, octagon = 8."},
     {"tema": "Angles and shapes", "q": "Lines that never meet, like railroad tracks, are...", "opts": ["perpendicular", "parallel", "intersecting", "curved"], "correct": 1, "fb": "Parallel lines never meet. (Paralelas.)"},
