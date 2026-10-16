@@ -297,18 +297,13 @@
   .mat-prox{margin-top:auto; font-size:12px; font-weight:900; border-radius:8px; padding:4px 7px; align-self:flex-start;}
   .mat-prox.nada{background:#EEF0FF; color:var(--ink-2);}
 
-  /* ---------- TURMA ---------- */
-  .turma{display:grid; grid-template-columns:repeat(4, 1fr); gap:10px;}
-  .amigo{text-align:center;}
+
+  /* ---------- AVATAR DOS PERSONAGENS ---------- */
   .avatar{
     width:56px; height:56px; border-radius:50%; margin:0 auto;
     border:3px solid var(--line); display:flex; align-items:center; justify-content:center;
     font-size:28px; box-shadow:0 3px 0 var(--line);
   }
-  .amigo b{display:block; font-size:14px; font-weight:900; margin-top:5px;}
-  .amigo:nth-child(odd) .avatar{animation:flutua 3.2s ease-in-out infinite;}
-  .amigo:nth-child(even) .avatar{animation:flutua 3.2s ease-in-out infinite 1.2s;}
-  @keyframes flutua{0%,100%{transform:translateY(0);}50%{transform:translateY(-5px);}}
 
   /* ---------- TELA DA MATÉRIA ---------- */
   .voltar{
@@ -602,7 +597,6 @@
     body{padding:24px 24px 50px;}
     .app{max-width:720px;}
     .materias{grid-template-columns:repeat(4, 1fr);}
-    .turma{grid-template-columns:repeat(8, 1fr);}
     .cal-dia{min-height:84px; padding:4px;}
     .chip{justify-content:flex-start; padding:2px 5px;}
     .chip .chip-txt{display:inline;}
@@ -1359,9 +1353,6 @@ function renderMenu(manterRolagem){
     <h2 class="secao-titulo">🎒 Matérias <small>toque para estudar</small></h2>
     <div class="materias">${tiles}</div>
 
-    <h2 class="secao-titulo">🧑‍🤝‍🧑 A turma do Passaporte</h2>
-    <div class="card"><div class="turma">${TURMA.map(a => `<div class="amigo">${avatarHtml(a)}<b>${a.nome}</b></div>`).join('')}</div>
-      <p class="texto-ajuda" style="margin:12px 0 0">Eles aparecem nas lições e nos desafios para estudar com você!</p></div>
   `;
   if(manterRolagem){
     const y = window.scrollY;
@@ -1403,7 +1394,7 @@ function renderMateria(id){
       ${s.licoes.length ? `
       <button class="modo" onclick="iniciarLicoes('${id}')">
         <span class="modo-ic" style="background:#FFF1BF" aria-hidden="true">📚</span>
-        <span><b>Aprender</b><small>${s.licoes.length} lições com a turma${lidas ? ` · ${Math.min(lidas, s.licoes.length)} lidas` : ''}</small></span><span class="seta" aria-hidden="true">›</span>
+        <span><b>Aprender</b><small>${s.licoes.length} lições curtas${lidas ? ` · ${Math.min(lidas, s.licoes.length)} lidas` : ''}</small></span><span class="seta" aria-hidden="true">›</span>
       </button>` : ''}
       <button class="modo" onclick="iniciarEstudo('${id}')">
         <span class="modo-ic" style="background:#DDEBFF" aria-hidden="true">🃏</span>
