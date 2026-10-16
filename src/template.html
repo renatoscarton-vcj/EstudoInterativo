@@ -1,0 +1,1936 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Alaris IA">
+<meta name="copyright" content="© __BUILD_YEAR__ Alaris IA. Todos os direitos reservados.">
+<meta name="description" content="Passaporte do Saber — jogo de estudos para o 4º ano, com calendário de avaliações, lições e desafios. Desenvolvido por Alaris IA.">
+<meta name="theme-color" content="#5B3FD9">
+<!--
+  Passaporte do Saber™
+  Desenvolvido por Alaris IA · © __BUILD_YEAR__ Alaris IA. Todos os direitos reservados.
+  Este software e seu conteúdo são protegidos por direitos autorais.
+  Uso, cópia, modificação ou distribuição sem autorização expressa são proibidos.
+-->
+<title>Passaporte do Saber</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@600;700;800;900&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1E1B4B;
+    --ink-2:#4B4870;
+    --bg:#EEF0FF;
+    --card:#FFFFFF;
+    --line:#1E1B4B;
+    --violeta:#5B3FD9;
+    --violeta-esc:#3F2AA8;
+    --sol:#FFC531;
+    --sol-esc:#C99200;
+    --menta:#17A673;
+    --menta-esc:#0E7A53;
+    --coral:#E5384F;
+    --coral-esc:#A9223A;
+    --ceu:#2F80ED;
+
+    /* tipos do calendário */
+    --t-avaliacao:#D62845;
+    --t-atividade:#2563EB;
+    --t-trabalho:#0E7C41;
+    --t-entrega:#F59F00;
+    --t-evento:#8B3DFF;
+    --t-feriado:#A3AEC2;
+
+    --fd:'Baloo 2', 'Nunito', system-ui, sans-serif;
+    --fb:'Nunito', 'Segoe UI', system-ui, sans-serif;
+    --raio:20px;
+    --sombra:0 6px 0 rgba(30,27,75,0.14);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    min-height:100vh;
+    font-family:var(--fb);
+    color:var(--ink);
+    background-color:var(--bg);
+    background-image:
+      radial-gradient(circle at 8% 6%, rgba(255,197,49,0.35) 0 90px, transparent 91px),
+      radial-gradient(circle at 96% 18%, rgba(91,63,217,0.18) 0 140px, transparent 141px),
+      radial-gradient(circle at 4% 70%, rgba(23,166,115,0.16) 0 120px, transparent 121px),
+      radial-gradient(circle at 92% 92%, rgba(229,56,79,0.14) 0 160px, transparent 161px),
+      radial-gradient(rgba(30,27,75,0.07) 1.4px, transparent 1.6px);
+    background-size:auto, auto, auto, auto, 22px 22px;
+    background-attachment:fixed;
+    padding:14px 16px 40px;
+    overflow-x:hidden;
+  }
+  .app{width:100%; max-width:560px; margin:0 auto;}
+  button{font-family:inherit; color:inherit;}
+  button:focus-visible, .btn:focus-visible, input:focus-visible{outline:4px solid var(--sol); outline-offset:2px;}
+
+  /* ---------- TOPO ---------- */
+  .topo{
+    display:flex; align-items:center; justify-content:space-between; gap:10px;
+    margin-bottom:14px;
+  }
+  .logo{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); background:none; border:none; padding:0; cursor:pointer;}
+  .logo-selo{
+    width:46px; height:46px; border-radius:14px; flex-shrink:0;
+    background:var(--violeta); border:3px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    font-size:24px; box-shadow:0 4px 0 var(--line);
+    transform:rotate(-6deg);
+  }
+  .logo-texto{font-family:var(--fd); font-weight:800; line-height:0.9; text-align:left;}
+  .logo-texto b{display:block; font-size:22px; color:var(--violeta-esc);}
+  .logo-texto span{font-size:15px; color:var(--ink);}
+  .topo-acoes{display:flex; gap:8px;}
+  .icone-btn{
+    width:44px; height:44px; border-radius:14px; border:3px solid var(--line);
+    background:var(--card); font-size:20px; cursor:pointer;
+    box-shadow:0 4px 0 var(--line); display:flex; align-items:center; justify-content:center;
+  }
+  .icone-btn:active{transform:translateY(3px); box-shadow:0 1px 0 var(--line);}
+
+  /* ---------- BLOCOS BASE ---------- */
+  .card{
+    background:var(--card); border:3px solid var(--line);
+    border-radius:var(--raio); box-shadow:var(--sombra);
+    padding:18px; margin-bottom:16px; position:relative;
+  }
+  .secao-titulo{
+    font-family:var(--fd); font-weight:800; font-size:22px; line-height:1.1;
+    margin:22px 2px 10px; display:flex; align-items:center; gap:8px;
+  }
+  .secao-titulo small{font-family:var(--fb); font-size:13px; font-weight:800; color:var(--ink-2); margin-left:auto;}
+
+  .btn{
+    border:3px solid var(--line); border-radius:16px;
+    padding:12px 16px; min-height:52px;
+    font-family:var(--fb); font-weight:900; font-size:16px;
+    display:flex; align-items:center; justify-content:center; gap:8px;
+    cursor:pointer; text-decoration:none;
+    box-shadow:0 5px 0 var(--line);
+    transition:transform .08s ease, box-shadow .08s ease, filter .15s;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .btn:not(:disabled):active{transform:translateY(4px); box-shadow:0 1px 0 var(--line);}
+  .btn:not(:disabled):hover{filter:brightness(1.05);}
+  .btn:disabled{opacity:0.35; cursor:default;}
+  .btn-primario{background:var(--violeta); color:#fff;}
+  .btn-sol{background:var(--sol); color:var(--ink);}
+  .btn-menta{background:var(--menta); color:#fff;}
+  .btn-coral{background:var(--coral); color:#fff;}
+  .btn-claro{background:#fff; color:var(--ink);}
+  .btn-bloco{width:100%;}
+
+  /* ---------- PERFIL / XP ---------- */
+  .ola{
+    display:flex; align-items:center; gap:14px;
+    background:var(--violeta); color:#fff;
+    border:3px solid var(--line); border-radius:var(--raio);
+    box-shadow:var(--sombra); padding:16px; margin-bottom:16px;
+    position:relative; overflow:hidden;
+  }
+  .ola::after{
+    content:""; position:absolute; right:-30px; top:-30px; width:130px; height:130px;
+    border-radius:50%; background:rgba(255,255,255,0.10);
+  }
+  .ola-avatar{
+    width:62px; height:62px; border-radius:50%; flex-shrink:0;
+    background:var(--sol); border:3px solid var(--line);
+    display:flex; align-items:center; justify-content:center; font-size:34px;
+  }
+  .ola-info{flex:1; min-width:0;}
+  .ola-nome{font-family:var(--fd); font-weight:800; font-size:24px; line-height:1.05;}
+  .ola-nivel{font-size:14px; font-weight:800; opacity:0.95; margin-top:2px;}
+  .xp-trilho{height:12px; background:rgba(0,0,0,0.25); border-radius:99px; margin-top:8px; overflow:hidden;}
+  .xp-barra{height:100%; background:var(--sol); border-radius:99px; transition:width .5s ease;}
+  .ola-trocar{
+    position:relative; z-index:1;
+    background:#fff; color:var(--ink); border:3px solid var(--line);
+    border-radius:12px; padding:6px 10px; font-weight:900; font-size:13px; cursor:pointer;
+    box-shadow:0 3px 0 var(--line);
+  }
+
+  .atalhos{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:16px;}
+  .atalho{
+    display:flex; align-items:center; gap:10px; text-align:left;
+    background:#fff; border:3px solid var(--line); border-radius:16px;
+    padding:10px 12px; cursor:pointer; box-shadow:0 4px 0 var(--line);
+  }
+  .atalho:active{transform:translateY(3px); box-shadow:0 1px 0 var(--line);}
+  .atalho .a-ic{font-size:28px;}
+  .atalho b{display:block; font-size:15px; font-weight:900;}
+  .atalho small{font-size:12.5px; font-weight:800; color:var(--ink-2);}
+
+  /* ---------- PRÓXIMO DESAFIO ---------- */
+  .proximo{
+    border-radius:var(--raio); border:3px solid var(--line);
+    box-shadow:var(--sombra); overflow:hidden; margin-bottom:16px; background:#fff;
+  }
+  .proximo-topo{
+    padding:14px 16px; color:#fff; display:flex; align-items:center; gap:12px;
+  }
+  .proximo-contagem{
+    background:#fff; color:var(--ink); border:3px solid var(--line); border-radius:16px;
+    min-width:72px; padding:6px 8px; text-align:center; flex-shrink:0;
+  }
+  .proximo-contagem b{display:block; font-family:var(--fd); font-size:30px; line-height:1;}
+  .proximo-contagem span{font-size:11px; font-weight:900; text-transform:uppercase; letter-spacing:0.5px;}
+  .proximo-rotulo{font-size:12px; font-weight:900; letter-spacing:1px; text-transform:uppercase; opacity:0.95;}
+  .proximo-titulo{font-family:var(--fd); font-weight:800; font-size:19px; line-height:1.15; margin-top:2px;}
+  .proximo-data{font-size:14px; font-weight:800; margin-top:3px; opacity:0.95;}
+  .proximo-corpo{padding:14px 16px 16px; display:flex; flex-direction:column; gap:10px;}
+  .proximo-dica{font-size:14.5px; font-weight:700; color:var(--ink-2); margin:0;}
+
+  /* ---------- CALENDÁRIO ---------- */
+  .cal{padding:14px 12px 12px;}
+  .cal-cab{display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:10px;}
+  .cal-mes{font-family:var(--fd); font-weight:800; font-size:24px; text-transform:capitalize; text-align:center; flex:1; line-height:1;}
+  .cal-mes small{display:block; font-family:var(--fb); font-size:12px; font-weight:800; color:var(--ink-2); text-transform:none; margin-top:3px;}
+  .cal-nav{
+    width:44px; height:44px; border-radius:12px; border:3px solid var(--line);
+    background:var(--sol); font-size:20px; font-weight:900; cursor:pointer;
+    box-shadow:0 3px 0 var(--line);
+  }
+  .cal-nav:disabled{opacity:0.3; cursor:default;}
+  .cal-nav:not(:disabled):active{transform:translateY(2px); box-shadow:0 1px 0 var(--line);}
+  .cal-grade{display:grid; grid-template-columns:repeat(7, minmax(0,1fr)); gap:4px;}
+  .cal-sem{text-align:center; font-size:11.5px; font-weight:900; color:var(--ink-2); padding:2px 0 4px;}
+  .cal-dia{
+    min-height:58px; border-radius:10px; border:2px solid #DCDDF3;
+    background:#FAFAFF; padding:3px; display:flex; flex-direction:column; gap:2px;
+    text-align:left; position:relative; font-family:var(--fb);
+  }
+  .cal-dia.vazio{background:transparent; border-color:transparent;}
+  .cal-dia.fds{background:#F2F2FA;}
+  .cal-dia.passado{opacity:0.55;}
+  .cal-dia.tem{cursor:pointer; border-color:#B9BBE3;}
+  .cal-dia.tem:hover{border-color:var(--line);}
+  .cal-dia.hoje{border:3px solid var(--violeta); box-shadow:0 0 0 3px rgba(91,63,217,0.25); opacity:1;}
+  .cal-dia.sel{border:3px solid var(--line); background:#FFF6D6; opacity:1;}
+  .cal-num{font-size:13px; font-weight:900; line-height:1; padding:2px 3px;}
+  .cal-dia.hoje .cal-num{color:var(--violeta);}
+  .cal-hoje-tag{
+    position:absolute; top:-9px; right:-4px; background:var(--violeta); color:#fff;
+    font-size:9px; font-weight:900; padding:1px 5px; border-radius:99px; letter-spacing:0.3px;
+  }
+  .chip{
+    display:flex; align-items:center; justify-content:center; gap:3px;
+    border-radius:6px; padding:2px 2px; font-size:11px; font-weight:900; line-height:1.2;
+    color:#fff; min-height:18px; max-width:100%; overflow:hidden; white-space:nowrap;
+  }
+  .chip .chip-txt{display:none; overflow:hidden; text-overflow:ellipsis;}
+  .tipo-avaliacao{background:var(--t-avaliacao); color:#fff;}
+  .tipo-atividade{background:var(--t-atividade); color:#fff;}
+  .tipo-trabalho{background:var(--t-trabalho); color:#fff;}
+  .tipo-entrega{background:var(--t-entrega); color:#2B1A00;}
+  .tipo-evento{background:var(--t-evento); color:#fff;}
+  .tipo-feriado{background:var(--t-feriado); color:#1E1B4B;}
+
+  .legenda{display:flex; flex-wrap:wrap; gap:6px; margin-top:12px;}
+  .legenda .chip{padding:4px 8px; font-size:12px; border-radius:99px;}
+  .legenda .chip .chip-txt{display:inline;}
+
+  .dia-detalhe{margin-top:12px; border-top:3px dashed #DCDDF3; padding-top:12px;}
+  .dd-titulo{font-family:var(--fd); font-weight:800; font-size:18px; margin-bottom:8px;}
+  .evento{
+    border-radius:14px; border:3px solid var(--line); overflow:hidden; margin-bottom:10px; background:#fff;
+  }
+  .evento-faixa{padding:8px 12px; font-size:12.5px; font-weight:900; letter-spacing:0.5px; text-transform:uppercase; display:flex; justify-content:space-between; gap:8px;}
+  .evento-corpo{padding:10px 12px 12px;}
+  .evento-titulo{font-weight:900; font-size:16px; line-height:1.3;}
+  .evento-detalhe{font-size:14px; font-weight:700; color:var(--ink-2); margin-top:3px;}
+  .evento-materias{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px;}
+  .mat-pill{
+    display:inline-flex; align-items:center; gap:6px; cursor:pointer;
+    border:3px solid var(--line); border-radius:99px; padding:6px 12px;
+    background:#fff; font-weight:900; font-size:14px; box-shadow:0 3px 0 var(--line);
+    min-height:44px;
+  }
+  .mat-pill:active{transform:translateY(2px); box-shadow:0 1px 0 var(--line);}
+  .mat-pill .bolinha{width:12px; height:12px; border-radius:50%; border:2px solid var(--line);}
+
+  /* agenda (lista das próximas) */
+  .agenda-item{
+    display:flex; align-items:center; gap:12px; width:100%; text-align:left;
+    background:#fff; border:3px solid var(--line); border-radius:16px;
+    padding:10px 12px; margin-bottom:10px; cursor:pointer; box-shadow:0 4px 0 var(--line);
+  }
+  .agenda-item:active{transform:translateY(3px); box-shadow:0 1px 0 var(--line);}
+  .agenda-data{
+    width:56px; flex-shrink:0; text-align:center; border-radius:12px; padding:6px 0;
+    border:2px solid var(--line);
+  }
+  .agenda-data b{display:block; font-family:var(--fd); font-size:24px; line-height:1;}
+  .agenda-data span{font-size:11px; font-weight:900; text-transform:uppercase;}
+  .agenda-txt{flex:1; min-width:0;}
+  .agenda-txt b{display:block; font-size:15px; font-weight:900; line-height:1.25;}
+  .agenda-txt small{font-size:13px; font-weight:800; color:var(--ink-2);}
+  .agenda-falta{font-size:12px; font-weight:900; background:var(--bg); border-radius:99px; padding:4px 8px; white-space:nowrap; border:2px solid var(--line);}
+
+  /* ---------- MATÉRIAS ---------- */
+  .materias{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+  .mat-tile{
+    position:relative; text-align:left; cursor:pointer;
+    background:#fff; border:3px solid var(--line); border-radius:var(--raio);
+    box-shadow:var(--sombra); padding:0; overflow:hidden; display:flex; flex-direction:column;
+    transition:transform .12s ease;
+  }
+  .mat-tile:hover{transform:translateY(-3px) rotate(-0.6deg);}
+  .mat-tile:active{transform:translateY(3px); box-shadow:0 2px 0 rgba(30,27,75,0.14);}
+  .mat-topo{padding:12px 12px 10px; color:#fff; display:flex; align-items:flex-start; justify-content:space-between; gap:6px;}
+  .mat-ic{font-size:36px; line-height:1; filter:drop-shadow(0 2px 0 rgba(0,0,0,0.2));}
+  .lingua{font-size:11px; font-weight:900; background:#fff; color:var(--ink); border-radius:99px; padding:2px 7px; border:2px solid var(--line);}
+  .mat-corpo{padding:10px 12px 12px; display:flex; flex-direction:column; gap:6px; flex:1;}
+  .mat-nome{font-family:var(--fd); font-weight:800; font-size:18px; line-height:1.1;}
+  .estrelas{font-size:16px; letter-spacing:1px; line-height:1;}
+  .estrelas .off{filter:grayscale(1); opacity:0.3;}
+  .mat-prox{margin-top:auto; font-size:12px; font-weight:900; border-radius:8px; padding:4px 7px; align-self:flex-start;}
+  .mat-prox.nada{background:#EEF0FF; color:var(--ink-2);}
+
+  /* ---------- TURMA ---------- */
+  .turma{display:grid; grid-template-columns:repeat(4, 1fr); gap:10px;}
+  .amigo{text-align:center;}
+  .avatar{
+    width:56px; height:56px; border-radius:50%; margin:0 auto;
+    border:3px solid var(--line); display:flex; align-items:center; justify-content:center;
+    font-size:28px; box-shadow:0 3px 0 var(--line);
+  }
+  .amigo b{display:block; font-size:14px; font-weight:900; margin-top:5px;}
+  .amigo:nth-child(odd) .avatar{animation:flutua 3.2s ease-in-out infinite;}
+  .amigo:nth-child(even) .avatar{animation:flutua 3.2s ease-in-out infinite 1.2s;}
+  @keyframes flutua{0%,100%{transform:translateY(0);}50%{transform:translateY(-5px);}}
+
+  /* ---------- TELA DA MATÉRIA ---------- */
+  .voltar{
+    display:inline-flex; align-items:center; gap:6px; cursor:pointer;
+    background:#fff; border:3px solid var(--line); border-radius:99px;
+    padding:8px 14px; font-weight:900; font-size:14px; margin-bottom:12px;
+    box-shadow:0 3px 0 var(--line); min-height:44px;
+  }
+  .voltar:active{transform:translateY(2px); box-shadow:0 1px 0 var(--line);}
+  .mat-hero{
+    border:3px solid var(--line); border-radius:var(--raio); box-shadow:var(--sombra);
+    color:#fff; padding:18px; margin-bottom:16px; position:relative; overflow:hidden;
+  }
+  .mat-hero::after{
+    content:""; position:absolute; right:-40px; bottom:-60px; width:180px; height:180px;
+    border-radius:50%; background:rgba(255,255,255,0.13);
+  }
+  .mat-hero .mh-ic{font-size:52px; line-height:1;}
+  .mat-hero h2{font-family:var(--fd); font-weight:800; font-size:30px; line-height:1; margin:8px 0 6px;}
+  .mat-hero p{margin:0; font-weight:800; font-size:14.5px; line-height:1.4; opacity:0.95;}
+  .mat-hero .estrelas{margin-top:10px; font-size:22px;}
+  .modos{display:grid; grid-template-columns:1fr; gap:10px; margin-bottom:6px;}
+  .modo{
+    display:flex; align-items:center; gap:14px; text-align:left; cursor:pointer;
+    background:#fff; border:3px solid var(--line); border-radius:18px;
+    padding:12px 14px; box-shadow:0 5px 0 var(--line);
+  }
+  .modo:active{transform:translateY(4px); box-shadow:0 1px 0 var(--line);}
+  .modo-ic{
+    width:52px; height:52px; border-radius:14px; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center; font-size:28px;
+    border:3px solid var(--line);
+  }
+  .modo b{display:block; font-size:17px; font-weight:900;}
+  .modo small{font-size:13.5px; font-weight:700; color:var(--ink-2);}
+  .modo .seta{margin-left:auto; font-size:24px; font-weight:900;}
+  .temas{display:flex; flex-direction:column; gap:8px;}
+  .tema-linha{
+    display:flex; align-items:center; gap:10px; width:100%; text-align:left; cursor:pointer;
+    background:#fff; border:3px solid var(--line); border-radius:14px; padding:10px 12px;
+    font-weight:900; font-size:15px; min-height:48px;
+  }
+  .tema-linha small{margin-left:auto; font-size:12.5px; color:var(--ink-2); white-space:nowrap;}
+
+  /* ---------- LIÇÕES ---------- */
+  .pontinhos{display:flex; gap:6px; justify-content:center; margin:4px 0 12px; flex-wrap:wrap;}
+  .pontinho{width:12px; height:12px; border-radius:50%; background:#C9CBEA; border:2px solid var(--line);}
+  .pontinho.on{background:var(--sol); transform:scale(1.25);}
+  .pontinho.visto{background:var(--menta);}
+  .licao h3{font-family:var(--fd); font-weight:800; font-size:24px; line-height:1.1; margin:6px 0 10px;}
+  .licao p{font-size:16.5px; font-weight:700; line-height:1.5; margin:0 0 12px;}
+  .licao ul{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:8px;}
+  .licao li{
+    background:#F5F4FF; border:2px solid #D9D7F5; border-radius:12px;
+    padding:10px 12px 10px 38px; position:relative; font-size:15.5px; font-weight:700; line-height:1.45;
+  }
+  .licao li::before{
+    content:"★"; position:absolute; left:12px; top:9px; color:var(--sol-esc); font-size:17px;
+  }
+  .licao em, .pergunta em{font-style:normal; background:#FFF1BF; border-radius:6px; padding:0 4px;}
+  .tag-tema{
+    display:inline-block; font-size:12px; font-weight:900; letter-spacing:0.6px; text-transform:uppercase;
+    padding:5px 10px; border-radius:99px; color:#fff; border:2px solid var(--line);
+  }
+  .fala{display:flex; gap:10px; align-items:flex-end; margin-top:14px;}
+  .fala .avatar{width:50px; height:50px; font-size:24px; flex-shrink:0; margin:0;}
+  .balao{
+    flex:1; background:#fff; border:3px solid var(--line); border-radius:18px 18px 18px 4px;
+    padding:10px 12px; font-size:15px; font-weight:800; line-height:1.4; position:relative;
+  }
+  .balao b{display:block; font-size:12.5px; text-transform:uppercase; letter-spacing:0.5px;}
+
+  /* ---------- JOGO ---------- */
+  .jogo-topo{display:flex; align-items:center; gap:10px; margin-bottom:12px;}
+  .progresso{flex:1; height:18px; background:#fff; border:3px solid var(--line); border-radius:99px; overflow:hidden;}
+  .progresso-barra{height:100%; background:var(--menta); border-radius:99px; transition:width .35s ease;
+    background-image:linear-gradient(rgba(255,255,255,0.35) 0 40%, transparent 40%);}
+  .contador{font-weight:900; font-size:14px; white-space:nowrap;}
+  .combo{
+    display:inline-flex; align-items:center; gap:4px; background:#fff; border:3px solid var(--line);
+    border-radius:99px; padding:3px 9px; font-weight:900; font-size:14px;
+  }
+  .combo.quente{background:#FFE3B0; animation:pulsa .6s ease;}
+  .faixa-modo{
+    background:var(--coral); color:#fff; border:3px solid var(--line); border-radius:14px;
+    padding:8px 12px; font-weight:900; font-size:14px; text-align:center; margin-bottom:12px;
+  }
+  .faixa-modo.tema{background:var(--violeta);}
+  .veiculo{
+    display:flex; align-items:center; gap:12px; background:var(--ink); color:#fff;
+    border:3px solid var(--line); border-radius:16px; padding:10px 14px; margin-bottom:6px;
+  }
+  .veiculo-ic{font-size:30px; line-height:1;}
+  .veiculo-ic.evoluiu{animation:evolui .8s ease;}
+  @keyframes evolui{0%{transform:scale(1);}35%{transform:scale(1.6) rotate(-10deg);}65%{transform:scale(1.6) rotate(10deg);}100%{transform:scale(1);}}
+  .veiculo-info{flex:1;}
+  .veiculo-nome{font-weight:900; font-size:15px;}
+  .veiculo-trilho{height:10px; border-radius:99px; background:rgba(255,255,255,0.18); margin-top:5px; overflow:hidden;}
+  .veiculo-barra{height:100%; background:var(--sol); border-radius:99px; transition:width .4s ease;}
+  .veiculo-sub{font-size:13px; font-weight:800; color:var(--ink-2); margin:0 2px 12px;}
+  .evoluiu-banner{
+    background:var(--sol); border:3px solid var(--line); border-radius:14px;
+    padding:8px 12px; text-align:center; font-weight:900; margin-bottom:10px; animation:cai .4s ease;
+  }
+  @keyframes cai{from{opacity:0; transform:translateY(-10px);}to{opacity:1; transform:none;}}
+
+  .host{display:flex; align-items:center; gap:10px; margin-bottom:10px;}
+  .host .avatar{width:46px; height:46px; font-size:22px; margin:0;}
+  .host-txt{font-weight:900; font-size:15px;}
+  .host-txt small{display:block; font-size:12.5px; color:var(--ink-2); font-weight:800;}
+  .pergunta{font-family:var(--fd); font-weight:700; font-size:21px; line-height:1.3; margin:10px 0 16px;}
+  .opcoes{display:flex; flex-direction:column; gap:10px;}
+  .opcao{
+    display:flex; align-items:center; gap:12px; width:100%; text-align:left; cursor:pointer;
+    background:#fff; border:3px solid var(--line); border-radius:16px;
+    padding:10px 12px; font-weight:800; font-size:16.5px; line-height:1.3; min-height:56px;
+    box-shadow:0 4px 0 var(--line); transition:transform .08s ease;
+  }
+  .opcao:not([disabled]):hover{background:#F7F6FF;}
+  .opcao:not([disabled]):active{transform:translateY(3px); box-shadow:0 1px 0 var(--line);}
+  .opcao[disabled]{cursor:default;}
+  .letra{
+    width:34px; height:34px; border-radius:10px; flex-shrink:0; border:2px solid var(--line);
+    display:flex; align-items:center; justify-content:center; font-weight:900; font-size:15px; color:#fff;
+  }
+  .letra.l0{background:var(--violeta);} .letra.l1{background:var(--ceu);}
+  .letra.l2{background:var(--menta);}   .letra.l3{background:var(--coral);}
+  .letra.l4{background:var(--sol-esc);}
+  .opcao.certa{background:#D7F7E7; border-color:var(--menta-esc); box-shadow:0 4px 0 var(--menta-esc);}
+  .opcao.certa .letra{background:var(--menta-esc);}
+  .opcao.errada{background:#FFE0E4; border-color:var(--coral-esc); box-shadow:0 4px 0 var(--coral-esc);}
+  .opcao.errada .letra{background:var(--coral-esc);}
+  .opcao.apagada{opacity:0.5;}
+  .card.treme{animation:treme .45s ease;}
+  @keyframes treme{0%,100%{transform:translateX(0);}20%{transform:translateX(-8px);}40%{transform:translateX(8px);}60%{transform:translateX(-5px);}80%{transform:translateX(5px);}}
+  @keyframes pulsa{0%{transform:scale(1);}50%{transform:scale(1.15);}100%{transform:scale(1);}}
+  .retorno{
+    margin-top:14px; border:3px solid var(--line); border-radius:16px; padding:12px 14px;
+    font-size:15.5px; font-weight:700; line-height:1.45; animation:cai .3s ease;
+  }
+  .retorno.ok{background:#E3FAEF;}
+  .retorno.nao{background:#FFF0E1;}
+  .retorno b{display:block; font-family:var(--fd); font-size:19px; font-weight:800; margin-bottom:2px;}
+  .nav-jogo{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:16px;}
+  .nav-jogo .btn-proxima{grid-column:1 / -1;}
+
+  .xp-voa{
+    position:fixed; z-index:50; pointer-events:none; font-family:var(--fd); font-weight:800; font-size:26px;
+    color:var(--menta-esc); text-shadow:0 2px 0 #fff; animation:voa 1s ease forwards;
+  }
+  @keyframes voa{from{opacity:1; transform:translate(-50%,0);}to{opacity:0; transform:translate(-50%,-70px);}}
+  .confete{position:fixed; top:-12px; width:10px; height:14px; z-index:60; pointer-events:none; border-radius:2px; animation:confete 1.6s ease-in forwards;}
+  @keyframes confete{to{transform:translateY(105vh) rotate(720deg);}}
+
+  /* ---------- FLASHCARDS ---------- */
+  .flash{min-height:230px; cursor:pointer; display:flex; flex-direction:column; width:100%; text-align:left; font:inherit;}
+  .flash .virar{margin-top:auto; text-align:center; font-weight:900; color:var(--ink-2); background:#F5F4FF; border-radius:12px; padding:12px;}
+  .resposta{background:var(--menta); color:#fff; border:3px solid var(--line); border-radius:14px; padding:10px 14px; margin-bottom:10px;}
+  .resposta small{font-size:12px; font-weight:900; letter-spacing:1px; text-transform:uppercase;}
+  .resposta .rt{display:block; font-size:19px; font-weight:900; margin-top:2px;}
+  .explica{font-size:15.5px; font-weight:700; line-height:1.45; background:#FFF6D6; border-radius:12px; padding:10px 12px;}
+
+  /* ---------- FIM ---------- */
+  .fim{text-align:center;}
+  .fim-estrelas{font-size:54px; letter-spacing:6px; margin:4px 0;}
+  .fim-estrelas span{display:inline-block; animation:estrela .6s ease backwards;}
+  .fim-estrelas span:nth-child(2){animation-delay:.25s;}
+  .fim-estrelas span:nth-child(3){animation-delay:.5s;}
+  .fim-estrelas .off{filter:grayscale(1); opacity:0.25;}
+  @keyframes estrela{from{transform:scale(0) rotate(-90deg);}70%{transform:scale(1.3);}to{transform:scale(1);}}
+  .fim h2{font-family:var(--fd); font-weight:800; font-size:30px; margin:4px 0;}
+  .placar{display:flex; justify-content:center; gap:10px; margin:12px 0;}
+  .placar div{background:#F5F4FF; border:3px solid var(--line); border-radius:14px; padding:8px 12px; min-width:92px;}
+  .placar b{display:block; font-family:var(--fd); font-size:26px; line-height:1;}
+  .placar span{font-size:12px; font-weight:900; color:var(--ink-2);}
+  .fim p{font-weight:800; font-size:16px; line-height:1.45;}
+  .acoes{display:grid; grid-template-columns:1fr; gap:10px; margin-top:12px;}
+
+  .novos-carimbos{background:#FFF6D6; border:3px solid var(--line); border-radius:16px; padding:12px; margin:12px 0; text-align:left;}
+  .novos-carimbos .nc-tit{font-family:var(--fd); font-weight:800; font-size:19px; text-align:center;}
+  .nc-item{display:flex; gap:10px; align-items:center; padding:6px 0; font-weight:800;}
+  .nc-item span:first-child{font-size:30px;}
+  .nc-item small{color:var(--ink-2); font-weight:700;}
+
+  .mapa{text-align:left;}
+  .mapa-linha{border:3px solid var(--line); border-radius:14px; padding:10px 12px; margin-bottom:8px; background:#fff;}
+  .mapa-topo{display:flex; justify-content:space-between; gap:8px; font-weight:900; font-size:15px;}
+  .mapa-trilho{height:10px; background:#E6E6F5; border-radius:99px; margin-top:7px; overflow:hidden;}
+  .mapa-barra{height:100%; border-radius:99px;}
+  .mapa-linha.forte .mapa-barra{background:var(--menta);}
+  .mapa-linha.medio .mapa-barra{background:var(--sol);}
+  .mapa-linha.fraco .mapa-barra{background:var(--coral);}
+  .mapa-btn{margin-top:8px; width:100%; border:2px solid var(--line); border-radius:10px; background:var(--violeta); color:#fff; font-weight:900; padding:9px; cursor:pointer; min-height:44px;}
+  .revisao{text-align:left; max-height:280px; overflow:auto; border:3px solid var(--line); border-radius:14px; padding:4px 12px; background:#fff;}
+  .rv{display:flex; gap:10px; padding:9px 0; border-bottom:2px solid #EEE; font-size:14.5px; font-weight:700; line-height:1.35;}
+  .rv:last-child{border-bottom:none;}
+  .rv-m{font-weight:900; font-size:17px;}
+  .rv-m.ok{color:var(--menta-esc);} .rv-m.no{color:var(--coral-esc);}
+
+  /* ---------- PASSAPORTE (CARIMBOS) ---------- */
+  .resumo{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:16px;}
+  .resumo div{background:#fff; border:3px solid var(--line); border-radius:16px; padding:10px 6px; text-align:center; box-shadow:0 4px 0 var(--line);}
+  .resumo b{display:block; font-family:var(--fd); font-size:28px; line-height:1; color:var(--violeta);}
+  .resumo span{font-size:12px; font-weight:900; color:var(--ink-2);}
+  .carimbos{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+  .carimbo{background:#fff; border:3px solid var(--line); border-radius:16px; padding:12px 10px; text-align:center;}
+  .carimbo.ganho{background:#FFF6D6; transform:rotate(-1.5deg);}
+  .carimbo.ganho:nth-child(even){transform:rotate(1.5deg);}
+  .carimbo.bloq{background:#ECECF4;}
+  .carimbo.bloq .cb-ic{filter:grayscale(1); opacity:0.35;}
+  .cb-ic{font-size:38px; line-height:1;}
+  .cb-nome{font-family:var(--fd); font-weight:800; font-size:16px; margin-top:4px;}
+  .cb-desc{font-size:12.5px; font-weight:700; color:var(--ink-2); line-height:1.3; margin-top:2px;}
+
+  /* ---------- PERFIS ---------- */
+  .perfil{display:flex; gap:8px; margin-bottom:10px;}
+  .perfil-btn{
+    flex:1; display:flex; align-items:center; gap:12px; text-align:left; cursor:pointer;
+    background:#fff; border:3px solid var(--line); border-radius:16px; padding:10px 12px; box-shadow:0 4px 0 var(--line);
+  }
+  .perfil.ativo .perfil-btn{background:#E3FAEF;}
+  .perfil-btn .avatar{width:48px; height:48px; font-size:24px; margin:0; background:var(--sol);}
+  .perfil-nome{font-family:var(--fd); font-weight:800; font-size:20px; line-height:1.1;}
+  .perfil-nome small{display:block; font-family:var(--fb); font-size:12.5px; color:var(--menta-esc); font-weight:900;}
+  .perfil-del{width:52px; border:3px solid var(--line); border-radius:16px; background:#fff; font-size:20px; cursor:pointer; box-shadow:0 4px 0 var(--line);}
+  .campo{width:100%; padding:12px 14px; border:3px solid var(--line); border-radius:14px; font:800 17px var(--fb); margin:6px 0 12px; color:var(--ink);}
+  .rotulo{font-weight:900; font-size:14px;}
+  .icones{display:grid; grid-template-columns:repeat(6,1fr); gap:6px; margin-bottom:14px;}
+  .icone-op{font-size:24px; padding:6px 0; border:3px solid #D9D7F5; border-radius:12px; background:#fff; cursor:pointer; min-height:44px;}
+  .icone-op.sel{border-color:var(--line); background:var(--sol);}
+  .texto-ajuda{font-size:14px; font-weight:700; color:var(--ink-2); line-height:1.45; margin:0 0 12px;}
+  .aviso{background:#FFE0E4; border:3px solid var(--coral-esc); border-radius:16px; padding:12px 14px; margin-bottom:16px;}
+  .aviso b{display:block; color:var(--coral-esc); margin-bottom:4px;}
+  .aviso span{font-size:14px; font-weight:700; line-height:1.45;}
+
+  /* ---------- RODAPÉ ALARIS IA ---------- */
+  .rodape{margin-top:34px; text-align:center;}
+  .alaris{
+    display:inline-flex; align-items:center; gap:12px;
+    background:#0B0F1C; color:#fff; border-radius:18px; padding:12px 18px;
+    border:3px solid var(--line); box-shadow:var(--sombra);
+  }
+  .alaris svg{width:60px; height:40px; flex-shrink:0;}
+  .alaris-txt{text-align:left; line-height:1;}
+  .alaris-txt small{display:block; font-size:10.5px; font-weight:800; letter-spacing:1.6px; text-transform:uppercase; color:#B7BCCD; margin-bottom:4px;}
+  .alaris-txt b{font-family:'Montserrat', var(--fb); font-weight:800; font-size:22px; letter-spacing:-0.3px;}
+  .alaris-txt b span{color:#A79FFF;}
+  .rodape-sub{font-size:13px; font-weight:800; color:var(--ink-2); margin-top:12px; line-height:1.6;}
+
+  /* ---------- TELAS MAIORES ---------- */
+  @media (min-width:600px){
+    body{padding:24px 24px 50px;}
+    .app{max-width:720px;}
+    .materias{grid-template-columns:repeat(4, 1fr);}
+    .turma{grid-template-columns:repeat(8, 1fr);}
+    .cal-dia{min-height:84px; padding:4px;}
+    .chip{justify-content:flex-start; padding:2px 5px;}
+    .chip .chip-txt{display:inline;}
+    .cal-num{font-size:14px;}
+    .pergunta{font-size:24px;}
+    .modos{grid-template-columns:1fr 1fr;}
+    .carimbos{grid-template-columns:repeat(3,1fr);}
+    .acoes{grid-template-columns:1fr 1fr;}
+    .acoes .btn:first-child{grid-column:1 / -1;}
+    .nav-jogo{grid-template-columns:1fr 1fr 1.4fr;}
+    .nav-jogo .btn-proxima{grid-column:auto;}
+  }
+  @media (min-width:1000px){
+    .app{max-width:860px;}
+    .cal-dia{min-height:96px;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="topo">
+    <button class="logo" onclick="irPara('menu')" aria-label="Passaporte do Saber, ir para o início">
+      <span class="logo-selo" aria-hidden="true">🧳</span>
+      <span class="logo-texto"><b>Passaporte</b><span>do Saber · 4º ano</span></span>
+    </button>
+    <div class="topo-acoes">
+      <button class="icone-btn" id="btnSom" onclick="alternarSom()" aria-label="Ligar ou desligar sons">🔊</button>
+      <button class="icone-btn" onclick="renderPerfis()" aria-label="Trocar de aluno">👥</button>
+    </div>
+  </header>
+
+  <main id="screen"></main>
+
+  <footer class="rodape">
+    <div class="alaris" aria-label="Desenvolvido por Alaris IA">
+      <svg viewBox="0 0 120 80" aria-hidden="true">
+        <defs><linearGradient id="alarisGrad" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#6F63FF"/><stop offset="1" stop-color="#C3BEFF"/></linearGradient></defs>
+        <g fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16H52C64 16 72 22 78 34"/><path d="M18 32H50C60 32 66 38 70 46"/><path d="M30 48H48C57 48 61 53 65 60"/><path d="M66 74L86 8L106 74"/></g>
+        <path d="M54 68C76 62 98 38 116 10" fill="none" stroke="url(#alarisGrad)" stroke-width="6" stroke-linecap="round"/>
+      </svg>
+      <div class="alaris-txt"><small>Desenvolvido por</small><b>ALARIS <span>IA</span></b></div>
+    </div>
+    <div class="rodape-sub">
+      Passaporte do Saber™ · atualizado em __BUILD_DATE__<br>
+      © __BUILD_YEAR__ Alaris IA · Todos os direitos reservados
+    </div>
+  </footer>
+</div>
+
+<script>
+
+// __DADOS__
+
+// =========================================================
+//  A TURMA (personagens das histórias)
+// =========================================================
+const TURMA = [
+  {nome:'Caio',  bicho:'🦊', cor:'#FF8A3D'},
+  {nome:'Joana', bicho:'🦋', cor:'#FF6FA3'},
+  {nome:'Manu',  bicho:'🐢', cor:'#39C27E'},
+  {nome:'Elise', bicho:'🦉', cor:'#A78BFA'},
+  {nome:'Theo',  bicho:'🐙', cor:'#5AA9FF'},
+  {nome:'Liz',   bicho:'🌻', cor:'#FFD23F'},
+  {nome:'Mia',   bicho:'🐱', cor:'#F472B6'},
+  {nome:'Gael',  bicho:'🦖', cor:'#2DD4BF'}
+];
+function amigo(nome){ return TURMA.find(t => t.nome === nome) || TURMA[0]; }
+function avatarHtml(a){ return `<div class="avatar" style="background:${a.cor}" aria-hidden="true">${a.bicho}</div>`; }
+
+// =========================================================
+//  TIPOS DO CALENDÁRIO
+// =========================================================
+const TIPOS = {
+  avaliacao:{nome:'Avaliação Diversificada', curto:'Avaliação', icon:'📝'},
+  atividade:{nome:'Atividade Avaliativa',    curto:'Atividade', icon:'✏️'},
+  trabalho: {nome:'Trabalho em grupo',       curto:'Trabalho',  icon:'👥'},
+  entrega:  {nome:'Entrega de trabalho',     curto:'Entrega',   icon:'📦'},
+  evento:   {nome:'Evento da escola',        curto:'Evento',    icon:'🎉'},
+  feriado:  {nome:'Feriado',                 curto:'Feriado',   icon:'🌴'}
+};
+const TIPOS_ESTUDO = ['avaliacao','atividade','trabalho','entrega'];
+const MESES = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+const SEMANA = ['domingo','segunda','terça','quarta','quinta','sexta','sábado'];
+
+function paraData(iso){ const [a,m,d] = iso.split('-').map(Number); return new Date(a, m-1, d); }
+function hoje(){ const h = new Date(); return new Date(h.getFullYear(), h.getMonth(), h.getDate()); }
+function isoDe(dt){ return `${dt.getFullYear()}-${String(dt.getMonth()+1).padStart(2,'0')}-${String(dt.getDate()).padStart(2,'0')}`; }
+function diasAte(iso){ return Math.round((paraData(iso) - hoje()) / 86400000); }
+function dataCurta(iso){ const d = paraData(iso); return `${String(d.getDate()).padStart(2,'0')}/${String(d.getMonth()+1).padStart(2,'0')}`; }
+function dataLonga(iso){
+  const d = paraData(iso);
+  const t = `${SEMANA[d.getDay()]}, ${d.getDate()} de ${MESES[d.getMonth()]}`;
+  return t.charAt(0).toUpperCase() + t.slice(1);
+}
+function faltaTexto(iso){
+  const n = diasAte(iso);
+  if(n === 0) return 'É hoje!';
+  if(n === 1) return 'É amanhã!';
+  if(n < 0) return n === -1 ? 'Foi ontem' : `Foi há ${-n} dias`;
+  return `Faltam ${n} dias`;
+}
+function eventosDoDia(iso){ return calendario.eventos.filter(e => e.data === iso); }
+function eventosDaMateria(id){ return calendario.eventos.filter(e => (e.materias||[]).includes(id)); }
+function proximosEventos(){
+  const h = isoDe(hoje());
+  return calendario.eventos.filter(e => e.data >= h && TIPOS_ESTUDO.includes(e.tipo) && (e.materias||[]).length);
+}
+function proximoDaMateria(id){
+  const h = isoDe(hoje());
+  return eventosDaMateria(id).find(e => e.data >= h && TIPOS_ESTUDO.includes(e.tipo));
+}
+function materia(id){ return subjects.find(s => s.id === id); }
+
+// =========================================================
+//  EVOLUÇÃO DO TRANSPORTE
+// =========================================================
+const vehicles = [
+  {min:0,  icon:'🚶', name:'A pé'},
+  {min:3,  icon:'🚲', name:'De bicicleta'},
+  {min:6,  icon:'🛵', name:'De moto'},
+  {min:9,  icon:'🚗', name:'De carro'},
+  {min:12, icon:'🚂', name:'De trem'},
+  {min:15, icon:'⛵', name:'De barco'},
+  {min:18, icon:'✈️', name:'De avião'},
+  {min:22, icon:'🚀', name:'De foguete'},
+  {min:26, icon:'🛸', name:'Nave espacial'}
+];
+function getVehicleIndex(s){
+  let vi = 0;
+  vehicles.forEach((v,i)=>{ if(s >= v.min) vi = i; });
+  return vi;
+}
+
+// =========================================================
+//  ARMAZENAMENTO
+//  No Chrome, abrir o arquivo direto do disco (file://) pode bloquear
+//  o localStorage. Sem isso, nada é salvo — melhor avisar.
+// =========================================================
+let armazenamentoOK = (function(){
+  try{
+    const teste = '__teste_passaporte__';
+    localStorage.setItem(teste, '1');
+    const leu = localStorage.getItem(teste) === '1';
+    localStorage.removeItem(teste);
+    return leu;
+  }catch(e){ return false; }
+})();
+
+function avisoArmazenamento(){
+  if(armazenamentoOK) return '';
+  return `
+    <div class="aviso">
+      <b>⚠️ O progresso não será salvo neste modo</b>
+      <span>Este navegador está bloqueando o salvamento porque o arquivo foi aberto
+      direto do computador. Dá para jogar normalmente, mas os carimbos e o progresso
+      somem ao fechar. Para salvar, abra pelo link do jogo na internet.</span>
+    </div>`;
+}
+
+function esc(t){
+  return String(t).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+// =========================================================
+//  SOM (efeitos simples com WebAudio, sem arquivos)
+// =========================================================
+const SOM_KEY = 'passaporte-som-v1';
+let somLigado = (function(){ try{ return localStorage.getItem(SOM_KEY) !== '0'; }catch(e){ return true; } })();
+let audioCtx = null;
+function tocar(notas){
+  if(!somLigado) return;
+  try{
+    audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+    let t = audioCtx.currentTime;
+    notas.forEach(([freq, dur, tipo]) => {
+      const o = audioCtx.createOscillator(), g = audioCtx.createGain();
+      o.type = tipo || 'triangle'; o.frequency.value = freq;
+      g.gain.setValueAtTime(0.18, t); g.gain.exponentialRampToValueAtTime(0.001, t + dur);
+      o.connect(g); g.connect(audioCtx.destination); o.start(t); o.stop(t + dur);
+      t += dur * 0.8;
+    });
+  }catch(e){}
+}
+const somAcerto = () => tocar([[660,.12],[880,.18]]);
+const somErro   = () => tocar([[220,.2,'square'],[180,.25,'square']]);
+const somVitoria= () => tocar([[523,.14],[659,.14],[784,.14],[1047,.3]]);
+function alternarSom(){
+  somLigado = !somLigado;
+  try{ localStorage.setItem(SOM_KEY, somLigado ? '1' : '0'); }catch(e){}
+  atualizarBotaoSom();
+  if(somLigado) somAcerto();
+}
+function atualizarBotaoSom(){
+  const b = document.getElementById('btnSom');
+  if(b) b.textContent = somLigado ? '🔊' : '🔇';
+}
+
+// =========================================================
+//  CONFETE E XP VOANDO
+// =========================================================
+const reduzMovimento = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function confete(qtd){
+  if(reduzMovimento) return;
+  const cores = ['#FFC531','#5B3FD9','#17A673','#E5384F','#2F80ED','#FF6FA3'];
+  for(let i=0;i<qtd;i++){
+    const c = document.createElement('span');
+    c.className = 'confete';
+    c.style.left = Math.random()*100 + 'vw';
+    c.style.background = cores[i % cores.length];
+    c.style.animationDelay = (Math.random()*0.4) + 's';
+    c.style.animationDuration = (1.2 + Math.random()*0.9) + 's';
+    document.body.appendChild(c);
+    setTimeout(()=>c.remove(), 2600);
+  }
+}
+function xpVoando(el, texto){
+  if(!el || reduzMovimento) return;
+  const r = el.getBoundingClientRect();
+  const s = document.createElement('div');
+  s.className = 'xp-voa'; s.textContent = texto;
+  s.style.left = (r.left + r.width/2) + 'px'; s.style.top = (r.top) + 'px';
+  document.body.appendChild(s);
+  setTimeout(()=>s.remove(), 1100);
+}
+
+// =========================================================
+//  PERFIS DE ALUNO
+//  Cada aluno tem progresso e carimbos separados no mesmo aparelho.
+// =========================================================
+const PERFIS_KEY = 'passaporte-perfis-v1';
+const PERFIL_ATIVO_KEY = 'passaporte-perfil-ativo-v1';
+
+// usados quando o navegador bloqueia o armazenamento
+let perfisMemoria = [];
+let perfilMemoriaAtivo = null;
+
+function lerPerfis(){
+  if(!armazenamentoOK) return perfisMemoria;
+  try{ return JSON.parse(localStorage.getItem(PERFIS_KEY)) || []; }catch(e){ return []; }
+}
+function salvarPerfis(lista){
+  if(!armazenamentoOK){ perfisMemoria = lista; return; }
+  try{ localStorage.setItem(PERFIS_KEY, JSON.stringify(lista)); }catch(e){}
+}
+function perfilAtivo(){
+  if(!armazenamentoOK) return perfilMemoriaAtivo;
+  try{ return localStorage.getItem(PERFIL_ATIVO_KEY) || null; }catch(e){ return null; }
+}
+function definirPerfilAtivo(id){
+  if(!armazenamentoOK){ perfilMemoriaAtivo = id; return; }
+  try{ localStorage.setItem(PERFIL_ATIVO_KEY, id); }catch(e){}
+}
+function perfilAtual(){ return lerPerfis().find(x => x.id === perfilAtivo()) || {nome:'', icone:'🙂'}; }
+
+// todas as chaves de dados passam por aqui, para separar por aluno
+function chave(base){
+  const p = perfilAtivo();
+  return p ? `${base}::${p}` : base;
+}
+
+function criarPerfil(nome, icone){
+  const lista = lerPerfis();
+  let id;
+  do {
+    id = 'p' + Date.now().toString(36) + Math.random().toString(36).slice(2,8);
+  } while(lista.some(p => p.id === id));
+  lista.push({id, nome, icone: icone || '🙂', criadoEm: Date.now()});
+  salvarPerfis(lista);
+  definirPerfilAtivo(id);
+  return id;
+}
+
+function excluirPerfil(id){
+  const lista = lerPerfis().filter(p => p.id !== id);
+  salvarPerfis(lista);
+  try{
+    [STORAGE, CARIMBOS_KEY, STATS_KEY].forEach(base=>{
+      localStorage.removeItem(`${base}::${id}`);
+    });
+  }catch(e){}
+  if(perfilAtivo() === id){
+    definirPerfilAtivo(lista.length ? lista[0].id : '');
+  }
+}
+
+// ---------- backup: exportar / importar ----------
+function exportarProgresso(){
+  const dados = {
+    app: 'Passaporte do Saber',
+    versao: 2,
+    exportadoEm: new Date().toISOString(),
+    perfis: lerPerfis(),
+    dados: {}
+  };
+  lerPerfis().forEach(p => {
+    dados.dados[p.id] = {};
+    [STORAGE, CARIMBOS_KEY, STATS_KEY].forEach(base=>{
+      try{
+        const v = localStorage.getItem(`${base}::${p.id}`);
+        if(v) dados.dados[p.id][base] = v;
+      }catch(e){}
+    });
+  });
+
+  const blob = new Blob([JSON.stringify(dados,null,2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'passaporte-progresso-' + new Date().toISOString().slice(0,10) + '.json';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  setTimeout(()=>URL.revokeObjectURL(url), 1000);
+}
+
+function importarProgresso(file){
+  const reader = new FileReader();
+  reader.onload = e => {
+    try{
+      const d = JSON.parse(e.target.result);
+      if(!d.perfis || !d.dados) throw new Error('arquivo inválido');
+      const atuais = lerPerfis();
+      d.perfis.forEach(p => { if(!atuais.find(x => x.id === p.id)) atuais.push(p); });
+      salvarPerfis(atuais);
+      Object.keys(d.dados).forEach(pid => {
+        Object.keys(d.dados[pid]).forEach(base => {
+          try{ localStorage.setItem(`${base}::${pid}`, d.dados[pid][base]); }catch(er){}
+        });
+      });
+      alert('Progresso restaurado com sucesso!');
+      renderPerfis();
+    }catch(err){
+      alert('Não consegui ler este arquivo. Verifique se é um backup do Passaporte do Saber.');
+    }
+  };
+  reader.readAsText(file);
+}
+
+// =========================================================
+//  CARIMBOS DO PASSAPORTE (conquistas)
+// =========================================================
+const CARIMBOS = [
+  {id:'primeira',  icon:'🎫', nome:'Primeira Viagem',   desc:'Terminou um desafio pela primeira vez'},
+  {id:'aprendiz',  icon:'🎓', nome:'Aprendiz',          desc:'Leu todas as lições de uma matéria'},
+  {id:'estudioso', icon:'📚', nome:'Estudioso',         desc:'Treinou com as cartas de estudo'},
+  {id:'nota10',    icon:'💯', nome:'Nota Máxima',       desc:'Acertou 100% de um desafio completo'},
+  {id:'quase',     icon:'🌟', nome:'Quase Perfeito',    desc:'Acertou 80% ou mais de um desafio'},
+  {id:'sequencia', icon:'🔥', nome:'Cinco Seguidas',    desc:'Acertou 5 perguntas seguidas'},
+  {id:'foguete',   icon:'🚀', nome:'Piloto de Foguete', desc:'Chegou ao foguete numa partida'},
+  {id:'cacador',   icon:'🎯', nome:'Caçador de Erros',  desc:'Zerou uma revisão dos próprios erros'},
+  {id:'preparado', icon:'⏰', nome:'Preparado',         desc:'Treinou até 7 dias antes de uma avaliação'},
+  {id:'bilingue',  icon:'🌐', nome:'Bilíngue',          desc:'Jogou matérias em português e em inglês'},
+  {id:'explorador',icon:'🗺️', nome:'Explorador',        desc:'Jogou todas as matérias'},
+  {id:'insistente',icon:'💪', nome:'Insistente',        desc:'Jogou a mesma matéria 3 vezes'},
+  {id:'maratona',  icon:'🏅', nome:'Maratonista',       desc:'Respondeu 200 perguntas no total'}
+];
+
+const CARIMBOS_KEY = 'passaporte-carimbos-v1';
+const STATS_KEY = 'passaporte-stats-v1';
+
+function lerCarimbos(){
+  try{ return JSON.parse(localStorage.getItem(chave(CARIMBOS_KEY))) || {}; }catch(e){ return {}; }
+}
+function lerStats(){
+  const vazio = {respondidas:0, partidas:{}, xp:0, licoes:{}};
+  try{ return Object.assign(vazio, JSON.parse(localStorage.getItem(chave(STATS_KEY))) || {}); }
+  catch(e){ return vazio; }
+}
+function salvarStats(s){
+  try{ localStorage.setItem(chave(STATS_KEY), JSON.stringify(s)); }catch(e){}
+}
+function nivelDe(xp){ return {nivel: Math.floor(xp/100) + 1, resto: xp % 100}; }
+
+let carimbosNovos = [];
+
+function darCarimbo(id){
+  const c = lerCarimbos();
+  if(c[id]) return false;
+  c[id] = Date.now();
+  try{ localStorage.setItem(chave(CARIMBOS_KEY), JSON.stringify(c)); }catch(e){}
+  carimbosNovos.push(CARIMBOS.find(x => x.id === id));
+  return true;
+}
+
+function maiorSequencia(){
+  let max = 0, atual = 0;
+  order.forEach((q,i)=>{
+    if(answers[i] !== null && answers[i] === q.correct){ atual++; max = Math.max(max,atual); }
+    else if(answers[i] !== null){ atual = 0; }
+  });
+  return max;
+}
+
+function verificarCarimbos(){
+  const score = getScore();
+  const total = order.length;
+  const pct = total ? score/total : 0;
+
+  const stats = lerStats();
+  stats.respondidas = (stats.respondidas || 0) + answers.filter(a=>a!==null).length;
+  stats.partidas[current.id] = (stats.partidas[current.id] || 0) + 1;
+  salvarStats(stats);
+
+  darCarimbo('primeira');
+  if(pct === 1 && total >= 10 && !temaJogo && !modoRevisao) darCarimbo('nota10');
+  else if(pct >= 0.8 && total >= 5) darCarimbo('quase');
+  if(maiorSequencia() >= 5) darCarimbo('sequencia');
+  if(getVehicleIndex(score) >= 7) darCarimbo('foguete');
+  if(modoRevisao && pct === 1) darCarimbo('cacador');
+  if(stats.partidas[current.id] >= 3) darCarimbo('insistente');
+  if(stats.respondidas >= 200) darCarimbo('maratona');
+
+  const prox = proximoDaMateria(current.id);
+  if(prox && diasAte(prox.data) <= 7) darCarimbo('preparado');
+
+  const jogadas = subjects.filter(s => stats.partidas[s.id]);
+  if(jogadas.some(s => s.lingua === 'en') && jogadas.some(s => s.lingua !== 'en')) darCarimbo('bilingue');
+  if(jogadas.length === subjects.length) darCarimbo('explorador');
+}
+
+// =========================================================
+//  ESTADO
+// =========================================================
+let current = null;
+let order = [];
+let answers = [];
+let idx = 0;
+let vehicleIndex = 0;
+let justEvolved = false;
+let modoRevisao = false;
+let temaJogo = null;
+let estudoIdx = 0;
+let estudoVirado = false;
+let temaEstudo = null;
+let licaoIdx = 0;
+let calMes = null;
+let calDia = null;
+let xpPartida = 0;
+let animarResposta = null;   // 'ok' | 'nao' — só na renderização logo após responder
+let revendo = false;         // revendo as questões depois do resultado: não conta de novo
+
+// =========================================================
+//  PROGRESSO SALVO
+// =========================================================
+const STORAGE = 'passaporte-progresso-v1';
+
+function lerProgresso(){
+  try{ return JSON.parse(localStorage.getItem(chave(STORAGE))) || {}; }
+  catch(e){ return {}; }
+}
+function salvarProgresso(subjectId, dados){
+  try{
+    const tudo = lerProgresso();
+    tudo[subjectId] = dados;
+    localStorage.setItem(chave(STORAGE), JSON.stringify(tudo));
+  }catch(e){}
+}
+function limparProgresso(subjectId){
+  try{
+    const tudo = lerProgresso();
+    delete tudo[subjectId];
+    localStorage.setItem(chave(STORAGE), JSON.stringify(tudo));
+  }catch(e){}
+}
+
+// guarda o estado atual da partida para poder retomar
+function persistirPartida(){
+  if(!current || !order.length || temaJogo) return;
+  const anterior = lerProgresso()[current.id] || {};
+  salvarProgresso(current.id, {
+    ...anterior,
+    perguntas: order.map(q => q.q),
+    answers: answers,
+    idx: idx,
+    modoRevisao: modoRevisao,
+    quando: Date.now()
+  });
+}
+
+// registra erros (para o modo revisão) e o melhor resultado (para as estrelas)
+function registrarResultado(){
+  if(!current || temaJogo) return;
+  const tudo = lerProgresso();
+  const anterior = tudo[current.id] || {};
+  const pct = order.length ? getScore()/order.length : 0;
+  const novo = {...anterior, answers: [], concluidoEm: Date.now()};
+  if(!modoRevisao){
+    novo.erradas = order
+      .map((q,i) => (answers[i] !== null && answers[i] !== q.correct) ? q.q : null)
+      .filter(Boolean);
+    novo.melhor = Math.max(anterior.melhor || 0, pct);
+  } else {
+    // na revisão, tira da lista o que acertou agora
+    const acertou = new Set(order.filter((q,i) => answers[i] === q.correct).map(q => q.q));
+    novo.erradas = (anterior.erradas || []).filter(t => !acertou.has(t));
+  }
+  salvarProgresso(current.id, novo);
+}
+
+function contarErrosSalvos(subjectId){
+  const p = lerProgresso()[subjectId];
+  return (p && p.erradas) ? p.erradas.length : 0;
+}
+function temPartidaEmAndamento(subjectId){
+  const p = lerProgresso()[subjectId];
+  return p && Array.isArray(p.answers) && p.answers.some(a => a !== null)
+           && p.answers.some(a => a === null);
+}
+function estrelasDe(pct){
+  if(pct >= 0.9) return 3;
+  if(pct >= 0.7) return 2;
+  if(pct >= 0.4) return 1;
+  return 0;
+}
+function estrelasMateria(id){
+  const p = lerProgresso()[id];
+  return p && p.melhor ? estrelasDe(p.melhor) : 0;
+}
+function estrelasHtml(n){
+  return [0,1,2].map(i => `<span class="${i < n ? '' : 'off'}">⭐</span>`).join('');
+}
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i=a.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [a[i],a[j]]=[a[j],a[i]];
+  }
+  return a;
+}
+function getScore(){
+  return answers.reduce((acc,ans,i) => acc + (ans !== null && ans === order[i].correct ? 1 : 0), 0);
+}
+function temasDe(s){ return [...new Set(s.questions.map(q => q.tema))]; }
+
+// =========================================================
+//  NAVEGAÇÃO
+// =========================================================
+function tela(html){
+  const el = document.getElementById('screen');
+  el.innerHTML = html;
+  window.scrollTo({top:0, behavior: reduzMovimento ? 'auto' : 'smooth'});
+}
+function irPara(destino){
+  persistirPartida();
+  current = null; modoRevisao = false; temaJogo = null;
+  if(destino === 'menu') renderMenu();
+}
+function backToMenu(){ irPara('menu'); }
+
+// =========================================================
+//  MENU (início)
+// =========================================================
+function htmlProximo(){
+  const prox = proximosEventos();
+  if(!prox.length){
+    return `<div class="card"><b style="font-family:var(--fd);font-size:20px">🎉 Todas as avaliações do calendário já passaram!</b>
+      <p class="proximo-dica" style="margin-top:6px">Continue treinando as matérias para não esquecer nada.</p></div>`;
+  }
+  const ev = prox[0];
+  const t = TIPOS[ev.tipo];
+  const n = diasAte(ev.data);
+  const mats = ev.materias.map(materia).filter(Boolean);
+  return `
+    <section class="proximo" aria-label="Próximo desafio">
+      <div class="proximo-topo tipo-${ev.tipo}">
+        <div class="proximo-contagem">
+          ${n === 0 ? '<b>Hoje</b><span>é o dia!</span>' : `<b>${n}</b><span>${n === 1 ? 'dia' : 'dias'}</span>`}
+        </div>
+        <div>
+          <div class="proximo-rotulo">${t.icon} Próximo desafio · ${t.nome}</div>
+          <div class="proximo-titulo">${ev.titulo}</div>
+          <div class="proximo-data">${dataLonga(ev.data)}${ev.detalhe ? ' · ' + ev.detalhe : ''}</div>
+        </div>
+      </div>
+      <div class="proximo-corpo">
+        <p class="proximo-dica">Bora treinar? Escolha a matéria:</p>
+        ${mats.map(s => `<button class="btn btn-bloco" style="background:${s.cor};color:#fff" onclick="renderMateria('${s.id}')">${s.icon} Treinar ${s.name}</button>`).join('')}
+      </div>
+    </section>`;
+}
+
+function mesInicial(){
+  const h = isoDe(hoje()).slice(0,7);
+  if(calendario.meses.includes(h)) return h;
+  const prox = proximosEventos()[0];
+  if(prox && calendario.meses.includes(prox.data.slice(0,7))) return prox.data.slice(0,7);
+  return calendario.meses[calendario.meses.length - 1];
+}
+function diaInicial(){
+  const prox = proximosEventos()[0];
+  if(prox && prox.data.slice(0,7) === calMes) return prox.data;
+  const doMes = calendario.eventos.filter(e => e.data.slice(0,7) === calMes);
+  return doMes.length ? doMes[0].data : null;
+}
+
+function htmlCalendario(){
+  const [ano, mes] = calMes.split('-').map(Number);
+  const primeiro = new Date(ano, mes-1, 1);
+  const ultimoDia = new Date(ano, mes, 0).getDate();
+  const hojeIso = isoDe(hoje());
+  const posMes = calendario.meses.indexOf(calMes);
+
+  let celulas = ['D','S','T','Q','Q','S','S'].map((d,i) =>
+    `<div class="cal-sem" aria-hidden="true">${d}</div>`).join('');
+  for(let i=0;i<primeiro.getDay();i++) celulas += '<div class="cal-dia vazio"></div>';
+
+  for(let d=1; d<=ultimoDia; d++){
+    const iso = `${calMes}-${String(d).padStart(2,'0')}`;
+    const evs = eventosDoDia(iso);
+    const dow = new Date(ano, mes-1, d).getDay();
+    const cls = ['cal-dia'];
+    if(dow === 0 || dow === 6) cls.push('fds');
+    if(iso < hojeIso) cls.push('passado');
+    if(iso === hojeIso) cls.push('hoje');
+    if(evs.length) cls.push('tem');
+    if(iso === calDia) cls.push('sel');
+
+    const chips = evs.map(e => {
+      const t = TIPOS[e.tipo];
+      const icones = (e.materias||[]).map(id => (materia(id)||{}).icon || '').join('');
+      return `<span class="chip tipo-${e.tipo}"><span aria-hidden="true">${t.icon}</span><span class="chip-txt">${t.curto}${icones ? ' ' + icones : ''}</span></span>`;
+    }).join('');
+    const hojeTag = iso === hojeIso ? '<span class="cal-hoje-tag">HOJE</span>' : '';
+
+    if(evs.length){
+      const rotulo = `${d} de ${MESES[mes-1]}: ` + evs.map(e => e.titulo).join('; ');
+      celulas += `<button class="${cls.join(' ')}" onclick="selecionarDia('${iso}')" aria-label="${esc(rotulo)}" aria-pressed="${iso===calDia}">
+        ${hojeTag}<span class="cal-num">${d}</span>${chips}</button>`;
+    } else {
+      celulas += `<div class="${cls.join(' ')}">${hojeTag}<span class="cal-num">${d}</span></div>`;
+    }
+  }
+
+  const legenda = Object.keys(TIPOS).map(k =>
+    `<span class="chip tipo-${k}"><span aria-hidden="true">${TIPOS[k].icon}</span><span class="chip-txt">${TIPOS[k].nome}</span></span>`).join('');
+
+  return `
+    <section class="card cal" aria-label="Calendário de avaliações">
+      <div class="cal-cab">
+        <button class="cal-nav" onclick="mudarMes(-1)" ${posMes<=0?'disabled':''} aria-label="Mês anterior">‹</button>
+        <div class="cal-mes">${MESES[mes-1]} ${ano}<small>Toque num dia colorido para ver os detalhes</small></div>
+        <button class="cal-nav" onclick="mudarMes(1)" ${posMes>=calendario.meses.length-1?'disabled':''} aria-label="Próximo mês">›</button>
+      </div>
+      <div class="cal-grade">${celulas}</div>
+      <div class="legenda" aria-label="Legenda das cores">${legenda}</div>
+      ${calDia ? htmlDetalheDia(calDia) : ''}
+    </section>`;
+}
+
+function htmlEvento(e){
+  const t = TIPOS[e.tipo];
+  const mats = (e.materias||[]).map(materia).filter(Boolean);
+  const passou = diasAte(e.data) < 0;
+  return `
+    <div class="evento">
+      <div class="evento-faixa tipo-${e.tipo}"><span>${t.icon} ${t.nome}</span><span>${faltaTexto(e.data)}</span></div>
+      <div class="evento-corpo">
+        <div class="evento-titulo">${e.titulo}</div>
+        ${e.detalhe ? `<div class="evento-detalhe">${e.detalhe}</div>` : ''}
+        ${mats.length ? `<div class="evento-materias">${mats.map(s =>
+          `<button class="mat-pill" onclick="renderMateria('${s.id}')"><span class="bolinha" style="background:${s.cor}"></span>${s.icon} ${passou ? 'Revisar' : 'Estudar'} ${s.name}</button>`).join('')}</div>` : ''}
+      </div>
+    </div>`;
+}
+
+function htmlDetalheDia(iso){
+  const evs = eventosDoDia(iso);
+  if(!evs.length) return '';
+  return `<div class="dia-detalhe"><div class="dd-titulo">📌 ${dataLonga(iso)}</div>${evs.map(htmlEvento).join('')}</div>`;
+}
+
+function selecionarDia(iso){ calDia = (calDia === iso ? null : iso); renderMenu(true); }
+function mudarMes(delta){
+  const i = calendario.meses.indexOf(calMes) + delta;
+  if(i < 0 || i >= calendario.meses.length) return;
+  calMes = calendario.meses[i];
+  calDia = diaInicial();
+  renderMenu(true);
+}
+
+function htmlAgenda(){
+  const prox = proximosEventos();
+  if(!prox.length) return '';
+  return `
+    <h2 class="secao-titulo">🗓️ Próximas avaliações <small>${prox.length} na lista</small></h2>
+    ${prox.map(e => {
+      const t = TIPOS[e.tipo]; const d = paraData(e.data);
+      const icones = e.materias.map(id => (materia(id)||{}).icon).join(' ');
+      return `
+      <button class="agenda-item" onclick="irParaDia('${e.data}')">
+        <div class="agenda-data tipo-${e.tipo}"><b>${d.getDate()}</b><span>${MESES[d.getMonth()].slice(0,3)}</span></div>
+        <div class="agenda-txt"><b>${t.icon} ${e.titulo}</b><small>${t.nome}${e.detalhe ? ' · ' + e.detalhe : ''} · ${icones}</small></div>
+        <span class="agenda-falta">${faltaTexto(e.data)}</span>
+      </button>`;
+    }).join('')}`;
+}
+function irParaDia(iso){
+  calMes = iso.slice(0,7); calDia = iso; renderMenu(true);
+  const c = document.querySelector('.cal');
+  if(c) c.scrollIntoView({behavior: reduzMovimento ? 'auto' : 'smooth', block:'start'});
+}
+
+function renderMenu(manterRolagem){
+  if(!calMes || !calendario.meses.includes(calMes)){ calMes = mesInicial(); calDia = diaInicial(); }
+  const perfil = perfilAtual();
+  const stats = lerStats();
+  const nv = nivelDe(stats.xp || 0);
+  const ganhos = Object.keys(lerCarimbos()).length;
+
+  const tiles = subjects.map(s => {
+    const prox = proximoDaMateria(s.id);
+    const est = estrelasMateria(s.id);
+    return `
+      <button class="mat-tile" onclick="renderMateria('${s.id}')" aria-label="${esc(s.name)}">
+        <div class="mat-topo" style="background:${s.cor}">
+          <span class="mat-ic" aria-hidden="true">${s.icon}</span>
+          <span class="lingua">${s.lingua === 'en' ? 'EN' : 'PT'}</span>
+        </div>
+        <div class="mat-corpo">
+          <div class="mat-nome">${s.name}</div>
+          <div class="estrelas" aria-label="${est} de 3 estrelas">${estrelasHtml(est)}</div>
+          ${prox
+            ? `<span class="mat-prox tipo-${prox.tipo}">${TIPOS[prox.tipo].icon} ${dataCurta(prox.data)}</span>`
+            : `<span class="mat-prox nada">Sem prova marcada</span>`}
+        </div>
+      </button>`;
+  }).join('');
+
+  const html = `
+    ${avisoArmazenamento()}
+    <section class="ola">
+      <div class="ola-avatar" aria-hidden="true">${perfil.icone}</div>
+      <div class="ola-info">
+        <div class="ola-nome">Oi, ${esc(perfil.nome || 'viajante')}! 👋</div>
+        <div class="ola-nivel">Nível ${nv.nivel} · ${stats.xp || 0} XP</div>
+        <div class="xp-trilho" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${nv.resto}" aria-label="XP até o próximo nível"><div class="xp-barra" style="width:${nv.resto}%"></div></div>
+      </div>
+      <button class="ola-trocar" onclick="renderPerfis()">trocar</button>
+    </section>
+
+    <div class="atalhos">
+      <button class="atalho" onclick="renderPassaporte()"><span class="a-ic" aria-hidden="true">🛂</span><span><b>Meu Passaporte</b><small>${ganhos} de ${CARIMBOS.length} carimbos</small></span></button>
+      <button class="atalho" onclick="jogarSurpresa()"><span class="a-ic" aria-hidden="true">🎲</span><span><b>Desafio surpresa</b><small>10 perguntas misturadas</small></span></button>
+    </div>
+
+    ${htmlProximo()}
+
+    <h2 class="secao-titulo">📅 Calendário <small>${calendario.periodo || ''}</small></h2>
+    ${htmlCalendario()}
+
+    ${htmlAgenda()}
+
+    <h2 class="secao-titulo">🎒 Matérias <small>toque para estudar</small></h2>
+    <div class="materias">${tiles}</div>
+
+    <h2 class="secao-titulo">🧑‍🤝‍🧑 A turma do Passaporte</h2>
+    <div class="card"><div class="turma">${TURMA.map(a => `<div class="amigo">${avatarHtml(a)}<b>${a.nome}</b></div>`).join('')}</div>
+      <p class="texto-ajuda" style="margin:12px 0 0">Eles aparecem nas lições e nos desafios para estudar com você!</p></div>
+  `;
+  if(manterRolagem){
+    const y = window.scrollY;
+    document.getElementById('screen').innerHTML = html;
+    window.scrollTo(0, y);
+  } else tela(html);
+}
+
+// =========================================================
+//  TELA DA MATÉRIA
+// =========================================================
+function renderMateria(id){
+  persistirPartida();
+  current = materia(id);
+  if(!current) return renderMenu();
+  modoRevisao = false; temaJogo = null;
+  const s = current;
+  const est = estrelasMateria(id);
+  const erros = contarErrosSalvos(id);
+  const andamento = temPartidaEmAndamento(id);
+  const evs = eventosDaMateria(id);
+  const temas = temasDe(s);
+  const lidas = (lerStats().licoes || {})[id] || 0;
+
+  tela(`
+    <button class="voltar" onclick="backToMenu()">← Início</button>
+    <section class="mat-hero" style="background:${s.cor}">
+      <div class="mh-ic" aria-hidden="true">${s.icon}</div>
+      <h2>${s.name}</h2>
+      <p>${s.topics}</p>
+      <div class="estrelas" aria-label="Melhor resultado: ${est} de 3 estrelas">${estrelasHtml(est)}</div>
+    </section>
+
+    ${evs.length ? `<h2 class="secao-titulo">📅 No calendário</h2>${evs.map(htmlEvento).join('')}` : ''}
+
+    <h2 class="secao-titulo">🚀 Como você quer estudar?</h2>
+    <div class="modos">
+      ${s.licoes.length ? `
+      <button class="modo" onclick="iniciarLicoes('${id}')">
+        <span class="modo-ic" style="background:#FFF1BF" aria-hidden="true">📚</span>
+        <span><b>Aprender</b><small>${s.licoes.length} lições com a turma${lidas ? ` · ${Math.min(lidas, s.licoes.length)} lidas` : ''}</small></span><span class="seta" aria-hidden="true">›</span>
+      </button>` : ''}
+      <button class="modo" onclick="iniciarEstudo('${id}')">
+        <span class="modo-ic" style="background:#DDEBFF" aria-hidden="true">🃏</span>
+        <span><b>Cartas de estudo</b><small>Vire a carta e veja a resposta</small></span><span class="seta" aria-hidden="true">›</span>
+      </button>
+      <button class="modo" onclick="startSubject('${id}')">
+        <span class="modo-ic" style="background:#D7F7E7" aria-hidden="true">🎮</span>
+        <span><b>Desafio completo</b><small>${s.questions.length} perguntas · ganhe estrelas</small></span><span class="seta" aria-hidden="true">›</span>
+      </button>
+      ${andamento ? `
+      <button class="modo" onclick="retomar('${id}')">
+        <span class="modo-ic" style="background:var(--sol)" aria-hidden="true">▶️</span>
+        <span><b>Continuar de onde parei</b><small>Seu desafio está salvo</small></span><span class="seta" aria-hidden="true">›</span>
+      </button>` : ''}
+      ${erros ? `
+      <button class="modo" onclick="revisarErros('${id}')">
+        <span class="modo-ic" style="background:#FFE0E4" aria-hidden="true">🎯</span>
+        <span><b>Revisar meus erros</b><small>${erros} pergunta${erros>1?'s':''} para acertar</small></span><span class="seta" aria-hidden="true">›</span>
+      </button>` : ''}
+    </div>
+
+    <h2 class="secao-titulo">🧩 Treinar um tema</h2>
+    <div class="temas">
+      ${temas.map((t,i) => {
+        const n = s.questions.filter(q => q.tema === t).length;
+        return `<button class="tema-linha" onclick="jogarTema('${id}', ${i})">🎯 ${t}<small>${n} pergunta${n>1?'s':''}</small></button>`;
+      }).join('')}
+    </div>
+  `);
+}
+
+// =========================================================
+//  LIÇÕES (Aprender)
+// =========================================================
+function iniciarLicoes(id){
+  current = materia(id);
+  licaoIdx = 0;
+  renderLicao();
+}
+function renderLicao(){
+  const s = current;
+  const l = s.licoes[licaoIdx];
+  const a = amigo(l.quem);
+  const ultimo = licaoIdx === s.licoes.length - 1;
+
+  const stats = lerStats();
+  stats.licoes = stats.licoes || {};
+  stats.licoes[s.id] = Math.max(stats.licoes[s.id] || 0, licaoIdx + 1);
+  salvarStats(stats);
+
+  tela(`
+    <button class="voltar" onclick="renderMateria('${s.id}')">← ${s.name}</button>
+    <div class="pontinhos" aria-label="Lição ${licaoIdx+1} de ${s.licoes.length}">
+      ${s.licoes.map((_,i) => `<span class="pontinho ${i===licaoIdx?'on':(i<licaoIdx?'visto':'')}"></span>`).join('')}
+    </div>
+    <article class="card licao">
+      <span class="tag-tema" style="background:${s.cor}">${l.tema}</span>
+      <h3>${l.titulo}</h3>
+      <p>${l.texto}</p>
+      ${(l.pontos||[]).length ? `<ul>${l.pontos.map(p => `<li>${p}</li>`).join('')}</ul>` : ''}
+      ${l.fala ? `
+      <div class="fala">
+        ${avatarHtml(a)}
+        <div class="balao" style="border-color:${a.cor}"><b>${a.bicho} ${a.nome}</b>${l.fala}</div>
+      </div>` : ''}
+    </article>
+    <div class="nav-jogo">
+      <button class="btn btn-claro" onclick="licaoAnterior()" ${licaoIdx===0?'disabled':''}>← Anterior</button>
+      <button class="btn btn-sol" onclick="jogarTema('${s.id}', ${temasDe(s).indexOf(l.tema)})" ${temasDe(s).includes(l.tema)?'':'disabled'}>🎯 Testar tema</button>
+      <button class="btn btn-primario btn-proxima" onclick="licaoProxima()">${ultimo ? '🏁 Terminei!' : 'Próxima →'}</button>
+    </div>
+  `);
+}
+function licaoAnterior(){ if(licaoIdx > 0){ licaoIdx--; renderLicao(); } }
+function licaoProxima(){
+  if(licaoIdx < current.licoes.length - 1){ licaoIdx++; renderLicao(); return; }
+  carimbosNovos = [];
+  darCarimbo('aprendiz');
+  somVitoria(); confete(40);
+  tela(`
+    <div class="card fim">
+      <div class="fim-estrelas" aria-hidden="true">🎓</div>
+      <h2>Lições concluídas!</h2>
+      <p>Você leu as ${current.licoes.length} lições de <b>${current.name}</b>. Agora vem a melhor parte: mostrar o que aprendeu!</p>
+      ${htmlNovosCarimbos()}
+      <div class="acoes">
+        <button class="btn btn-primario" onclick="startSubject('${current.id}')">🎮 Fazer o desafio</button>
+        <button class="btn btn-claro" onclick="iniciarEstudo('${current.id}')">🃏 Cartas de estudo</button>
+        <button class="btn btn-sol" onclick="renderMateria('${current.id}')">← Voltar à matéria</button>
+      </div>
+    </div>`);
+}
+
+// =========================================================
+//  CARTAS DE ESTUDO (flashcards)
+// =========================================================
+function iniciarEstudo(id, tema){
+  current = materia(id);
+  order = tema ? current.questions.filter(q => q.tema === tema) : current.questions.slice();
+  estudoIdx = 0; estudoVirado = false; temaEstudo = tema || null;
+  carimbosNovos = [];
+  darCarimbo('estudioso');
+  renderEstudo();
+}
+function virarCarta(){ estudoVirado = !estudoVirado; renderEstudo(); }
+function estudoAnterior(){ if(estudoIdx > 0){ estudoIdx--; estudoVirado = false; renderEstudo(); } }
+function estudoProxima(){
+  if(estudoIdx < order.length - 1){ estudoIdx++; estudoVirado = false; renderEstudo(); }
+  else renderEstudoFim();
+}
+function renderEstudo(){
+  const q = order[estudoIdx];
+  const pct = Math.round(((estudoIdx+1)/order.length)*100);
+  tela(`
+    <button class="voltar" onclick="renderMateria('${current.id}')">← ${current.name}</button>
+    ${temaEstudo ? `<div class="faixa-modo tema">📕 Revisando só: ${temaEstudo}</div>` : ''}
+    <div class="jogo-topo">
+      <div class="progresso" role="progressbar" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100"><div class="progresso-barra" style="width:${pct}%"></div></div>
+      <span class="contador">${estudoIdx+1}/${order.length}</span>
+    </div>
+    <button class="card flash" onclick="virarCarta()" aria-label="${estudoVirado ? 'Esconder resposta' : 'Mostrar resposta'}">
+      <span class="tag-tema" style="background:${current.cor}">${q.tema}</span>
+      <span class="pergunta" style="display:block">${q.q}</span>
+      ${estudoVirado ? `
+        <span class="resposta" style="display:block"><small>Resposta</small><span class="rt">${q.opts[q.correct]}</span></span>
+        <span class="explica" style="display:block">💡 ${q.fb}</span>
+      ` : `<span class="virar">👆 Toque na carta para ver a resposta</span>`}
+    </button>
+    <div class="nav-jogo">
+      <button class="btn btn-claro" onclick="estudoAnterior()" ${estudoIdx===0?'disabled':''}>← Anterior</button>
+      <button class="btn btn-sol" onclick="renderMateria('${current.id}')">🏠 Matéria</button>
+      <button class="btn btn-primario btn-proxima" onclick="estudoProxima()">${estudoIdx === order.length-1 ? '✅ Terminei' : 'Próxima →'}</button>
+    </div>
+  `);
+}
+function renderEstudoFim(){
+  tela(`
+    <div class="card fim">
+      <div class="fim-estrelas" aria-hidden="true">🧠</div>
+      <h2>Estudou tudo!</h2>
+      <p>Você passou pelas ${order.length} cartas de <b>${temaEstudo || current.name}</b>.</p>
+      <p>Estudar e depois se testar é o que faz a memória fixar de verdade.</p>
+      ${htmlNovosCarimbos()}
+      <div class="acoes">
+        <button class="btn btn-primario" onclick="startSubject('${current.id}')">🎮 Jogar agora</button>
+        <button class="btn btn-claro" onclick="iniciarEstudo('${current.id}')">🔁 Estudar de novo</button>
+        <button class="btn btn-sol" onclick="renderMateria('${current.id}')">← Voltar à matéria</button>
+      </div>
+    </div>`);
+}
+
+// =========================================================
+//  INÍCIO DE PARTIDAS
+// =========================================================
+function novaPartida(perguntas){
+  order = perguntas;
+  answers = new Array(order.length).fill(null);
+  idx = 0; vehicleIndex = 0; justEvolved = false; xpPartida = 0; animarResposta = null; revendo = false;
+  renderQuestion();
+}
+function startSubject(id){
+  current = materia(id);
+  modoRevisao = false; temaJogo = null;
+  novaPartida(shuffle(current.questions));
+}
+function jogarTema(id, i){
+  current = materia(id);
+  const tema = temasDe(current)[i];
+  if(!tema) return renderMateria(id);
+  modoRevisao = false; temaJogo = tema;
+  novaPartida(shuffle(current.questions.filter(q => q.tema === tema)));
+}
+function jogarSurpresa(){
+  // 10 perguntas de matérias variadas, priorizando as que têm avaliação mais perto
+  const prox = proximosEventos();
+  const foco = prox.length ? prox[0].materias : subjects.map(s => s.id);
+  const base = shuffle(subjects.filter(s => foco.includes(s.id)).flatMap(s => s.questions.map(q => ({...q, _mat:s.id}))));
+  const resto = shuffle(subjects.filter(s => !foco.includes(s.id)).flatMap(s => s.questions.map(q => ({...q, _mat:s.id}))));
+  current = {id:'surpresa', name:'Desafio surpresa', icon:'🎲', cor:'#5B3FD9', lingua:'pt', questions:[]};
+  modoRevisao = false; temaJogo = 'Surpresa';
+  novaPartida(base.slice(0,6).concat(resto.slice(0,4)).sort(() => Math.random() - 0.5));
+}
+
+// retoma uma partida interrompida
+function retomar(id){
+  const p = lerProgresso()[id];
+  current = materia(id);
+  if(!p || !current){ startSubject(id); return; }
+  const porEnunciado = {};
+  current.questions.forEach(q => { porEnunciado[q.q] = q; });
+  const remontada = (p.perguntas || []).map(txt => porEnunciado[txt]).filter(Boolean);
+  // se o conteúdo mudou desde a última vez, começa limpo
+  if(!remontada.length || remontada.length !== (p.perguntas||[]).length){
+    limparProgresso(id); startSubject(id); return;
+  }
+  order = remontada;
+  answers = p.answers.slice(0, order.length);
+  while(answers.length < order.length) answers.push(null);
+  idx = Math.min(p.idx || 0, order.length - 1);
+  modoRevisao = !!p.modoRevisao; temaJogo = null;
+  vehicleIndex = getVehicleIndex(getScore());
+  justEvolved = false; xpPartida = 0; animarResposta = null; revendo = false;
+  renderQuestion();
+}
+
+// joga só as perguntas erradas da última partida
+function revisarErros(id){
+  const p = lerProgresso()[id];
+  current = materia(id);
+  if(!p || !p.erradas || !current){ startSubject(id); return; }
+  const set = new Set(p.erradas);
+  const soErradas = current.questions.filter(q => set.has(q.q));
+  if(!soErradas.length){ startSubject(id); return; }
+  modoRevisao = true; temaJogo = null;
+  novaPartida(shuffle(soErradas));
+}
+
+// =========================================================
+//  PERGUNTA
+// =========================================================
+const REACOES = {
+  pt:{ok:['Mandou bem!','Isso aí!','Arrasou!','Na mosca!','Show de bola!','Que craque!'],
+      nao:['Quase! Olha só:','Não foi dessa vez. Veja:','Opa! Vamos entender:','Tudo bem errar. Repara:']},
+  en:{ok:['Great job!','Awesome!','You got it!','Well done!','Super!'],
+      nao:['Almost! Look:','Not quite. Here is why:','Oops! Let\'s see:']}
+};
+function hash(t){ let h = 0; for(const c of t) h = (h*31 + c.charCodeAt(0)) >>> 0; return h; }
+function anfitriao(q){
+  const nomes = TURMA.filter(a => new RegExp('\\b' + a.nome + '\\b').test(q.q));
+  return nomes.length ? nomes[0] : TURMA[hash(q.q) % TURMA.length];
+}
+function linguaDe(q){
+  if(q._mat) return (materia(q._mat)||{}).lingua || 'pt';
+  return current.lingua || 'pt';
+}
+function combo(){
+  let n = 0;
+  for(let i = idx; i >= 0; i--){
+    if(answers[i] === null) continue;
+    if(answers[i] === order[i].correct) n++; else break;
+  }
+  return n;
+}
+
+function renderQuestion(){
+  const q = order[idx];
+  const given = answers[idx];
+  const respondida = given !== null;
+  const score = getScore();
+  const lingua = linguaDe(q);
+  const host = anfitriao(q);
+  const respondidas = answers.filter(a => a !== null).length;
+  const pct = Math.round((respondidas / order.length) * 100);
+  const seq = combo();
+  const matQ = q._mat ? materia(q._mat) : current;
+
+  const v = vehicles[vehicleIndex];
+  const next = vehicles[vehicleIndex+1];
+  let vpct = 100, sub = 'Nível máximo de transporte!';
+  if(next){
+    vpct = Math.max(0, Math.min(100, Math.round(((score - v.min) / (next.min - v.min)) * 100)));
+    sub = `Mais ${Math.max(0, next.min - score)} acerto(s) para viajar ${next.name.toLowerCase()} ${next.icon}`;
+  }
+
+  const opts = q.opts.map((opt, i) => {
+    let cls = 'opcao';
+    if(respondida){
+      if(i === q.correct) cls += ' certa';
+      else if(i === given) cls += ' errada';
+      else cls += ' apagada';
+    }
+    return `<button class="${cls}" ${respondida ? 'disabled' : ''} onclick="selectAnswer(${i}, this)">
+      <span class="letra l${i}" aria-hidden="true">${'ABCDE'[i]}</span><span>${opt}</span>
+    </button>`;
+  }).join('');
+
+  let retorno = '';
+  if(respondida){
+    const ok = given === q.correct;
+    const lista = REACOES[lingua][ok ? 'ok' : 'nao'];
+    retorno = `<div class="retorno ${ok ? 'ok' : 'nao'}" role="status"><b>${ok ? '🎉' : '💡'} ${lista[hash(q.q) % lista.length]}</b>${q.fb}</div>`;
+  }
+
+  const isLast = idx === order.length - 1;
+  const titulo = temaJogo && temaJogo !== 'Surpresa' ? `${current.icon} ${temaJogo}` : `${current.icon} ${current.name}`;
+
+  tela(`
+    <button class="voltar" onclick="${current.id === 'surpresa' ? 'backToMenu()' : `renderMateria('${current.id}')`}">← ${current.id === 'surpresa' ? 'Início' : current.name}</button>
+    ${modoRevisao ? '<div class="faixa-modo">🎯 Modo revisão: só as que você errou</div>' : ''}
+    ${temaJogo ? `<div class="faixa-modo tema">${titulo}</div>` : ''}
+    <div class="jogo-topo">
+      <div class="progresso" role="progressbar" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso"><div class="progresso-barra" style="width:${pct}%"></div></div>
+      <span class="contador">${idx+1}/${order.length}</span>
+      <span class="combo ${seq >= 3 && animarResposta === 'ok' ? 'quente' : ''}" aria-label="Sequência de acertos">🔥 ${seq}</span>
+    </div>
+
+    ${justEvolved ? `<div class="evoluiu-banner">🎉 Evoluiu! Agora você viaja ${v.name.toLowerCase()} ${v.icon}</div>` : ''}
+    <div class="veiculo">
+      <div class="veiculo-ic ${justEvolved ? 'evoluiu' : ''}" aria-hidden="true">${v.icon}</div>
+      <div class="veiculo-info">
+        <div class="veiculo-nome">${v.name} · ${score} acerto${score===1?'':'s'}</div>
+        <div class="veiculo-trilho"><div class="veiculo-barra" style="width:${vpct}%"></div></div>
+      </div>
+    </div>
+    <div class="veiculo-sub">${sub}</div>
+
+    <div class="card ${animarResposta === 'nao' ? 'treme' : ''}">
+      <div class="host">
+        ${avatarHtml(host)}
+        <div class="host-txt">${host.nome} ${lingua === 'en' ? 'asks' : 'pergunta'}:<small>${matQ.icon} ${matQ.name} · ${q.tema}</small></div>
+      </div>
+      <p class="pergunta">${q.q}</p>
+      <div class="opcoes">${opts}</div>
+      ${retorno}
+    </div>
+
+    <div class="nav-jogo">
+      <button class="btn btn-claro" onclick="prevQuestion()" ${idx === 0 ? 'disabled' : ''}>← Anterior</button>
+      <button class="btn btn-sol" onclick="${current.id === 'surpresa' ? 'backToMenu()' : `renderMateria('${current.id}')`}">⏸ Pausar</button>
+      <button class="btn btn-primario btn-proxima" onclick="nextQuestion()" ${respondida ? '' : 'disabled'}>${isLast ? '🏁 Ver resultado' : 'Próxima →'}</button>
+    </div>
+  `);
+  justEvolved = false;
+  animarResposta = null;
+}
+
+function selectAnswer(i, el){
+  if(answers[idx] !== null) return;
+  answers[idx] = i;
+  const ok = i === order[idx].correct;
+  const oldVi = vehicleIndex;
+  vehicleIndex = getVehicleIndex(getScore());
+  justEvolved = vehicleIndex > oldVi;
+  animarResposta = ok ? 'ok' : 'nao';
+
+  if(ok){
+    const bonus = combo() >= 3 ? 5 : 0;
+    const ganho = 10 + bonus;
+    xpPartida += ganho;
+    const stats = lerStats(); stats.xp = (stats.xp || 0) + ganho; salvarStats(stats);
+    xpVoando(el, `+${ganho} XP`);
+    somAcerto();
+    if(justEvolved) confete(30);
+  } else {
+    somErro();
+  }
+  persistirPartida();
+  renderQuestion();
+  // mantém o retorno visível sem precisar rolar
+  const r = document.querySelector('.retorno');
+  if(r && r.scrollIntoView) r.scrollIntoView({behavior: reduzMovimento ? 'auto' : 'smooth', block:'nearest'});
+}
+
+function prevQuestion(){ if(idx > 0){ idx--; renderQuestion(); } }
+function nextQuestion(){
+  if(answers[idx] === null) return;
+  if(idx < order.length - 1){ idx++; renderQuestion(); }
+  else renderEnd();
+}
+
+// =========================================================
+//  RESULTADO
+// =========================================================
+function desempenhoPorTema(){
+  const mapa = {};
+  order.forEach((q,i)=>{
+    if(answers[i] === null) return;
+    if(!mapa[q.tema]) mapa[q.tema] = {tema:q.tema, mat:q._mat || current.id, acertos:0, total:0};
+    mapa[q.tema].total++;
+    if(answers[i] === q.correct) mapa[q.tema].acertos++;
+  });
+  return Object.values(mapa)
+    .map(t => ({...t, pct: t.total ? t.acertos/t.total : 0}))
+    .sort((a,b) => a.pct - b.pct);
+}
+function nivelTema(pct){
+  if(pct >= 0.8) return {classe:'forte', rotulo:'Mandou bem', icone:'✅'};
+  if(pct >= 0.5) return {classe:'medio', rotulo:'Quase lá',   icone:'⚠️'};
+  return {classe:'fraco', rotulo:'Revisar',  icone:'📕'};
+}
+function htmlNovosCarimbos(){
+  if(!carimbosNovos.length) return '';
+  return `
+    <div class="novos-carimbos">
+      <div class="nc-tit">🎉 ${carimbosNovos.length === 1 ? 'Novo carimbo!' : 'Novos carimbos!'}</div>
+      ${carimbosNovos.map(c=>`<div class="nc-item"><span aria-hidden="true">${c.icon}</span><span>${c.nome}<br><small>${c.desc}</small></span></div>`).join('')}
+    </div>`;
+}
+
+function renderEnd(){
+  carimbosNovos = [];
+  if(!revendo){
+    if(current.id !== 'surpresa') registrarResultado();
+    verificarCarimbos();
+  }
+  const score = getScore();
+  const total = order.length;
+  const pct = Math.round((score/total)*100);
+  const est = estrelasDe(score/total);
+  let titulo, msg;
+  if(pct === 100){ titulo = 'Viagem perfeita!'; msg = 'Você acertou tudo. Passaporte carimbado com louvor!'; }
+  else if(pct >= 80){ titulo = 'Excelente viagem!'; msg = 'Faltou só um pouquinho para gabaritar.'; }
+  else if(pct >= 60){ titulo = 'Boa viagem!'; msg = 'Vale revisar os temas marcados abaixo.'; }
+  else { titulo = 'Viagem de treino!'; msg = 'Cada erro mostra o que estudar. Use as lições e tente de novo!'; }
+
+  if(pct >= 60 && !revendo){ somVitoria(); confete(pct === 100 ? 90 : 50); }
+
+  const v = vehicles[getVehicleIndex(score)];
+  const temas = desempenhoPorTema();
+  const voltar = current.id === 'surpresa' ? 'backToMenu()' : `renderMateria('${current.id}')`;
+
+  tela(`
+    <div class="card fim">
+      <div class="fim-estrelas" aria-label="${est} de 3 estrelas">${estrelasHtml(est)}</div>
+      <h2>${titulo}</h2>
+      <div class="placar">
+        <div><b>${score}/${total}</b><span>acertos</span></div>
+        <div><b>${pct}%</b><span>aproveitamento</span></div>
+        <div><b>+${xpPartida}</b><span>XP</span></div>
+      </div>
+      <p>Você terminou a viagem <b>${v.name.toLowerCase()} ${v.icon}</b>. ${msg}</p>
+      ${htmlNovosCarimbos()}
+
+      <div class="mapa">
+        <h2 class="secao-titulo" style="margin-top:8px">🧭 Seu mapa de temas</h2>
+        ${temas.map(t=>{
+          const n = nivelTema(t.pct);
+          const ti = materia(t.mat) ? temasDe(materia(t.mat)).indexOf(t.tema) : -1;
+          return `
+          <div class="mapa-linha ${n.classe}">
+            <div class="mapa-topo"><span>${n.icone} ${t.tema}</span><span>${t.acertos}/${t.total}</span></div>
+            <div class="mapa-trilho"><div class="mapa-barra" style="width:${Math.round(t.pct*100)}%"></div></div>
+            ${t.pct < 0.8 && ti >= 0 ? `<button class="mapa-btn" onclick="iniciarEstudo('${t.mat}', ${JSON.stringify(t.tema).replace(/"/g,'&quot;')})">📚 Estudar este tema</button>` : ''}
+          </div>`;
+        }).join('')}
+      </div>
+
+      <h2 class="secao-titulo">🔍 Suas respostas</h2>
+      <div class="revisao">
+        ${order.map((q, i) => {
+          const ok = answers[i] === q.correct;
+          return `<div class="rv"><span class="rv-m ${ok ? 'ok' : 'no'}" aria-label="${ok ? 'acertou' : 'errou'}">${ok ? '✓' : '✕'}</span><span><b>${q.tema}</b> · ${q.q.replace(/<[^>]*>/g,'')}</span></div>`;
+        }).join('')}
+      </div>
+
+      <div class="acoes">
+        <button class="btn btn-primario" onclick="reviewAnswers()">🔍 Rever as questões</button>
+        <button class="btn btn-claro" onclick="jogarDeNovo()">🔁 Jogar de novo</button>
+        <button class="btn btn-sol" onclick="${voltar}">← Voltar</button>
+      </div>
+    </div>
+  `);
+}
+function jogarDeNovo(){
+  if(current.id === 'surpresa') return jogarSurpresa();
+  if(temaJogo) return jogarTema(current.id, temasDe(current).indexOf(temaJogo));
+  if(modoRevisao) return revisarErros(current.id);
+  startSubject(current.id);
+}
+function reviewAnswers(){ revendo = true; idx = 0; renderQuestion(); }
+
+// =========================================================
+//  MEU PASSAPORTE (coleção de carimbos)
+// =========================================================
+function renderPassaporte(){
+  const ganhos = lerCarimbos();
+  const stats = lerStats();
+  const qtd = Object.keys(ganhos).length;
+  const estrelas = subjects.reduce((n,s) => n + estrelasMateria(s.id), 0);
+  tela(`
+    <button class="voltar" onclick="backToMenu()">← Início</button>
+    <h2 class="secao-titulo" style="margin-top:0">🛂 Meu Passaporte</h2>
+    <div class="resumo">
+      <div><b>${qtd}</b><span>carimbos</span></div>
+      <div><b>${estrelas}</b><span>estrelas</span></div>
+      <div><b>${stats.respondidas||0}</b><span>respostas</span></div>
+    </div>
+    <div class="carimbos">
+      ${CARIMBOS.map(c => {
+        const tem = !!ganhos[c.id];
+        return `<div class="carimbo ${tem ? 'ganho' : 'bloq'}">
+          <div class="cb-ic" aria-hidden="true">${tem ? c.icon : '❔'}</div>
+          <div class="cb-nome">${c.nome}</div>
+          <div class="cb-desc">${c.desc}</div>
+        </div>`;
+      }).join('')}
+    </div>
+  `);
+}
+
+// =========================================================
+//  PERFIS
+// =========================================================
+const ICONES_PERFIL = ['🙂','🚀','🦊','🐢','🦁','🐼','🦄','⚽','🎸','🌟','🐙','🦖'];
+let iconeEscolhido = ICONES_PERFIL[0];
+
+function renderPerfis(){
+  persistirPartida();
+  const perfis = lerPerfis();
+  const ativo = perfilAtivo();
+  const lista = perfis.length ? perfis.map(p => `
+    <div class="perfil ${p.id===ativo?'ativo':''}">
+      <button class="perfil-btn" onclick="trocarPerfil('${p.id}')">
+        <div class="avatar" aria-hidden="true">${p.icone}</div>
+        <span class="perfil-nome">${esc(p.nome)}${p.id===ativo?'<small>estudando agora</small>':''}</span>
+      </button>
+      <button class="perfil-del" onclick="confirmarExcluirPerfil('${p.id}')" aria-label="Excluir perfil de ${esc(p.nome)}">🗑</button>
+    </div>`).join('') : '<p class="texto-ajuda">Ainda não tem ninguém aqui. Crie o primeiro perfil!</p>';
+
+  tela(`
+    ${perfis.length ? '<button class="voltar" onclick="backToMenu()">← Início</button>' : ''}
+    <h2 class="secao-titulo" style="margin-top:0">👥 Quem vai estudar?</h2>
+    ${avisoArmazenamento()}
+    ${lista}
+
+    <section class="card">
+      <h3 class="secao-titulo" style="margin-top:0">➕ Novo aluno</h3>
+      <label class="rotulo" for="novoNome">Nome</label>
+      <input type="text" id="novoNome" class="campo" placeholder="Digite o nome" maxlength="20" autocomplete="off">
+      <div class="rotulo">Escolha um ícone</div>
+      <div class="icones">
+        ${ICONES_PERFIL.map((ic,i)=>`<button class="icone-op ${ic===iconeEscolhido?'sel':''}" onclick="selecionarIcone(this,'${ic}')" aria-label="Ícone ${ic}">${ic}</button>`).join('')}
+      </div>
+      <button class="btn btn-primario btn-bloco" onclick="adicionarPerfil()">Criar perfil</button>
+    </section>
+
+    <section class="card">
+      <h3 class="secao-titulo" style="margin-top:0">💾 Backup do progresso</h3>
+      <p class="texto-ajuda">O progresso fica salvo neste aparelho. Para levar para outro aparelho
+      (ou não perder se limpar o navegador), baixe o backup e depois restaure.</p>
+      <div class="acoes" style="margin-top:0">
+        <button class="btn btn-claro" onclick="exportarProgresso()">⬇️ Baixar backup</button>
+        <label class="btn btn-sol">⬆️ Restaurar backup
+          <input type="file" accept=".json" style="display:none" onchange="if(this.files[0]) importarProgresso(this.files[0])">
+        </label>
+      </div>
+    </section>
+  `);
+}
+function selecionarIcone(el, ic){
+  iconeEscolhido = ic;
+  document.querySelectorAll('.icone-op').forEach(b=>b.classList.remove('sel'));
+  el.classList.add('sel');
+}
+function adicionarPerfil(){
+  const nome = (document.getElementById('novoNome').value || '').trim();
+  if(!nome){ alert('Digite o nome do aluno.'); return; }
+  criarPerfil(nome, iconeEscolhido);
+  backToMenu();
+}
+function trocarPerfil(id){ definirPerfilAtivo(id); backToMenu(); }
+function confirmarExcluirPerfil(id){
+  const p = lerPerfis().find(x => x.id === id);
+  if(!p) return;
+  if(!confirm(`Excluir o perfil de ${p.nome}? Todo o progresso e os carimbos serão apagados.`)) return;
+  excluirPerfil(id);
+  renderPerfis();
+}
+
+// ---------- início ----------
+atualizarBotaoSom();
+if(!armazenamentoOK){
+  // sem armazenamento (file:// bloqueado): perfil temporário em memória
+  perfisMemoria = [{id:'temp', nome:'Visitante', icone:'🙂'}];
+  perfilMemoriaAtivo = 'temp';
+  renderMenu();
+} else if(!lerPerfis().length || !perfilAtivo()){
+  renderPerfis();
+} else {
+  renderMenu();
+}
+</script>
+
+</body>
+</html>

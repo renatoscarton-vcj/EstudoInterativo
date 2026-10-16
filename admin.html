@@ -108,7 +108,7 @@
   <div class="panel">
     <h2>📂 Carregar conteúdo</h2>
     <div class="hint">
-      Escolha os arquivos <b>.json</b> da pasta <code>data/</code> do repositório para editar o que já existe.
+      Escolha os arquivos <b>.json</b> da pasta <code>data/materias/</code> do repositório para editar o que já existe.
       Seu trabalho fica salvo automaticamente neste navegador enquanto você edita.
     </div>
     <label>Arquivos JSON das matérias</label>
@@ -206,7 +206,7 @@
   <div class="panel">
     <h2>📤 Exportar para o repositório</h2>
     <div class="hint">
-      Baixe os arquivos e coloque-os na pasta <code>data/</code> do repositório.
+      Baixe os arquivos e coloque-os na pasta <code>data/materias/</code> do repositório.
       Depois rode <code>node scripts/build.js</code> para gerar o jogo atualizado.
     </div>
     <div>
@@ -523,7 +523,7 @@ function exportarTudo(){
   subjects.forEach(s => problemas = problemas.concat(validar(s)));
   if(problemas.length){ msg('msgExport','Corrija antes: '+problemas[0],false); return; }
   subjects.forEach(s => baixar(s.id+'.json', JSON.stringify(s,null,2)));
-  msg('msgExport', subjects.length+' arquivo(s) baixado(s). Coloque-os na pasta data/ do repositório.', true);
+  msg('msgExport', subjects.length+' arquivo(s) baixado(s). Coloque-os na pasta data/materias/ do repositório.', true);
 }
 
 function exportarAtual(){

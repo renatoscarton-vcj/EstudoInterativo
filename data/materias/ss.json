@@ -1,0 +1,143 @@
+{
+  "id": "ss",
+  "ordem": 8,
+  "icon": "🗺️",
+  "name": "Social Studies",
+  "cor": "#4338CA",
+  "lingua": "en",
+  "ano": 4,
+  "topics": "Maps · Continents & oceans · Communities · Family history · Needs & wants · Goods & services · Brazil",
+  "licoes": [
+    {
+      "tema": "Maps",
+      "titulo": "Reading a map",
+      "texto": "Maps have tools that help us read them:",
+      "pontos": [
+        "<b>Title:</b> tells what the map shows.",
+        "<b>Map key (legend):</b> tells what the symbols mean.",
+        "<b>Compass rose:</b> shows the directions: <b>North, South, East, West</b>.",
+        "<b>Scale:</b> helps measure real distances.",
+        "A <b>globe</b> is a round model of the Earth. The <b>Equator</b> divides it into the Northern and Southern Hemispheres."
+      ],
+      "quem": "Caio",
+      "fala": "Never Eat Soggy Waffles: North, East, South, West around the compass!"
+    },
+    {
+      "tema": "Continents and oceans",
+      "titulo": "Continents and oceans",
+      "texto": "The Earth has <b>7 continents</b> and <b>5 oceans</b>.",
+      "pontos": [
+        "Continents: Africa, Antarctica, Asia, Australia (Oceania), Europe, North America, <b>South America</b>.",
+        "Oceans: <b>Pacific</b> (the largest), <b>Atlantic</b>, Indian, Arctic, Southern.",
+        "<b>Brazil</b> is in South America, and its coast is on the <b>Atlantic Ocean</b>.",
+        "<b>Antarctica</b> is the coldest continent."
+      ],
+      "quem": "Elise",
+      "fala": "From Brazil, I'd have to cross the whole Atlantic Ocean to get to Africa!"
+    },
+    {
+      "tema": "Communities",
+      "titulo": "Communities",
+      "texto": "A <b>community</b> is a place where people live, work and play together.",
+      "pontos": [
+        "<b>Urban:</b> a city, with tall buildings, many people and traffic.",
+        "<b>Suburban:</b> near a city, with houses and yards.",
+        "<b>Rural:</b> the countryside, with farms and fields.",
+        "<b>Community helpers:</b> firefighters, doctors, teachers, police officers."
+      ],
+      "quem": "Joana",
+      "fala": "Grandpa lives on a farm, a rural community. I live in the city, an urban community!"
+    },
+    {
+      "tema": "Family history",
+      "titulo": "Family history and timelines",
+      "texto": "We learn about the past through our families.",
+      "pontos": [
+        "A <b>family tree</b> shows the members and <b>generations</b> of a family.",
+        "Your grandparents' parents are your <b>great-grandparents</b>.",
+        "A <b>timeline</b> shows events in the <b>order they happened</b>.",
+        "<b>Primary sources</b> come from the time of the event: old letters, photos, diaries."
+      ],
+      "quem": "Liz",
+      "fala": "Our family tree for the Mostra Cultural has four generations!"
+    },
+    {
+      "tema": "Needs and wants",
+      "titulo": "Needs and wants",
+      "texto": "Some things we <b>need</b> to live. Others we just <b>want</b>.",
+      "pontos": [
+        "<b>Needs:</b> food, clean water, shelter (a home), clothing.",
+        "<b>Wants:</b> toys, video games, candy, a skateboard.",
+        "<b>Saving</b> money helps us buy things later."
+      ],
+      "quem": "Gael",
+      "fala": "I want a new skateboard, but first I need lunch!"
+    },
+    {
+      "tema": "Goods and services",
+      "titulo": "Goods and services",
+      "texto": "People buy and sell <b>goods</b> and <b>services</b>.",
+      "pontos": [
+        "<b>Goods</b> are things you can touch: bread, shoes, books.",
+        "<b>Services</b> are jobs people do for others: a haircut, a doctor visit, a bus ride.",
+        "<b>Producers</b> make goods or give services. <b>Consumers</b> buy and use them."
+      ],
+      "quem": "Mia",
+      "fala": "The bread from the bakery is a good. The haircut at the salon is a service!"
+    },
+    {
+      "tema": "Citizenship",
+      "titulo": "Citizenship: rules, rights and responsibilities",
+      "texto": "Good citizens help their community.",
+      "pontos": [
+        "<b>Rules</b> and <b>laws</b> keep us safe and help us live together.",
+        "<b>Rights:</b> things everyone deserves, like going to school.",
+        "<b>Responsibilities:</b> things we should do, like doing homework and respecting others."
+      ],
+      "quem": "Manu",
+      "fala": "Picking up trash in the schoolyard is a responsibility we all share!"
+    },
+    {
+      "tema": "Brazil",
+      "titulo": "Brazil",
+      "texto": "Some facts about our country:",
+      "pontos": [
+        "The capital is <b>Brasília</b>.",
+        "Brazil has <b>5 regions</b> and <b>26 states</b> plus the Federal District.",
+        "<b>Independence Day:</b> September 7th (1822).",
+        "<b>October 12th:</b> Our Lady of Aparecida holiday and Children's Day."
+      ],
+      "quem": "Theo",
+      "fala": "September 7th was a holiday in our school calendar. Now I know why!"
+    }
+  ],
+  "questions": [
+    {"tema": "Maps", "q": "The part of a map that shows directions (N, S, E, W) is the...", "opts": ["map key", "compass rose", "title", "scale"], "correct": 1, "fb": "The compass rose shows North, South, East and West. (Rosa dos ventos.)"},
+    {"tema": "Maps", "q": "The <b>map key</b> (legend) tells us...", "opts": ["what the symbols mean", "the date", "the author's name", "the weather"], "correct": 0, "fb": "The map key explains the symbols and colors on the map. (Legenda.)"},
+    {"tema": "Maps", "q": "The opposite of <b>North</b> is...", "opts": ["East", "West", "South", "Up"], "correct": 2, "fb": "North and South are opposites. East and West are opposites too."},
+    {"tema": "Maps", "q": "A <b>globe</b> is...", "opts": ["a flat map of a city", "a round model of the Earth", "a kind of compass", "a photo of the Moon"], "correct": 1, "fb": "A globe is a round model of the Earth. (Globo terrestre.)"},
+    {"tema": "Maps", "q": "The imaginary line that divides the Earth into the Northern and Southern Hemispheres is the...", "opts": ["Equator", "compass rose", "scale", "border"], "correct": 0, "fb": "The Equator is an imaginary line around the middle of the Earth. (Linha do Equador.)"},
+    {"tema": "Continents and oceans", "q": "How many continents are there?", "opts": ["5", "6", "7", "8"], "correct": 2, "fb": "There are 7 continents: Africa, Antarctica, Asia, Australia, Europe, North America and South America."},
+    {"tema": "Continents and oceans", "q": "Brazil is located in...", "opts": ["North America", "South America", "Africa", "Europe"], "correct": 1, "fb": "Brazil is the largest country in South America."},
+    {"tema": "Continents and oceans", "q": "The largest ocean on Earth is the...", "opts": ["Atlantic", "Indian", "Pacific", "Arctic"], "correct": 2, "fb": "The Pacific Ocean is the largest and deepest ocean."},
+    {"tema": "Continents and oceans", "q": "Which ocean touches the coast of Brazil?", "opts": ["Pacific", "Atlantic", "Indian", "Arctic"], "correct": 1, "fb": "The whole Brazilian coast is on the Atlantic Ocean."},
+    {"tema": "Continents and oceans", "q": "The coldest continent, covered in ice, is...", "opts": ["Asia", "Antarctica", "Africa", "Europe"], "correct": 1, "fb": "Antarctica is at the South Pole and is covered in ice."},
+    {"tema": "Communities", "q": "A community with farms, fields and few houses is...", "opts": ["urban", "rural", "suburban", "a capital"], "correct": 1, "fb": "Rural communities are in the countryside. (Zona rural.)"},
+    {"tema": "Communities", "q": "A big city with tall buildings, lots of people and traffic is an ___ community.", "opts": ["rural", "urban", "farm", "desert"], "correct": 1, "fb": "Urban = city. (Zona urbana.)"},
+    {"tema": "Communities", "q": "Firefighters, doctors and teachers are called community...", "opts": ["helpers", "consumers", "continents", "visitors"], "correct": 0, "fb": "Community helpers are people whose jobs help everyone in the community."},
+    {"tema": "Needs and wants", "q": "Which one is a <b>need</b>?", "opts": ["a video game", "clean water", "a new toy", "candy"], "correct": 1, "fb": "We need clean water to live. The others are wants."},
+    {"tema": "Needs and wants", "q": "Which one is a <b>want</b>?", "opts": ["food", "a home", "a skateboard", "warm clothes"], "correct": 2, "fb": "A skateboard is fun, but we can live without it: it is a want."},
+    {"tema": "Needs and wants", "q": "Elise wants a book that costs R$ 40. Elise saves R$ 10 each week. How many weeks will it take?", "opts": ["2", "3", "4", "5"], "correct": 2, "fb": "40 ÷ 10 = 4 weeks of saving."},
+    {"tema": "Goods and services", "q": "A haircut is an example of a...", "opts": ["good", "service", "need", "natural resource"], "correct": 1, "fb": "A haircut is work someone does for you: a service."},
+    {"tema": "Goods and services", "q": "A loaf of bread from the bakery is a...", "opts": ["good", "service", "map", "law"], "correct": 0, "fb": "You can touch bread, so it is a good."},
+    {"tema": "Family history", "q": "A <b>family tree</b> shows...", "opts": ["the plants in a garden", "the members and generations of a family", "a map of the city", "the school rules"], "correct": 1, "fb": "A family tree shows who is in the family and how they are related. (Árvore genealógica.)"},
+    {"tema": "Family history", "q": "Your grandparents' parents are your...", "opts": ["cousins", "great-grandparents", "uncles", "siblings"], "correct": 1, "fb": "Great-grandparents = bisavós."},
+    {"tema": "Family history", "q": "A <b>timeline</b> shows events in...", "opts": ["alphabetical order", "the order they happened", "size order", "color order"], "correct": 1, "fb": "A timeline puts events in the order they happened. (Linha do tempo.)"},
+    {"tema": "Family history", "q": "An old letter written by your great-grandmother is a ___ source.", "opts": ["primary", "future", "fiction", "pretend"], "correct": 0, "fb": "A primary source was made at the time of the event, by someone who was there."},
+    {"tema": "Citizenship", "q": "Rules and laws are important because they...", "opts": ["keep people safe and help us live together", "make games boring", "are only for adults", "change every day"], "correct": 0, "fb": "Rules and laws protect people and help the community live in peace."},
+    {"tema": "Citizenship", "q": "A <b>responsibility</b> of a student is to...", "opts": ["do homework and respect classmates", "skip class", "throw trash on the floor", "never listen"], "correct": 0, "fb": "Responsibilities are things we should do: study, respect others, take care of the school."},
+    {"tema": "Brazil", "q": "Brazil's Independence Day is on...", "opts": ["September 7th", "October 12th", "December 25th", "April 21st"], "correct": 0, "fb": "Brazil became independent on September 7th, 1822."},
+    {"tema": "Brazil", "q": "The capital of Brazil is...", "opts": ["São Paulo", "Rio de Janeiro", "Brasília", "Salvador"], "correct": 2, "fb": "Brasília has been the capital since 1960."},
+    {"tema": "Brazil", "q": "How many regions does Brazil have?", "opts": ["3", "5", "7", "26"], "correct": 1, "fb": "5 regions: North, Northeast, Central-West, Southeast and South."}
+  ]
+}

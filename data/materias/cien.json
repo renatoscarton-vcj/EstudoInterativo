@@ -1,0 +1,144 @@
+{
+  "id": "cien",
+  "ordem": 3,
+  "icon": "🔬",
+  "name": "Ciências",
+  "cor": "#15803D",
+  "lingua": "pt",
+  "ano": 4,
+  "topics": "Microscópio · Microrganismos · Saúde · Cadeia alimentar · Misturas · Transformações · Sol e sombras",
+  "licoes": [
+    {
+      "tema": "Microscópio",
+      "titulo": "O microscópio e suas partes",
+      "texto": "O microscópio <b>aumenta a imagem</b> de coisas pequenas demais para ver a olho nu. Conheça as partes:",
+      "pontos": [
+        "<b>Ocular:</b> a lente de cima, onde colocamos o olho.",
+        "<b>Objetivas:</b> as lentes perto da amostra; ficam presas no <b>revólver</b>, que gira para trocar o aumento.",
+        "<b>Platina:</b> a “mesinha” onde fica a <b>lâmina</b> de vidro, coberta pela <b>lamínula</b>.",
+        "<b>Parafuso macrométrico:</b> foco grosso. <b>Micrométrico:</b> foco fino.",
+        "<b>Fonte de luz</b> ilumina a amostra. <b>Braço</b> e <b>base</b> sustentam o aparelho: carregue sempre por eles, com as duas mãos."
+      ],
+      "quem": "Elise",
+      "fala": "No trabalho em grupo, olhamos pela ocular e giramos o revólver para ver ainda mais perto!"
+    },
+    {
+      "tema": "Microrganismos",
+      "titulo": "Microrganismos: seres vivos invisíveis",
+      "texto": "Microrganismos são seres vivos tão pequenos que só podem ser vistos com microscópio. Eles estão no ar, na água, no solo e até no nosso corpo.",
+      "pontos": [
+        "<b>Bactérias:</b> formadas por uma única célula.",
+        "<b>Fungos:</b> alguns são micro, como as <b>leveduras</b> do fermento e o <b>bolor</b>.",
+        "<b>Protozoários:</b> vivem em ambientes úmidos, como a água de lagos.",
+        "<b>Vírus:</b> não são formados por células e só se multiplicam dentro de outro ser vivo."
+      ],
+      "quem": "Manu",
+      "fala": "Uma gotinha de água de lago tem um mundo inteiro de seres vivos que a gente nem imagina!"
+    },
+    {
+      "tema": "Microrganismos úteis",
+      "titulo": "Microrganismos que ajudam",
+      "texto": "Nem todo microrganismo faz mal. Muitos são nossos ajudantes!",
+      "pontos": [
+        "<b>Leveduras</b> (fungos) fazem a massa do pão crescer.",
+        "<b>Bactérias</b> transformam o leite em <b>iogurte</b> e <b>queijo</b>.",
+        "A <b>penicilina</b>, um remédio, foi descoberta a partir de um fungo.",
+        "<b>Decompositores</b> (fungos e bactérias) transformam restos de seres vivos em nutrientes para o solo."
+      ],
+      "quem": "Theo",
+      "fala": "Quem diria que o meu pão de queijo e o iogurte têm a ajuda de seres invisíveis?"
+    },
+    {
+      "tema": "Saúde",
+      "titulo": "Como nos proteger",
+      "texto": "Alguns microrganismos causam doenças. Hábitos simples ajudam a evitá-las:",
+      "pontos": [
+        "<b>Lavar as mãos</b> com água e sabão, principalmente antes de comer e depois de ir ao banheiro.",
+        "Tomar as <b>vacinas</b>: elas ensinam o corpo a se defender.",
+        "Beber <b>água tratada ou filtrada</b> e lavar bem frutas e verduras.",
+        "Cobrir a boca com o braço ao tossir ou espirrar."
+      ],
+      "quem": "Joana",
+      "fala": "Lavo as mãos cantando “parabéns” duas vezes. Assim dá o tempo certinho!"
+    },
+    {
+      "tema": "Cadeia alimentar",
+      "titulo": "Cadeia alimentar: quem come quem",
+      "texto": "A cadeia alimentar mostra como a energia passa de um ser vivo para outro.",
+      "pontos": [
+        "<b>Produtores:</b> plantas, que fazem o próprio alimento com a luz do Sol (fotossíntese).",
+        "<b>Consumidores primários:</b> herbívoros que comem plantas.",
+        "<b>Consumidores secundários:</b> comem os primários.",
+        "<b>Decompositores:</b> fungos e bactérias que decompõem restos de todos."
+      ],
+      "quem": "Liz",
+      "fala": "Capim → gafanhoto → sapo → cobra. O capim é o produtor, e tudo começa no Sol!"
+    },
+    {
+      "tema": "Misturas",
+      "titulo": "Misturas e como separá-las",
+      "texto": "Mistura é a união de dois ou mais materiais.",
+      "pontos": [
+        "<b>Homogênea:</b> parece uma coisa só (água com açúcar dissolvido).",
+        "<b>Heterogênea:</b> dá para ver as partes (água e óleo, água e areia).",
+        "<b>Filtração:</b> separa sólido de líquido com filtro (areia e água).",
+        "<b>Evaporação:</b> o líquido vira vapor e o sólido fica (sal nas salinas).",
+        "<b>Catação:</b> separa com as mãos (escolher o feijão)."
+      ],
+      "quem": "Caio",
+      "fala": "Água e óleo nunca se misturam de verdade: o óleo fica em cima. Mistura heterogênea!"
+    },
+    {
+      "tema": "Transformações",
+      "titulo": "Transformações reversíveis e irreversíveis",
+      "texto": "Os materiais podem se transformar. Algumas mudanças têm volta, outras não.",
+      "pontos": [
+        "<b>Reversíveis:</b> dá para voltar ao que era: gelo derrete e congela de novo; chocolate derrete e endurece.",
+        "<b>Irreversíveis:</b> não voltam mais: bolo assado, papel queimado, ovo frito, prego enferrujado."
+      ],
+      "quem": "Mia",
+      "fala": "Depois que o bolo vai ao forno, não tem como desassar! Isso é irreversível."
+    },
+    {
+      "tema": "Sol e sombras",
+      "titulo": "O Sol, as sombras e os pontos cardeais",
+      "texto": "Observando o Sol, descobrimos as direções.",
+      "pontos": [
+        "O Sol aparece de manhã no lado <b>leste</b> e se põe à tarde no lado <b>oeste</b>.",
+        "Ao meio-dia, a sombra é a <b>mais curta</b> do dia; de manhã e à tarde, fica comprida.",
+        "O <b>gnômon</b> é uma vareta fincada no chão para observar a sombra e marcar as direções."
+      ],
+      "quem": "Gael",
+      "fala": "Aponte o braço direito para onde o Sol nasce: ali é o leste, e à sua frente fica o norte!"
+    }
+  ],
+  "questions": [
+    {"tema": "Microscópio", "q": "Para que serve o microscópio?", "opts": ["Ver coisas muito distantes, como estrelas", "Aumentar a imagem de coisas muito pequenas", "Medir a temperatura", "Pesar objetos"], "correct": 1, "fb": "O microscópio aumenta a imagem de coisas minúsculas. Para ver estrelas usamos o telescópio."},
+    {"tema": "Microscópio", "q": "No trabalho em grupo, Elise olhou pela parte de cima do microscópio, onde se coloca o olho. Essa parte se chama:", "opts": ["Objetiva", "Ocular", "Platina", "Base"], "correct": 1, "fb": "A ocular é a lente onde colocamos o olho."},
+    {"tema": "Microscópio", "q": "Onde se coloca a lâmina com o material a ser observado?", "opts": ["Na ocular", "Na platina", "No revólver", "No braço"], "correct": 1, "fb": "A platina é a “mesinha” do microscópio, onde fica a lâmina."},
+    {"tema": "Microscópio", "q": "Para girar e trocar as lentes objetivas, Caio mexeu no:", "opts": ["Revólver", "Parafuso micrométrico", "Espelho", "Braço"], "correct": 0, "fb": "O revólver segura as objetivas e gira para trocar o aumento."},
+    {"tema": "Microscópio", "q": "Qual parafuso serve para o ajuste <b>fino</b> do foco?", "opts": ["Macrométrico", "Micrométrico", "Revólver", "Ocular"], "correct": 1, "fb": "O micrométrico faz o ajuste fino. O macrométrico faz o ajuste grosso (movimentos maiores)."},
+    {"tema": "Microscópio", "q": "Qual é o jeito certo de carregar um microscópio?", "opts": ["Pela ocular, com uma mão só", "Segurando pelo braço e apoiando a base", "Pela platina", "Pelas lentes objetivas"], "correct": 1, "fb": "Use as duas mãos: uma no braço e outra embaixo da base. Assim ele não cai e as lentes não se sujam."},
+    {"tema": "Microscópio", "q": "A plaquinha de vidro bem fina que cobre a amostra na lâmina se chama:", "opts": ["Lamínula", "Platina", "Objetiva", "Lupa"], "correct": 0, "fb": "A lamínula cobre e protege a amostra sobre a lâmina."},
+    {"tema": "Microrganismos", "q": "Qual destes <b>não</b> é um microrganismo?", "opts": ["Bactéria", "Protozoário", "Minhoca", "Levedura"], "correct": 2, "fb": "A minhoca dá para ver a olho nu, então não é microrganismo. Os outros só são vistos com microscópio."},
+    {"tema": "Microrganismos", "q": "O bolor verde que aparece no pão velho é um:", "opts": ["Fungo", "Vírus", "Inseto", "Mineral"], "correct": 0, "fb": "O bolor (mofo) é um tipo de fungo que cresce em alimentos úmidos e velhos."},
+    {"tema": "Microrganismos", "q": "Os vírus são diferentes dos outros microrganismos porque:", "opts": ["São enormes", "Não são formados por células e só se multiplicam dentro de outro ser vivo", "Fazem fotossíntese", "Vivem só no mar"], "correct": 1, "fb": "Os vírus não têm células e precisam invadir as células de outro ser vivo para se multiplicar."},
+    {"tema": "Microrganismos úteis", "q": "O fermento biológico que faz a massa do pão crescer é formado por:", "opts": ["Bactérias da gripe", "Leveduras (fungos)", "Protozoários", "Vírus"], "correct": 1, "fb": "As leveduras são fungos microscópicos. Elas soltam gás na massa, que fica fofinha."},
+    {"tema": "Microrganismos úteis", "q": "O iogurte é feito com a ajuda de:", "opts": ["Bactérias", "Vírus", "Vermes", "Algas do mar"], "correct": 0, "fb": "Bactérias “do bem” transformam o leite em iogurte."},
+    {"tema": "Microrganismos úteis", "q": "A penicilina, um dos primeiros antibióticos, foi descoberta a partir de um:", "opts": ["Fungo", "Vírus", "Peixe", "Planta carnívora"], "correct": 0, "fb": "Em 1928, Alexander Fleming percebeu que um fungo impedia o crescimento de bactérias. Daí veio a penicilina."},
+    {"tema": "Microrganismos úteis", "q": "Fungos e bactérias que transformam folhas caídas e restos de animais em nutrientes para o solo são os:", "opts": ["Produtores", "Decompositores", "Consumidores", "Predadores"], "correct": 1, "fb": "Os decompositores reciclam a matéria e devolvem nutrientes ao solo."},
+    {"tema": "Saúde", "q": "Qual hábito ajuda <b>mais</b> a evitar doenças causadas por microrganismos?", "opts": ["Lavar bem as mãos com água e sabão", "Comer doces", "Dormir pouco", "Dividir a escova de dentes"], "correct": 0, "fb": "Lavar as mãos remove muitos microrganismos que causam doenças."},
+    {"tema": "Saúde", "q": "As vacinas ajudam o corpo a:", "opts": ["Ficar mais alto", "Se defender de certas doenças", "Digerir a comida", "Enxergar melhor"], "correct": 1, "fb": "A vacina “treina” o sistema de defesa do corpo para reconhecer e combater um microrganismo."},
+    {"tema": "Cadeia alimentar", "q": "Na cadeia <em>capim → gafanhoto → sapo → cobra</em>, quem é o <b>produtor</b>?", "opts": ["Capim", "Gafanhoto", "Sapo", "Cobra"], "correct": 0, "fb": "O capim é uma planta e produz o próprio alimento com a luz do Sol."},
+    {"tema": "Cadeia alimentar", "q": "Na mesma cadeia <em>capim → gafanhoto → sapo → cobra</em>, quem é o <b>consumidor primário</b>?", "opts": ["Capim", "Gafanhoto", "Sapo", "Cobra"], "correct": 1, "fb": "O consumidor primário é o primeiro a comer o produtor: o gafanhoto, que é herbívoro."},
+    {"tema": "Cadeia alimentar", "q": "Por que as plantas são chamadas de <b>produtoras</b>?", "opts": ["Porque produzem o próprio alimento usando a luz do Sol", "Porque comem outros seres vivos", "Porque vivem muito tempo", "Porque não precisam de água"], "correct": 0, "fb": "Pela fotossíntese, as plantas usam luz, água e gás carbônico para produzir seu alimento."},
+    {"tema": "Misturas", "q": "Theo misturou água e óleo num copo. Formou-se uma mistura:", "opts": ["Homogênea", "Heterogênea", "Que vira gelo", "Que desaparece"], "correct": 1, "fb": "Dá para ver o óleo separado em cima da água: é uma mistura heterogênea."},
+    {"tema": "Misturas", "q": "Água com açúcar bem dissolvido é uma mistura:", "opts": ["Homogênea", "Heterogênea", "De sólidos", "Impossível"], "correct": 0, "fb": "O açúcar dissolvido não aparece mais: a mistura parece uma coisa só, é homogênea."},
+    {"tema": "Misturas", "q": "Para separar a areia da água, Manu usou um filtro de papel. Esse método é a:", "opts": ["Evaporação", "Filtração", "Catação", "Imantação"], "correct": 1, "fb": "Na filtração, o líquido passa pelo filtro e o sólido (a areia) fica retido."},
+    {"tema": "Misturas", "q": "Nas salinas, o sal é separado da água do mar pela:", "opts": ["Filtração", "Evaporação", "Peneiração", "Catação"], "correct": 1, "fb": "O Sol aquece a água, que evapora, e o sal fica no fundo."},
+    {"tema": "Transformações", "q": "Qual transformação é <b>irreversível</b> (não volta a ser o que era)?", "opts": ["Gelo derretendo", "Água congelando", "Bolo assando", "Chocolate derretendo"], "correct": 2, "fb": "Depois de assado, o bolo não volta a ser massa crua. As outras transformações têm volta."},
+    {"tema": "Transformações", "q": "Um prego deixado na chuva enferrujou. Essa transformação é:", "opts": ["Reversível", "Irreversível", "Uma mistura", "Uma evaporação"], "correct": 1, "fb": "A ferrugem é um material novo que se formou. O prego não volta a ser como antes."},
+    {"tema": "Sol e sombras", "q": "De manhã, o Sol aparece no lado:", "opts": ["Leste", "Oeste", "Norte", "Sul"], "correct": 0, "fb": "O Sol nasce no lado leste e se põe no lado oeste."},
+    {"tema": "Sol e sombras", "q": "Ao meio-dia, a sombra de um poste fica:", "opts": ["A mais comprida do dia", "A mais curta do dia", "Igual à de manhã", "Do tamanho do poste"], "correct": 1, "fb": "Ao meio-dia o Sol está mais alto no céu, então a sombra fica a mais curta do dia."}
+  ]
+}

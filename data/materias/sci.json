@@ -1,0 +1,131 @@
+{
+  "id": "sci",
+  "ordem": 7,
+  "icon": "🧪",
+  "name": "Science",
+  "cor": "#0E7490",
+  "lingua": "en",
+  "ano": 4,
+  "topics": "Living things · Food chains · Plants · Habitats · Life cycles · States of matter · Human body",
+  "licoes": [
+    {
+      "tema": "Food chains",
+      "titulo": "Food chains: who eats whom",
+      "texto": "A <b>food chain</b> shows how energy passes from one living thing to another. It always starts with the <b>Sun</b>.",
+      "pontos": [
+        "<b>Producers</b> (plants) make their own food with sunlight.",
+        "<b>Herbivores</b> eat only plants. <b>Carnivores</b> eat only meat. <b>Omnivores</b> eat both.",
+        "<b>Decomposers</b> (fungi and bacteria) break down dead plants and animals.",
+        "<em>grass → rabbit → fox</em>"
+      ],
+      "quem": "Caio",
+      "fala": "I eat rice, beans and chicken, so I am an omnivore!"
+    },
+    {
+      "tema": "Plants",
+      "titulo": "Plant parts and photosynthesis",
+      "texto": "Each part of a plant has a job.",
+      "pontos": [
+        "<b>Roots</b> take in water and hold the plant in the soil.",
+        "<b>Stem</b> carries water up and holds the plant up.",
+        "<b>Leaves</b> make food by <b>photosynthesis</b>: sunlight + water + carbon dioxide → food + <b>oxygen</b>.",
+        "<b>Flowers</b> make seeds; <b>fruits</b> protect the seeds."
+      ],
+      "quem": "Liz",
+      "fala": "Plants give us the oxygen we breathe. Thank you, plants!"
+    },
+    {
+      "tema": "Habitats and adaptations",
+      "titulo": "Habitats and adaptations",
+      "texto": "A <b>habitat</b> is the home of a living thing. An <b>adaptation</b> is a special feature that helps it survive there.",
+      "pontos": [
+        "<b>Desert:</b> a cactus stores water in its thick stem; a camel can go days without drinking.",
+        "<b>Arctic:</b> a polar bear has thick fur and fat to stay warm.",
+        "<b>Ocean:</b> fish breathe with <b>gills</b>.",
+        "<b>Rainforest:</b> monkeys have long tails and arms to climb trees."
+      ],
+      "quem": "Manu",
+      "fala": "If a polar bear lived in the desert, it would be way too hot! Every animal fits its habitat."
+    },
+    {
+      "tema": "Life cycles",
+      "titulo": "Life cycles and metamorphosis",
+      "texto": "A <b>life cycle</b> shows how a living thing is born, grows and makes new living things.",
+      "pontos": [
+        "<b>Butterfly:</b> egg → caterpillar (larva) → chrysalis (pupa) → adult butterfly.",
+        "<b>Frog:</b> egg → tadpole → froglet → adult frog.",
+        "This big change in body shape is called <b>metamorphosis</b>."
+      ],
+      "quem": "Mia",
+      "fala": "A tadpole has a tail and lives in water. Later it becomes a frog that jumps on land!"
+    },
+    {
+      "tema": "States of matter",
+      "titulo": "Solids, liquids and gases",
+      "texto": "Matter can be a <b>solid</b> (ice), a <b>liquid</b> (water) or a <b>gas</b> (water vapor).",
+      "pontos": [
+        "<b>Melting:</b> solid → liquid (ice cream melts).",
+        "<b>Freezing:</b> liquid → solid (water becomes ice).",
+        "<b>Evaporation:</b> liquid → gas (puddles dry in the sun).",
+        "<b>Condensation:</b> gas → liquid (drops on a cold glass)."
+      ],
+      "quem": "Elise",
+      "fala": "My ice cream melted in the sun: solid to liquid. Science happens even at snack time!"
+    },
+    {
+      "tema": "Human body",
+      "titulo": "The human body",
+      "texto": "Our body has organs that work together in systems.",
+      "pontos": [
+        "<b>Heart:</b> pumps blood around the body.",
+        "<b>Lungs:</b> help us breathe (take in oxygen).",
+        "<b>Stomach:</b> helps digest food.",
+        "<b>Brain:</b> controls the body. The <b>skull</b> protects it.",
+        "The <b>skeleton</b> holds us up and protects our organs."
+      ],
+      "quem": "Theo",
+      "fala": "When I run, my heart beats faster to send more blood to my muscles!"
+    },
+    {
+      "tema": "Microorganisms",
+      "titulo": "Microorganisms",
+      "texto": "<b>Microorganisms</b> are living things so small that we need a <b>microscope</b> to see them.",
+      "pontos": [
+        "<b>Bacteria</b> and <b>fungi</b> are examples.",
+        "Some are helpful: <b>yeast</b> makes bread rise; bacteria help make yogurt.",
+        "Some make us sick: wash your hands with soap and water for 20 seconds!"
+      ],
+      "quem": "Gael",
+      "fala": "Under the microscope, a drop of pond water is full of tiny living things!"
+    }
+  ],
+  "questions": [
+    {"tema": "Living things", "q": "Which one is a <b>living thing</b>?", "opts": ["a rock", "a tree", "a chair", "water"], "correct": 1, "fb": "A tree grows, needs water and air, and makes new trees (seeds). Rocks, chairs and water are non-living."},
+    {"tema": "Food chains", "q": "Plants are called <b>producers</b> because they...", "opts": ["eat insects", "make their own food using sunlight", "live in the ocean", "sleep at night"], "correct": 1, "fb": "Plants produce their own food by photosynthesis. (Produtores.)"},
+    {"tema": "Food chains", "q": "In the food chain <em>grass → rabbit → fox</em>, the rabbit is a...", "opts": ["producer", "herbivore (primary consumer)", "decomposer", "carnivore"], "correct": 1, "fb": "The rabbit eats the grass (a plant), so it is a herbivore, the first consumer."},
+    {"tema": "Food chains", "q": "An animal that eats <b>only meat</b> is a...", "opts": ["herbivore", "carnivore", "omnivore", "producer"], "correct": 1, "fb": "Carnivores eat meat. Herbivores eat plants. Omnivores eat both."},
+    {"tema": "Food chains", "q": "Humans eat plants and meat, so we are...", "opts": ["herbivores", "carnivores", "omnivores", "producers"], "correct": 2, "fb": "Omnivores eat both plants and animals."},
+    {"tema": "Food chains", "q": "Mushrooms and bacteria that break down dead leaves are...", "opts": ["producers", "decomposers", "predators", "herbivores"], "correct": 1, "fb": "Decomposers break down dead things and return nutrients to the soil."},
+    {"tema": "Food chains", "q": "Where does the energy in a food chain <b>start</b>?", "opts": ["The Sun", "The soil", "The Moon", "The animals"], "correct": 0, "fb": "Plants use the Sun's energy to make food. Then the energy passes to the animals."},
+    {"tema": "Plants", "q": "Which part of the plant takes in water from the soil?", "opts": ["leaves", "roots", "flowers", "fruit"], "correct": 1, "fb": "Roots take in water and nutrients and hold the plant in the soil."},
+    {"tema": "Plants", "q": "Photosynthesis happens mainly in the...", "opts": ["roots", "leaves", "seeds", "bark"], "correct": 1, "fb": "Leaves capture sunlight to make food."},
+    {"tema": "Plants", "q": "During photosynthesis, plants release a gas that we need to breathe:", "opts": ["carbon dioxide", "oxygen", "smoke", "helium"], "correct": 1, "fb": "Plants take in carbon dioxide and release oxygen."},
+    {"tema": "Habitats and adaptations", "q": "A cactus can live in the desert because it...", "opts": ["stores water in its thick stem", "needs lots of rain", "lives under water", "has no roots"], "correct": 0, "fb": "Storing water is an adaptation to the dry desert."},
+    {"tema": "Habitats and adaptations", "q": "A polar bear has thick fur and fat to...", "opts": ["swim in warm water", "stay warm in the cold Arctic", "hide in the desert", "climb trees"], "correct": 1, "fb": "Thick fur and fat keep the polar bear warm in the freezing Arctic."},
+    {"tema": "Habitats and adaptations", "q": "A special feature that helps a living thing survive in its habitat is called...", "opts": ["an adaptation", "a habitat", "a food chain", "a skeleton"], "correct": 0, "fb": "Adaptations are features or behaviors that help living things survive. (Adaptação.)"},
+    {"tema": "Habitats and adaptations", "q": "Fish breathe under water using their...", "opts": ["lungs", "gills", "fins", "scales"], "correct": 1, "fb": "Gills take oxygen from the water. (Brânquias.)"},
+    {"tema": "Life cycles", "q": "What is the correct order of a butterfly's life cycle?", "opts": ["egg → caterpillar → chrysalis → butterfly", "caterpillar → egg → butterfly → chrysalis", "egg → chrysalis → caterpillar → butterfly", "butterfly → caterpillar → egg → chrysalis"], "correct": 0, "fb": "Egg → caterpillar (larva) → chrysalis (pupa) → butterfly."},
+    {"tema": "Life cycles", "q": "A baby frog that lives in water and has a tail is a...", "opts": ["caterpillar", "tadpole", "chick", "puppy"], "correct": 1, "fb": "A tadpole (girino) lives in water. Later it grows legs and loses its tail."},
+    {"tema": "Life cycles", "q": "The big change in body shape of a frog or a butterfly is called...", "opts": ["photosynthesis", "metamorphosis", "evaporation", "migration"], "correct": 1, "fb": "Metamorphosis is a big change in body shape during the life cycle."},
+    {"tema": "States of matter", "q": "Ice is water in the ___ state.", "opts": ["solid", "liquid", "gas", "plasma"], "correct": 0, "fb": "Ice keeps its own shape: it is solid."},
+    {"tema": "States of matter", "q": "When ice cream melts, it changes from...", "opts": ["liquid to solid", "solid to liquid", "gas to liquid", "liquid to gas"], "correct": 1, "fb": "Melting: solid → liquid."},
+    {"tema": "States of matter", "q": "Puddles disappear on a sunny day because the water...", "opts": ["freezes", "evaporates", "melts", "condenses"], "correct": 1, "fb": "The Sun heats the water and it evaporates: liquid → gas (water vapor)."},
+    {"tema": "States of matter", "q": "Drops of water appear on the outside of a cold glass. This is...", "opts": ["evaporation", "condensation", "melting", "freezing"], "correct": 1, "fb": "Water vapor in the air touches the cold glass and turns into liquid: condensation."},
+    {"tema": "Human body", "q": "Which organ pumps blood around the body?", "opts": ["lungs", "heart", "stomach", "brain"], "correct": 1, "fb": "The heart is a muscle that pumps blood all the time."},
+    {"tema": "Human body", "q": "We use our lungs to...", "opts": ["digest food", "breathe", "think", "pump blood"], "correct": 1, "fb": "The lungs take in oxygen when we breathe in."},
+    {"tema": "Human body", "q": "The skull protects the...", "opts": ["heart", "brain", "lungs", "stomach"], "correct": 1, "fb": "The skull (crânio) is a strong bone that protects the brain."},
+    {"tema": "Microorganisms", "q": "Manu looked at pond water under a microscope and saw tiny living things. They are called...", "opts": ["microorganisms", "dinosaurs", "minerals", "planets"], "correct": 0, "fb": "Microorganisms are living things too small to see without a microscope."},
+    {"tema": "Microorganisms", "q": "Which microorganism helps make bread rise?", "opts": ["yeast", "a virus", "sand", "salt"], "correct": 0, "fb": "Yeast is a tiny fungus. It makes gas bubbles that make the dough rise."},
+    {"tema": "Microorganisms", "q": "What is the best way to remove germs from your hands?", "opts": ["Wipe them on your shirt", "Wash with soap and water for 20 seconds", "Blow on them", "Rinse with water for 1 second"], "correct": 1, "fb": "Soap and water for about 20 seconds removes most germs."}
+  ]
+}

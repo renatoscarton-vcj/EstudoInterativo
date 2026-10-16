@@ -8,11 +8,11 @@ principalmente de anos/séries que ainda não estão cobertos.
 O jeito mais simples:
 
 1. Abra o arquivo `admin.html` no navegador (clique duas vezes nele)
-2. Carregue os arquivos `.json` da pasta `data/`
+2. Carregue os arquivos `.json` da pasta `data/materias/`
 3. Monte as perguntas pela interface
 4. Baixe os JSONs e envie para quem mantém o repositório
 
-Se você usa GitHub, pode abrir um Pull Request direto com os arquivos alterados em `data/`.
+Se você usa GitHub, pode abrir um Pull Request direto com os arquivos alterados em `data/materias/`.
 
 ## O que faz uma boa pergunta
 
@@ -22,7 +22,9 @@ Se você usa GitHub, pode abrir um Pull Request direto com os arquivos alterados
   sem entender nada.
 - **Uma ideia por pergunta.** Evite enunciados que cobram duas coisas ao mesmo tempo.
 - **Linguagem da idade.** Escreva como você explicaria para a criança, não como está no livro.
-- **Sem nomes de crianças reais** nos enunciados, já que o material circula entre famílias.
+- **Use a turma do Passaporte** nas histórias: Caio, Joana, Manu, Elise, Theo, Liz, Mia e Gael.
+  Não acrescente outros nomes de crianças sem autorização das famílias.
+- **Evite pronomes de gênero para a turma** (ele/ela, he/she): prefira repetir o nome.
 
 ## Não copie textos de livros
 

@@ -1,0 +1,128 @@
+{
+  "id": "la",
+  "ordem": 5,
+  "icon": "📝",
+  "name": "Language Arts",
+  "cor": "#7B2CBF",
+  "lingua": "en",
+  "ano": 4,
+  "topics": "Nouns · Verbs · Adjectives · Simple past · Plurals · Punctuation · Synonyms & antonyms",
+  "licoes": [
+    {
+      "tema": "Nouns",
+      "titulo": "Nouns: people, places, animals and things",
+      "texto": "A <b>noun</b> names a person, a place, an animal or a thing. <i>(Substantivo)</i>",
+      "pontos": [
+        "<b>Common nouns:</b> any one of a kind: <em>girl, city, dog</em>.",
+        "<b>Proper nouns:</b> a special name. They start with a <b>capital letter</b>: <em>Liz, London, Brazil</em>."
+      ],
+      "quem": "Liz",
+      "fala": "My name is a proper noun, so it starts with a capital L!"
+    },
+    {
+      "tema": "Verbs",
+      "titulo": "Verbs: action words",
+      "texto": "A <b>verb</b> tells what someone or something <b>does</b> or <b>is</b>. <i>(Verbo)</i>",
+      "pontos": [
+        "Action verbs: <em>run, jump, read, swim</em>.",
+        "Being verbs: <em>am, is, are, was, were</em>.",
+        "<em>Theo <b>kicks</b> the ball.</em> “Kicks” is the verb."
+      ],
+      "quem": "Theo",
+      "fala": "I run, I jump, I kick! Verbs are the action of the sentence."
+    },
+    {
+      "tema": "Adjectives",
+      "titulo": "Adjectives: describing words",
+      "texto": "An <b>adjective</b> describes a noun: color, size, shape or feeling. <i>(Adjetivo)</i>",
+      "pontos": [
+        "<em>a <b>beautiful</b> garden</em>, <em>a <b>small</b> cat</em>, <em>a <b>happy</b> day</em>.",
+        "To compare two things, add <b>-er</b>: <em>tall → taller</em>.",
+        "To compare three or more, add <b>-est</b>: <em>tall → tallest</em>.",
+        "Short words ending in consonant-vowel-consonant double the last letter: <em>big → bigger → biggest</em>."
+      ],
+      "quem": "Joana",
+      "fala": "An elephant is bigger than a mouse, and a blue whale is the biggest of all!"
+    },
+    {
+      "tema": "Simple past",
+      "titulo": "Simple past: things that already happened",
+      "texto": "We use the <b>simple past</b> to talk about finished actions: <em>yesterday, last week, in 2020</em>.",
+      "pontos": [
+        "<b>Regular verbs:</b> add <b>-ed</b>: <em>play → played</em>. Ending in consonant + y: <em>study → studied</em>.",
+        "<b>Irregular verbs</b> change: <em>go → went, eat → ate, see → saw, have → had, run → ran</em>.",
+        "<b>Was</b> with I, he, she, it. <b>Were</b> with you, we, they: <em>The weather was sunny. We were happy.</em>"
+      ],
+      "quem": "Gael",
+      "fala": "Yesterday I went to the park and played with my friends. Went and played are in the past!"
+    },
+    {
+      "tema": "Plurals",
+      "titulo": "Plurals: more than one",
+      "texto": "Most nouns just add <b>-s</b>: <em>cat → cats</em>. But watch out:",
+      "pontos": [
+        "Ending in <b>s, x, ch, sh</b>: add <b>-es</b>: <em>box → boxes, bus → buses</em>.",
+        "Consonant + <b>y</b>: change to <b>-ies</b>: <em>baby → babies</em>.",
+        "Irregular: <em>child → children, tooth → teeth, foot → feet, mouse → mice</em>."
+      ],
+      "quem": "Mia",
+      "fala": "One mouse, two mice! English plurals can be tricky."
+    },
+    {
+      "tema": "Punctuation and capitals",
+      "titulo": "Capital letters and end marks",
+      "texto": "Every sentence starts with a <b>capital letter</b> and ends with an <b>end mark</b>.",
+      "pontos": [
+        "<b>.</b> period: a telling sentence. <b>?</b> question mark: a question. <b>!</b> exclamation mark: strong feeling.",
+        "In English, these always start with a capital: <b>names</b>, the word <b>I</b>, <b>days</b> (Monday) and <b>months</b> (October).",
+        "<b>Command:</b> tells someone to do something: <em>Close the door, please.</em>"
+      ],
+      "quem": "Elise",
+      "fala": "In Portuguese we write “outubro”, but in English it is always “October” with a capital O!"
+    },
+    {
+      "tema": "Synonyms and antonyms",
+      "titulo": "Synonyms, antonyms and joining words",
+      "texto": "<b>Synonyms</b> have similar meanings. <b>Antonyms</b> have opposite meanings.",
+      "pontos": [
+        "Synonyms: <em>happy = glad</em>, <em>big = large</em>, <em>fast = quick</em>.",
+        "Antonyms: <em>hot × cold</em>, <em>early × late</em>, <em>full × empty</em>.",
+        "<b>Conjunctions</b> join ideas: <b>and</b> (add), <b>but</b> (contrast), <b>because</b> (reason), <b>so</b> (result), <b>or</b> (choice)."
+      ],
+      "quem": "Caio",
+      "fala": "I was glad, which means happy, because we won the game!"
+    }
+  ],
+  "questions": [
+    {"tema": "Nouns", "q": "Which word is a <b>proper noun</b>?", "opts": ["city", "Mia", "dog", "school"], "correct": 1, "fb": "Mia is a special name, so it is a proper noun and starts with a capital letter. (Substantivo próprio.)"},
+    {"tema": "Nouns", "q": "Find the <b>noun</b>: <em>The happy cat sleeps.</em>", "opts": ["happy", "cat", "sleeps", "the"], "correct": 1, "fb": "“Cat” is an animal, so it is a noun. “Happy” is an adjective and “sleeps” is a verb."},
+    {"tema": "Verbs", "q": "Find the <b>verb</b>: <em>Theo kicks the ball.</em>", "opts": ["Theo", "kicks", "ball", "the"], "correct": 1, "fb": "“Kicks” is the action Theo does, so it is the verb."},
+    {"tema": "Verbs", "q": "Which word is an <b>action verb</b>?", "opts": ["swim", "blue", "table", "slowly"], "correct": 0, "fb": "“Swim” is something you do. Blue is an adjective, table is a noun."},
+    {"tema": "Adjectives", "q": "Find the <b>adjective</b>: <em>Joana has a beautiful garden.</em>", "opts": ["Joana", "has", "beautiful", "garden"], "correct": 2, "fb": "“Beautiful” describes the garden, so it is an adjective."},
+    {"tema": "Adjectives", "q": "Complete: <em>An elephant is ___ than a mouse.</em>", "opts": ["big", "bigger", "biggest", "more big"], "correct": 1, "fb": "To compare two things we use -er: bigger. (Big doubles the g: big → bigger.)"},
+    {"tema": "Adjectives", "q": "Complete: <em>Gael is the ___ runner in the class.</em>", "opts": ["fast", "faster", "fastest", "more fast"], "correct": 2, "fb": "Comparing one with the whole group, we use -est: the fastest."},
+    {"tema": "Simple past", "q": "What is the past of <b>play</b>?", "opts": ["plays", "played", "playing", "plaied"], "correct": 1, "fb": "Play is a regular verb: just add -ed → played."},
+    {"tema": "Simple past", "q": "What is the past of <b>go</b>?", "opts": ["goed", "went", "goes", "going"], "correct": 1, "fb": "Go is irregular: go → went. Example: We went to the zoo."},
+    {"tema": "Simple past", "q": "Complete: <em>Yesterday, Elise ___ a big pizza.</em>", "opts": ["eat", "eats", "ate", "eating"], "correct": 2, "fb": "“Yesterday” tells us it is the past. Eat is irregular: eat → ate."},
+    {"tema": "Simple past", "q": "Complete: <em>Caio and Manu ___ at the museum last Saturday.</em>", "opts": ["was", "were", "is", "am"], "correct": 1, "fb": "Caio and Manu = they. With they, we use were."},
+    {"tema": "Simple past", "q": "Complete: <em>The weather ___ sunny yesterday.</em>", "opts": ["were", "was", "are", "be"], "correct": 1, "fb": "The weather = it. With it, the past is was."},
+    {"tema": "Simple past", "q": "What is the past of <b>study</b>?", "opts": ["studyed", "studied", "studed", "studies"], "correct": 1, "fb": "Consonant + y: change y to i and add -ed → studied."},
+    {"tema": "Plurals", "q": "What is the plural of <b>box</b>?", "opts": ["boxs", "boxes", "boxies", "box"], "correct": 1, "fb": "Words ending in x add -es: boxes."},
+    {"tema": "Plurals", "q": "What is the plural of <b>child</b>?", "opts": ["childs", "children", "childes", "childrens"], "correct": 1, "fb": "Child is irregular: one child, two children."},
+    {"tema": "Plurals", "q": "What is the plural of <b>baby</b>?", "opts": ["babys", "babies", "babyes", "babis"], "correct": 1, "fb": "Consonant + y: change to -ies → babies."},
+    {"tema": "Plurals", "q": "What is the plural of <b>tooth</b>?", "opts": ["tooths", "teeth", "toothes", "teeths"], "correct": 1, "fb": "Tooth is irregular: one tooth, many teeth (like foot → feet)."},
+    {"tema": "Punctuation and capitals", "q": "Which sentence is written correctly?", "opts": ["on monday, liz went to school.", "On Monday, Liz went to school.", "On monday, Liz went to School.", "on Monday, liz went to school."], "correct": 1, "fb": "Capital letters: the first word, names (Liz) and days of the week (Monday)."},
+    {"tema": "Punctuation and capitals", "q": "Which word must <b>always</b> start with a capital letter in English?", "opts": ["dog", "October", "school", "happy"], "correct": 1, "fb": "Months and days always start with a capital in English: October, Monday."},
+    {"tema": "Punctuation and capitals", "q": "Which end mark goes here? <em>Where is my backpack</em>", "opts": [".", "?", "!", ","], "correct": 1, "fb": "It is a question, so it ends with a question mark."},
+    {"tema": "Punctuation and capitals", "q": "<em>Wow, we won the game</em> — which end mark shows strong feeling?", "opts": [".", "?", "!", ","], "correct": 2, "fb": "The exclamation mark shows strong feeling: Wow, we won the game!"},
+    {"tema": "Punctuation and capitals", "q": "<em>Close the door, please.</em> What kind of sentence is this?", "opts": ["A question", "A command", "An exclamation", "A poem"], "correct": 1, "fb": "It tells someone to do something, so it is a command."},
+    {"tema": "Synonyms and antonyms", "q": "Which word is a <b>synonym</b> for <em>happy</em>?", "opts": ["sad", "glad", "angry", "tired"], "correct": 1, "fb": "Synonyms mean almost the same: happy = glad. Sad is the antonym."},
+    {"tema": "Synonyms and antonyms", "q": "What is the <b>antonym</b> of <em>hot</em>?", "opts": ["warm", "cold", "sunny", "big"], "correct": 1, "fb": "Antonyms are opposites: hot × cold."},
+    {"tema": "Synonyms and antonyms", "q": "What is the opposite of <em>early</em>?", "opts": ["late", "soon", "fast", "first"], "correct": 0, "fb": "Early × late. (Cedo × tarde.)"},
+    {"tema": "Synonyms and antonyms", "q": "Complete: <em>Mia stayed home ___ it was raining a lot.</em>", "opts": ["but", "because", "or", "so"], "correct": 1, "fb": "“Because” gives the reason: Mia stayed home because it was raining."},
+    {"tema": "Synonyms and antonyms", "q": "Complete: <em>I like apples, ___ I don't like bananas.</em>", "opts": ["because", "but", "so", "or"], "correct": 1, "fb": "“But” shows a contrast between two ideas."},
+    {"tema": "Reading", "q": "Read: <em>Liz has a small garden. Every morning, Liz waters the tomatoes and the sunflowers. The sunflowers are taller than Liz!</em> What does Liz do every morning?", "opts": ["Plays soccer", "Waters the plants", "Eats tomatoes", "Paints sunflowers"], "correct": 1, "fb": "The text says: “Every morning, Liz waters the tomatoes and the sunflowers.”"},
+    {"tema": "Reading", "q": "Read again: <em>The sunflowers are taller than Liz!</em> Which is taller?", "opts": ["Liz", "The sunflowers", "The tomatoes", "The garden"], "correct": 1, "fb": "“Taller than Liz” means the sunflowers are taller."},
+    {"tema": "Reading", "q": "<em>do not</em> can be written as:", "opts": ["don't", "doesn't", "didn't", "dont"], "correct": 0, "fb": "Contraction: do + not = don't. The apostrophe (') takes the place of the letter o."}
+  ]
+}

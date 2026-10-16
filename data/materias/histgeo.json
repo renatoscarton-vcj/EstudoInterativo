@@ -1,0 +1,141 @@
+{
+  "id": "histgeo",
+  "ordem": 4,
+  "icon": "🌎",
+  "name": "História e Geografia",
+  "cor": "#A15C00",
+  "lingua": "pt",
+  "ano": 4,
+  "topics": "Árvore genealógica · Fontes históricas · Tempo · Migrações · Mapas · Brasil · Campo e cidade",
+  "licoes": [
+    {
+      "tema": "Família e árvore genealógica",
+      "titulo": "Árvore genealógica: a história da família",
+      "texto": "A <b>árvore genealógica</b> mostra as pessoas de uma família e como elas se ligam, geração por geração.",
+      "pontos": [
+        "Você → seus <b>pais</b> → seus <b>avós</b> (pais dos seus pais) → seus <b>bisavós</b> (pais dos seus avós).",
+        "<b>Tios</b> são irmãos dos seus pais; os filhos dos tios são seus <b>primos</b>.",
+        "<b>Antepassados</b> são os familiares que vieram antes de nós; <b>descendentes</b>, os que vêm depois.",
+        "Cada nível da árvore é uma <b>geração</b>."
+      ],
+      "quem": "Joana",
+      "fala": "Na minha árvore genealógica dimensional para a Mostra Cultural, os bisavós ficaram lá no alto!"
+    },
+    {
+      "tema": "Fontes históricas",
+      "titulo": "Fontes históricas: as pistas do passado",
+      "texto": "Tudo o que nos ajuda a conhecer o passado é uma <b>fonte histórica</b>.",
+      "pontos": [
+        "<b>Escritas:</b> cartas, certidões, diários, jornais.",
+        "<b>Visuais:</b> fotografias, pinturas, desenhos.",
+        "<b>Orais:</b> histórias contadas, entrevistas com os mais velhos.",
+        "<b>Materiais:</b> objetos, roupas, ferramentas, construções."
+      ],
+      "quem": "Liz",
+      "fala": "Entrevistei minha avó sobre a infância dela. Essa conversa virou uma fonte oral!"
+    },
+    {
+      "tema": "Tempo histórico",
+      "titulo": "Medindo o tempo",
+      "texto": "Para organizar a história, usamos medidas de tempo e a <b>linha do tempo</b>.",
+      "pontos": [
+        "<b>Década</b> = 10 anos. <b>Século</b> = 100 anos. <b>Milênio</b> = 1.000 anos.",
+        "Os séculos são escritos em números romanos: estamos no <b>século XXI</b> (anos 2001 a 2100).",
+        "A linha do tempo mostra os fatos na <b>ordem em que aconteceram</b>."
+      ],
+      "quem": "Theo",
+      "fala": "Meu bisavô nasceu no século XX. Eu nasci no século XXI!"
+    },
+    {
+      "tema": "Nômades e sedentários",
+      "titulo": "De nômades a sedentários",
+      "texto": "Os primeiros grupos humanos viviam mudando de lugar em busca de comida: eram <b>nômades</b>. Caçavam, pescavam e coletavam frutos.",
+      "pontos": [
+        "Com o desenvolvimento da <b>agricultura</b> e da <b>criação de animais</b>, muitos grupos passaram a viver num lugar fixo: ficaram <b>sedentários</b>.",
+        "Assim surgiram as primeiras <b>aldeias</b>, que depois cresceram e viraram cidades."
+      ],
+      "quem": "Gael",
+      "fala": "Plantar foi uma revolução: quem planta precisa ficar perto da plantação!"
+    },
+    {
+      "tema": "Migrações",
+      "titulo": "Migrações: pessoas em movimento",
+      "texto": "<b>Migrar</b> é mudar de um lugar para outro para viver. As pessoas migram por trabalho, por segurança, para estudar ou para ter uma vida melhor.",
+      "pontos": [
+        "<b>Imigrante:</b> quem <b>chega</b> a um país para morar.",
+        "<b>Emigrante:</b> quem <b>sai</b> do seu país.",
+        "<b>Migração interna:</b> mudança dentro do mesmo país (de um estado para outro).",
+        "O Brasil foi formado por <b>indígenas</b>, <b>portugueses</b>, <b>africanos</b> (trazidos à força e escravizados) e imigrantes como <b>italianos, japoneses, alemães</b> e muitos outros."
+      ],
+      "quem": "Manu",
+      "fala": "O sobrenome da minha família veio de outro país. Quantas histórias de migração existem na nossa sala?"
+    },
+    {
+      "tema": "Mapas e orientação",
+      "titulo": "Lendo mapas",
+      "texto": "Um bom mapa tem elementos que ajudam a entendê-lo:",
+      "pontos": [
+        "<b>Título:</b> diz o que o mapa mostra.",
+        "<b>Legenda:</b> explica os símbolos e as cores.",
+        "<b>Escala:</b> ajuda a calcular as distâncias reais.",
+        "<b>Rosa dos ventos:</b> mostra as direções. Pontos cardeais: <b>Norte, Sul, Leste, Oeste</b>. Colaterais: <b>Nordeste, Noroeste, Sudeste, Sudoeste</b>."
+      ],
+      "quem": "Caio",
+      "fala": "Entre o Norte e o Leste fica o Nordeste. É só juntar os nomes!"
+    },
+    {
+      "tema": "Brasil",
+      "titulo": "O Brasil e sua divisão",
+      "texto": "O Brasil é dividido em <b>26 estados</b> e o <b>Distrito Federal</b>, onde fica a capital, <b>Brasília</b>.",
+      "pontos": [
+        "Os estados formam <b>5 regiões</b>: Norte, Nordeste, Centro-Oeste, Sudeste e Sul.",
+        "Cada estado é dividido em <b>municípios</b>.",
+        "O município tem <b>zona urbana</b> (cidade) e <b>zona rural</b> (campo)."
+      ],
+      "quem": "Elise",
+      "fala": "São 5 regiões, 26 estados e 1 Distrito Federal. Já sei de cor!"
+    },
+    {
+      "tema": "Campo e cidade",
+      "titulo": "Campo e cidade: um precisa do outro",
+      "texto": "Campo e cidade estão sempre conectados.",
+      "pontos": [
+        "<b>Campo (zona rural):</b> agricultura, pecuária (criação de animais), extrativismo.",
+        "<b>Cidade (zona urbana):</b> indústria, comércio e serviços.",
+        "O leite sai da fazenda, vira queijo na fábrica e é vendido no mercado. As máquinas da cidade ajudam no campo."
+      ],
+      "quem": "Mia",
+      "fala": "Meu café da manhã veio do campo, mas foi embalado na cidade!"
+    }
+  ],
+  "questions": [
+    {"tema": "Família e árvore genealógica", "q": "Os pais da mãe de Gael são os ___ de Gael.", "opts": ["Tios", "Avós", "Primos", "Bisavós"], "correct": 1, "fb": "Os pais dos nossos pais são nossos avós."},
+    {"tema": "Família e árvore genealógica", "q": "Os pais dos seus avós são os seus:", "opts": ["Tios", "Bisavós", "Primos", "Sobrinhos"], "correct": 1, "fb": "Subindo mais uma geração na árvore depois dos avós, chegamos aos bisavós."},
+    {"tema": "Família e árvore genealógica", "q": "Os filhos dos tios de Joana são os ___ de Joana.", "opts": ["Irmãos", "Primos", "Sobrinhos", "Netos"], "correct": 1, "fb": "Os filhos dos nossos tios são nossos primos."},
+    {"tema": "Família e árvore genealógica", "q": "Na árvore genealógica, os <b>antepassados</b> são:", "opts": ["Os familiares que vieram antes de nós", "Os amigos da escola", "Os vizinhos", "Os filhos e netos"], "correct": 0, "fb": "Antepassados são os familiares das gerações anteriores: pais, avós, bisavós..."},
+    {"tema": "Fontes históricas", "q": "Liz entrevistou a avó sobre como era a escola antigamente. Essa entrevista é uma fonte histórica:", "opts": ["Oral", "Escrita", "Material", "Visual"], "correct": 0, "fb": "Histórias contadas e entrevistas são fontes orais."},
+    {"tema": "Fontes históricas", "q": "Uma certidão de nascimento antiga é uma fonte histórica:", "opts": ["Oral", "Escrita", "Material", "Sonora"], "correct": 1, "fb": "Documentos com texto, como certidões e cartas, são fontes escritas."},
+    {"tema": "Fontes históricas", "q": "Um ferro de passar roupa a carvão, guardado pelo bisavô de Caio, é uma fonte:", "opts": ["Material", "Oral", "Escrita", "Visual"], "correct": 0, "fb": "Objetos são fontes materiais: mostram como as pessoas viviam."},
+    {"tema": "Fontes históricas", "q": "Uma fotografia antiga do casamento dos avós é uma fonte:", "opts": ["Visual", "Oral", "Material", "Sonora"], "correct": 0, "fb": "Fotos, pinturas e desenhos são fontes visuais."},
+    {"tema": "Tempo histórico", "q": "Um <b>século</b> corresponde a:", "opts": ["10 anos", "100 anos", "1.000 anos", "50 anos"], "correct": 1, "fb": "Século = 100 anos. Década = 10 anos. Milênio = 1.000 anos."},
+    {"tema": "Tempo histórico", "q": "Uma <b>década</b> corresponde a:", "opts": ["10 anos", "12 anos", "100 anos", "1 ano"], "correct": 0, "fb": "Década = 10 anos."},
+    {"tema": "Tempo histórico", "q": "Em 2026, estamos em qual século?", "opts": ["XX", "XXI", "XIX", "XXII"], "correct": 1, "fb": "O século XXI vai de 2001 a 2100, então 2026 está no século XXI."},
+    {"tema": "Nômades e sedentários", "q": "Os primeiros grupos humanos mudavam de lugar em busca de alimento. Eles eram:", "opts": ["Sedentários", "Nômades", "Imigrantes", "Industriais"], "correct": 1, "fb": "Nômades não têm moradia fixa: mudam de lugar para caçar, pescar e coletar."},
+    {"tema": "Nômades e sedentários", "q": "O que fez muitos grupos humanos deixarem de ser nômades?", "opts": ["A invenção do avião", "A agricultura e a criação de animais", "A internet", "A construção de shoppings"], "correct": 1, "fb": "Plantando e criando animais, as pessoas podiam ficar num lugar fixo. Assim surgiram as aldeias."},
+    {"tema": "Migrações", "q": "Uma pessoa que <b>chega</b> a um país para morar é chamada de:", "opts": ["Emigrante", "Imigrante", "Nômade", "Turista"], "correct": 1, "fb": "Imigrante é quem entra (chega). Emigrante é quem sai do seu país."},
+    {"tema": "Migrações", "q": "A família de Theo se mudou da Bahia para São Paulo. Isso é uma migração:", "opts": ["Interna", "Internacional", "Marítima", "Nômade"], "correct": 0, "fb": "Mudar de um estado para outro dentro do mesmo país é migração interna."},
+    {"tema": "Migrações", "q": "Por que muitos italianos e japoneses vieram para o Brasil no fim do século XIX e começo do século XX?", "opts": ["Para trabalhar nas lavouras, principalmente de café", "Para participar da Copa do Mundo", "Para passar férias nas praias", "Porque foram convidados para governar"], "correct": 0, "fb": "Muitos imigrantes vieram trabalhar nas fazendas, especialmente nas plantações de café."},
+    {"tema": "Migrações", "q": "Quem já vivia nas terras que hoje formam o Brasil antes da chegada dos portugueses?", "opts": ["Os povos indígenas", "Os japoneses", "Os italianos", "Os alemães"], "correct": 0, "fb": "Os povos indígenas já viviam aqui havia milhares de anos quando os portugueses chegaram, em 1500."},
+    {"tema": "Migrações", "q": "A maioria dos africanos chegou ao Brasil:", "opts": ["Como turistas", "Trazida à força e escravizada", "Com bons salários", "Como comerciantes ricos"], "correct": 1, "fb": "Milhões de africanos foram trazidos à força e escravizados. Mesmo assim, deixaram uma contribuição enorme na cultura brasileira."},
+    {"tema": "Mapas e orientação", "q": "Na rosa dos ventos, o ponto oposto ao <b>Norte</b> é o:", "opts": ["Leste", "Sul", "Oeste", "Nordeste"], "correct": 1, "fb": "Norte e Sul são opostos, assim como Leste e Oeste."},
+    {"tema": "Mapas e orientação", "q": "Entre o Norte e o Leste fica o ponto colateral:", "opts": ["Nordeste", "Noroeste", "Sudeste", "Sudoeste"], "correct": 0, "fb": "Norte + Leste = Nordeste."},
+    {"tema": "Mapas e orientação", "q": "A parte do mapa que explica o significado dos símbolos e das cores é a:", "opts": ["Escala", "Legenda", "Rosa dos ventos", "Título"], "correct": 1, "fb": "A legenda é como um dicionário do mapa."},
+    {"tema": "Mapas e orientação", "q": "A <b>escala</b> do mapa serve para:", "opts": ["Mostrar as cores", "Calcular a distância real entre os lugares", "Indicar o norte", "Dar nome ao mapa"], "correct": 1, "fb": "A escala mostra quantas vezes o lugar real foi reduzido, para calcular distâncias."},
+    {"tema": "Brasil", "q": "Quantas regiões tem o Brasil?", "opts": ["3", "4", "5", "6"], "correct": 2, "fb": "São 5 regiões: Norte, Nordeste, Centro-Oeste, Sudeste e Sul."},
+    {"tema": "Brasil", "q": "Qual é a capital do Brasil?", "opts": ["Rio de Janeiro", "São Paulo", "Brasília", "Salvador"], "correct": 2, "fb": "Brasília é a capital desde 1960 e fica no Distrito Federal."},
+    {"tema": "Brasil", "q": "O Brasil está dividido em 26 estados e:", "opts": ["O Distrito Federal", "3 territórios", "5 países", "10 capitais"], "correct": 0, "fb": "São 26 estados mais o Distrito Federal, onde fica Brasília."},
+    {"tema": "Campo e cidade", "q": "Qual atividade é típica da zona <b>rural</b>?", "opts": ["Fábrica de carros", "Plantação de soja e criação de gado", "Shopping center", "Metrô"], "correct": 1, "fb": "Agricultura e pecuária são atividades do campo, a zona rural."},
+    {"tema": "Campo e cidade", "q": "Theo mora num prédio, perto de lojas, hospital e muitas ruas asfaltadas. Theo vive na zona:", "opts": ["Rural", "Urbana", "De floresta", "Desértica"], "correct": 1, "fb": "Prédios, comércio e muitos serviços são características da zona urbana (cidade)."},
+    {"tema": "Campo e cidade", "q": "O leite tirado na fazenda vira queijo na fábrica e é vendido no supermercado. Isso mostra que campo e cidade:", "opts": ["Não têm relação", "Dependem um do outro", "São iguais", "Competem entre si"], "correct": 1, "fb": "O campo fornece alimentos e matérias-primas; a cidade transforma, vende e fornece máquinas e serviços."}
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "id": "port",
+  "ordem": 1,
+  "icon": "📖",
+  "name": "Língua Portuguesa",
+  "cor": "#C2410C",
+  "lingua": "pt",
+  "ano": 4,
+  "topics": "Substantivos · Adjetivos · Verbos · Pontuação · Ortografia · Gêneros textuais",
+  "licoes": [
+    {
+      "tema": "Substantivos",
+      "titulo": "Substantivos: as palavras que dão nome",
+      "texto": "Substantivo é a palavra que dá <b>nome</b> a tudo: pessoas, animais, lugares, objetos e até sentimentos.",
+      "pontos": [
+        "<b>Próprio:</b> nome de um ser ou lugar específico. Sempre com letra maiúscula: <em>Joana, Recife, Brasil</em>.",
+        "<b>Comum:</b> nome de qualquer ser da mesma espécie: <em>menina, cidade, cachorro</em>.",
+        "<b>Coletivo:</b> nomeia um grupo: <em>cardume</em> (peixes), <em>alcateia</em> (lobos), <em>enxame</em> (abelhas), <em>constelação</em> (estrelas), <em>biblioteca</em> (livros), <em>arquipélago</em> (ilhas)."
+      ],
+      "quem": "Caio",
+      "fala": "Meu nome é substantivo próprio, por isso começa com C maiúsculo. Já “amigo” é comum!"
+    },
+    {
+      "tema": "Adjetivos",
+      "titulo": "Adjetivos: as palavras que caracterizam",
+      "texto": "Adjetivo é a palavra que mostra como um ser é: sua cor, tamanho, jeito ou qualidade.",
+      "pontos": [
+        "<em>gato <b>peludo</b></em>, <em>dia <b>ensolarado</b></em>, <em>bolo <b>delicioso</b></em>.",
+        "Para dizer que algo é MUITO, usamos o <b>superlativo</b> com <b>-íssimo</b>: <em>lindo → lindíssimo</em>, <em>gostoso → gostosíssimo</em>.",
+        "O <b>-inho</b> forma o diminutivo: <em>casa → casinha</em>."
+      ],
+      "quem": "Mia",
+      "fala": "Meu gato é fofo, brincalhão e preguiçosíssimo! Achou os três adjetivos?"
+    },
+    {
+      "tema": "Verbos e tempos verbais",
+      "titulo": "Verbos: ação, estado e natureza",
+      "texto": "Verbo é a palavra que indica <b>ação</b> (correr, ler), <b>estado</b> (ser, estar, ficar) ou <b>fenômeno da natureza</b> (chover, ventar, trovejar).",
+      "pontos": [
+        "<b>Passado:</b> já aconteceu: <em>Theo jogou</em>.",
+        "<b>Presente:</b> está acontecendo: <em>Theo joga</em>.",
+        "<b>Futuro:</b> ainda vai acontecer: <em>Theo jogará</em>.",
+        "<b>Infinitivo</b> é a forma do dicionário, terminada em <b>-ar, -er, -ir</b>: <em>cantar, comer, partir</em>."
+      ],
+      "quem": "Theo",
+      "fala": "Ontem eu corri, hoje eu corro e amanhã eu correrei. O verbo muda com o tempo!"
+    },
+    {
+      "tema": "Pontuação",
+      "titulo": "Pontuação: os sinais que dão sentido",
+      "texto": "Os sinais de pontuação ajudam a ler com a entonação certa.",
+      "pontos": [
+        "<b>.</b> Ponto final: termina uma frase que afirma ou nega.",
+        "<b>?</b> Ponto de interrogação: termina uma pergunta.",
+        "<b>!</b> Ponto de exclamação: mostra emoção (alegria, susto, surpresa).",
+        "<b>,</b> Vírgula: separa itens de uma lista: <em>lápis, borracha, régua e cola</em>.",
+        "<b>:</b> e <b>—</b> Dois-pontos anunciam a fala; o travessão mostra quem está falando no diálogo."
+      ],
+      "quem": "Joana",
+      "fala": "Que legal! Você sabia? Com o sinal certo, a frase ganha outro sentido."
+    },
+    {
+      "tema": "Sinônimos e antônimos",
+      "titulo": "Sinônimos e antônimos",
+      "texto": "Palavras podem ter sentido parecido ou contrário.",
+      "pontos": [
+        "<b>Sinônimos</b> têm sentido parecido: <em>alegre = contente</em>, <em>bonito = belo</em>.",
+        "<b>Antônimos</b> têm sentido contrário: <em>cheio × vazio</em>, <em>corajoso × medroso</em>, <em>cedo × tarde</em>."
+      ],
+      "quem": "Manu",
+      "fala": "Hoje estou contente, que é o mesmo que alegre. O contrário seria triste!"
+    },
+    {
+      "tema": "Sílaba tônica e acentuação",
+      "titulo": "Sílaba tônica: a mais forte",
+      "texto": "Em toda palavra há uma sílaba falada com mais força: a <b>sílaba tônica</b>.",
+      "pontos": [
+        "<b>Oxítona:</b> a tônica é a última: <em>ca-<b>fé</b>, so-<b>fá</b>, pa-<b>pel</b></em>.",
+        "<b>Paroxítona:</b> a tônica é a penúltima: <em><b>me</b>-sa, ja-<b>ne</b>-la</em>.",
+        "<b>Proparoxítona:</b> a tônica é a antepenúltima e <b>sempre tem acento</b>: <em><b>pás</b>-sa-ro, <b>lâm</b>-pa-da</em>."
+      ],
+      "quem": "Elise",
+      "fala": "Fale a palavra devagar e bata palmas: a palma mais forte é a sílaba tônica."
+    },
+    {
+      "tema": "Ortografia",
+      "titulo": "Ortografia: R/RR, S/SS e Ç",
+      "texto": "Algumas letras mudam de som conforme a posição na palavra.",
+      "pontos": [
+        "Entre vogais, <b>R</b> tem som fraco (<em>caro</em>) e <b>RR</b> tem som forte (<em>carro</em>).",
+        "Entre vogais, <b>S</b> sozinho tem som de Z (<em>casa</em>). Para o som de S, usamos <b>SS</b> (<em>pássaro</em>) ou <b>Ç</b>.",
+        "O <b>Ç</b> só aparece antes de <b>A, O, U</b> e <b>nunca</b> começa palavra: <em>açúcar, poço, caçula</em>."
+      ],
+      "quem": "Gael",
+      "fala": "Carro com RR é veículo; caro com R é o que custa muito. Uma letra muda tudo!"
+    },
+    {
+      "tema": "Gêneros textuais",
+      "titulo": "Gêneros textuais: cada texto tem uma missão",
+      "texto": "Cada tipo de texto serve para uma coisa diferente.",
+      "pontos": [
+        "<b>Biografia:</b> conta a vida de uma pessoa real.",
+        "<b>Notícia:</b> informa um fato real que aconteceu.",
+        "<b>Fábula:</b> história curta, muitas vezes com animais que falam, e termina com uma <b>moral</b>.",
+        "<b>Poema:</b> escrito em <b>versos</b> (linhas) e <b>estrofes</b> (grupos de versos).",
+        "<b>Convite:</b> chama alguém para um evento, com data, hora e local."
+      ],
+      "quem": "Liz",
+      "fala": "No Flipbook da Mostra Cultural, cada página pode ser um gênero diferente!"
+    }
+  ],
+  "questions": [
+    {"tema": "Substantivos", "q": "Na frase <em>Caio levou a bola para Recife</em>, quais palavras são substantivos próprios?", "opts": ["Caio e Recife", "bola e Recife", "levou e bola", "Caio e bola"], "correct": 0, "fb": "Substantivos próprios nomeiam um ser ou lugar específico e começam com maiúscula: Caio (pessoa) e Recife (cidade). “Bola” é substantivo comum."},
+    {"tema": "Substantivos", "q": "Qual destas palavras é um substantivo <b>comum</b>?", "opts": ["Theo", "Amazonas", "escola", "Brasil"], "correct": 2, "fb": "“Escola” nomeia qualquer escola, por isso é comum. Theo, Amazonas e Brasil são nomes específicos: substantivos próprios."},
+    {"tema": "Substantivos", "q": "Joana viu muitos peixes nadando juntos no aquário. Um grupo de peixes se chama:", "opts": ["Alcateia", "Cardume", "Enxame", "Rebanho"], "correct": 1, "fb": "Cardume é o coletivo de peixes. Alcateia = lobos; enxame = abelhas; rebanho = ovelhas ou gado."},
+    {"tema": "Substantivos", "q": "Manu adora olhar o céu à noite. O conjunto de estrelas se chama:", "opts": ["Constelação", "Arquipélago", "Biblioteca", "Frota"], "correct": 0, "fb": "Constelação é o coletivo de estrelas. Arquipélago = ilhas; biblioteca = livros; frota = navios ou veículos."},
+    {"tema": "Adjetivos", "q": "Na frase <em>Mia ganhou um gato peludo e brincalhão</em>, os adjetivos são:", "opts": ["ganhou e gato", "peludo e brincalhão", "Mia e gato", "um e e"], "correct": 1, "fb": "Peludo e brincalhão dizem como o gato é, então são adjetivos. “Gato” é substantivo e “ganhou” é verbo."},
+    {"tema": "Adjetivos", "q": "O bolo da festa estava <b>muito</b> gostoso. Usando o superlativo, fica:", "opts": ["gostosinho", "gostosíssimo", "gostosão", "gostosamente"], "correct": 1, "fb": "O final -íssimo forma o superlativo e quer dizer “muito”: gostosíssimo = muito gostoso. O -inho é diminutivo."},
+    {"tema": "Adjetivos", "q": "Qual palavra é um adjetivo?", "opts": ["corajoso", "correr", "cidade", "ontem"], "correct": 0, "fb": "“Corajoso” dá uma característica a alguém. Correr é verbo, cidade é substantivo e ontem indica tempo."},
+    {"tema": "Verbos e tempos verbais", "q": "Qual é o verbo na frase <em>Gael correu até o portão</em>?", "opts": ["Gael", "correu", "até", "portão"], "correct": 1, "fb": "“Correu” indica a ação que Gael fez. É o verbo correr no passado."},
+    {"tema": "Verbos e tempos verbais", "q": "Em <em>Amanhã, Elise visitará a avó</em>, o verbo está no:", "opts": ["passado", "presente", "futuro", "infinitivo"], "correct": 2, "fb": "“Visitará” é algo que ainda vai acontecer, por isso está no futuro. A palavra “amanhã” também dá a pista."},
+    {"tema": "Verbos e tempos verbais", "q": "Qual frase está no <b>passado</b>?", "opts": ["Theo joga futebol.", "Theo jogou futebol.", "Theo jogará futebol.", "Theo vai jogar futebol."], "correct": 1, "fb": "“Jogou” mostra uma ação que já aconteceu. “Joga” é presente; “jogará” e “vai jogar” são futuro."},
+    {"tema": "Verbos e tempos verbais", "q": "Qual verbo está no <b>infinitivo</b> (a forma do dicionário)?", "opts": ["estudamos", "estudar", "estudou", "estudarão"], "correct": 1, "fb": "O infinitivo termina em -ar, -er ou -ir e é a forma que procuramos no dicionário: estudar."},
+    {"tema": "Verbos e tempos verbais", "q": "Qual verbo indica um <b>fenômeno da natureza</b>?", "opts": ["chover", "pular", "pensar", "escrever"], "correct": 0, "fb": "Chover, ventar, trovejar e nevar são fenômenos da natureza. Os outros são ações de pessoas."},
+    {"tema": "Pontuação", "q": "Qual sinal combina com o final da frase <em>Que dia lindo para um piquenique</em>?", "opts": ["?", "!", ":", ","], "correct": 1, "fb": "A frase mostra emoção e admiração, então pede ponto de exclamação: Que dia lindo para um piquenique!"},
+    {"tema": "Pontuação", "q": "Qual sinal termina a frase <em>Você vai à Mostra Cultural</em>?", "opts": ["Ponto final", "Ponto de interrogação", "Vírgula", "Travessão"], "correct": 1, "fb": "É uma pergunta, então termina com ponto de interrogação: Você vai à Mostra Cultural?"},
+    {"tema": "Pontuação", "q": "Em um diálogo, qual sinal no começo da linha mostra a fala de um personagem?", "opts": ["Travessão (—)", "Vírgula", "Ponto final", "Parênteses"], "correct": 0, "fb": "O travessão marca a fala do personagem: — Vamos brincar? perguntou Liz."},
+    {"tema": "Pontuação", "q": "Qual frase está com as vírgulas no lugar certo?", "opts": ["Caio, comprou lápis borracha régua e cola.", "Caio comprou lápis, borracha, régua e cola.", "Caio comprou, lápis borracha régua, e cola.", "Caio comprou lápis borracha régua e, cola."], "correct": 1, "fb": "A vírgula separa os itens de uma lista. Antes do “e” do último item, normalmente não vai vírgula."},
+    {"tema": "Sinônimos e antônimos", "q": "Qual é o <b>sinônimo</b> de <em>alegre</em>?", "opts": ["triste", "contente", "bravo", "cansado"], "correct": 1, "fb": "Sinônimos têm sentido parecido: alegre e contente. Triste é o antônimo (o contrário)."},
+    {"tema": "Sinônimos e antônimos", "q": "Qual é o <b>antônimo</b> de <em>corajoso</em>?", "opts": ["valente", "medroso", "forte", "ousado"], "correct": 1, "fb": "Antônimo é o contrário: corajoso × medroso. Valente e ousado são sinônimos de corajoso."},
+    {"tema": "Sinônimos e antônimos", "q": "Joana disse que a sala estava <em>vazia</em>. O contrário de vazia é:", "opts": ["cheia", "limpa", "grande", "escura"], "correct": 0, "fb": "Vazia × cheia são antônimos. Limpa, grande e escura falam de outras características."},
+    {"tema": "Sílaba tônica e acentuação", "q": "Em qual palavra a sílaba mais forte é a <b>última</b> (oxítona)?", "opts": ["mesa", "café", "lâmpada", "livro"], "correct": 1, "fb": "Ca-FÉ: a última sílaba é a mais forte, então é oxítona. Mesa e livro são paroxítonas; lâmpada é proparoxítona."},
+    {"tema": "Sílaba tônica e acentuação", "q": "Qual palavra é <b>proparoxítona</b>?", "opts": ["pássaro", "janela", "sofá", "caderno"], "correct": 0, "fb": "PÁS-sa-ro: a sílaba forte é a antepenúltima. Toda proparoxítona tem acento!"},
+    {"tema": "Ortografia", "q": "Qual palavra completa a frase? <em>Manu foi de ___ até a praia.</em>", "opts": ["caro", "carro", "carrro", "karro"], "correct": 1, "fb": "Entre vogais, o som forte do R é escrito com RR: carro. “Caro” (com um R) quer dizer que custa muito."},
+    {"tema": "Ortografia", "q": "Qual palavra está escrita corretamente?", "opts": ["pásaro", "pássaro", "páçaro", "pázaro"], "correct": 1, "fb": "Entre vogais, um S sozinho tem som de Z. Para o som de S, usamos SS: pássaro."},
+    {"tema": "Ortografia", "q": "Em qual palavra o <b>Ç</b> foi usado corretamente?", "opts": ["çebola", "açúcar", "çinema", "çapato"], "correct": 1, "fb": "O Ç só vem antes de A, O e U e nunca começa palavra. Por isso: açúcar, mas cebola, cinema e sapato."},
+    {"tema": "Gêneros textuais", "q": "Theo escreveu um texto contando a vida de Santos Dumont: onde nasceu, o que inventou e quando morreu. Esse texto é uma:", "opts": ["receita", "biografia", "fábula", "notícia"], "correct": 1, "fb": "Biografia conta a história da vida de uma pessoa real, em ordem de acontecimentos."},
+    {"tema": "Gêneros textuais", "q": "“A Cigarra e a Formiga” tem animais que falam e termina com um ensinamento. Que tipo de texto é?", "opts": ["Fábula", "Notícia", "Receita", "Bilhete"], "correct": 0, "fb": "Fábulas são histórias curtas, muitas vezes com animais, que terminam com uma moral (um ensinamento)."},
+    {"tema": "Gêneros textuais", "q": "Num poema, cada linha se chama ___ e cada grupo de linhas se chama ___.", "opts": ["verso / estrofe", "estrofe / verso", "parágrafo / capítulo", "rima / título"], "correct": 0, "fb": "Verso é cada linha do poema. Estrofe é um conjunto de versos."},
+    {"tema": "Gêneros textuais", "q": "Qual é a principal função de uma <b>notícia</b>?", "opts": ["Contar uma história inventada com moral", "Informar um fato real que aconteceu", "Ensinar a preparar uma comida", "Chamar alguém para uma festa"], "correct": 1, "fb": "A notícia informa um fato real: o que aconteceu, quando, onde e com quem."},
+    {"tema": "Gêneros textuais", "q": "Liz quer chamar as famílias para a Mostra Cultural do dia 17/10. Qual gênero é o mais adequado?", "opts": ["Convite", "Poema", "Biografia", "Fábula"], "correct": 0, "fb": "O convite chama alguém para um evento e informa data, horário e local."},
+    {"tema": "Interpretação de texto", "q": "Leia: <em>Elise acordou cedo, pegou o guarda-chuva e saiu apressada. Lá fora, as nuvens estavam escuras.</em> Por que Elise levou o guarda-chuva?", "opts": ["Porque fazia muito sol", "Porque parecia que ia chover", "Porque ia à praia", "Porque o guarda-chuva era novo"], "correct": 1, "fb": "As nuvens escuras são a pista: parecia que ia chover. Ler as pistas do texto é inferir!"},
+    {"tema": "Interpretação de texto", "q": "Leia: <em>Gael e Caio dividiram o último pedaço de bolo ao meio. Os dois sorriram.</em> O que a atitude mostra?", "opts": ["Que os dois brigaram", "Que os dois sabem dividir", "Que o bolo estava ruim", "Que ninguém queria bolo"], "correct": 1, "fb": "Dividir ao meio e sorrir mostra generosidade e amizade. O texto não diz isso com essas palavras, mas dá as pistas."}
+  ]
+}

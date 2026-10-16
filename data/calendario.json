@@ -1,0 +1,111 @@
+{
+  "titulo": "Calendário de Avaliações · 4º ano",
+  "periodo": "Setembro e Outubro de 2026",
+  "meses": ["2026-09", "2026-10"],
+  "eventos": [
+    {
+      "data": "2026-09-07",
+      "tipo": "feriado",
+      "titulo": "Feriado da Independência do Brasil"
+    },
+    {
+      "data": "2026-09-12",
+      "tipo": "evento",
+      "titulo": "Learning Celebration"
+    },
+    {
+      "data": "2026-09-16",
+      "tipo": "trabalho",
+      "titulo": "Trabalho de Ciências em grupo",
+      "detalhe": "Microscópio",
+      "materias": ["cien"]
+    },
+    {
+      "data": "2026-09-25",
+      "tipo": "avaliacao",
+      "titulo": "Avaliação Diversificada de Língua Portuguesa",
+      "detalhe": "Impressa",
+      "materias": ["port"]
+    },
+    {
+      "data": "2026-09-28",
+      "tipo": "trabalho",
+      "titulo": "Trabalho de Matemática em grupo",
+      "detalhe": "Ângulos",
+      "materias": ["mat"]
+    },
+    {
+      "data": "2026-09-30",
+      "tipo": "atividade",
+      "titulo": "Atividade Avaliativa de Language Arts",
+      "materias": ["la"]
+    },
+    {
+      "data": "2026-10-02",
+      "tipo": "atividade",
+      "titulo": "Atividade Avaliativa de Língua Portuguesa",
+      "detalhe": "Google Forms",
+      "materias": ["port"]
+    },
+    {
+      "data": "2026-10-12",
+      "tipo": "feriado",
+      "titulo": "Feriado de Nossa Senhora Aparecida · Dia das Crianças"
+    },
+    {
+      "data": "2026-10-13",
+      "tipo": "entrega",
+      "titulo": "Entrega dos trabalhos para a Mostra Cultural",
+      "detalhe": "Árvore genealógica dimensional e Flipbook (Português, Ciências e História/Geografia)",
+      "materias": ["port", "cien", "histgeo"]
+    },
+    {
+      "data": "2026-10-15",
+      "tipo": "avaliacao",
+      "titulo": "Avaliação Diversificada de Language Arts e Science",
+      "materias": ["la", "sci"]
+    },
+    {
+      "data": "2026-10-17",
+      "tipo": "evento",
+      "titulo": "Mostra Cultural"
+    },
+    {
+      "data": "2026-10-19",
+      "tipo": "avaliacao",
+      "titulo": "Avaliação Diversificada Multidisciplinar de Matemática e História/Geografia",
+      "detalhe": "Impressa",
+      "materias": ["mat", "histgeo"]
+    },
+    {
+      "data": "2026-10-21",
+      "tipo": "atividade",
+      "titulo": "Atividade Avaliativa de Math e Language Arts",
+      "materias": ["math", "la"]
+    },
+    {
+      "data": "2026-10-22",
+      "tipo": "atividade",
+      "titulo": "Atividade Avaliativa de Matemática",
+      "detalhe": "Google Forms",
+      "materias": ["mat"]
+    },
+    {
+      "data": "2026-10-26",
+      "tipo": "avaliacao",
+      "titulo": "Avaliação Diversificada de Math e Social Studies",
+      "materias": ["math", "ss"]
+    },
+    {
+      "data": "2026-10-27",
+      "tipo": "evento",
+      "titulo": "English Camp"
+    },
+    {
+      "data": "2026-10-30",
+      "tipo": "avaliacao",
+      "titulo": "Avaliação Diversificada de Science e Social Studies",
+      "materias": ["sci", "ss"]
+    }
+  ]
+}
