@@ -6,7 +6,7 @@
   "cor": "#C2410C",
   "lingua": "pt",
   "ano": 4,
-  "topics": "Substantivos · Adjetivos · Verbos · Pontuação · Ortografia · Gêneros textuais",
+  "topics": "Notícia do jacaré · Título e subtítulo · Notícia dos animais resgatados · Uso das aspas · Sons da letra X · Tempos verbais",
   "licoes": [
     {
       "tema": "Substantivos",
@@ -110,36 +110,869 @@
     }
   ],
   "questions": [
-    {"tema": "Substantivos", "q": "Na frase <em>Caio levou a bola para Recife</em>, quais palavras são substantivos próprios?", "opts": ["Caio e Recife", "bola e Recife", "levou e bola", "Caio e bola"], "correct": 0, "fb": "Substantivos próprios nomeiam um ser ou lugar específico e começam com maiúscula: Caio (pessoa) e Recife (cidade). “Bola” é substantivo comum."},
-    {"tema": "Substantivos", "q": "Qual destas palavras é um substantivo <b>comum</b>?", "opts": ["Théo", "Amazonas", "escola", "Brasil"], "correct": 2, "fb": "“Escola” nomeia qualquer escola, por isso é comum. Théo, Amazonas e Brasil são nomes específicos: substantivos próprios."},
-    {"tema": "Substantivos", "q": "Joana viu muitos peixes nadando juntos no aquário. Um grupo de peixes se chama:", "opts": ["Alcateia", "Cardume", "Enxame", "Rebanho"], "correct": 1, "fb": "Cardume é o coletivo de peixes. Alcateia = lobos; enxame = abelhas; rebanho = ovelhas ou gado."},
-    {"tema": "Substantivos", "q": "Manu adora olhar o céu à noite. O conjunto de estrelas se chama:", "opts": ["Constelação", "Arquipélago", "Biblioteca", "Frota"], "correct": 0, "fb": "Constelação é o coletivo de estrelas. Arquipélago = ilhas; biblioteca = livros; frota = navios ou veículos."},
-    {"tema": "Adjetivos", "q": "Na frase <em>Mia ganhou um gato peludo e brincalhão</em>, os adjetivos são:", "opts": ["ganhou e gato", "peludo e brincalhão", "Mia e gato", "um e e"], "correct": 1, "fb": "Peludo e brincalhão dizem como o gato é, então são adjetivos. “Gato” é substantivo e “ganhou” é verbo."},
-    {"tema": "Adjetivos", "q": "O bolo da festa estava <b>muito</b> gostoso. Usando o superlativo, fica:", "opts": ["gostosinho", "gostosíssimo", "gostosão", "gostosamente"], "correct": 1, "fb": "O final -íssimo forma o superlativo e quer dizer “muito”: gostosíssimo = muito gostoso. O -inho é diminutivo."},
-    {"tema": "Adjetivos", "q": "Qual palavra é um adjetivo?", "opts": ["corajoso", "correr", "cidade", "ontem"], "correct": 0, "fb": "“Corajoso” dá uma característica a alguém. Correr é verbo, cidade é substantivo e ontem indica tempo."},
-    {"tema": "Verbos e tempos verbais", "q": "Qual é o verbo na frase <em>Gael correu até o portão</em>?", "opts": ["Gael", "correu", "até", "portão"], "correct": 1, "fb": "“Correu” indica a ação que Gael fez. É o verbo correr no passado."},
-    {"tema": "Verbos e tempos verbais", "q": "Em <em>Amanhã, Elise visitará a avó</em>, o verbo está no:", "opts": ["passado", "presente", "futuro", "infinitivo"], "correct": 2, "fb": "“Visitará” é algo que ainda vai acontecer, por isso está no futuro. A palavra “amanhã” também dá a pista."},
-    {"tema": "Verbos e tempos verbais", "q": "Qual frase está no <b>passado</b>?", "opts": ["Théo joga futebol.", "Théo jogou futebol.", "Théo jogará futebol.", "Théo vai jogar futebol."], "correct": 1, "fb": "“Jogou” mostra uma ação que já aconteceu. “Joga” é presente; “jogará” e “vai jogar” são futuro."},
-    {"tema": "Verbos e tempos verbais", "q": "Qual verbo está no <b>infinitivo</b> (a forma do dicionário)?", "opts": ["estudamos", "estudar", "estudou", "estudarão"], "correct": 1, "fb": "O infinitivo termina em -ar, -er ou -ir e é a forma que procuramos no dicionário: estudar."},
-    {"tema": "Verbos e tempos verbais", "q": "Qual verbo indica um <b>fenômeno da natureza</b>?", "opts": ["chover", "pular", "pensar", "escrever"], "correct": 0, "fb": "Chover, ventar, trovejar e nevar são fenômenos da natureza. Os outros são ações de pessoas."},
-    {"tema": "Pontuação", "q": "Qual sinal combina com o final da frase <em>Que dia lindo para um piquenique</em>?", "opts": ["?", "!", ":", ","], "correct": 1, "fb": "A frase mostra emoção e admiração, então pede ponto de exclamação: Que dia lindo para um piquenique!"},
-    {"tema": "Pontuação", "q": "Qual sinal termina a frase <em>Você vai à Mostra Cultural</em>?", "opts": ["Ponto final", "Ponto de interrogação", "Vírgula", "Travessão"], "correct": 1, "fb": "É uma pergunta, então termina com ponto de interrogação: Você vai à Mostra Cultural?"},
-    {"tema": "Pontuação", "q": "Em um diálogo, qual sinal no começo da linha mostra a fala de um personagem?", "opts": ["Travessão (—)", "Vírgula", "Ponto final", "Parênteses"], "correct": 0, "fb": "O travessão marca a fala do personagem: — Vamos brincar? perguntou Lis."},
-    {"tema": "Pontuação", "q": "Qual frase está com as vírgulas no lugar certo?", "opts": ["Caio, comprou lápis borracha régua e cola.", "Caio comprou lápis, borracha, régua e cola.", "Caio comprou, lápis borracha régua, e cola.", "Caio comprou lápis borracha régua e, cola."], "correct": 1, "fb": "A vírgula separa os itens de uma lista. Antes do “e” do último item, normalmente não vai vírgula."},
-    {"tema": "Sinônimos e antônimos", "q": "Qual é o <b>sinônimo</b> de <em>alegre</em>?", "opts": ["triste", "contente", "bravo", "cansado"], "correct": 1, "fb": "Sinônimos têm sentido parecido: alegre e contente. Triste é o antônimo (o contrário)."},
-    {"tema": "Sinônimos e antônimos", "q": "Qual é o <b>antônimo</b> de <em>corajoso</em>?", "opts": ["valente", "medroso", "forte", "ousado"], "correct": 1, "fb": "Antônimo é o contrário: corajoso × medroso. Valente e ousado são sinônimos de corajoso."},
-    {"tema": "Sinônimos e antônimos", "q": "Bia disse que a sala estava <em>vazia</em>. O contrário de vazia é:", "opts": ["cheia", "limpa", "grande", "escura"], "correct": 0, "fb": "Vazia × cheia são antônimos. Limpa, grande e escura falam de outras características."},
-    {"tema": "Sílaba tônica e acentuação", "q": "Em qual palavra a sílaba mais forte é a <b>última</b> (oxítona)?", "opts": ["mesa", "café", "lâmpada", "livro"], "correct": 1, "fb": "Ca-FÉ: a última sílaba é a mais forte, então é oxítona. Mesa e livro são paroxítonas; lâmpada é proparoxítona."},
-    {"tema": "Sílaba tônica e acentuação", "q": "Qual palavra é <b>proparoxítona</b>?", "opts": ["pássaro", "janela", "sofá", "caderno"], "correct": 0, "fb": "PÁS-sa-ro: a sílaba forte é a antepenúltima. Toda proparoxítona tem acento!"},
-    {"tema": "Ortografia", "q": "Qual palavra completa a frase? <em>Nico foi de ___ até a praia.</em>", "opts": ["caro", "carro", "carrro", "karro"], "correct": 1, "fb": "Entre vogais, o som forte do R é escrito com RR: carro. “Caro” (com um R) quer dizer que custa muito."},
-    {"tema": "Ortografia", "q": "Qual palavra está escrita corretamente?", "opts": ["pásaro", "pássaro", "páçaro", "pázaro"], "correct": 1, "fb": "Entre vogais, um S sozinho tem som de Z. Para o som de S, usamos SS: pássaro."},
-    {"tema": "Ortografia", "q": "Em qual palavra o <b>Ç</b> foi usado corretamente?", "opts": ["çebola", "açúcar", "çinema", "çapato"], "correct": 1, "fb": "O Ç só vem antes de A, O e U e nunca começa palavra. Por isso: açúcar, mas cebola, cinema e sapato."},
-    {"tema": "Gêneros textuais", "q": "Théo escreveu um texto contando a vida de Santos Dumont: onde nasceu, o que inventou e quando morreu. Esse texto é uma:", "opts": ["receita", "biografia", "fábula", "notícia"], "correct": 1, "fb": "Biografia conta a história da vida de uma pessoa real, em ordem de acontecimentos."},
-    {"tema": "Gêneros textuais", "q": "“A Cigarra e a Formiga” tem animais que falam e termina com um ensinamento. Que tipo de texto é?", "opts": ["Fábula", "Notícia", "Receita", "Bilhete"], "correct": 0, "fb": "Fábulas são histórias curtas, muitas vezes com animais, que terminam com uma moral (um ensinamento)."},
-    {"tema": "Gêneros textuais", "q": "Num poema, cada linha se chama ___ e cada grupo de linhas se chama ___.", "opts": ["verso / estrofe", "estrofe / verso", "parágrafo / capítulo", "rima / título"], "correct": 0, "fb": "Verso é cada linha do poema. Estrofe é um conjunto de versos."},
-    {"tema": "Gêneros textuais", "q": "Qual é a principal função de uma <b>notícia</b>?", "opts": ["Contar uma história inventada com moral", "Informar um fato real que aconteceu", "Ensinar a preparar uma comida", "Chamar alguém para uma festa"], "correct": 1, "fb": "A notícia informa um fato real: o que aconteceu, quando, onde e com quem."},
-    {"tema": "Gêneros textuais", "q": "Lis quer chamar as famílias para a Mostra Cultural do dia 17/10. Qual gênero é o mais adequado?", "opts": ["Convite", "Poema", "Biografia", "Fábula"], "correct": 0, "fb": "O convite chama alguém para um evento e informa data, horário e local."},
-    {"tema": "Interpretação de texto", "q": "Leia: <em>Elise acordou cedo, pegou o guarda-chuva e saiu com pressa. Lá fora, as nuvens estavam escuras.</em> Por que Elise levou o guarda-chuva?", "opts": ["Porque fazia muito sol", "Porque parecia que ia chover", "Porque ia à praia", "Porque o guarda-chuva era novo"], "correct": 1, "fb": "As nuvens escuras são a pista: parecia que ia chover. Ler as pistas do texto é inferir!"},
-    {"tema": "Interpretação de texto", "q": "Leia: <em>Gael e Caio dividiram o último pedaço de bolo ao meio. Os dois sorriram.</em> O que a atitude mostra?", "opts": ["Que os dois brigaram", "Que os dois sabem dividir", "Que o bolo estava ruim", "Que ninguém queria bolo"], "correct": 1, "fb": "Dividir ao meio e sorrir mostra generosidade e amizade. O texto não diz isso com essas palavras, mas dá as pistas."}
+    {
+      "tema": "Notícia do jacaré",
+      "q": "Qual é o <b>título</b> da notícia da Leitura 1 (“De olho nos fatos”)?",
+      "opts": [
+        "Filhote de jacaré aparece em pátio de residência em Tramandaí, RS",
+        "Jacaré ataca morador no litoral gaúcho",
+        "Bombeiros capturam jacaré gigante",
+        "Jacaré foge do zoológico"
+      ],
+      "correct": 0,
+      "fb": "O título apresenta o fato principal: um filhote de jacaré apareceu no pátio de uma casa em Tramandaí, no Rio Grande do Sul."
+    },
+    {
+      "tema": "Notícia do jacaré",
+      "q": "Qual é a espécie do jacaré capturado?",
+      "opts": [
+        "Jacaré-do-papo-amarelo",
+        "Jacaré-açu",
+        "Jacaré-tinga",
+        "Jacaré-coroa"
+      ],
+      "correct": 0,
+      "fb": "<b>Jacaré-do-papo-amarelo</b>, comum nas lagoas do Litoral Norte gaúcho."
+    },
+    {
+      "tema": "Notícia do jacaré",
+      "q": "Quem capturou o animal?",
+      "opts": [
+        "O Corpo de Bombeiros",
+        "A polícia",
+        "Os próprios moradores",
+        "Um biólogo"
+      ],
+      "correct": 0,
+      "fb": "O <b>Corpo de Bombeiros</b>, acionado pelos moradores depois que avistaram o animal no pátio."
+    },
+    {
+      "tema": "Notícia do jacaré",
+      "q": "Qual é o nome do <b>soldado</b> que deu as declarações na notícia?",
+      "opts": [
+        "Renísio Wilmes",
+        "Jackson Müller",
+        "Caio Fulgêncio",
+        "Victor Hugo"
+      ],
+      "correct": 0,
+      "fb": "O soldado <b>Renísio Wilmes</b>, do Corpo de Bombeiros. Jackson Müller é o biólogo citado mais adiante."
+    },
+    {
+      "tema": "Notícia do jacaré",
+      "q": "Qual equipamento os bombeiros usaram para capturar o filhote?",
+      "opts": [
+        "Um cambão, equipamento usado para pegar cães e gatos",
+        "Uma rede de pesca",
+        "Uma armadilha de madeira",
+        "Uma gaiola grande"
+      ],
+      "correct": 0,
+      "fb": "Um <b>cambão</b>. Também precisaram vendar o animal e colocar uma atadura na boca dele."
+    },
+    {
+      "tema": "Notícia do jacaré",
+      "q": "Para onde o jacaré foi levado depois da captura?",
+      "opts": [
+        "Para o seu hábitat natural, uma área verde afastada e protegida onde já vivem outros jacarés",
+        "Para o zoológico da cidade",
+        "Para um aquário",
+        "Ficou com os bombeiros"
+      ],
+      "correct": 0,
+      "fb": "Foi devolvido ao <b>hábitat natural</b>, numa área verde protegida da cidade."
+    },
+    {
+      "tema": "Notícia do jacaré",
+      "q": "Segundo o biólogo Jackson Müller, onde vive o jacaré-do-papo-amarelo?",
+      "opts": [
+        "Nas lagoas",
+        "Nos rios de montanha",
+        "No mar aberto",
+        "Nas florestas secas"
+      ],
+      "correct": 0,
+      "fb": "“<b>Vive nas lagoas</b>”, explica o biólogo. E alerta: é uma espécie que corre <b>risco de extinção</b>."
+    },
+    {
+      "tema": "Notícia do jacaré",
+      "q": "Quanto pode medir um jacaré-do-papo-amarelo adulto?",
+      "opts": [
+        "Até três metros",
+        "Até um metro",
+        "Até dez metros",
+        "Até cinquenta centímetros"
+      ],
+      "correct": 0,
+      "fb": "Pode alcançar <b>três metros</b> de comprimento. O soldado contou que já tinham capturado um de 1,9 metro."
+    },
+    {
+      "tema": "Título e subtítulo",
+      "q": "Qual é a função do <em>título</em> de um texto jornalístico?",
+      "opts": [
+        "Apresentar o assunto ou destacar o fato principal da notícia",
+        "Contar a história inteira da notícia",
+        "Mostrar o nome do jornalista",
+        "Indicar o preço do jornal"
+      ],
+      "correct": 0,
+      "fb": "O título <b>apresenta o assunto</b> e chama a atenção do leitor — mas não conta a história toda."
+    },
+    {
+      "tema": "Título e subtítulo",
+      "q": "Como se chama o texto que vem <b>logo após</b> o título da notícia?",
+      "opts": [
+        "Subtítulo",
+        "Legenda",
+        "Parágrafo",
+        "Rodapé"
+      ],
+      "correct": 0,
+      "fb": "É o <b>subtítulo</b>. Ele complementa o título com mais detalhes do fato."
+    },
+    {
+      "tema": "Título e subtítulo",
+      "q": "Qual destas <b>não</b> é função do título de uma notícia?",
+      "opts": [
+        "Contar a história da notícia",
+        "Chamar a atenção do leitor para o assunto",
+        "Mostrar qual será o assunto tratado",
+        "Destacar o fato principal"
+      ],
+      "correct": 0,
+      "fb": "O título <b>não conta a história</b> — ele apenas anuncia o assunto. Quem conta a história é o corpo da notícia."
+    },
+    {
+      "tema": "Título e subtítulo",
+      "q": "Qual é a função da <em>fotografia</em> e da <em>legenda</em> em uma notícia?",
+      "opts": [
+        "Mostrar que o fato é real e ajudar o leitor a entender melhor",
+        "Deixar a página mais colorida",
+        "Ocupar espaço vazio",
+        "Substituir o texto"
+      ],
+      "correct": 0,
+      "fb": "A foto comprova e ilustra o fato; a legenda explica o que a imagem mostra."
+    },
+    {
+      "tema": "Notícia dos animais resgatados",
+      "q": "Qual é o título da segunda notícia (“Tem mais notícia!”)?",
+      "opts": [
+        "Batalhão Ambiental do AP resgata cães e gatos mantidos em gaiolas",
+        "ONG denuncia maus-tratos em Macapá",
+        "Polícia prende mulher por maus-tratos",
+        "Animais silvestres são soltos na natureza"
+      ],
+      "correct": 0,
+      "fb": "O título destaca quem agiu (Batalhão Ambiental do Amapá) e o que aconteceu (resgate de cães e gatos em gaiolas)."
+    },
+    {
+      "tema": "Notícia dos animais resgatados",
+      "q": "Quantos e quais animais foram resgatados?",
+      "opts": [
+        "Oito gatos, quatro cães, dois papagaios e um pombo",
+        "Dez gatos e dez cães",
+        "Cinco cães e cinco papagaios",
+        "Vinte gatos apenas"
+      ],
+      "correct": 0,
+      "fb": "<b>8 gatos, 4 cães, 2 papagaios e 1 pombo</b> — quase 20 animais, todos ariscos e dentro de gaiolas."
+    },
+    {
+      "tema": "Notícia dos animais resgatados",
+      "q": "Qual é o nome da ONG que fez a denúncia?",
+      "opts": [
+        "Unidade de Proteção ao Animal “Costelinha”",
+        "Batalhão Ambiental",
+        "Proteção Animal Curitiba",
+        "SOS Animais do Amapá"
+      ],
+      "correct": 0,
+      "fb": "A ONG <b>Unidade de Proteção ao Animal “Costelinha”</b>, que repassou as informações para a polícia."
+    },
+    {
+      "tema": "Notícia dos animais resgatados",
+      "q": "Quem é <em>Victor Hugo Fernandes</em> na notícia?",
+      "opts": [
+        "O presidente da ONG",
+        "O dono dos animais",
+        "Um policial do Batalhão",
+        "O jornalista que escreveu"
+      ],
+      "correct": 0,
+      "fb": "É o <b>presidente da ONG</b>. O jornalista que escreveu a notícia é Jorge Abreu, do G1 AP."
+    },
+    {
+      "tema": "Notícia dos animais resgatados",
+      "q": "O que são <em>animais silvestres</em>?",
+      "opts": [
+        "Animais que vivem naturalmente na natureza, não domesticados — como os papagaios e o pombo",
+        "Animais que vivem em casas",
+        "Animais de fazenda",
+        "Animais de circo"
+      ],
+      "correct": 0,
+      "fb": "Silvestres são os animais da natureza. Na notícia, eles ficaram sob responsabilidade do <b>Batalhão Ambiental</b>, enquanto cães e gatos foram para adoção."
+    },
+    {
+      "tema": "Notícia dos animais resgatados",
+      "q": "Qual seria o destino dos cães e gatos resgatados?",
+      "opts": [
+        "Passar por tratamento feito por voluntários e depois ficar disponíveis para adoção",
+        "Voltar para a dona",
+        "Ser levados para o zoológico",
+        "Ser soltos na floresta"
+      ],
+      "correct": 0,
+      "fb": "Tratamento com voluntários da ONG e depois <b>adoção</b>."
+    },
+    {
+      "tema": "Uso das aspas",
+      "q": "Qual é a <b>principal função</b> das aspas em uma notícia?",
+      "opts": [
+        "Indicar a reprodução exata da fala de uma pessoa",
+        "Separar os parágrafos",
+        "Marcar o fim do texto",
+        "Mostrar que o texto é inventado"
+      ],
+      "correct": 0,
+      "fb": "As aspas mostram que aquelas são as <b>palavras exatas</b> de quem falou — nada foi mudado pelo jornalista."
+    },
+    {
+      "tema": "Uso das aspas",
+      "q": "Como identificamos <b>de quem é</b> uma citação entre aspas?",
+      "opts": [
+        "Por um verbo que anuncia quem falou (afirma, comenta, observa, destaca) junto com o nome da pessoa",
+        "Pela cor da letra",
+        "Pelo tamanho do parágrafo",
+        "Não é possível saber"
+      ],
+      "correct": 0,
+      "fb": "Logo depois (ou antes) da fala vem um verbo como <b>afirma, comenta, observa, destacou</b> e o nome de quem falou."
+    },
+    {
+      "tema": "Uso das aspas",
+      "q": "Na notícia do jacaré, por que só na <b>primeira citação</b> aparece o nome completo e a profissão?",
+      "opts": [
+        "Porque é a primeira vez que a pessoa é apresentada ao leitor; depois ela já está identificada",
+        "Porque o jornalista esqueceu nas outras",
+        "Porque o nome mudou no meio do texto",
+        "Porque as outras citações são de pessoas diferentes"
+      ],
+      "correct": 0,
+      "fb": "Na 1ª citação: “<b>soldado Renísio Wilmes</b>”. Na 2ª: “o soldado”. Na 3ª: “Wilmes”. Depois de apresentar, basta uma referência curta."
+    },
+    {
+      "tema": "Uso das aspas",
+      "q": "Na expressão ONG Unidade de Proteção ao Animal <em>“Costelinha”</em>, as aspas têm a mesma função das citações?",
+      "opts": [
+        "Não — ali elas destacam o nome (apelido) da ONG, não uma fala",
+        "Sim, é a fala de alguém",
+        "Sim, é uma citação do presidente",
+        "Não, elas marcam um erro"
+      ],
+      "correct": 0,
+      "fb": "Função <b>diferente</b>: aqui as aspas destacam um nome próprio/apelido. Nas citações, elas reproduzem uma fala."
+    },
+    {
+      "tema": "Uso das aspas",
+      "q": "Qual frase usa as aspas <b>corretamente</b> para citar uma fala?",
+      "opts": [
+        "“Vive nas lagoas”, explica o biólogo.",
+        "Vive nas lagoas, “explica” o biólogo.",
+        "“Vive nas lagoas explica o biólogo.”",
+        "Vive “nas lagoas explica” o biólogo."
+      ],
+      "correct": 0,
+      "fb": "As aspas cercam só a fala. O verbo que anuncia quem falou (“explica”) fica <b>fora</b> das aspas."
+    },
+    {
+      "tema": "Uso das aspas",
+      "q": "Ao criar uma citação para uma notícia, o que não pode faltar?",
+      "opts": [
+        "As aspas, o verbo que anuncia quem falou e o nome da pessoa",
+        "Apenas as aspas",
+        "Apenas o nome da pessoa",
+        "Um ponto de exclamação"
+      ],
+      "correct": 0,
+      "fb": "Os três juntos: aspas + verbo (afirma, comenta…) + nome completo de quem falou."
+    },
+    {
+      "tema": "Sons da letra X",
+      "q": "Na palavra <em>xícara</em>, o X tem som de:",
+      "opts": [
+        "CH",
+        "S",
+        "Z",
+        "KS"
+      ],
+      "correct": 0,
+      "fb": "Som de <b>CH</b>. O mesmo acontece em lagartixa, peixe e enxada — as quatro figuras da página 208."
+    },
+    {
+      "tema": "Sons da letra X",
+      "q": "Na palavra <em>exame</em>, o X tem som de:",
+      "opts": [
+        "Z",
+        "S",
+        "CH",
+        "KS"
+      ],
+      "correct": 0,
+      "fb": "Som de <b>Z</b> (“ezame”). O mesmo em exercício e exemplo."
+    },
+    {
+      "tema": "Sons da letra X",
+      "q": "Na palavra <em>extrato</em>, o X tem som de:",
+      "opts": [
+        "S",
+        "Z",
+        "CH",
+        "KS"
+      ],
+      "correct": 0,
+      "fb": "Som de <b>S</b> (“estrato”). O mesmo em experiência e exposição."
+    },
+    {
+      "tema": "Sons da letra X",
+      "q": "Classifique: em qual grupo <b>todas</b> as palavras têm X com som de <em>Z</em>?",
+      "opts": [
+        "exercício, exame, exemplo",
+        "experiência, extrato, exposição",
+        "caixa, enxaguar, queixo",
+        "lagartixa, peixe, enxada"
+      ],
+      "correct": 0,
+      "fb": "<b>Exercício, exame, exemplo</b> — todas com “ex-” seguido de vogal, o que dá som de Z."
+    },
+    {
+      "tema": "Sons da letra X",
+      "q": "Em qual grupo <b>todas</b> as palavras têm X com som de <em>S</em>?",
+      "opts": [
+        "experiência, extrato, exposição",
+        "exercício, exame, exemplo",
+        "caixa, queixo, enxaguar",
+        "xícara, peixe, lagartixa"
+      ],
+      "correct": 0,
+      "fb": "<b>Experiência, extrato, exposição</b> — em todas o X vem antes de consoante (p, t, p)."
+    },
+    {
+      "tema": "Sons da letra X",
+      "q": "Em qual grupo <b>todas</b> as palavras têm X com som de <em>CH</em>?",
+      "opts": [
+        "caixa, enxaguar, queixo",
+        "exame, exemplo, exercício",
+        "extrato, exposição, experiência",
+        "táxi, fixo, látex"
+      ],
+      "correct": 0,
+      "fb": "<b>Caixa, enxaguar, queixo</b> — som de CH, que também aparece em peixe, lagartixa e enxada."
+    },
+    {
+      "tema": "Sons da letra X",
+      "q": "A letra X com som de <b>S</b> ocorre em que parte da sílaba?",
+      "opts": [
+        "No final da sílaba",
+        "No início da sílaba",
+        "No meio da sílaba",
+        "Sempre no fim da palavra"
+      ],
+      "correct": 0,
+      "fb": "No <b>final da sílaba</b>: ex-tra-to, ex-pe-ri-ên-cia, ex-po-si-ção. Essa é a resposta do item 3a da página 209."
+    },
+    {
+      "tema": "Sons da letra X",
+      "q": "Após a letra X com som de <b>S</b>, aparece uma vogal ou uma consoante?",
+      "opts": [
+        "Uma consoante",
+        "Uma vogal",
+        "Sempre a letra H",
+        "Nunca aparece nada"
+      ],
+      "correct": 0,
+      "fb": "Sempre uma <b>consoante</b>: ex<b>t</b>rato, ex<b>p</b>eriência, ex<b>p</b>osição. É a resposta do item 3b."
+    },
+    {
+      "tema": "Sons da letra X",
+      "q": "A letra X com som de <b>Z</b> aparece entre vogais ou entre consoantes?",
+      "opts": [
+        "Entre vogais",
+        "Entre consoantes",
+        "Sempre no início",
+        "Sempre no final"
+      ],
+      "correct": 0,
+      "fb": "<b>Entre vogais</b>: e-<b>x</b>-ame, e-<b>x</b>-ercício, e-<b>x</b>-emplo. É a resposta do item 3c."
+    },
+    {
+      "tema": "Sons da letra X",
+      "q": "Que letras costumam aparecer <b>antes</b> do X quando ele soa como CH?",
+      "opts": [
+        "Os ditongos ai/ei ou a sílaba en",
+        "Sempre a letra o",
+        "Sempre a letra u",
+        "Nunca aparece letra antes"
+      ],
+      "correct": 0,
+      "fb": "Depois de <b>ditongo</b> (c<b>ai</b>xa, qu<b>ei</b>xo, p<b>ei</b>xe) ou de <b>en</b> (<b>en</b>xaguar, <b>en</b>xada). É a resposta do item 3d."
+    },
+    {
+      "tema": "Sons da letra X",
+      "q": "Como podemos <b>verificar</b> a escrita correta de uma palavra com X?",
+      "opts": [
+        "Consultando o dicionário",
+        "Escrevendo do jeito que se fala",
+        "Perguntando a um colega",
+        "Trocando o x por ch"
+      ],
+      "correct": 0,
+      "fb": "O X tem vários sons, então nem sempre dá para confiar no ouvido. Na dúvida, <b>dicionário</b>!"
+    },
+    {
+      "tema": "Sons da letra X",
+      "q": "A letra X representa sempre o mesmo som em português?",
+      "opts": [
+        "Não — ela pode ter sons diferentes dependendo da palavra",
+        "Sim, sempre som de CH",
+        "Sim, sempre som de Z",
+        "Sim, sempre som de S"
+      ],
+      "correct": 0,
+      "fb": "O X é a letra mais “camaleoa” do português: pode soar como <b>S, Z ou CH</b> — por isso o livro dedica duas páginas a ela."
+    },
+    {
+      "tema": "Tempos verbais",
+      "q": "Na frase <em>“Um filhote de jacaré foi capturado pelo Corpo de Bombeiros”</em>, o verbo está em que tempo?",
+      "opts": [
+        "Passado",
+        "Presente",
+        "Futuro",
+        "Não tem verbo"
+      ],
+      "correct": 0,
+      "fb": "<b>Passado</b>. Notícias relatam fatos que já aconteceram, por isso usam muito o pretérito."
+    },
+    {
+      "tema": "Tempos verbais",
+      "q": "Na frase <em>“A campanha será dividida em cinco etapas”</em>, o verbo indica:",
+      "opts": [
+        "Futuro",
+        "Passado",
+        "Presente",
+        "Nenhum tempo"
+      ],
+      "correct": 0,
+      "fb": "<b>Futuro</b> — algo que ainda vai acontecer. Comum quando a notícia fala de planos."
+    },
+    {
+      "tema": "Tempos verbais",
+      "q": "Na frase <em>“O jacaré-do-papo-amarelo vive nas lagoas”</em>, o verbo está em que tempo?",
+      "opts": [
+        "Presente",
+        "Passado",
+        "Futuro",
+        "Não tem verbo"
+      ],
+      "correct": 0,
+      "fb": "<b>Presente</b> — indica algo que é sempre verdade, um fato permanente."
+    },
+    {
+      "tema": "Tempos verbais",
+      "q": "Passe para o <b>futuro</b>: “Os estudantes plantaram árvores.”",
+      "opts": [
+        "Os estudantes plantarão árvores",
+        "Os estudantes plantam árvores",
+        "Os estudantes plantavam árvores",
+        "Os estudantes tinham plantado árvores"
+      ],
+      "correct": 0,
+      "fb": "<b>Plantarão</b> indica futuro. “Plantam” é presente e “plantavam” é passado."
+    },
+    {
+      "tema": "Tempos verbais",
+      "q": "Por que uma mesma notícia pode ter verbos no <b>passado e no futuro</b>?",
+      "opts": [
+        "Porque relata o que já aconteceu e também o que ainda vai acontecer",
+        "Porque o jornalista se confundiu",
+        "Porque é uma regra obrigatória",
+        "Porque o texto foi escrito por duas pessoas"
+      ],
+      "correct": 0,
+      "fb": "A notícia conta o fato (passado) e às vezes anuncia o que virá depois (futuro) — como o destino dos animais resgatados."
+    },
+    {
+      "tema": "Tipos de frase",
+      "q": "A frase <em>“O Corpo de Bombeiros capturou o animal.”</em> é uma frase:",
+      "opts": [
+        "Declarativa",
+        "Interrogativa",
+        "Exclamativa",
+        "Nenhuma delas"
+      ],
+      "correct": 0,
+      "fb": "A frase <b>declarativa</b> afirma ou nega alguma coisa e termina com ponto final."
+    },
+    {
+      "tema": "Tipos de frase",
+      "q": "A frase <em>“Onde aconteceu o fato?”</em> é uma frase:",
+      "opts": [
+        "Interrogativa",
+        "Declarativa",
+        "Exclamativa",
+        "Nenhuma delas"
+      ],
+      "correct": 0,
+      "fb": "A frase <b>interrogativa</b> pergunta algo e termina com ponto de interrogação (?)."
+    },
+    {
+      "tema": "Tipos de frase",
+      "q": "A frase <em>“Que susto levamos!”</em> é uma frase:",
+      "opts": [
+        "Exclamativa",
+        "Declarativa",
+        "Interrogativa",
+        "Nenhuma delas"
+      ],
+      "correct": 0,
+      "fb": "A frase <b>exclamativa</b> expressa emoção — susto, alegria, surpresa — e termina com ponto de exclamação (!)."
+    },
+    {
+      "tema": "Tipos de frase",
+      "q": "Qual sinal de pontuação encerra uma frase <b>interrogativa</b>?",
+      "opts": [
+        "Ponto de interrogação (?)",
+        "Ponto final (.)",
+        "Ponto de exclamação (!)",
+        "Vírgula (,)"
+      ],
+      "correct": 0,
+      "fb": "Interrogativa → “?”. Declarativa → “.”. Exclamativa → “!”."
+    },
+    {
+      "tema": "Tipos de frase",
+      "q": "Transforme em frase <b>exclamativa</b>: “O jacaré era bem pequeno.”",
+      "opts": [
+        "Como o jacaré era pequeno!",
+        "O jacaré era bem pequeno?",
+        "O jacaré era bem pequeno.",
+        "Que o jacaré era pequeno,"
+      ],
+      "correct": 0,
+      "fb": "A exclamativa carrega emoção e termina com “!”. Normalmente começa com palavras como “Que…” ou “Como…”."
+    },
+    {
+      "tema": "Anúncio publicitário",
+      "q": "Qual é a <b>finalidade</b> de um anúncio publicitário?",
+      "opts": [
+        "Convencer o leitor de alguma ideia ou atitude",
+        "Relatar um fato que aconteceu",
+        "Contar uma história inventada",
+        "Ensinar uma receita"
+      ],
+      "correct": 0,
+      "fb": "O anúncio quer <b>convencer</b>. Diferente da notícia, que quer informar sobre um fato real."
+    },
+    {
+      "tema": "Anúncio publicitário",
+      "q": "Quem produziu o anúncio “Animal de estimação não é brinquedo”?",
+      "opts": [
+        "A Rede de Defesa e Proteção Animal da cidade de Curitiba",
+        "Uma loja de brinquedos",
+        "Um canal de TV",
+        "Uma escola particular"
+      ],
+      "correct": 0,
+      "fb": "A <b>Rede de Defesa e Proteção Animal de Curitiba</b>, junto com a Secretaria Municipal do Meio Ambiente."
+    },
+    {
+      "tema": "Anúncio publicitário",
+      "q": "Qual é a relação entre a frase “Animal de estimação não é brinquedo” e a <b>imagem</b> do anúncio?",
+      "opts": [
+        "O cão de verdade aparece cercado de cachorros de pelúcia, mostrando o contraste entre ser vivo e brinquedo",
+        "A imagem mostra crianças brincando",
+        "A imagem mostra uma loja de brinquedos",
+        "Não há relação entre elas"
+      ],
+      "correct": 0,
+      "fb": "Um cachorro <b>real</b> no meio de vários de pelúcia — a imagem prova a frase sem precisar explicar."
+    },
+    {
+      "tema": "Anúncio publicitário",
+      "q": "Por que as letras da primeira frase são <b>maiores</b> que as da segunda?",
+      "opts": [
+        "Para destacar a mensagem principal, que deve ser lida primeiro",
+        "Porque sobrou espaço no cartaz",
+        "Porque a segunda frase não é importante",
+        "Por engano do anunciante"
+      ],
+      "correct": 0,
+      "fb": "O tamanho da letra cria <b>hierarquia</b>: o olho vai primeiro para a frase maior, que carrega a ideia central."
+    },
+    {
+      "tema": "Anúncio publicitário",
+      "q": "Na segunda frase, “<em>Dê amor para o seu</em>”, a quem o anunciante faz o pedido?",
+      "opts": [
+        "Ao dono do animal de estimação, ou seja, ao leitor",
+        "Aos fabricantes de brinquedos",
+        "Aos veterinários",
+        "Aos próprios animais"
+      ],
+      "correct": 0,
+      "fb": "O pedido é feito ao <b>leitor</b>. Dá para saber pelo pronome <b>seu</b>, que se refere ao animal de estimação de quem lê."
+    },
+    {
+      "tema": "Anúncio publicitário",
+      "q": "A que o pronome <b>seu</b> se refere na frase “Dê amor para o seu”?",
+      "opts": [
+        "Ao animal de estimação do leitor",
+        "Ao anunciante",
+        "Ao cachorro de pelúcia",
+        "À cidade de Curitiba"
+      ],
+      "correct": 0,
+      "fb": "“O <b>seu</b>” = o seu animal de estimação. O pronome evita repetir a palavra que já apareceu na frase anterior."
+    },
+    {
+      "tema": "Plantando árvores",
+      "q": "Qual é o título da notícia da Leitura 2?",
+      "opts": [
+        "Projeto planta ao menos 400 mudas de árvores para resfriar paredes de escola no Acre",
+        "Escola do Acre vira exemplo de reciclagem",
+        "Alunos criam horta na escola",
+        "Projeto verde chega a Rio Branco"
+      ],
+      "correct": 0,
+      "fb": "O título já traz o número (400 mudas), o objetivo (resfriar paredes) e o lugar (escola no Acre)."
+    },
+    {
+      "tema": "Plantando árvores",
+      "q": "Qual é o nome da escola e onde ela fica?",
+      "opts": [
+        "Escola Professora Clícia Gadelha, em Rio Branco (AC)",
+        "Escola Caio Fulgêncio, em Macapá (AP)",
+        "Escola do Acre, em Tramandaí (RS)",
+        "Escola Verde, em Curitiba (PR)"
+      ],
+      "correct": 0,
+      "fb": "<b>Escola Professora Clícia Gadelha</b>, em <b>Rio Branco</b>, capital do Acre."
+    },
+    {
+      "tema": "Plantando árvores",
+      "q": "Desde que ano o projeto “paredão verde” existe?",
+      "opts": [
+        "2011",
+        "2017",
+        "2020",
+        "2005"
+      ],
+      "correct": 0,
+      "fb": "Desde <b>2011</b>. De 2011 a 2017 já tinham sido plantadas ao menos 400 mudas."
+    },
+    {
+      "tema": "Plantando árvores",
+      "q": "Para que serve o “<em>paredão verde</em>”?",
+      "opts": [
+        "Para resfriar as paredes das salas de aula",
+        "Para enfeitar o pátio",
+        "Para produzir frutas para a merenda",
+        "Para separar a escola da rua"
+      ],
+      "correct": 0,
+      "fb": "As árvores fazem sombra e deixam as salas <b>frescas</b>. Sem elas, a parede absorve muita insolação e esquenta."
+    },
+    {
+      "tema": "Plantando árvores",
+      "q": "Quais espécies de árvores podem ser encontradas na escola?",
+      "opts": [
+        "Buriti, seringueira, café, cacau, cupuaçu, ipê e eucalipto",
+        "Araucária, pinheiro e carvalho",
+        "Mandacaru, facheiro e xiquexique",
+        "Babaçu e carnaúba apenas"
+      ],
+      "correct": 0,
+      "fb": "São sete espécies citadas — muitas delas cultivadas no <b>agronegócio brasileiro</b>, o que as torna material de estudo."
+    },
+    {
+      "tema": "Plantando árvores",
+      "q": "Quem é <em>Cleilton Pessoa</em> na notícia?",
+      "opts": [
+        "O biólogo e atual diretor da escola, que encabeça o trabalho",
+        "O jornalista que escreveu a notícia",
+        "Um aluno da escola",
+        "O prefeito de Rio Branco"
+      ],
+      "correct": 0,
+      "fb": "<b>Biólogo</b> e <b>diretor</b> da instituição. O jornalista é Caio Fulgêncio, do G1 AC."
+    },
+    {
+      "tema": "Plantando árvores",
+      "q": "Quantos estudantes tem o colégio?",
+      "opts": [
+        "820",
+        "400",
+        "1.200",
+        "200"
+      ],
+      "correct": 0,
+      "fb": "<b>820 estudantes</b>. Cuidado para não confundir com as <b>400 mudas</b> plantadas."
+    },
+    {
+      "tema": "Plantando árvores",
+      "q": "O que é <em>compostagem</em>, segundo o glossário do texto?",
+      "opts": [
+        "Tipo de reciclagem do lixo orgânico, de modo a transformá-lo em adubo",
+        "Plantio de mudas em fileira",
+        "Separação de plástico e vidro",
+        "Rega automática das plantas"
+      ],
+      "correct": 0,
+      "fb": "Compostagem transforma restos orgânicos em <b>adubo</b>. A escola também mantém uma horta para análise científica."
+    },
+    {
+      "tema": "Plantando árvores",
+      "q": "Qual é o <b>diferencial</b> do projeto, segundo o professor?",
+      "opts": [
+        "Incentivar, além do plantio, a mudança de mentalidade quanto ao cuidado do meio ambiente",
+        "Vender as frutas colhidas",
+        "Ganhar prêmios de arquitetura",
+        "Diminuir o número de alunos por sala"
+      ],
+      "correct": 0,
+      "fb": "O mais importante não é só plantar: é fazer os alunos <b>entenderem que preservar é importante</b>."
+    },
+    {
+      "tema": "Entrevista: Oscar",
+      "q": "Quem é <em>Carlos Saldanha</em>?",
+      "opts": [
+        "O cineasta carioca que dirigiu O Touro Ferdinando",
+        "O autor do livro O Touro Ferdinando",
+        "Um ator de Hollywood",
+        "O diretor do filme Viva"
+      ],
+      "correct": 0,
+      "fb": "Cineasta <b>carioca</b>, primeiro brasileiro da história indicado <b>duas vezes</b> ao Oscar."
+    },
+    {
+      "tema": "Entrevista: Oscar",
+      "q": "A que categoria do Oscar concorria <em>O Touro Ferdinando</em>?",
+      "opts": [
+        "Melhor animação",
+        "Melhor filme",
+        "Melhor diretor",
+        "Melhor trilha sonora"
+      ],
+      "correct": 0,
+      "fb": "<b>Melhor animação</b>, no Oscar de 2018."
+    },
+    {
+      "tema": "Entrevista: Oscar",
+      "q": "Quais filmes concorriam junto com O Touro Ferdinando?",
+      "opts": [
+        "O Poderoso Chefinho, The Breadwinner, Viva – A Vida é Uma Festa e Com Amor, Van Gogh",
+        "Toy Story, Shrek e Procurando Nemo",
+        "Frozen, Moana e Zootopia",
+        "Up, Wall-E e Ratatouille"
+      ],
+      "correct": 0,
+      "fb": "Eram cinco indicados no total. O <b>Viva</b> era considerado o favorito disparado."
+    },
+    {
+      "tema": "Entrevista: Oscar",
+      "q": "De quem é o livro que deu origem ao filme O Touro Ferdinando?",
+      "opts": [
+        "Munro Leaf",
+        "Carlos Saldanha",
+        "Lee Unkrich",
+        "Adrian Molina"
+      ],
+      "correct": 0,
+      "fb": "O livro de <b>Munro Leaf</b>, publicado originalmente em <b>1936</b>. Nos Estados Unidos, todas as crianças leem na escola."
+    },
+    {
+      "tema": "Entrevista: Oscar",
+      "q": "Qual é a <b>mensagem</b> do filme O Touro Ferdinando?",
+      "opts": [
+        "Uma lição de tolerância, respeito, inclusão e aceitação das diferenças",
+        "A importância de vencer competições",
+        "O valor do dinheiro",
+        "A vida dos animais de fazenda"
+      ],
+      "correct": 0,
+      "fb": "Saldanha fala de “um mundo com um pouquinho mais de tolerância” — uma fábula sobre aceitar as diferenças."
+    },
+    {
+      "tema": "Entrevista: Oscar",
+      "q": "Quanto tempo costuma levar para fazer uma animação como essa?",
+      "opts": [
+        "De três a quatro anos",
+        "Alguns meses",
+        "Mais de vinte anos",
+        "Uma semana"
+      ],
+      "correct": 0,
+      "fb": "De <b>três a quatro anos</b> de produção. Os direitos do livro tinham sido comprados cerca de <b>sete anos</b> antes."
+    },
+    {
+      "tema": "Entrevista: Oscar",
+      "q": "Quantas pessoas trabalharam na equipe do filme?",
+      "opts": [
+        "Mais de 300",
+        "Cerca de 20",
+        "Cerca de 50",
+        "Mais de 3 mil"
+      ],
+      "correct": 0,
+      "fb": "<b>Mais de 300 pessoas</b> trabalhando sem parar — por isso o processo é tão longo."
+    },
+    {
+      "tema": "Entrevista: Oscar",
+      "q": "O que significa <em>live action</em>, segundo o glossário do texto?",
+      "opts": [
+        "Filmes encenados por atores reais",
+        "Filmes de ação com muitas explosões",
+        "Filmes gravados ao vivo na TV",
+        "Filmes feitos só por computador"
+      ],
+      "correct": 0,
+      "fb": "<b>Live action</b> = filmes com <b>atores reais</b>, o contrário de animação."
+    },
+    {
+      "tema": "Entrevista: Oscar",
+      "q": "Qual é a semelhança entre <em>O Touro Ferdinando</em> e <em>Viva</em>, segundo Saldanha?",
+      "opts": [
+        "Apenas a língua espanhola — o Viva explora a cultura mexicana e o Ferdinando foca na Espanha",
+        "Os dois se passam no México",
+        "Os dois foram feitos pelo mesmo estúdio",
+        "Os dois têm touros como personagens"
+      ],
+      "correct": 0,
+      "fb": "Ele compara: “É como se a gente falasse de Brasil e Portugal: existe um distanciamento muito grande”."
+    },
+    {
+      "tema": "Entrevista: Oscar",
+      "q": "Segundo Saldanha, o que falta para a animação brasileira crescer?",
+      "opts": [
+        "Maior investimento em conteúdo e em tecnologia de mercado — talento, vontade e ideias já existem",
+        "Mais escolas de cinema",
+        "Menos filmes independentes",
+        "Mais atores famosos"
+      ],
+      "correct": 0,
+      "fb": "Ele diz que o cenário está evoluindo, mas é pequeno. Falta investimento para formar uma <b>indústria lucrativa</b>."
+    },
+    {
+      "tema": "Entrevista: Oscar",
+      "q": "Que <b>gênero de texto</b> é essa leitura sobre o Oscar?",
+      "opts": [
+        "Uma entrevista, publicada em um jornal digital",
+        "Uma notícia curta",
+        "Um conto",
+        "Um anúncio publicitário"
+      ],
+      "correct": 0,
+      "fb": "É uma <b>entrevista</b>: perguntas em destaque e respostas do entrevistado, publicada no jornal Correio."
+    }
   ]
 }

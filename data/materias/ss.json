@@ -6,7 +6,7 @@
   "cor": "#4338CA",
   "lingua": "en",
   "ano": 4,
-  "topics": "Maps · Continents & oceans · Communities · Family history · Needs & wants · Goods & services · Brazil",
+  "topics": "Different houses · Jobs and communities · City and countryside · Migration and refugees · Homes",
   "licoes": [
     {
       "tema": "Maps",
@@ -112,32 +112,341 @@
     }
   ],
   "questions": [
-    {"tema": "Maps", "q": "The part of a map that shows directions (N, S, E, W) is the...", "opts": ["map key", "compass rose", "title", "scale"], "correct": 1, "fb": "The compass rose shows North, South, East and West. (Rosa dos ventos.)"},
-    {"tema": "Maps", "q": "The <b>map key</b> (legend) tells us...", "opts": ["what the symbols mean", "the date", "the author's name", "the weather"], "correct": 0, "fb": "The map key explains the symbols and colors on the map. (Legenda.)"},
-    {"tema": "Maps", "q": "The opposite of <b>North</b> is...", "opts": ["East", "West", "South", "Up"], "correct": 2, "fb": "North and South are opposites. East and West are opposites too."},
-    {"tema": "Maps", "q": "A <b>globe</b> is...", "opts": ["a flat map of a city", "a round model of the Earth", "a kind of compass", "a photo of the Moon"], "correct": 1, "fb": "A globe is a round model of the Earth. (Globo terrestre.)"},
-    {"tema": "Maps", "q": "The imaginary line that divides the Earth into the Northern and Southern Hemispheres is the...", "opts": ["Equator", "compass rose", "scale", "border"], "correct": 0, "fb": "The Equator is an imaginary line around the middle of the Earth. (Linha do Equador.)"},
-    {"tema": "Continents and oceans", "q": "How many continents are there?", "opts": ["5", "6", "7", "8"], "correct": 2, "fb": "There are 7 continents: Africa, Antarctica, Asia, Australia, Europe, North America and South America."},
-    {"tema": "Continents and oceans", "q": "Brazil is located in...", "opts": ["North America", "South America", "Africa", "Europe"], "correct": 1, "fb": "Brazil is the largest country in South America."},
-    {"tema": "Continents and oceans", "q": "The largest ocean on Earth is the...", "opts": ["Atlantic", "Indian", "Pacific", "Arctic"], "correct": 2, "fb": "The Pacific Ocean is the largest and deepest ocean."},
-    {"tema": "Continents and oceans", "q": "Which ocean touches the coast of Brazil?", "opts": ["Pacific", "Atlantic", "Indian", "Arctic"], "correct": 1, "fb": "The whole Brazilian coast is on the Atlantic Ocean."},
-    {"tema": "Continents and oceans", "q": "The coldest continent, covered in ice, is...", "opts": ["Asia", "Antarctica", "Africa", "Europe"], "correct": 1, "fb": "Antarctica is at the South Pole and is covered in ice."},
-    {"tema": "Communities", "q": "A community with farms, fields and few houses is...", "opts": ["urban", "rural", "suburban", "a capital"], "correct": 1, "fb": "Rural communities are in the countryside. (Zona rural.)"},
-    {"tema": "Communities", "q": "A big city with tall buildings, lots of people and traffic is an ___ community.", "opts": ["rural", "urban", "farm", "desert"], "correct": 1, "fb": "Urban = city. (Zona urbana.)"},
-    {"tema": "Communities", "q": "Firefighters, doctors and teachers are called community...", "opts": ["helpers", "consumers", "continents", "visitors"], "correct": 0, "fb": "Community helpers are people whose jobs help everyone in the community."},
-    {"tema": "Needs and wants", "q": "Which one is a <b>need</b>?", "opts": ["a video game", "clean water", "a new toy", "candy"], "correct": 1, "fb": "We need clean water to live. The others are wants."},
-    {"tema": "Needs and wants", "q": "Which one is a <b>want</b>?", "opts": ["food", "a home", "a skateboard", "warm clothes"], "correct": 2, "fb": "A skateboard is fun, but we can live without it: it is a want."},
-    {"tema": "Needs and wants", "q": "Nico wants a book that costs R$ 40. Nico saves R$ 10 each week. How many weeks will it take?", "opts": ["2", "3", "4", "5"], "correct": 2, "fb": "40 ÷ 10 = 4 weeks of saving."},
-    {"tema": "Goods and services", "q": "Bia got a haircut at the salon. A haircut is an example of a...", "opts": ["good", "service", "need", "natural resource"], "correct": 1, "fb": "A haircut is work someone does for you: a service."},
-    {"tema": "Goods and services", "q": "A loaf of bread from the bakery is a...", "opts": ["good", "service", "map", "law"], "correct": 0, "fb": "You can touch bread, so it is a good."},
-    {"tema": "Family history", "q": "A <b>family tree</b> shows...", "opts": ["the plants in a garden", "the members and generations of a family", "a map of the city", "the school rules"], "correct": 1, "fb": "A family tree shows who is in the family and how they are related. (Árvore genealógica.)"},
-    {"tema": "Family history", "q": "Your grandparents' parents are your...", "opts": ["cousins", "great-grandparents", "uncles", "siblings"], "correct": 1, "fb": "Great-grandparents = bisavós."},
-    {"tema": "Family history", "q": "A <b>timeline</b> shows events in...", "opts": ["alphabetical order", "the order they happened", "size order", "color order"], "correct": 1, "fb": "A timeline puts events in the order they happened. (Linha do tempo.)"},
-    {"tema": "Family history", "q": "An old letter written by your great-grandmother is a ___ source.", "opts": ["primary", "future", "fiction", "pretend"], "correct": 0, "fb": "A primary source was made at the time of the event, by someone who was there."},
-    {"tema": "Citizenship", "q": "Rules and laws are important because they...", "opts": ["keep people safe and help us live together", "make games boring", "are only for adults", "change every day"], "correct": 0, "fb": "Rules and laws protect people and help the community live in peace."},
-    {"tema": "Citizenship", "q": "A <b>responsibility</b> of a student is to...", "opts": ["do homework and respect classmates", "skip class", "throw trash on the floor", "never listen"], "correct": 0, "fb": "Responsibilities are things we should do: study, respect others, take care of the school."},
-    {"tema": "Brazil", "q": "Brazil's Independence Day is on...", "opts": ["September 7th", "October 12th", "December 25th", "April 21st"], "correct": 0, "fb": "Brazil became independent on September 7th, 1822."},
-    {"tema": "Brazil", "q": "The capital of Brazil is...", "opts": ["São Paulo", "Rio de Janeiro", "Brasília", "Salvador"], "correct": 2, "fb": "Brasília has been the capital since 1960."},
-    {"tema": "Brazil", "q": "How many regions does Brazil have?", "opts": ["3", "5", "7", "26"], "correct": 1, "fb": "5 regions: North, Northeast, Central-West, Southeast and South."}
+    {
+      "tema": "Different houses",
+      "q": "Which home is made of <b>snow and ice</b>?",
+      "opts": [
+        "An igloo",
+        "A houseboat",
+        "A bungalow",
+        "A tent"
+      ],
+      "correct": 0,
+      "fb": "O igloo é construído com blocos de neve em regiões árticas. A neve é um bom isolante — segura o calor dentro."
+    },
+    {
+      "tema": "Different houses",
+      "q": "Why are <em>stilt houses</em> built on tall wooden poles?",
+      "opts": [
+        "To protect the house from floods and water",
+        "To make the house look taller",
+        "To keep the house warm in the snow",
+        "To save money on materials"
+      ],
+      "correct": 0,
+      "fb": "As palafitas ficam erguidas sobre estacas para a água das cheias passar por baixo — comuns em rios e áreas alagadas."
+    },
+    {
+      "tema": "Different houses",
+      "q": "An <em>adobe house</em> is made of:",
+      "opts": [
+        "Mud, water and straw dried in the sun",
+        "Glass and steel",
+        "Snow blocks",
+        "Plastic sheets"
+      ],
+      "correct": 0,
+      "fb": "O adobe é um tijolo de barro, água e palha, seco ao sol. Mantém a casa fresca em regiões quentes e secas."
+    },
+    {
+      "tema": "Different houses",
+      "q": "Why are houses <b>different</b> around the world?",
+      "opts": [
+        "Because of the climate, the available materials and the local culture",
+        "Because people like different colours",
+        "Because some countries have no builders",
+        "Because of the day they were built"
+      ],
+      "correct": 0,
+      "fb": "O clima, os materiais que existem no lugar e a cultura decidem o formato da casa. Por isso o igloo e a palafita são tão diferentes."
+    },
+    {
+      "tema": "Different houses",
+      "q": "Which home can be <b>moved</b> from one place to another?",
+      "opts": [
+        "A yurt",
+        "A block of flats",
+        "A stone castle",
+        "A brick house"
+      ],
+      "correct": 0,
+      "fb": "A yurt é a tenda redonda usada por povos nômades da Mongólia: pode ser desmontada e levada junto com o rebanho."
+    },
+    {
+      "tema": "Jobs and communities",
+      "q": "Who <b>designs</b> a house before it is built?",
+      "opts": [
+        "An architect",
+        "A plumber",
+        "An electrician",
+        "A painter"
+      ],
+      "correct": 0,
+      "fb": "O arquiteto desenha a planta. Depois o builder constrói, o electrician faz a parte elétrica e o plumber cuida da água."
+    },
+    {
+      "tema": "Jobs and communities",
+      "q": "Who works with <b>water pipes</b> in a house?",
+      "opts": [
+        "A plumber",
+        "An electrician",
+        "A carpenter",
+        "An architect"
+      ],
+      "correct": 0,
+      "fb": "O plumber (encanador) instala e conserta os canos. O electrician cuida da fiação e o carpenter trabalha com madeira."
+    },
+    {
+      "tema": "City and countryside",
+      "q": "What does <em>urban</em> mean?",
+      "opts": [
+        "Related to the city",
+        "Related to the countryside",
+        "Related to the sea",
+        "Related to the mountains"
+      ],
+      "correct": 0,
+      "fb": "<b>Urban</b> = da cidade (muitos prédios, trânsito, lojas). <b>Rural</b> = do campo (fazendas, mais natureza, menos gente)."
+    },
+    {
+      "tema": "City and countryside",
+      "q": "Which is typical of a <b>rural</b> area?",
+      "opts": [
+        "Farms, fields and few people",
+        "Tall buildings and heavy traffic",
+        "Shopping centres and subways",
+        "Many factories and offices"
+      ],
+      "correct": 0,
+      "fb": "A área rural tem fazendas, plantações e poucos moradores. A urbana tem prédios, comércio e muita gente."
+    },
+    {
+      "tema": "Migration and refugees",
+      "q": "What is <em>migration</em>?",
+      "opts": [
+        "When people move from one place to another to live",
+        "When people travel on holiday and come back",
+        "When people build a new house in the same street",
+        "When people change jobs"
+      ],
+      "correct": 0,
+      "fb": "Migração é mudar de lugar para viver. Pode ser dentro do próprio país ou para outro país."
+    },
+    {
+      "tema": "Migration and refugees",
+      "q": "Who is a <em>refugee</em>?",
+      "opts": [
+        "Someone who had to leave their home because of war, danger or disaster",
+        "Someone who travels for fun",
+        "Someone who builds houses",
+        "Someone who lives in the countryside"
+      ],
+      "correct": 0,
+      "fb": "O refugiado não escolheu sair: foi forçado por guerra, perseguição ou desastre. Por isso precisa de proteção e acolhimento."
+    },
+    {
+      "tema": "Migration and refugees",
+      "q": "Why do people migrate to another place?",
+      "opts": [
+        "To look for work, safety, study or a better life",
+        "Only because they are bored",
+        "Only to see snow",
+        "Because houses are all the same everywhere"
+      ],
+      "correct": 0,
+      "fb": "As razões mais comuns são trabalho, segurança, estudo e saúde — a busca por uma vida melhor."
+    },
+    {
+      "tema": "Homes",
+      "q": "What makes a house become a <em>home</em>?",
+      "opts": [
+        "The people who live there and the feeling of safety and belonging",
+        "The price of the house",
+        "The number of windows",
+        "The colour of the walls"
+      ],
+      "correct": 0,
+      "fb": "“House” é a construção; “home” é o lar. O que transforma uma na outra são as pessoas, as memórias e a sensação de segurança."
+    },
+    {
+      "tema": "Different houses",
+      "q": "What is a <em>bungalow</em>?",
+      "opts": [
+        "A house with only one floor",
+        "A very tall building",
+        "A house on water",
+        "A house made of snow"
+      ],
+      "correct": 0,
+      "fb": "<b>Bungalow</b> é a casa térrea, de um andar só."
+    },
+    {
+      "tema": "Different houses",
+      "q": "What is a <em>block of flats</em> (apartment building)?",
+      "opts": [
+        "A tall building where many families live in separate homes",
+        "A house for one family only",
+        "A house that floats",
+        "A tent"
+      ],
+      "correct": 0,
+      "fb": "Em inglês britânico é <b>block of flats</b>; em americano, <i>apartment building</i>."
+    },
+    {
+      "tema": "Different houses",
+      "q": "Where would you find a <em>houseboat</em>?",
+      "opts": [
+        "On a river or canal",
+        "On a mountain",
+        "In the desert",
+        "Under the ground"
+      ],
+      "correct": 0,
+      "fb": "A <b>houseboat</b> é uma casa-barco, ancorada em rios e canais."
+    },
+    {
+      "tema": "Different houses",
+      "q": "A <em>tipi</em> is a traditional home of which people?",
+      "opts": [
+        "Native Americans",
+        "The Inuit of the Arctic",
+        "The people of Mongolia",
+        "People in Japan"
+      ],
+      "correct": 0,
+      "fb": "O <b>tipi</b> é a tenda cônica dos povos nativos americanos — portátil, feita de varas e peles."
+    },
+    {
+      "tema": "Different houses",
+      "q": "Which people traditionally build <em>igloos</em>?",
+      "opts": [
+        "The Inuit",
+        "The Maasai",
+        "The Mongols",
+        "The Aborigines"
+      ],
+      "correct": 0,
+      "fb": "Os <b>Inuit</b>, povos do Ártico, constroem igloos com blocos de neve."
+    },
+    {
+      "tema": "Jobs and communities",
+      "q": "Who works with <b>wood</b>, making doors, floors and furniture?",
+      "opts": [
+        "A carpenter",
+        "A plumber",
+        "An electrician",
+        "A painter"
+      ],
+      "correct": 0,
+      "fb": "O <b>carpenter</b> (marceneiro) trabalha com madeira."
+    },
+    {
+      "tema": "Jobs and communities",
+      "q": "Who lays the bricks to build the walls?",
+      "opts": [
+        "A bricklayer",
+        "An architect",
+        "A plumber",
+        "A teacher"
+      ],
+      "correct": 0,
+      "fb": "O <b>bricklayer</b> assenta os tijolos. O <i>builder</i> é o termo geral para quem constrói."
+    },
+    {
+      "tema": "Jobs and communities",
+      "q": "Which workers help a <b>community</b> stay safe and healthy?",
+      "opts": [
+        "Doctors, nurses, firefighters and police officers",
+        "Only builders",
+        "Only teachers",
+        "Only architects"
+      ],
+      "correct": 0,
+      "fb": "Uma comunidade precisa de muitos trabalhos diferentes: saúde, segurança, educação e construção."
+    },
+    {
+      "tema": "Jobs and communities",
+      "q": "What is a <em>community</em>?",
+      "opts": [
+        "A group of people who live in the same place and help each other",
+        "A single family",
+        "A type of house",
+        "A kind of job"
+      ],
+      "correct": 0,
+      "fb": "Comunidade é o grupo de pessoas que vive num mesmo lugar e depende umas das outras."
+    },
+    {
+      "tema": "City and countryside",
+      "q": "Which of these is usually found in a <b>city</b>?",
+      "opts": [
+        "Shops, offices, buses and tall buildings",
+        "Only farms",
+        "Only forests",
+        "Only rivers"
+      ],
+      "correct": 0,
+      "fb": "A cidade (urban area) tem comércio, escritórios, transporte e muitos prédios."
+    },
+    {
+      "tema": "City and countryside",
+      "q": "What is one <b>advantage</b> of living in the countryside?",
+      "opts": [
+        "There is more space, fresh air and less noise",
+        "There are more shops",
+        "There is more traffic",
+        "There are taller buildings"
+      ],
+      "correct": 0,
+      "fb": "Espaço, ar puro e tranquilidade. Por outro lado, há menos serviços e lojas por perto."
+    },
+    {
+      "tema": "City and countryside",
+      "q": "What is one <b>disadvantage</b> of living in a big city?",
+      "opts": [
+        "Traffic, noise and pollution",
+        "Too many trees",
+        "Too few people",
+        "No shops"
+      ],
+      "correct": 0,
+      "fb": "Trânsito, barulho e poluição são os problemas mais comuns das grandes cidades."
+    },
+    {
+      "tema": "Migration and refugees",
+      "q": "What is the difference between a <em>migrant</em> and a <em>refugee</em>?",
+      "opts": [
+        "A migrant chooses to move; a refugee is forced to leave",
+        "There is no difference",
+        "A refugee always comes back",
+        "A migrant never changes country"
+      ],
+      "correct": 0,
+      "fb": "A diferença está na <b>escolha</b>: o migrante decide mudar; o refugiado foi obrigado a fugir."
+    },
+    {
+      "tema": "Migration and refugees",
+      "q": "How can a community <b>help</b> refugees?",
+      "opts": [
+        "By welcoming them, helping with language, school and housing",
+        "By ignoring them",
+        "By sending them away",
+        "By charging them money"
+      ],
+      "correct": 0,
+      "fb": "Acolher, ensinar a língua, garantir escola e moradia — é assim que uma comunidade recebe quem chega."
+    },
+    {
+      "tema": "Migration and refugees",
+      "q": "What might a refugee family <b>lose</b> when they leave home?",
+      "opts": [
+        "Their house, their school, their friends and sometimes their language",
+        "Nothing at all",
+        "Only their clothes",
+        "Only their money"
+      ],
+      "correct": 0,
+      "fb": "Perde-se muito mais do que a casa: escola, amigos, vizinhos e, às vezes, o convívio com a própria língua."
+    }
   ]
 }

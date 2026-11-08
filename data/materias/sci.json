@@ -6,7 +6,7 @@
   "cor": "#0E7490",
   "lingua": "en",
   "ano": 4,
-  "topics": "Living things · Food chains · Plants · Habitats · Life cycles · States of matter · Human body",
+  "topics": "Materials · Eco-home · Safety at home · House design",
   "licoes": [
     {
       "tema": "Food chains",
@@ -100,32 +100,329 @@
     }
   ],
   "questions": [
-    {"tema": "Living things", "q": "Which one is a <b>living thing</b>?", "opts": ["a rock", "a tree", "a chair", "water"], "correct": 1, "fb": "A tree grows, needs water and air, and makes new trees (seeds). Rocks, chairs and water are non-living."},
-    {"tema": "Food chains", "q": "Plants are called <b>producers</b> because they...", "opts": ["eat insects", "make their own food using sunlight", "live in the ocean", "sleep at night"], "correct": 1, "fb": "Plants produce their own food by photosynthesis. (Produtores.)"},
-    {"tema": "Food chains", "q": "In the food chain <em>grass → rabbit → fox</em>, the rabbit is a...", "opts": ["producer", "herbivore (primary consumer)", "decomposer", "carnivore"], "correct": 1, "fb": "The rabbit eats the grass (a plant), so it is a herbivore, the first consumer."},
-    {"tema": "Food chains", "q": "An animal that eats <b>only meat</b> is a...", "opts": ["herbivore", "carnivore", "omnivore", "producer"], "correct": 1, "fb": "Carnivores eat meat. Herbivores eat plants. Omnivores eat both."},
-    {"tema": "Food chains", "q": "Humans eat plants and meat, so we are...", "opts": ["herbivores", "carnivores", "omnivores", "producers"], "correct": 2, "fb": "Omnivores eat both plants and animals."},
-    {"tema": "Food chains", "q": "Mushrooms and bacteria that break down dead leaves are...", "opts": ["producers", "decomposers", "predators", "herbivores"], "correct": 1, "fb": "Decomposers break down dead things and return nutrients to the soil."},
-    {"tema": "Food chains", "q": "Where does the energy in a food chain <b>start</b>?", "opts": ["The Sun", "The soil", "The Moon", "The animals"], "correct": 0, "fb": "Plants use the Sun's energy to make food. Then the energy passes to the animals."},
-    {"tema": "Plants", "q": "Which part of the plant takes in water from the soil?", "opts": ["leaves", "roots", "flowers", "fruit"], "correct": 1, "fb": "Roots take in water and nutrients and hold the plant in the soil."},
-    {"tema": "Plants", "q": "Photosynthesis happens mainly in the...", "opts": ["roots", "leaves", "seeds", "bark"], "correct": 1, "fb": "Leaves capture sunlight to make food."},
-    {"tema": "Plants", "q": "During photosynthesis, plants release a gas that we need to breathe:", "opts": ["carbon dioxide", "oxygen", "smoke", "helium"], "correct": 1, "fb": "Plants take in carbon dioxide and release oxygen."},
-    {"tema": "Habitats and adaptations", "q": "A cactus can live in the desert because it...", "opts": ["stores water in its thick stem", "needs lots of rain", "lives under water", "has no roots"], "correct": 0, "fb": "Storing water is an adaptation to the dry desert."},
-    {"tema": "Habitats and adaptations", "q": "A polar bear has thick fur and fat to...", "opts": ["swim in warm water", "stay warm in the cold Arctic", "hide in the desert", "climb trees"], "correct": 1, "fb": "Thick fur and fat keep the polar bear warm in the freezing Arctic."},
-    {"tema": "Habitats and adaptations", "q": "A special feature that helps a living thing survive in its habitat is called...", "opts": ["an adaptation", "a habitat", "a food chain", "a skeleton"], "correct": 0, "fb": "Adaptations are features or behaviors that help living things survive. (Adaptação.)"},
-    {"tema": "Habitats and adaptations", "q": "Fish breathe under water using their...", "opts": ["lungs", "gills", "fins", "scales"], "correct": 1, "fb": "Gills take oxygen from the water. (Brânquias.)"},
-    {"tema": "Life cycles", "q": "What is the correct order of a butterfly's life cycle?", "opts": ["egg → caterpillar → chrysalis → butterfly", "caterpillar → egg → butterfly → chrysalis", "egg → chrysalis → caterpillar → butterfly", "butterfly → caterpillar → egg → chrysalis"], "correct": 0, "fb": "Egg → caterpillar (larva) → chrysalis (pupa) → butterfly."},
-    {"tema": "Life cycles", "q": "A baby frog that lives in water and has a tail is a...", "opts": ["caterpillar", "tadpole", "chick", "puppy"], "correct": 1, "fb": "A tadpole (girino) lives in water. Later it grows legs and loses its tail."},
-    {"tema": "Life cycles", "q": "The big change in body shape of a frog or a butterfly is called...", "opts": ["photosynthesis", "metamorphosis", "evaporation", "migration"], "correct": 1, "fb": "Metamorphosis is a big change in body shape during the life cycle."},
-    {"tema": "States of matter", "q": "Ice is water in the ___ state.", "opts": ["solid", "liquid", "gas", "plasma"], "correct": 0, "fb": "Ice keeps its own shape: it is solid."},
-    {"tema": "States of matter", "q": "When ice cream melts, it changes from...", "opts": ["liquid to solid", "solid to liquid", "gas to liquid", "liquid to gas"], "correct": 1, "fb": "Melting: solid → liquid."},
-    {"tema": "States of matter", "q": "Bia noticed that puddles disappear on a sunny day. That happens because the water...", "opts": ["freezes", "evaporates", "melts", "condenses"], "correct": 1, "fb": "The Sun heats the water and it evaporates: liquid → gas (water vapor)."},
-    {"tema": "States of matter", "q": "Drops of water appear on the outside of a cold glass. This is...", "opts": ["evaporation", "condensation", "melting", "freezing"], "correct": 1, "fb": "Water vapor in the air touches the cold glass and turns into liquid: condensation."},
-    {"tema": "Human body", "q": "Which organ pumps blood around the body?", "opts": ["lungs", "heart", "stomach", "brain"], "correct": 1, "fb": "The heart is a muscle that pumps blood all the time."},
-    {"tema": "Human body", "q": "We use our lungs to...", "opts": ["digest food", "breathe", "think", "pump blood"], "correct": 1, "fb": "The lungs take in oxygen when we breathe in."},
-    {"tema": "Human body", "q": "The skull protects the...", "opts": ["heart", "brain", "lungs", "stomach"], "correct": 1, "fb": "The skull (crânio) is a strong bone that protects the brain."},
-    {"tema": "Microorganisms", "q": "Nico looked at pond water under a microscope and saw tiny living things. They are called...", "opts": ["microorganisms", "dinosaurs", "minerals", "planets"], "correct": 0, "fb": "Microorganisms are living things too small to see without a microscope."},
-    {"tema": "Microorganisms", "q": "Which microorganism helps make bread rise?", "opts": ["yeast", "a virus", "sand", "salt"], "correct": 0, "fb": "Yeast is a tiny fungus. It makes gas bubbles that make the dough rise."},
-    {"tema": "Microorganisms", "q": "What is the best way to remove germs from your hands?", "opts": ["Wipe them on your shirt", "Wash with soap and water for 20 seconds", "Blow on them", "Rinse with water for 1 second"], "correct": 1, "fb": "Soap and water for about 20 seconds removes most germs."}
+    {
+      "tema": "Materials",
+      "q": "Which material is <b>transparent</b>, letting light pass through?",
+      "opts": [
+        "Glass",
+        "Brick",
+        "Wood",
+        "Concrete"
+      ],
+      "correct": 0,
+      "fb": "O vidro é transparente — por isso é usado nas janelas, deixando a luz natural entrar."
+    },
+    {
+      "tema": "Materials",
+      "q": "Why is <em>brick</em> a good material for walls?",
+      "opts": [
+        "It is strong and lasts a long time",
+        "It is transparent",
+        "It floats on water",
+        "It melts in the sun"
+      ],
+      "correct": 0,
+      "fb": "O tijolo é resistente e durável, suportando o peso da construção e protegendo do vento e da chuva."
+    },
+    {
+      "tema": "Materials",
+      "q": "Which property does a <b>roof material</b> most need?",
+      "opts": [
+        "To be waterproof",
+        "To be transparent",
+        "To be very heavy",
+        "To be soft"
+      ],
+      "correct": 0,
+      "fb": "O telhado precisa ser impermeável (waterproof) para a chuva não entrar. Telhas e metal cumprem bem esse papel."
+    },
+    {
+      "tema": "Materials",
+      "q": "What is an <em>adobe brick</em> made of?",
+      "opts": [
+        "Soil (clay), water and straw, dried in the sun",
+        "Cement and steel",
+        "Ice and snow",
+        "Plastic and glass"
+      ],
+      "correct": 0,
+      "fb": "A receita do adobe: terra (argila) + água + palha. Mistura-se, molda-se e deixa secar ao sol até endurecer."
+    },
+    {
+      "tema": "Materials",
+      "q": "Why is <b>straw</b> added to an adobe brick?",
+      "opts": [
+        "To hold the mud together so the brick does not crack",
+        "To give it a nice colour",
+        "To make it lighter to carry",
+        "To make it waterproof"
+      ],
+      "correct": 0,
+      "fb": "A palha funciona como “fio” dentro do barro, segurando a mistura e evitando que o tijolo rache ao secar."
+    },
+    {
+      "tema": "Materials",
+      "q": "Which material would be a <b>bad</b> choice for a house in a very rainy place?",
+      "opts": [
+        "Straw walls",
+        "Brick walls",
+        "Concrete walls",
+        "Stone walls"
+      ],
+      "correct": 0,
+      "fb": "A palha absorve água e apodrece com a chuva constante. Por isso casas de palha aparecem mais em climas secos."
+    },
+    {
+      "tema": "Eco-home",
+      "q": "What do <em>solar panels</em> on a roof do?",
+      "opts": [
+        "They turn sunlight into electricity",
+        "They collect rainwater",
+        "They keep birds away",
+        "They make the house taller"
+      ],
+      "correct": 0,
+      "fb": "Os painéis solares transformam a luz do sol em eletricidade, reduzindo o uso de energia da rede."
+    },
+    {
+      "tema": "Eco-home",
+      "q": "Why do eco-homes <b>collect rainwater</b>?",
+      "opts": [
+        "To reuse it for cleaning, the garden and the toilet, saving water",
+        "To make the house heavier",
+        "Because rainwater is always safe to drink",
+        "To cool the walls down"
+      ],
+      "correct": 0,
+      "fb": "A água da chuva é guardada e reutilizada em tarefas que não precisam de água potável, economizando água tratada."
+    },
+    {
+      "tema": "Eco-home",
+      "q": "Which of these makes a house more <b>eco-friendly</b>?",
+      "opts": [
+        "Using recycled materials and big windows for natural light",
+        "Leaving all lights on day and night",
+        "Using as much water as possible",
+        "Building with materials brought from very far away"
+      ],
+      "correct": 0,
+      "fb": "Materiais reciclados, luz natural, isolamento e materiais locais reduzem o impacto da casa no meio ambiente."
+    },
+    {
+      "tema": "Safety at home",
+      "q": "Which of these is a <b>dangerous item</b> in a house?",
+      "opts": [
+        "Cleaning products and bleach",
+        "A cushion on the sofa",
+        "A picture on the wall",
+        "A cotton towel"
+      ],
+      "correct": 0,
+      "fb": "Produtos de limpeza são tóxicos e devem ficar guardados longe do alcance de crianças, sempre nos frascos originais."
+    },
+    {
+      "tema": "Safety at home",
+      "q": "Which room usually has the <b>most</b> dangerous items?",
+      "opts": [
+        "The kitchen, with knives, the stove and hot pans",
+        "The bedroom",
+        "The living room",
+        "The hallway"
+      ],
+      "correct": 0,
+      "fb": "A cozinha reúne facas, fogo, panelas quentes e eletricidade — por isso exige mais atenção e supervisão."
+    },
+    {
+      "tema": "Safety at home",
+      "q": "What should you do to make a house <b>safer</b>?",
+      "opts": [
+        "Keep medicines and matches out of reach and cover electrical sockets",
+        "Leave the floor wet after cleaning",
+        "Store knives at the edge of the table",
+        "Play near the stove while cooking"
+      ],
+      "correct": 0,
+      "fb": "Guardar remédios e fósforos em lugar alto, proteger tomadas e secar o chão molhado evitam a maior parte dos acidentes domésticos."
+    },
+    {
+      "tema": "Materials",
+      "q": "Which material is <b>flexible</b> (it bends without breaking)?",
+      "opts": [
+        "Rubber",
+        "Glass",
+        "Brick",
+        "Concrete"
+      ],
+      "correct": 0,
+      "fb": "<b>Rubber</b> (borracha) é flexível. Vidro e tijolo são rígidos e quebram."
+    },
+    {
+      "tema": "Materials",
+      "q": "Which material is the <b>strongest</b> for building tall buildings?",
+      "opts": [
+        "Steel and concrete",
+        "Paper",
+        "Straw",
+        "Cloth"
+      ],
+      "correct": 0,
+      "fb": "<b>Steel</b> (aço) e <b>concrete</b> (concreto) aguentam muito peso — por isso são usados em arranha-céus."
+    },
+    {
+      "tema": "Materials",
+      "q": "Why is <em>wood</em> a popular building material?",
+      "opts": [
+        "It is light, easy to cut and comes from trees",
+        "It never burns",
+        "It is transparent",
+        "It is the heaviest material"
+      ],
+      "correct": 0,
+      "fb": "Leve e fácil de cortar. A desvantagem é que pode queimar e apodrecer com a umidade."
+    },
+    {
+      "tema": "Materials",
+      "q": "What does <em>waterproof</em> mean?",
+      "opts": [
+        "Water cannot pass through it",
+        "It floats on water",
+        "It absorbs a lot of water",
+        "It is made of water"
+      ],
+      "correct": 0,
+      "fb": "<b>Waterproof</b> = à prova d'água. Telhados e capas de chuva precisam dessa propriedade."
+    },
+    {
+      "tema": "Materials",
+      "q": "Which material would you choose for a <b>window</b>?",
+      "opts": [
+        "Glass, because it lets light in",
+        "Brick",
+        "Wood",
+        "Steel"
+      ],
+      "correct": 0,
+      "fb": "O vidro é <b>transparent</b> e deixa a luz natural entrar."
+    },
+    {
+      "tema": "House design",
+      "q": "What is a <em>floor plan</em>?",
+      "opts": [
+        "A drawing that shows the rooms of a house seen from above",
+        "The type of floor material",
+        "A list of furniture",
+        "The price of the house"
+      ],
+      "correct": 0,
+      "fb": "A <b>floor plan</b> (planta baixa) mostra os cômodos vistos de cima, como um mapa da casa."
+    },
+    {
+      "tema": "House design",
+      "q": "Why do houses in <b>very rainy</b> places often have steep (sloping) roofs?",
+      "opts": [
+        "So the rain runs off quickly",
+        "To look taller",
+        "To store more things",
+        "To keep birds away"
+      ],
+      "correct": 0,
+      "fb": "O telhado inclinado faz a água escorrer rápido, evitando infiltração e o peso da água parada."
+    },
+    {
+      "tema": "House design",
+      "q": "Why do houses in <b>very hot</b> places often have thick walls and small windows?",
+      "opts": [
+        "To keep the inside cool",
+        "To look modern",
+        "To save glass",
+        "To make them taller"
+      ],
+      "correct": 0,
+      "fb": "Paredes grossas seguram o calor fora e janelas pequenas reduzem a entrada de sol — a casa fica fresca."
+    },
+    {
+      "tema": "House design",
+      "q": "What should a designer think about <b>first</b> when planning a house?",
+      "opts": [
+        "Who will live there and what they need",
+        "The colour of the door",
+        "The name of the street",
+        "The brand of the furniture"
+      ],
+      "correct": 0,
+      "fb": "Bom design começa pelas <b>pessoas</b>: quantas são, do que precisam e como vão usar os espaços."
+    },
+    {
+      "tema": "Eco-home",
+      "q": "What does <em>insulation</em> do in a house?",
+      "opts": [
+        "Keeps heat inside in winter and outside in summer",
+        "Makes the house taller",
+        "Cleans the water",
+        "Produces electricity"
+      ],
+      "correct": 0,
+      "fb": "O <b>insulation</b> (isolamento) nas paredes e no telhado reduz a perda de calor — a casa gasta menos energia."
+    },
+    {
+      "tema": "Eco-home",
+      "q": "Why is it good to use <em>local materials</em> to build a house?",
+      "opts": [
+        "They do not need to travel far, so less fuel and pollution",
+        "They are always prettier",
+        "They are always stronger",
+        "They never cost anything"
+      ],
+      "correct": 0,
+      "fb": "Materiais locais percorrem menos distância, gastando menos combustível no transporte."
+    },
+    {
+      "tema": "Eco-home",
+      "q": "What does <em>recycled material</em> mean?",
+      "opts": [
+        "Material made from things that were used before",
+        "Material that is brand new",
+        "Material that cannot be used again",
+        "Material made only of wood"
+      ],
+      "correct": 0,
+      "fb": "Reciclado = feito a partir de algo já usado, poupando recursos naturais."
+    },
+    {
+      "tema": "Safety at home",
+      "q": "Which room has the highest risk of <b>slipping</b>?",
+      "opts": [
+        "The bathroom, because the floor gets wet",
+        "The bedroom",
+        "The study",
+        "The hallway"
+      ],
+      "correct": 0,
+      "fb": "O banheiro molhado é onde mais se escorrega. Tapete antiderrapante ajuda muito."
+    },
+    {
+      "tema": "Safety at home",
+      "q": "What should you do if you see a <b>broken electrical wire</b>?",
+      "opts": [
+        "Do not touch it and tell an adult",
+        "Try to fix it yourself",
+        "Pull it hard",
+        "Pour water on it"
+      ],
+      "correct": 0,
+      "fb": "Nunca toque — eletricidade é perigosa. Avise sempre um adulto."
+    },
+    {
+      "tema": "Safety at home",
+      "q": "Why should medicines be kept <b>locked away</b>?",
+      "opts": [
+        "Because small children could take them by mistake",
+        "Because they look nice in a box",
+        "Because they melt",
+        "Because they are heavy"
+      ],
+      "correct": 0,
+      "fb": "Remédios parecem balas para uma criança pequena. Guardar em lugar alto e trancado evita acidentes graves."
+    }
   ]
 }

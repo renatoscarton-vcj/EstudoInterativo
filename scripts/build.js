@@ -18,7 +18,7 @@ const CALENDARIO = path.join(ROOT, 'data', 'calendario.json');
 const TEMPLATE = path.join(ROOT, 'src', 'template.html');
 const OUTPUT = path.join(ROOT, 'index.html');
 
-const TIPOS = ['avaliacao', 'atividade', 'trabalho', 'entrega', 'evento', 'feriado'];
+const TIPOS = ['sistematizada', 'avaliacao', 'atividade', 'trabalho', 'entrega', 'evento', 'feriado'];
 
 function erro(msg) {
   console.error('\n❌ ' + msg + '\n');

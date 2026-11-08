@@ -1,111 +1,55 @@
 {
   "titulo": "Calendário de Avaliações · 4º ano",
-  "periodo": "Setembro e Outubro de 2026",
-  "meses": ["2026-09", "2026-10"],
+  "periodo": "Novembro de 2026 — Avaliações Sistematizadas",
+  "meses": ["2026-11"],
   "eventos": [
     {
-      "data": "2026-09-07",
-      "tipo": "feriado",
-      "titulo": "Feriado da Independência do Brasil"
-    },
-    {
-      "data": "2026-09-12",
-      "tipo": "evento",
-      "titulo": "Learning Celebration"
-    },
-    {
-      "data": "2026-09-16",
-      "tipo": "trabalho",
-      "titulo": "Trabalho de Ciências em grupo",
-      "detalhe": "Microscópio",
+      "data": "2026-11-09",
+      "tipo": "sistematizada",
+      "titulo": "Avaliação Sistematizada de Ciências",
+      "detalhe": "Microrganismos e defesas do corpo · booklet páginas 50 a 59",
       "materias": ["cien"]
     },
     {
-      "data": "2026-09-25",
-      "tipo": "avaliacao",
-      "titulo": "Avaliação Diversificada de Língua Portuguesa",
-      "detalhe": "Impressa",
+      "data": "2026-11-11",
+      "tipo": "sistematizada",
+      "titulo": "Avaliação Sistematizada de História e Geografia",
+      "detalhe": "Navegações, África e paisagens vegetais · páginas 58-63, 72-74 e 126-129",
+      "materias": ["histgeo"]
+    },
+    {
+      "data": "2026-11-13",
+      "tipo": "sistematizada",
+      "titulo": "Avaliação Sistematizada de Língua Portuguesa",
+      "detalhe": "Notícia, aspas, sons do X e tipos de frase · páginas 198-217 e 290-299",
       "materias": ["port"]
     },
     {
-      "data": "2026-09-28",
-      "tipo": "trabalho",
-      "titulo": "Trabalho de Matemática em grupo",
-      "detalhe": "Ângulos",
-      "materias": ["mat"]
-    },
-    {
-      "data": "2026-09-30",
-      "tipo": "atividade",
-      "titulo": "Atividade Avaliativa de Language Arts",
-      "materias": ["la"]
-    },
-    {
-      "data": "2026-10-02",
-      "tipo": "atividade",
-      "titulo": "Atividade Avaliativa de Língua Portuguesa",
-      "detalhe": "Google Forms",
-      "materias": ["port"]
-    },
-    {
-      "data": "2026-10-12",
+      "data": "2026-11-15",
       "tipo": "feriado",
-      "titulo": "Feriado de Nossa Senhora Aparecida · Dia das Crianças"
+      "titulo": "Feriado da Proclamação da República",
+      "detalhe": "Cai num domingo"
     },
     {
-      "data": "2026-10-13",
-      "tipo": "entrega",
-      "titulo": "Entrega dos trabalhos para a Mostra Cultural",
-      "detalhe": "Árvore genealógica dimensional e Flipbook (Português, Ciências e História/Geografia)",
-      "materias": ["port", "cien", "histgeo"]
-    },
-    {
-      "data": "2026-10-15",
-      "tipo": "avaliacao",
-      "titulo": "Avaliação Diversificada de Language Arts e Science",
-      "materias": ["la", "sci"]
-    },
-    {
-      "data": "2026-10-17",
-      "tipo": "evento",
-      "titulo": "Mostra Cultural"
-    },
-    {
-      "data": "2026-10-19",
-      "tipo": "avaliacao",
-      "titulo": "Avaliação Diversificada Multidisciplinar de Matemática e História/Geografia",
-      "detalhe": "Impressa",
-      "materias": ["mat", "histgeo"]
-    },
-    {
-      "data": "2026-10-21",
-      "tipo": "atividade",
-      "titulo": "Atividade Avaliativa de Math e Language Arts",
-      "materias": ["math", "la"]
-    },
-    {
-      "data": "2026-10-22",
-      "tipo": "atividade",
-      "titulo": "Atividade Avaliativa de Matemática",
-      "detalhe": "Google Forms",
+      "data": "2026-11-16",
+      "tipo": "sistematizada",
+      "titulo": "Avaliação Sistematizada de Matemática",
+      "detalhe": "Perímetro, frações, decimais, ângulos e as quatro operações",
       "materias": ["mat"]
     },
     {
-      "data": "2026-10-26",
-      "tipo": "avaliacao",
-      "titulo": "Avaliação Diversificada de Math e Social Studies",
-      "materias": ["math", "ss"]
+      "data": "2026-11-18",
+      "tipo": "sistematizada",
+      "titulo": "Avaliação Sistematizada de Language Arts e Humanities",
+      "detalhe": "IPC Homes and Houses · Our World 96-106 e 116-123 · Humanities Booklet 31 e 33-46",
+      "materias": ["la", "ss"]
     },
     {
-      "data": "2026-10-27",
-      "tipo": "evento",
-      "titulo": "English Camp"
-    },
-    {
-      "data": "2026-10-30",
-      "tipo": "avaliacao",
-      "titulo": "Avaliação Diversificada de Science e Social Studies",
-      "materias": ["sci", "ss"]
+      "data": "2026-11-24",
+      "tipo": "sistematizada",
+      "titulo": "Avaliação Sistematizada de Math e Science",
+      "detalhe": "IPC Homes and Houses · Math Booklet 6-18 e 29-43 · Science Booklet 41-47",
+      "materias": ["math", "sci"]
     }
   ]
 }

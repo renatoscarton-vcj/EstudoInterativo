@@ -6,7 +6,7 @@
   "cor": "#1D64B8",
   "lingua": "pt",
   "ano": 4,
-  "topics": "Ângulos · Retas · Figuras · Números · Multiplicação e divisão · Frações · Medidas",
+  "topics": "Perímetro · Frações · Leitura de frações · Subtração · Multiplicação · Números decimais",
   "licoes": [
     {
       "tema": "Ângulos",
@@ -110,35 +110,1061 @@
     }
   ],
   "questions": [
-    {"tema": "Ângulos", "q": "Gael abriu o livro formando um ângulo igual ao canto de uma folha de papel. Que ângulo é esse?", "opts": ["Agudo", "Reto", "Obtuso", "Raso"], "correct": 1, "fb": "O canto da folha mede 90°, que é o ângulo reto."},
-    {"tema": "Ângulos", "q": "Quanto mede um ângulo <b>reto</b>?", "opts": ["45°", "90°", "180°", "360°"], "correct": 1, "fb": "Ângulo reto mede 90°, ou seja, ¼ de volta."},
-    {"tema": "Ângulos", "q": "Um ângulo de <b>40°</b> é:", "opts": ["Agudo", "Reto", "Obtuso", "Raso"], "correct": 0, "fb": "Todo ângulo menor que 90° é agudo."},
-    {"tema": "Ângulos", "q": "Um ângulo de <b>130°</b> é:", "opts": ["Agudo", "Reto", "Obtuso", "Raso"], "correct": 2, "fb": "Ângulos maiores que 90° e menores que 180° são obtusos."},
-    {"tema": "Ângulos", "q": "Bia deu <b>meia-volta</b> para olhar para trás. Quantos graus Bia girou?", "opts": ["90°", "180°", "270°", "360°"], "correct": 1, "fb": "Meia-volta é metade de 360°, ou seja, 180°: um ângulo raso."},
-    {"tema": "Ângulos", "q": "Quantos graus tem uma <b>volta completa</b>?", "opts": ["90°", "180°", "360°", "100°"], "correct": 2, "fb": "Uma volta inteira tem 360°. Meia-volta tem 180° e ¼ de volta tem 90°."},
-    {"tema": "Ângulos", "q": "Às <b>3 horas</b> em ponto, os ponteiros do relógio formam um ângulo:", "opts": ["Agudo", "Reto", "Obtuso", "Raso"], "correct": 1, "fb": "Às 3h, um ponteiro aponta para o 12 e o outro para o 3: ¼ de volta, 90°, ângulo reto."},
-    {"tema": "Ângulos", "q": "Às <b>6 horas</b> em ponto, os ponteiros formam um ângulo:", "opts": ["Reto", "Raso", "Agudo", "Obtuso"], "correct": 1, "fb": "Às 6h os ponteiros apontam para lados opostos (12 e 6), formando uma linha reta: 180°, ângulo raso."},
-    {"tema": "Retas", "q": "Os trilhos de um trem são um exemplo de retas:", "opts": ["Perpendiculares", "Paralelas", "Concorrentes", "Curvas"], "correct": 1, "fb": "Retas paralelas nunca se cruzam, como os dois trilhos do trem."},
-    {"tema": "Retas", "q": "Duas ruas que se cruzam formando 4 ângulos retos são:", "opts": ["Paralelas", "Perpendiculares", "Curvas", "Iguais"], "correct": 1, "fb": "Retas que se cruzam formando ângulos retos (90°) são perpendiculares."},
-    {"tema": "Figuras geométricas", "q": "Nico desenhou o formato de um favo de mel, com <b>6 lados</b>. Essa figura é um:", "opts": ["Pentágono", "Hexágono", "Octógono", "Quadrado"], "correct": 1, "fb": "Polígono de 6 lados é hexágono. Pentágono tem 5 e octógono tem 8."},
-    {"tema": "Figuras geométricas", "q": "A placa de trânsito PARE tem o formato de um:", "opts": ["Hexágono", "Octógono", "Pentágono", "Triângulo"], "correct": 1, "fb": "A placa PARE tem 8 lados: é um octógono."},
-    {"tema": "Figuras geométricas", "q": "Quantas faces tem um <b>cubo</b> (como um dado)?", "opts": ["4", "6", "8", "12"], "correct": 1, "fb": "O cubo tem 6 faces quadradas, 12 arestas e 8 vértices."},
-    {"tema": "Figuras geométricas", "q": "Qual sólido geométrico rola e tem o formato de uma lata?", "opts": ["Cubo", "Cilindro", "Pirâmide", "Prisma"], "correct": 1, "fb": "O cilindro tem duas bases redondas e uma parte arredondada, por isso rola."},
-    {"tema": "Números e valor posicional", "q": "No número <b>47.385</b>, quanto vale o algarismo 7?", "opts": ["7", "700", "7.000", "70.000"], "correct": 2, "fb": "O 7 está na casa da unidade de milhar, então vale 7.000."},
-    {"tema": "Números e valor posicional", "q": "Como se escreve <em>vinte e três mil, quatrocentos e cinco</em>?", "opts": ["2.345", "23.405", "23.450", "230.405"], "correct": 1, "fb": "Vinte e três mil = 23.000; quatrocentos e cinco = 405. Juntando: 23.405."},
-    {"tema": "Números e valor posicional", "q": "Qual é a decomposição de <b>35.062</b>?", "opts": ["30.000 + 5.000 + 60 + 2", "30.000 + 5.000 + 600 + 2", "3.000 + 500 + 60 + 2", "35.000 + 600 + 2"], "correct": 0, "fb": "35.062 = 3 dezenas de milhar (30.000) + 5 unidades de milhar (5.000) + 0 centenas + 6 dezenas (60) + 2 unidades."},
-    {"tema": "Números e valor posicional", "q": "Qual é o <b>maior</b> número?", "opts": ["9.899", "10.001", "9.990", "10.000"], "correct": 1, "fb": "Números com 5 algarismos são maiores que os de 4. Entre 10.000 e 10.001, o maior é 10.001."},
-    {"tema": "Multiplicação", "q": "Na conta <em>8 × 7 = 56</em>, o 56 é o:", "opts": ["Fator", "Produto", "Quociente", "Resto"], "correct": 1, "fb": "Na multiplicação, o resultado é o produto. O 8 e o 7 são os fatores."},
-    {"tema": "Multiplicação", "q": "Mia tem 6 caixas com 8 lápis de cor em cada. Quantos lápis ao todo?", "opts": ["14", "42", "48", "56"], "correct": 2, "fb": "6 grupos de 8: 6 × 8 = 48 lápis."},
-    {"tema": "Multiplicação", "q": "Qual é o <b>triplo</b> de 15?", "opts": ["30", "45", "18", "60"], "correct": 1, "fb": "Triplo é multiplicar por 3: 15 × 3 = 45."},
-    {"tema": "Divisão", "q": "Caio repartiu 36 figurinhas igualmente entre 4 amigos. Quantas cada um recebeu?", "opts": ["8", "9", "12", "32"], "correct": 1, "fb": "36 ÷ 4 = 9, porque 4 × 9 = 36."},
-    {"tema": "Divisão", "q": "Na divisão <em>17 ÷ 5</em>, o quociente e o resto são:", "opts": ["3 e 2", "3 e 1", "4 e 2", "2 e 7"], "correct": 0, "fb": "5 × 3 = 15 e sobram 2 para chegar a 17. Quociente 3, resto 2."},
-    {"tema": "Frações", "q": "Lis comeu 3 pedaços de uma pizza cortada em 8 pedaços iguais. Que fração Lis comeu?", "opts": ["3/8", "8/3", "3/5", "5/8"], "correct": 0, "fb": "O denominador é o total de partes (8) e o numerador é quantas foram comidas (3): 3/8."},
-    {"tema": "Frações", "q": "Na fração <b>2/5</b>, o 5 é o:", "opts": ["Numerador", "Denominador", "Inteiro", "Resto"], "correct": 1, "fb": "O número de baixo é o denominador: mostra em quantas partes iguais o inteiro foi dividido."},
-    {"tema": "Frações", "q": "Quanto é a <b>metade</b> de 50 reais?", "opts": ["5 reais", "20 reais", "25 reais", "100 reais"], "correct": 2, "fb": "Metade é dividir por 2: 50 ÷ 2 = 25 reais."},
-    {"tema": "Medidas", "q": "Quantos centímetros tem 1 metro?", "opts": ["10", "100", "1.000", "60"], "correct": 1, "fb": "1 metro = 100 centímetros."},
-    {"tema": "Medidas", "q": "Uma apresentação da Mostra Cultural durou <b>1 hora e meia</b>. Quantos minutos são?", "opts": ["60", "80", "90", "130"], "correct": 2, "fb": "1 hora = 60 minutos; meia hora = 30 minutos. 60 + 30 = 90 minutos."},
-    {"tema": "Medidas", "q": "Elise saiu de casa às <b>7h40</b> e chegou à escola às <b>8h05</b>. Quanto tempo levou?", "opts": ["15 minutos", "25 minutos", "35 minutos", "45 minutos"], "correct": 1, "fb": "De 7h40 até 8h00 são 20 minutos; de 8h00 até 8h05, mais 5. Total: 25 minutos."},
-    {"tema": "Problemas", "q": "Gael tinha R$ 50,00. Gastou R$ 18,00 num livro e R$ 12,00 num lanche. Quanto sobrou?", "opts": ["R$ 20,00", "R$ 30,00", "R$ 22,00", "R$ 32,00"], "correct": 0, "fb": "Gastou 18 + 12 = 30 reais. Sobrou 50 − 30 = 20 reais."}
+    {
+      "tema": "Perímetro",
+      "q": "O que é o <em>perímetro</em> de uma figura?",
+      "opts": [
+        "A soma das medidas de todos os seus lados",
+        "A medida do lado maior",
+        "O espaço de dentro da figura",
+        "O número de cantos que ela tem"
+      ],
+      "correct": 0,
+      "fb": "Perímetro é o contorno: imagine dar uma volta completa em torno da figura. A distância percorrida é o perímetro."
+    },
+    {
+      "tema": "Perímetro",
+      "q": "Um quadrado tem lados de <em>7 cm</em>. Qual é o seu perímetro?",
+      "opts": [
+        "14 cm",
+        "21 cm",
+        "28 cm",
+        "49 cm"
+      ],
+      "correct": 2,
+      "fb": "O quadrado tem 4 lados iguais: 7 + 7 + 7 + 7 = 28 cm. Também dá para fazer 4 × 7."
+    },
+    {
+      "tema": "Perímetro",
+      "q": "Um terreno retangular mede <em>12 m</em> de comprimento por <em>8 m</em> de largura. Qual é o perímetro?",
+      "opts": [
+        "20 m",
+        "40 m",
+        "96 m",
+        "48 m"
+      ],
+      "correct": 1,
+      "fb": "12 + 8 + 12 + 8 = 40 m. O retângulo tem os lados opostos iguais, então dá para fazer 2 × (12 + 8)."
+    },
+    {
+      "tema": "Perímetro",
+      "q": "Um triângulo tem lados de 5 cm, 6 cm e 9 cm. Qual é o perímetro?",
+      "opts": [
+        "15 cm",
+        "18 cm",
+        "20 cm",
+        "270 cm"
+      ],
+      "correct": 2,
+      "fb": "Basta somar todos os lados: 5 + 6 + 9 = 20 cm."
+    },
+    {
+      "tema": "Frações — atenção!",
+      "q": "Uma pizza foi dividida em <b>10 pedaços iguais</b> e <b>7 estão pintados</b>. Que fração representa a parte <u>pintada</u>?",
+      "opts": [
+        "7/10",
+        "3/10",
+        "10/7",
+        "7/3"
+      ],
+      "correct": 0,
+      "fb": "⚠️ A pergunta pede a parte <b>PINTADA</b>: são 7 de 10 → <b>7/10</b>. Se contar os pedaços vazios dá 3/10 — resposta da pergunta errada! Sempre releia o que está sendo pedido."
+    },
+    {
+      "tema": "Frações — atenção!",
+      "q": "Uma pizza foi dividida em <b>2 partes iguais</b> e <b>1 está pintada</b>. Qual é a fração?",
+      "opts": [
+        "1/2",
+        "1/1",
+        "2/1",
+        "2/2"
+      ],
+      "correct": 0,
+      "fb": "⚠️ Embaixo vai <b>em quantas partes dividimos</b> (2), em cima <b>quantas pintamos</b> (1) → <b>1/2</b>. Nunca 1/1: isso seria a pizza inteira!"
+    },
+    {
+      "tema": "Frações — atenção!",
+      "q": "Uma figura dividida em <b>12 partes</b> tem <b>3 pintadas</b>. Qual é a fração?",
+      "opts": [
+        "3/12",
+        "12/3",
+        "9/12",
+        "3/9"
+      ],
+      "correct": 0,
+      "fb": "3 pintadas de 12 partes → <b>3/12</b>. O número de baixo é sempre o <b>total</b> de partes."
+    },
+    {
+      "tema": "Leitura de frações",
+      "q": "Como se lê a fração <em>1/2</em>?",
+      "opts": [
+        "Um meio",
+        "Um um",
+        "Um dois",
+        "Dois avos"
+      ],
+      "correct": 0,
+      "fb": "<b>Um meio</b>. Decore os nomes especiais: /2 = meio · /3 = terço · /4 = quarto."
+    },
+    {
+      "tema": "Leitura de frações",
+      "q": "Como se lê a fração <em>7/10</em>?",
+      "opts": [
+        "Sete décimos",
+        "Sete dez",
+        "Sete dez avos",
+        "Dez sétimos"
+      ],
+      "correct": 0,
+      "fb": "<b>Sete décimos</b>. Denominador 10 sempre vira “décimos”."
+    },
+    {
+      "tema": "Leitura de frações",
+      "q": "Como se lê a fração <em>4/7</em>?",
+      "opts": [
+        "Quatro sétimos",
+        "Quatro sete",
+        "Quatro sete avos",
+        "Sete quartos"
+      ],
+      "correct": 0,
+      "fb": "<b>Quatro sétimos</b>. De 2 até 10 usamos o nome do número ordinal: terços, quartos, quintos, sextos, sétimos, oitavos, nonos, décimos."
+    },
+    {
+      "tema": "Leitura de frações",
+      "q": "Como se lê a fração <em>3/12</em>?",
+      "opts": [
+        "Três doze avos",
+        "Três doze",
+        "Três décimos",
+        "Doze terços"
+      ],
+      "correct": 0,
+      "fb": "⚠️ A partir de <b>11</b>, o denominador ganha a palavra <b>“avos”</b>: três doze avos, cinco quinze avos, dois vinte avos."
+    },
+    {
+      "tema": "Leitura de frações",
+      "q": "Como se lê a fração <em>5/15</em>?",
+      "opts": [
+        "Cinco quinze avos",
+        "Cinco quintos",
+        "Cinco décimos",
+        "Quinze quintos"
+      ],
+      "correct": 0,
+      "fb": "Denominador maior que 10 → <b>avos</b>. Cinco quinze avos."
+    },
+    {
+      "tema": "Subtração — atenção!",
+      "q": "Quanto é <em>354 − 178</em>?",
+      "opts": [
+        "176",
+        "156",
+        "186",
+        "224"
+      ],
+      "correct": 0,
+      "fb": "⚠️ Vá com calma nas dezenas! 4−8 pede emprestado → 14−8 = <b>6</b>. Sobra 4 nas dezenas: 4−7 pede emprestado → <b>14−7 = 7</b> (não 5!). Depois 2−1 = 1. Resultado: <b>176</b>."
+    },
+    {
+      "tema": "Subtração — atenção!",
+      "q": "Quanto é <em>2.549 − 1.355</em>?",
+      "opts": [
+        "1.194",
+        "1.294",
+        "1.184",
+        "1.206"
+      ],
+      "correct": 0,
+      "fb": "9−5=4; 4−5 pede emprestado → 14−5=9; 4−3=1; 2−1=1 → <b>1.194</b>."
+    },
+    {
+      "tema": "Subtração — atenção!",
+      "q": "Qual é a melhor forma de <b>conferir</b> se uma subtração está certa?",
+      "opts": [
+        "Somar o resultado com o número que foi subtraído — tem que dar o número de cima",
+        "Subtrair de novo do mesmo jeito",
+        "Contar nos dedos",
+        "Não dá para conferir"
+      ],
+      "correct": 0,
+      "fb": "Em 354 − 178 = 176, confira: 176 + 178 = 354 ✓. Esse truque pega quase todo erro de empréstimo."
+    },
+    {
+      "tema": "Multiplicação — atenção!",
+      "q": "Quanto é <em>1.243 × 5</em>?",
+      "opts": [
+        "6.215",
+        "6.205",
+        "5.215",
+        "6.115"
+      ],
+      "correct": 0,
+      "fb": "⚠️ Pelo algoritmo: 3×5=15 (fica 5, vai 1); 4×5=20 +1 = 21 (fica <b>1</b>, vai 2); 2×5=10 +2 = 12 (fica 2, vai 1); 1×5=5 +1 = 6 → <b>6.215</b>."
+    },
+    {
+      "tema": "Multiplicação — atenção!",
+      "q": "Por que é melhor usar a <b>conta armada</b> de multiplicar em vez de somar várias vezes?",
+      "opts": [
+        "Porque é mais rápido e tem menos chance de errar no meio do caminho",
+        "Porque somar é proibido",
+        "Porque a professora não gosta de soma",
+        "Porque dá resultado diferente"
+      ],
+      "correct": 0,
+      "fb": "Somar 1.243 cinco vezes funciona, mas são 4 somas seguidas — e basta errar uma para o resultado todo sair errado. A multiplicação armada tem menos passos."
+    },
+    {
+      "tema": "Frações",
+      "q": "A fração <em>½</em> representa qual parte de um inteiro?",
+      "opts": [
+        "A metade",
+        "A quarta parte",
+        "O dobro",
+        "A terça parte"
+      ],
+      "correct": 0,
+      "fb": "½ se lê “um meio”: o inteiro foi dividido em 2 partes iguais e pegamos 1 delas — ou seja, a metade."
+    },
+    {
+      "tema": "Frações",
+      "q": "A fração <em>¼</em> representa qual parte de um inteiro?",
+      "opts": [
+        "A metade",
+        "A quarta parte",
+        "Três partes de quatro",
+        "O inteiro todo"
+      ],
+      "correct": 1,
+      "fb": "¼ se lê “um quarto”: dividimos o inteiro em 4 partes iguais e pegamos 1. É a quarta parte."
+    },
+    {
+      "tema": "Frações",
+      "q": "Qual fração é <b>maior</b>: ½ ou ¼?",
+      "opts": [
+        "½",
+        "¼",
+        "São iguais",
+        "Não dá para comparar"
+      ],
+      "correct": 0,
+      "fb": "Quanto mais partes dividimos, menores elas ficam. Dividir em 2 dá pedaços maiores do que dividir em 4 — por isso ½ é maior que ¼."
+    },
+    {
+      "tema": "Frações",
+      "q": "Na fração <em>3/5</em>, o número <b>5</b> indica o quê?",
+      "opts": [
+        "Em quantas partes iguais o inteiro foi dividido",
+        "Quantas partes foram pegas",
+        "O resultado da divisão",
+        "A soma das partes"
+      ],
+      "correct": 0,
+      "fb": "O número de baixo é o denominador: diz em quantas partes dividimos. O de cima, o numerador, diz quantas partes pegamos."
+    },
+    {
+      "tema": "Frações",
+      "q": "A metade de um inteiro também pode ser escrita como qual número decimal?",
+      "opts": [
+        "0,5",
+        "0,25",
+        "0,2",
+        "5,0"
+      ],
+      "correct": 0,
+      "fb": "½ = 0,5 (cinco décimos). Do mesmo jeito, ¼ = 0,25 (vinte e cinco centésimos)."
+    },
+    {
+      "tema": "Números decimais",
+      "q": "Como se lê o número <em>3,7</em>?",
+      "opts": [
+        "Três inteiros e sete décimos",
+        "Três inteiros e sete centésimos",
+        "Trinta e sete",
+        "Três e sete inteiros"
+      ],
+      "correct": 0,
+      "fb": "Depois da vírgula, a primeira casa é a dos décimos. Então 3,7 = três inteiros e sete décimos."
+    },
+    {
+      "tema": "Números decimais",
+      "q": "No número <em>8,04</em>, o algarismo <b>4</b> ocupa qual casa?",
+      "opts": [
+        "Décimos",
+        "Centésimos",
+        "Milésimos",
+        "Unidades"
+      ],
+      "correct": 1,
+      "fb": "Depois da vírgula a ordem é: décimos, centésimos, milésimos. O 4 está na segunda casa, então são 4 centésimos."
+    },
+    {
+      "tema": "Números decimais",
+      "q": "Como se escreve com algarismos “<em>vinte e dois inteiros e oitenta e nove centésimos</em>”?",
+      "opts": [
+        "22,89",
+        "22,089",
+        "2,289",
+        "228,9"
+      ],
+      "correct": 0,
+      "fb": "A parte inteira é 22 e a parte decimal tem duas casas (centésimos): 22,89."
+    },
+    {
+      "tema": "Números decimais",
+      "q": "Qual número é <b>maior</b>: 1,7 ou 1,07?",
+      "opts": [
+        "1,7",
+        "1,07",
+        "São iguais",
+        "Depende da conta"
+      ],
+      "correct": 0,
+      "fb": "1,7 tem 7 décimos; 1,07 tem apenas 0 décimos e 7 centésimos. Comparando casa a casa depois da vírgula, 1,7 é maior."
+    },
+    {
+      "tema": "Números decimais",
+      "q": "Os números <em>2,3</em> e <em>2,30</em> são:",
+      "opts": [
+        "Iguais — o zero no fim não muda o valor",
+        "Diferentes, 2,30 é dez vezes maior",
+        "Diferentes, 2,3 é maior",
+        "Impossíveis de comparar"
+      ],
+      "correct": 0,
+      "fb": "2,3 = 2,30 = 2,300. Zeros acrescentados no fim da parte decimal não mudam o valor do número."
+    },
+    {
+      "tema": "Números decimais",
+      "q": "Coloque em <b>ordem crescente</b>: 0,9 — 0,25 — 0,5",
+      "opts": [
+        "0,25 — 0,5 — 0,9",
+        "0,9 — 0,5 — 0,25",
+        "0,5 — 0,25 — 0,9",
+        "0,25 — 0,9 — 0,5"
+      ],
+      "correct": 0,
+      "fb": "Compare os décimos primeiro: 0,25 tem 2 décimos, 0,5 tem 5 e 0,9 tem 9. Crescente é do menor para o maior."
+    },
+    {
+      "tema": "Ângulos",
+      "q": "Um ângulo <em>reto</em> mede quantos graus?",
+      "opts": [
+        "45°",
+        "90°",
+        "180°",
+        "360°"
+      ],
+      "correct": 1,
+      "fb": "O ângulo reto mede 90° — é o “cantinho quadrado”, como o canto de uma folha de papel."
+    },
+    {
+      "tema": "Ângulos",
+      "q": "Um ângulo <em>agudo</em> é aquele que:",
+      "opts": [
+        "Mede menos de 90°",
+        "Mede exatamente 90°",
+        "Mede mais de 90°",
+        "Mede 180°"
+      ],
+      "correct": 0,
+      "fb": "Agudo é o ângulo “fechadinho”, menor que o reto. Obtuso é o contrário: mais aberto que 90°."
+    },
+    {
+      "tema": "Ângulos",
+      "q": "Um ângulo que mede <em>130°</em> é classificado como:",
+      "opts": [
+        "Agudo",
+        "Reto",
+        "Obtuso",
+        "Raso"
+      ],
+      "correct": 2,
+      "fb": "130° é maior que 90° e menor que 180°, então é obtuso. O ângulo raso é o de exatamente 180°."
+    },
+    {
+      "tema": "Ângulos",
+      "q": "Quantos <b>ângulos retos</b> tem um retângulo?",
+      "opts": [
+        "2",
+        "3",
+        "4",
+        "Nenhum"
+      ],
+      "correct": 2,
+      "fb": "O retângulo tem 4 cantos e todos são ângulos retos de 90°. O quadrado também."
+    },
+    {
+      "tema": "Ângulos",
+      "q": "O que é um <em>polígono</em>?",
+      "opts": [
+        "Uma figura plana fechada formada só por segmentos de reta",
+        "Qualquer figura com curvas",
+        "Uma figura com exatamente 5 lados",
+        "Um tipo de ângulo"
+      ],
+      "correct": 0,
+      "fb": "Polígono é figura fechada feita de linhas retas: triângulo, quadrado, pentágono. O círculo não é polígono porque é curvo."
+    },
+    {
+      "tema": "Ângulos",
+      "q": "Qual instrumento usamos para <b>medir</b> ângulos?",
+      "opts": [
+        "Transferidor",
+        "Régua",
+        "Compasso",
+        "Esquadro"
+      ],
+      "correct": 0,
+      "fb": "O transferidor é o semicírculo com a escala de graus. A régua mede comprimento, não ângulo."
+    },
+    {
+      "tema": "Multiplicação",
+      "q": "Quanto é <em>23 × 14</em>?",
+      "opts": [
+        "302",
+        "322",
+        "332",
+        "372"
+      ],
+      "correct": 1,
+      "fb": "Separe: 23 × 10 = 230 e 23 × 4 = 92. Somando: 230 + 92 = 322."
+    },
+    {
+      "tema": "Multiplicação",
+      "q": "Quanto é <em>47 × 12</em>?",
+      "opts": [
+        "494",
+        "544",
+        "564",
+        "574"
+      ],
+      "correct": 2,
+      "fb": "47 × 10 = 470 e 47 × 2 = 94. Somando: 470 + 94 = 564."
+    },
+    {
+      "tema": "Multiplicação",
+      "q": "Quanto é <em>36 × 25</em>?",
+      "opts": [
+        "800",
+        "850",
+        "900",
+        "960"
+      ],
+      "correct": 2,
+      "fb": "36 × 20 = 720 e 36 × 5 = 180. Somando: 720 + 180 = 900."
+    },
+    {
+      "tema": "Multiplicação",
+      "q": "Quanto é <em>58 × 21</em>?",
+      "opts": [
+        "1.108",
+        "1.218",
+        "1.258",
+        "1.318"
+      ],
+      "correct": 1,
+      "fb": "58 × 20 = 1.160 e 58 × 1 = 58. Somando: 1.160 + 58 = 1.218."
+    },
+    {
+      "tema": "Divisão",
+      "q": "Quanto é <em>144 ÷ 12</em>?",
+      "opts": [
+        "11",
+        "12",
+        "14",
+        "16"
+      ],
+      "correct": 1,
+      "fb": "12 × 12 = 144, então 144 ÷ 12 = 12. Conferir pela multiplicação é a melhor forma de checar uma divisão."
+    },
+    {
+      "tema": "Divisão",
+      "q": "Quanto é <em>196 ÷ 4</em>?",
+      "opts": [
+        "39",
+        "47",
+        "49",
+        "52"
+      ],
+      "correct": 2,
+      "fb": "4 × 49 = 196. Dá para fazer por partes: 160 ÷ 4 = 40 e 36 ÷ 4 = 9, somando 49."
+    },
+    {
+      "tema": "Divisão",
+      "q": "Numa divisão, como podemos <b>conferir</b> se o resultado está certo?",
+      "opts": [
+        "Multiplicando o quociente pelo divisor e somando o resto",
+        "Somando todos os números da conta",
+        "Dividindo de novo pelo mesmo número",
+        "Não tem como conferir"
+      ],
+      "correct": 0,
+      "fb": "A prova real: divisor × quociente + resto = dividendo. Se bater com o número inicial, a divisão está certa."
+    },
+    {
+      "tema": "Situações-problema",
+      "q": "Uma caixa tem 24 lápis. Quantos lápis há em <em>15 caixas</em>?",
+      "opts": [
+        "240",
+        "320",
+        "360",
+        "390"
+      ],
+      "correct": 2,
+      "fb": "É multiplicação: 24 × 15. Fazendo por partes, 24 × 10 = 240 e 24 × 5 = 120, somando 360 lápis."
+    },
+    {
+      "tema": "Situações-problema",
+      "q": "480 figurinhas serão divididas igualmente entre <em>16 crianças</em>. Quantas cada uma recebe?",
+      "opts": [
+        "24",
+        "28",
+        "30",
+        "32"
+      ],
+      "correct": 2,
+      "fb": "É divisão: 480 ÷ 16 = 30. Conferindo: 16 × 30 = 480 ✓"
+    },
+    {
+      "tema": "Situações-problema",
+      "q": "Pedro tinha R$ 50,00 e gastou R$ 18,75. Quanto sobrou?",
+      "opts": [
+        "R$ 31,25",
+        "R$ 32,25",
+        "R$ 31,75",
+        "R$ 32,75"
+      ],
+      "correct": 0,
+      "fb": "50,00 − 18,75 = 31,25. Ao subtrair decimais, alinhe sempre a vírgula embaixo da vírgula."
+    },
+    {
+      "tema": "Situações-problema",
+      "q": "Uma sala tem formato retangular de 9 m por 6 m. Quantos metros de rodapé são necessários para contornar toda a sala?",
+      "opts": [
+        "15 m",
+        "30 m",
+        "54 m",
+        "36 m"
+      ],
+      "correct": 1,
+      "fb": "Contornar é perímetro: 9 + 6 + 9 + 6 = 30 m. Cuidado para não confundir com área, que seria 9 × 6 = 54 m²."
+    },
+    {
+      "tema": "Nomes das operações",
+      "q": "Na multiplicação <em>6 × 7 = 42</em>, como se chamam o 6 e o 7?",
+      "opts": [
+        "Fatores",
+        "Parcelas",
+        "Termos",
+        "Divisores"
+      ],
+      "correct": 0,
+      "fb": "Os números que multiplicamos são os <b>fatores</b>; o resultado (42) é o <b>produto</b>."
+    },
+    {
+      "tema": "Nomes das operações",
+      "q": "Na divisão <em>48 ÷ 6 = 8</em>, como se chama o número <b>48</b>?",
+      "opts": [
+        "Dividendo",
+        "Divisor",
+        "Quociente",
+        "Resto"
+      ],
+      "correct": 0,
+      "fb": "48 é o <b>dividendo</b> (o que será dividido), 6 é o <b>divisor</b> e 8 é o <b>quociente</b>."
+    },
+    {
+      "tema": "Nomes das operações",
+      "q": "Na subtração <em>90 − 35 = 55</em>, como se chama o número <b>90</b>?",
+      "opts": [
+        "Minuendo",
+        "Subtraendo",
+        "Diferença",
+        "Parcela"
+      ],
+      "correct": 0,
+      "fb": "90 é o <b>minuendo</b>, 35 é o <b>subtraendo</b> e 55 é a <b>diferença</b> (ou resto)."
+    },
+    {
+      "tema": "Dobro, metade e triplo",
+      "q": "Qual é o <b>dobro</b> de 125?",
+      "opts": [
+        "250",
+        "225",
+        "275",
+        "125"
+      ],
+      "correct": 0,
+      "fb": "Dobro = multiplicar por 2: 125 × 2 = <b>250</b>."
+    },
+    {
+      "tema": "Dobro, metade e triplo",
+      "q": "Qual é a <b>metade</b> de 86?",
+      "opts": [
+        "43",
+        "42",
+        "44",
+        "38"
+      ],
+      "correct": 0,
+      "fb": "Metade = dividir por 2: 86 ÷ 2 = <b>43</b>."
+    },
+    {
+      "tema": "Dobro, metade e triplo",
+      "q": "Qual é o <b>triplo</b> de 24?",
+      "opts": [
+        "72",
+        "48",
+        "27",
+        "84"
+      ],
+      "correct": 0,
+      "fb": "Triplo = multiplicar por 3: 24 × 3 = <b>72</b>."
+    },
+    {
+      "tema": "Medidas",
+      "q": "Quantos centímetros tem <em>3 metros</em>?",
+      "opts": [
+        "300 cm",
+        "30 cm",
+        "3.000 cm",
+        "33 cm"
+      ],
+      "correct": 0,
+      "fb": "1 metro = 100 centímetros. Então 3 × 100 = <b>300 cm</b>."
+    },
+    {
+      "tema": "Medidas",
+      "q": "Um animal mede <em>5 metros</em>. Quanto é isso em centímetros?",
+      "opts": [
+        "500 cm",
+        "50 cm",
+        "5.000 cm",
+        "550 cm"
+      ],
+      "correct": 0,
+      "fb": "5 × 100 = <b>500 cm</b>. Sempre que for de metro para centímetro, multiplique por 100."
+    },
+    {
+      "tema": "Medidas",
+      "q": "Quantos metros tem <em>1 quilômetro</em>?",
+      "opts": [
+        "1.000 m",
+        "100 m",
+        "10 m",
+        "10.000 m"
+      ],
+      "correct": 0,
+      "fb": "1 km = <b>1.000 metros</b>. “Quilo” sempre quer dizer mil."
+    },
+    {
+      "tema": "Medidas",
+      "q": "Quanto é <em>450 cm</em> em metros?",
+      "opts": [
+        "4,5 m",
+        "45 m",
+        "0,45 m",
+        "4.500 m"
+      ],
+      "correct": 0,
+      "fb": "De centímetro para metro, divide por 100: 450 ÷ 100 = <b>4,5 m</b>."
+    },
+    {
+      "tema": "Divisão",
+      "q": "Quanto é <em>348 ÷ 6</em>?",
+      "opts": [
+        "58",
+        "48",
+        "68",
+        "54"
+      ],
+      "correct": 0,
+      "fb": "6 × 58 = 348. Fazendo por partes: 300 ÷ 6 = 50 e 48 ÷ 6 = 8, somando <b>58</b>."
+    },
+    {
+      "tema": "Divisão",
+      "q": "Quanto é <em>720 ÷ 9</em>?",
+      "opts": [
+        "80",
+        "70",
+        "90",
+        "81"
+      ],
+      "correct": 0,
+      "fb": "9 × 80 = 720 → <b>80</b>."
+    },
+    {
+      "tema": "Divisão",
+      "q": "Quanto é <em>100 ÷ 8</em>?",
+      "opts": [
+        "12 com resto 4",
+        "12 sem resto",
+        "13 com resto 1",
+        "11 com resto 2"
+      ],
+      "correct": 0,
+      "fb": "8 × 12 = 96, e sobram 4 para chegar a 100. Então quociente <b>12</b> e resto <b>4</b>."
+    },
+    {
+      "tema": "Divisão",
+      "q": "Quanto é <em>537 ÷ 4</em>?",
+      "opts": [
+        "134 com resto 1",
+        "133 com resto 2",
+        "134 sem resto",
+        "135 com resto 3"
+      ],
+      "correct": 0,
+      "fb": "4 × 134 = 536, falta 1 para 537. Quociente <b>134</b>, resto <b>1</b>."
+    },
+    {
+      "tema": "Divisão",
+      "q": "Numa divisão, o <b>resto</b> pode ser maior que o divisor?",
+      "opts": [
+        "Não — se for maior, ainda dá para dividir mais uma vez",
+        "Sim, sempre",
+        "Sim, quando o número é grande",
+        "Só em divisões por 10"
+      ],
+      "correct": 0,
+      "fb": "O resto é sempre <b>menor</b> que o divisor. Se der maior, é sinal de que a conta pode continuar."
+    },
+    {
+      "tema": "Divisão",
+      "q": "384 lápis serão guardados em caixas de <em>8 lápis</em> cada. Quantas caixas são necessárias?",
+      "opts": [
+        "48",
+        "38",
+        "44",
+        "52"
+      ],
+      "correct": 0,
+      "fb": "384 ÷ 8 = <b>48 caixas</b>. Conferindo: 8 × 48 = 384 ✓"
+    },
+    {
+      "tema": "Multiplicação",
+      "q": "Quanto é <em>34 × 21</em>?",
+      "opts": [
+        "714",
+        "704",
+        "744",
+        "654"
+      ],
+      "correct": 0,
+      "fb": "34 × 20 = 680 e 34 × 1 = 34. Somando: <b>714</b>."
+    },
+    {
+      "tema": "Multiplicação",
+      "q": "Quanto é <em>45 × 13</em>?",
+      "opts": [
+        "585",
+        "575",
+        "595",
+        "545"
+      ],
+      "correct": 0,
+      "fb": "45 × 10 = 450 e 45 × 3 = 135. Somando: <b>585</b>."
+    },
+    {
+      "tema": "Multiplicação",
+      "q": "Quanto é <em>62 × 15</em>?",
+      "opts": [
+        "930",
+        "920",
+        "960",
+        "830"
+      ],
+      "correct": 0,
+      "fb": "62 × 10 = 620 e 62 × 5 = 310. Somando: <b>930</b>."
+    },
+    {
+      "tema": "Multiplicação",
+      "q": "Quanto é <em>28 × 32</em>?",
+      "opts": [
+        "896",
+        "886",
+        "906",
+        "856"
+      ],
+      "correct": 0,
+      "fb": "28 × 30 = 840 e 28 × 2 = 56. Somando: <b>896</b>."
+    },
+    {
+      "tema": "Multiplicação",
+      "q": "Quanto é <em>53 × 24</em>?",
+      "opts": [
+        "1.272",
+        "1.262",
+        "1.372",
+        "1.232"
+      ],
+      "correct": 0,
+      "fb": "53 × 20 = 1.060 e 53 × 4 = 212. Somando: <b>1.272</b>."
+    },
+    {
+      "tema": "Multiplicação",
+      "q": "Ao multiplicar por um número de <b>dois algarismos</b>, o que acontece na segunda linha da conta armada?",
+      "opts": [
+        "Ela começa deslocada uma casa para a esquerda, porque multiplica as dezenas",
+        "Ela fica igual à primeira",
+        "Ela começa deslocada para a direita",
+        "Ela não existe"
+      ],
+      "correct": 0,
+      "fb": "A segunda linha multiplica pelas <b>dezenas</b>, então vale 10 vezes mais — por isso desloca uma casa (ou põe-se um zero)."
+    },
+    {
+      "tema": "Números decimais",
+      "q": "Quanto é <em>0,7 + 0,5</em>?",
+      "opts": [
+        "1,2",
+        "0,12",
+        "1,02",
+        "0,75"
+      ],
+      "correct": 0,
+      "fb": "7 décimos + 5 décimos = 12 décimos = <b>1,2</b>. Alinhe sempre a vírgula embaixo da vírgula."
+    },
+    {
+      "tema": "Números decimais",
+      "q": "Quanto é <em>3,5 + 2,8</em>?",
+      "opts": [
+        "6,3",
+        "5,3",
+        "6,13",
+        "5,13"
+      ],
+      "correct": 0,
+      "fb": "5 + 8 = 13 décimos → escreve 3 e vai 1. Depois 3 + 2 + 1 = 6 → <b>6,3</b>."
+    },
+    {
+      "tema": "Números decimais",
+      "q": "Quanto é <em>7,4 − 2,9</em>?",
+      "opts": [
+        "4,5",
+        "5,5",
+        "4,4",
+        "5,4"
+      ],
+      "correct": 0,
+      "fb": "4 décimos − 9 décimos pede emprestado: 14 − 9 = 5. Depois 6 − 2 = 4 → <b>4,5</b>."
+    },
+    {
+      "tema": "Números decimais",
+      "q": "Quanto é <em>10 − 3,6</em>?",
+      "opts": [
+        "6,4",
+        "7,4",
+        "6,6",
+        "7,6"
+      ],
+      "correct": 0,
+      "fb": "Escreva 10 como <b>10,0</b> para alinhar a vírgula: 10,0 − 3,6 = <b>6,4</b>."
+    },
+    {
+      "tema": "Números decimais",
+      "q": "Como se escreve <em>“quatro inteiros e três centésimos”</em>?",
+      "opts": [
+        "4,03",
+        "4,3",
+        "4,30",
+        "43,0"
+      ],
+      "correct": 0,
+      "fb": "Centésimos usam <b>duas casas</b> depois da vírgula. Como não há décimos, entra zero: <b>4,03</b>."
+    },
+    {
+      "tema": "Números decimais",
+      "q": "No número <em>309,01</em>, quantos centésimos há?",
+      "opts": [
+        "1",
+        "0",
+        "9",
+        "309"
+      ],
+      "correct": 0,
+      "fb": "Depois da vírgula: 0 décimos e <b>1 centésimo</b>."
+    },
+    {
+      "tema": "Números decimais",
+      "q": "Coloque em <b>ordem decrescente</b>: 4,5 — 4,05 — 4,55",
+      "opts": [
+        "4,55 — 4,5 — 4,05",
+        "4,05 — 4,5 — 4,55",
+        "4,5 — 4,55 — 4,05",
+        "4,55 — 4,05 — 4,5"
+      ],
+      "correct": 0,
+      "fb": "Compare casa a casa: 4,55 tem 5 décimos e 5 centésimos; 4,5 tem 5 décimos; 4,05 tem 0 décimos. Decrescente = do maior para o menor."
+    },
+    {
+      "tema": "Perímetro",
+      "q": "Um pentágono regular tem lados de <em>6 cm</em>. Qual é o perímetro?",
+      "opts": [
+        "30 cm",
+        "24 cm",
+        "36 cm",
+        "11 cm"
+      ],
+      "correct": 0,
+      "fb": "Pentágono tem 5 lados iguais: 5 × 6 = <b>30 cm</b>."
+    },
+    {
+      "tema": "Perímetro",
+      "q": "Um retângulo mede <em>15 cm</em> por <em>7 cm</em>. Qual é o perímetro?",
+      "opts": [
+        "44 cm",
+        "22 cm",
+        "105 cm",
+        "38 cm"
+      ],
+      "correct": 0,
+      "fb": "2 × (15 + 7) = 2 × 22 = <b>44 cm</b>."
+    },
+    {
+      "tema": "Perímetro",
+      "q": "Um quadrado tem perímetro de <em>36 cm</em>. Quanto mede cada lado?",
+      "opts": [
+        "9 cm",
+        "6 cm",
+        "12 cm",
+        "18 cm"
+      ],
+      "correct": 0,
+      "fb": "O quadrado tem 4 lados iguais, então 36 ÷ 4 = <b>9 cm</b> cada lado."
+    },
+    {
+      "tema": "Ângulos",
+      "q": "Quantos lados e quantos ângulos tem um <em>pentágono</em>?",
+      "opts": [
+        "5 lados e 5 ângulos",
+        "4 lados e 4 ângulos",
+        "6 lados e 6 ângulos",
+        "5 lados e 4 ângulos"
+      ],
+      "correct": 0,
+      "fb": "Todo polígono tem o <b>mesmo número</b> de lados e de ângulos. Penta = 5."
+    },
+    {
+      "tema": "Ângulos",
+      "q": "Um ângulo de <em>180°</em> é chamado de:",
+      "opts": [
+        "Raso",
+        "Reto",
+        "Agudo",
+        "Obtuso"
+      ],
+      "correct": 0,
+      "fb": "O ângulo <b>raso</b> mede 180° — é uma linha reta, como se fossem dois ângulos retos juntos."
+    },
+    {
+      "tema": "Ângulos",
+      "q": "Quantos ângulos retos cabem em uma volta completa (360°)?",
+      "opts": [
+        "4",
+        "2",
+        "3",
+        "6"
+      ],
+      "correct": 0,
+      "fb": "360 ÷ 90 = <b>4</b> ângulos retos. Pense nos quatro cantos de um quadrado."
+    },
+    {
+      "tema": "Ângulos",
+      "q": "Como costumamos <b>nomear</b> um ângulo?",
+      "opts": [
+        "Com três letras, sendo a do meio o vértice (por exemplo, ABC)",
+        "Com um número apenas",
+        "Com o nome da figura",
+        "Com a cor do desenho"
+      ],
+      "correct": 0,
+      "fb": "No ângulo <b>ABC</b>, a letra do meio (B) marca o <b>vértice</b>, que é a “pontinha” onde as duas semirretas se encontram."
+    },
+    {
+      "tema": "Ângulos",
+      "q": "Qual destas figuras <b>não</b> é um polígono?",
+      "opts": [
+        "O círculo",
+        "O triângulo",
+        "O quadrado",
+        "O pentágono"
+      ],
+      "correct": 0,
+      "fb": "O <b>círculo</b> é curvo. Polígonos são figuras fechadas feitas só de linhas retas."
+    },
+    {
+      "tema": "Situações-problema",
+      "q": "Um livro tem 354 páginas e já foram lidas 178. Quantas <b>faltam</b>?",
+      "opts": [
+        "176",
+        "156",
+        "186",
+        "532"
+      ],
+      "correct": 0,
+      "fb": "⚠️ 354 − 178 = <b>176 páginas</b>. Cuidado com o empréstimo nas dezenas: 14 − 7 = 7, não 5!"
+    },
+    {
+      "tema": "Situações-problema",
+      "q": "Foram feitos 2.549 brigadeiros e comidos 1.355. Quantos sobraram?",
+      "opts": [
+        "1.194",
+        "1.294",
+        "1.184",
+        "3.904"
+      ],
+      "correct": 0,
+      "fb": "2.549 − 1.355 = <b>1.194 brigadeiros</b>."
+    },
+    {
+      "tema": "Situações-problema",
+      "q": "Uma orca come 250 quilos por dia. Quanto come em <em>5 dias</em>?",
+      "opts": [
+        "1.250 kg",
+        "1.000 kg",
+        "1.500 kg",
+        "1.050 kg"
+      ],
+      "correct": 0,
+      "fb": "250 × 5 = <b>1.250 quilos</b>."
+    },
+    {
+      "tema": "Situações-problema",
+      "q": "Ana comprou 6 livros iguais, de <em>17 páginas</em> cada. Quantas páginas ao todo?",
+      "opts": [
+        "102",
+        "92",
+        "112",
+        "96"
+      ],
+      "correct": 0,
+      "fb": "6 × 17 = <b>102 páginas</b>. Dá para separar: 6 × 10 = 60 e 6 × 7 = 42, somando 102."
+    },
+    {
+      "tema": "Situações-problema",
+      "q": "Ao terminar um problema, o que é importante escrever na <b>resposta</b>?",
+      "opts": [
+        "Uma frase completa com o número e a unidade (páginas, quilos, reais...)",
+        "Apenas o número",
+        "Apenas a conta armada",
+        "O nome do personagem"
+      ],
+      "correct": 0,
+      "fb": "⚠️ Na prova vale ponto! Escreva “Faltam 176 <b>páginas</b>” — e confira se a unidade é a mesma do enunciado."
+    },
+    {
+      "tema": "Situações-problema",
+      "q": "João gastou R$ 469,00 em duas parcelas. A primeira foi de R$ 247,00. Quanto foi a segunda?",
+      "opts": [
+        "R$ 222,00",
+        "R$ 232,00",
+        "R$ 212,00",
+        "R$ 716,00"
+      ],
+      "correct": 0,
+      "fb": "469 − 247 = <b>222 reais</b> na segunda parcela."
+    }
   ]
 }

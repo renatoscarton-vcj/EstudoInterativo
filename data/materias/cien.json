@@ -6,7 +6,7 @@
   "cor": "#15803D",
   "lingua": "pt",
   "ano": 4,
-  "topics": "Microscópio · Microrganismos · Saúde · Cadeia alimentar · Misturas · Transformações · Sol e sombras",
+  "topics": "Microrganismos · Cientistas · Bactérias · Fungos · Vírus · Protozoários",
   "licoes": [
     {
       "tema": "Microscópio",
@@ -113,32 +113,629 @@
     }
   ],
   "questions": [
-    {"tema": "Microscópio", "q": "Para que serve o microscópio?", "opts": ["Ver coisas muito distantes, como estrelas", "Aumentar a imagem de coisas muito pequenas", "Medir a temperatura", "Pesar objetos"], "correct": 1, "fb": "O microscópio aumenta a imagem de coisas minúsculas. Para ver estrelas usamos o telescópio."},
-    {"tema": "Microscópio", "q": "No trabalho em grupo, Elise olhou pela parte de cima do microscópio, onde se coloca o olho. Essa parte se chama:", "opts": ["Objetiva", "Ocular", "Platina", "Base"], "correct": 1, "fb": "A ocular é a lente onde colocamos o olho."},
-    {"tema": "Microscópio", "q": "Onde se coloca a lâmina com o material a ser observado?", "opts": ["Na ocular", "Na platina", "No revólver", "No braço"], "correct": 1, "fb": "A platina é a “mesinha” do microscópio, onde fica a lâmina."},
-    {"tema": "Microscópio", "q": "Para girar e trocar as lentes objetivas, Nico mexeu no:", "opts": ["Revólver", "Parafuso micrométrico", "Espelho", "Braço"], "correct": 0, "fb": "O revólver segura as objetivas e gira para trocar o aumento."},
-    {"tema": "Microscópio", "q": "Qual parafuso serve para o ajuste <b>fino</b> do foco?", "opts": ["Macrométrico", "Micrométrico", "Revólver", "Ocular"], "correct": 1, "fb": "O micrométrico faz o ajuste fino. O macrométrico faz o ajuste grosso (movimentos maiores)."},
-    {"tema": "Microscópio", "q": "Qual é o jeito certo de carregar um microscópio?", "opts": ["Pela ocular, com uma mão só", "Segurando pelo braço e apoiando a base", "Pela platina", "Pelas lentes objetivas"], "correct": 1, "fb": "Use as duas mãos: uma no braço e outra embaixo da base. Assim ele não cai e as lentes não se sujam."},
-    {"tema": "Microscópio", "q": "A plaquinha de vidro bem fina que cobre a amostra na lâmina se chama:", "opts": ["Lamínula", "Platina", "Objetiva", "Lupa"], "correct": 0, "fb": "A lamínula cobre e protege a amostra sobre a lâmina."},
-    {"tema": "Microrganismos", "q": "Qual destes <b>não</b> é um microrganismo?", "opts": ["Bactéria", "Protozoário", "Minhoca", "Levedura"], "correct": 2, "fb": "A minhoca dá para ver a olho nu, então não é microrganismo. Os outros só são vistos com microscópio."},
-    {"tema": "Microrganismos", "q": "O bolor verde que aparece no pão velho é um:", "opts": ["Fungo", "Vírus", "Inseto", "Mineral"], "correct": 0, "fb": "O bolor (mofo) é um tipo de fungo que cresce em alimentos úmidos e velhos."},
-    {"tema": "Microrganismos", "q": "Os vírus são diferentes dos outros microrganismos porque:", "opts": ["São enormes", "Não são formados por células e só se multiplicam dentro de outro ser vivo", "Fazem fotossíntese", "Vivem só no mar"], "correct": 1, "fb": "Os vírus não têm células e precisam invadir as células de outro ser vivo para se multiplicar."},
-    {"tema": "Microrganismos úteis", "q": "O fermento biológico que faz a massa do pão crescer é formado por:", "opts": ["Bactérias da gripe", "Leveduras (fungos)", "Protozoários", "Vírus"], "correct": 1, "fb": "As leveduras são fungos microscópicos. Elas soltam gás na massa, que fica fofinha."},
-    {"tema": "Microrganismos úteis", "q": "O iogurte é feito com a ajuda de:", "opts": ["Bactérias", "Vírus", "Vermes", "Algas do mar"], "correct": 0, "fb": "Bactérias “do bem” transformam o leite em iogurte."},
-    {"tema": "Microrganismos úteis", "q": "A penicilina, um dos primeiros antibióticos, foi descoberta a partir de um:", "opts": ["Fungo", "Vírus", "Peixe", "Planta carnívora"], "correct": 0, "fb": "Em 1928, Alexander Fleming percebeu que um fungo impedia o crescimento de bactérias. Daí veio a penicilina."},
-    {"tema": "Microrganismos úteis", "q": "Fungos e bactérias que transformam folhas caídas e restos de animais em nutrientes para o solo são os:", "opts": ["Produtores", "Decompositores", "Consumidores", "Predadores"], "correct": 1, "fb": "Os decompositores reciclam a matéria e devolvem nutrientes ao solo."},
-    {"tema": "Saúde", "q": "Qual hábito ajuda <b>mais</b> a evitar doenças causadas por microrganismos?", "opts": ["Lavar bem as mãos com água e sabão", "Comer doces", "Dormir pouco", "Dividir a escova de dentes"], "correct": 0, "fb": "Lavar as mãos remove muitos microrganismos que causam doenças."},
-    {"tema": "Saúde", "q": "As vacinas ajudam o corpo a:", "opts": ["Ficar mais alto", "Se defender de certas doenças", "Digerir a comida", "Enxergar melhor"], "correct": 1, "fb": "A vacina “treina” o sistema de defesa do corpo para reconhecer e combater um microrganismo."},
-    {"tema": "Cadeia alimentar", "q": "Na cadeia <em>capim → gafanhoto → sapo → cobra</em>, quem é o <b>produtor</b>?", "opts": ["Capim", "Gafanhoto", "Sapo", "Cobra"], "correct": 0, "fb": "O capim é uma planta e produz o próprio alimento com a luz do Sol."},
-    {"tema": "Cadeia alimentar", "q": "Na mesma cadeia <em>capim → gafanhoto → sapo → cobra</em>, quem é o <b>consumidor primário</b>?", "opts": ["Capim", "Gafanhoto", "Sapo", "Cobra"], "correct": 1, "fb": "O consumidor primário é o primeiro a comer o produtor: o gafanhoto, que é herbívoro."},
-    {"tema": "Cadeia alimentar", "q": "Por que as plantas são chamadas de <b>produtoras</b>?", "opts": ["Porque produzem o próprio alimento usando a luz do Sol", "Porque comem outros seres vivos", "Porque vivem muito tempo", "Porque não precisam de água"], "correct": 0, "fb": "Pela fotossíntese, as plantas usam luz, água e gás carbônico para produzir seu alimento."},
-    {"tema": "Misturas", "q": "Bia misturou água e óleo num copo. Formou-se uma mistura:", "opts": ["Homogênea", "Heterogênea", "Que vira gelo", "Que desaparece"], "correct": 1, "fb": "Dá para ver o óleo separado em cima da água: é uma mistura heterogênea."},
-    {"tema": "Misturas", "q": "Água com açúcar bem dissolvido é uma mistura:", "opts": ["Homogênea", "Heterogênea", "De sólidos", "Impossível"], "correct": 0, "fb": "O açúcar dissolvido não aparece mais: a mistura parece uma coisa só, é homogênea."},
-    {"tema": "Misturas", "q": "Para separar a areia da água, Manu usou um filtro de papel. Esse método é a:", "opts": ["Evaporação", "Filtração", "Catação", "Imantação"], "correct": 1, "fb": "Na filtração, o líquido passa pelo filtro e o sólido (a areia) fica retido."},
-    {"tema": "Misturas", "q": "Nas salinas, o sal é separado da água do mar pela:", "opts": ["Filtração", "Evaporação", "Peneiração", "Catação"], "correct": 1, "fb": "O Sol aquece a água, que evapora, e o sal fica no fundo."},
-    {"tema": "Transformações", "q": "Qual transformação é <b>irreversível</b> (não volta a ser o que era)?", "opts": ["Gelo derretendo", "Água congelando", "Bolo assando", "Chocolate derretendo"], "correct": 2, "fb": "Depois de assado, o bolo não volta a ser massa crua. As outras transformações têm volta."},
-    {"tema": "Transformações", "q": "Um prego deixado na chuva enferrujou. Essa transformação é:", "opts": ["Reversível", "Irreversível", "Uma mistura", "Uma evaporação"], "correct": 1, "fb": "A ferrugem é um material novo que se formou. O prego não volta a ser como antes."},
-    {"tema": "Sol e sombras", "q": "De manhã, o Sol aparece no lado:", "opts": ["Leste", "Oeste", "Norte", "Sul"], "correct": 0, "fb": "O Sol nasce no lado leste e se põe no lado oeste."},
-    {"tema": "Sol e sombras", "q": "Ao meio-dia, a sombra de um poste fica:", "opts": ["A mais comprida do dia", "A mais curta do dia", "Igual à de manhã", "Do tamanho do poste"], "correct": 1, "fb": "Ao meio-dia o Sol está mais alto no céu, então a sombra fica a mais curta do dia."}
+    {
+      "tema": "Microrganismos",
+      "q": "Quais são os quatro tipos de microrganismos estudados no livro?",
+      "opts": [
+        "Bactérias, fungos, vírus e protozoários",
+        "Bactérias, insetos, vírus e algas",
+        "Fungos, vírus, minhocas e protozoários",
+        "Bactérias, fungos, plantas e vírus"
+      ],
+      "correct": 0,
+      "fb": "São quatro: <b>bactérias, fungos, vírus e protozoários</b>. Vale decorar os quatro na ordem — é a base de toda a matéria."
+    },
+    {
+      "tema": "Microrganismos",
+      "q": "Como se chamam os microrganismos que <b>causam doenças</b>?",
+      "opts": [
+        "Microrganismos patogênicos",
+        "Microrganismos decompositores",
+        "Microrganismos benéficos",
+        "Microrganismos fermentados"
+      ],
+      "correct": 0,
+      "fb": "<b>Patogênicos</b> é o nome dos que causam doença. Essa palavra aparece no livro e pode cair na prova."
+    },
+    {
+      "tema": "Microrganismos",
+      "q": "Onde os microrganismos podem ser encontrados?",
+      "opts": [
+        "Na água, no solo e no corpo de outros seres vivos",
+        "Apenas em lugares sujos",
+        "Apenas dentro de hospitais",
+        "Somente no fundo do mar"
+      ],
+      "correct": 0,
+      "fb": "O livro diz: na água, no solo e no corpo de outros seres vivos. Eles estão praticamente em toda parte."
+    },
+    {
+      "tema": "Microrganismos",
+      "q": "Qual invenção permitiu que os estudos sobre microrganismos ganhassem destaque?",
+      "opts": [
+        "O microscópio",
+        "O telescópio",
+        "A vacina",
+        "O termômetro"
+      ],
+      "correct": 0,
+      "fb": "Como não podem ser vistos a olho nu, só foi possível estudá-los depois da invenção do <b>microscópio</b>, que amplia as imagens."
+    },
+    {
+      "tema": "Cientistas",
+      "q": "Quem é considerado, por alguns, o <b>inventor do microscópio</b>?",
+      "opts": [
+        "Anton van Leeuwenhoek",
+        "Edward Jenner",
+        "Alexander Fleming",
+        "Louis Pasteur"
+      ],
+      "correct": 0,
+      "fb": "<b>Anton van Leeuwenhoek</b> (1632-1723). Decore ligando: Leeuwenhoek → microscópio."
+    },
+    {
+      "tema": "Cientistas",
+      "q": "Quem foi um dos primeiros a testar, em 1796, a <b>técnica de vacinação</b>?",
+      "opts": [
+        "Edward Jenner",
+        "Anton van Leeuwenhoek",
+        "Alexander Fleming",
+        "Oswaldo Cruz"
+      ],
+      "correct": 0,
+      "fb": "<b>Edward Jenner</b> (1749-1823). Decore ligando: Jenner → vacina, em 1796."
+    },
+    {
+      "tema": "Cientistas",
+      "q": "Quem descobriu a <b>penicilina</b>?",
+      "opts": [
+        "Alexander Fleming",
+        "Edward Jenner",
+        "Anton van Leeuwenhoek",
+        "Carlos Chagas"
+      ],
+      "correct": 0,
+      "fb": "<b>Alexander Fleming</b> (1881-1955). Decore ligando: Fleming → penicilina → antibiótico."
+    },
+    {
+      "tema": "Cientistas",
+      "q": "O que foi a <em>penicilina</em>?",
+      "opts": [
+        "A primeira substância utilizada como antibiótico",
+        "A primeira vacina do mundo",
+        "O primeiro microscópio",
+        "Um tipo de bactéria"
+      ],
+      "correct": 0,
+      "fb": "A penicilina foi a <b>primeira substância usada como antibiótico</b> — descoberta por Fleming, mudou a história da medicina."
+    },
+    {
+      "tema": "Bactérias",
+      "q": "O que são <em>bactérias</em>?",
+      "opts": [
+        "Microrganismos bem pequenos, só visíveis com microscópio",
+        "Animais muito pequenos com patas",
+        "Pedaços de plantas mortas",
+        "Tipos de fungos grandes"
+      ],
+      "correct": 0,
+      "fb": "São microrganismos bem pequenos que só conseguimos ver com a ajuda de um microscópio."
+    },
+    {
+      "tema": "Bactérias",
+      "q": "Como se chamam os <b>grupos</b> que as bactérias formam quando vivem juntas?",
+      "opts": [
+        "Colônias",
+        "Bandos",
+        "Cardumes",
+        "Enxames"
+      ],
+      "correct": 0,
+      "fb": "Bactérias podem viver sozinhas ou em grupos, formando <b>colônias</b> — palavra que está no livro."
+    },
+    {
+      "tema": "Bactérias",
+      "q": "Segundo o livro, quais doenças algumas bactérias podem causar?",
+      "opts": [
+        "Infecções na garganta ou na pele",
+        "Gripe e dengue",
+        "Malária e doença de Chagas",
+        "Micose nas unhas"
+      ],
+      "correct": 0,
+      "fb": "O livro cita infecções na garganta e na pele. Gripe e dengue são vírus; malária e Chagas, protozoários; micose, fungo."
+    },
+    {
+      "tema": "Bactérias",
+      "q": "Como as bactérias provocam a <em>cárie</em>?",
+      "opts": [
+        "Encontram restos de alimentos, utilizam esse alimento e liberam uma substância que corrói os dentes",
+        "Fazem um buraco com os dentinhos delas",
+        "Deixam o dente mole com água",
+        "Comem o esmalte diretamente"
+      ],
+      "correct": 0,
+      "fb": "Exatamente como está no livro: as bactérias da boca usam os restos de alimento e <b>liberam uma substância que corrói os dentes</b>."
+    },
+    {
+      "tema": "Bactérias",
+      "q": "Quais microrganismos são utilizados na fabricação de <em>iogurtes</em>?",
+      "opts": [
+        "Bactérias",
+        "Vírus",
+        "Protozoários",
+        "Algas"
+      ],
+      "correct": 0,
+      "fb": "São as <b>bactérias</b> — essa foi a resposta 1 do diagrama de palavras cruzadas do livro."
+    },
+    {
+      "tema": "Fungos",
+      "q": "Quais destes são exemplos de <em>fungos</em>?",
+      "opts": [
+        "Os bolores do pão e os cogumelos",
+        "As minhocas e as formigas",
+        "Os musgos e as samambaias",
+        "As algas e os corais"
+      ],
+      "correct": 0,
+      "fb": "Fungos podem ser pequenos, como os bolores do pão, ou maiores, como os cogumelos que vemos na natureza."
+    },
+    {
+      "tema": "Fungos",
+      "q": "O <em>fermento biológico</em>, usado para fazer o pão crescer, é composto de:",
+      "opts": [
+        "Fungos muito pequenos, visíveis apenas com microscópio",
+        "Bactérias grandes",
+        "Vírus",
+        "Protozoários"
+      ],
+      "correct": 0,
+      "fb": "O fermento biológico é formado por <b>fungos</b> minúsculos — só dá para vê-los no microscópio."
+    },
+    {
+      "tema": "Fungos",
+      "q": "Qual doença é causada por <b>fungos</b>, segundo o livro?",
+      "opts": [
+        "A micose",
+        "A gripe",
+        "A malária",
+        "A cárie"
+      ],
+      "correct": 0,
+      "fb": "A <b>micose</b>, que ataca unhas e pele, é causada por fungos. Por isso a higiene é tão importante."
+    },
+    {
+      "tema": "Fungos",
+      "q": "Como os fungos ajudam a natureza?",
+      "opts": [
+        "Decompõem matéria orgânica, “quebrando” restos de plantas e animais em nutrientes para o solo",
+        "Produzem oxigênio como as plantas",
+        "Transportam sementes",
+        "Filtram a água dos rios"
+      ],
+      "correct": 0,
+      "fb": "Eles decompõem a matéria orgânica e devolvem nutrientes ao solo — é o papel de <b>decompositores</b>."
+    },
+    {
+      "tema": "Fungos",
+      "q": "Na cadeia alimentar, as bactérias e os fungos são chamados de:",
+      "opts": [
+        "Decompositores",
+        "Produtores",
+        "Consumidores",
+        "Predadores"
+      ],
+      "correct": 0,
+      "fb": "<b>Decompositores</b> — foi a resposta 5 do diagrama do livro. Eles fecham o ciclo devolvendo nutrientes ao solo."
+    },
+    {
+      "tema": "Vírus",
+      "q": "Por que os vírus <b>não conseguem viver sozinhos</b>?",
+      "opts": [
+        "Porque precisam invadir as células de outros seres vivos para se multiplicar",
+        "Porque morrem em menos de um minuto",
+        "Porque não suportam a luz do sol",
+        "Porque precisam de água o tempo todo"
+      ],
+      "correct": 0,
+      "fb": "Diferente dos outros microrganismos, o vírus precisa invadir a célula de outro ser vivo para se multiplicar."
+    },
+    {
+      "tema": "Vírus",
+      "q": "Como se chamam as doenças causadas por vírus?",
+      "opts": [
+        "Viroses",
+        "Bacterioses",
+        "Micoses",
+        "Infecções"
+      ],
+      "correct": 0,
+      "fb": "<b>Viroses</b>. Micose é de fungo — cuidado para não trocar os nomes na prova."
+    },
+    {
+      "tema": "Vírus",
+      "q": "Como os vírus podem ser <b>transmitidos</b>?",
+      "opts": [
+        "Pelo ar, pela água, pelo contato com pessoas doentes ou objetos contaminados",
+        "Apenas pelo ar",
+        "Apenas pela picada de mosquitos",
+        "Apenas por alimentos estragados"
+      ],
+      "correct": 0,
+      "fb": "O livro cita as quatro formas: ar, água, contato com pessoas doentes e objetos contaminados."
+    },
+    {
+      "tema": "Vírus",
+      "q": "Como se previne a <em>gripe</em>, segundo o livro?",
+      "opts": [
+        "Evitando o contato com pessoas infectadas",
+        "Tomando antibiótico todos os dias",
+        "Bebendo água gelada",
+        "Ficando no sol"
+      ],
+      "correct": 0,
+      "fb": "O vírus da gripe é transmitido pelo ar e pelo contato, então evitar contato com pessoas infectadas é a principal prevenção."
+    },
+    {
+      "tema": "Vírus",
+      "q": "A <em>raiva</em> é uma doença causada por vírus e transmitida por:",
+      "opts": [
+        "Mamíferos, através de mordidas ou saliva contaminada",
+        "Mosquitos",
+        "Água parada",
+        "Alimentos mal lavados"
+      ],
+      "correct": 0,
+      "fb": "A raiva é transmitida por mamíferos, por mordida ou contato com a saliva contaminada. <b>Vacinar cães e gatos previne a doença.</b>"
+    },
+    {
+      "tema": "Vírus",
+      "q": "<em>Dengue</em> e <em>febre amarela</em> são doenças causadas por:",
+      "opts": [
+        "Vírus",
+        "Bactérias",
+        "Fungos",
+        "Protozoários"
+      ],
+      "correct": 0,
+      "fb": "São causadas por <b>vírus</b> e transmitidas por mosquitos — resposta 2 do diagrama do livro."
+    },
+    {
+      "tema": "Protozoários",
+      "q": "Onde vivem os <em>protozoários</em>?",
+      "opts": [
+        "Em ambientes úmidos, como lagos, rios, poças d'água e dentro de outros seres vivos",
+        "Somente em lugares secos",
+        "Apenas no ar",
+        "Somente dentro de alimentos"
+      ],
+      "correct": 0,
+      "fb": "Ambientes úmidos é a palavra-chave: lagos, rios, poças d'água e dentro de outros seres vivos."
+    },
+    {
+      "tema": "Protozoários",
+      "q": "Os protozoários são constituídos de:",
+      "opts": [
+        "Uma única célula",
+        "Duas células",
+        "Milhares de células",
+        "Nenhuma célula"
+      ],
+      "correct": 0,
+      "fb": "São seres muito pequenos e formados por <b>uma única célula</b>."
+    },
+    {
+      "tema": "Protozoários",
+      "q": "<em>Malária</em> e <em>doença de Chagas</em> são causadas por:",
+      "opts": [
+        "Protozoários",
+        "Vírus",
+        "Bactérias",
+        "Fungos"
+      ],
+      "correct": 0,
+      "fb": "Por <b>protozoários</b> — resposta 6 do diagrama. Na malária, o protozoário é transmitido por mosquitos contaminados pelo parasita."
+    },
+    {
+      "tema": "Antibiótico",
+      "q": "Qual é o medicamento utilizado no combate à <b>infecção bacteriana</b>?",
+      "opts": [
+        "Antibiótico",
+        "Vacina",
+        "Xarope",
+        "Soro"
+      ],
+      "correct": 0,
+      "fb": "<b>Antibiótico</b> — resposta 3 do diagrama. Atenção à escrita: antibió<b>t</b>ico, com T e com acento no O."
+    },
+    {
+      "tema": "Pão e fermento",
+      "q": "Na fabricação do pão, o fungo utiliza como alimento:",
+      "opts": [
+        "O amido, substância presente na farinha de trigo",
+        "O sal da massa",
+        "A água da receita",
+        "O óleo da forma"
+      ],
+      "correct": 0,
+      "fb": "O fungo come o <b>amido</b> da farinha de trigo. Essa frase está destacada no livro — tem boa chance de cair."
+    },
+    {
+      "tema": "Pão e fermento",
+      "q": "Que gás é liberado dentro da massa do pão nesse processo?",
+      "opts": [
+        "Gás carbônico",
+        "Oxigênio",
+        "Hidrogênio",
+        "Nitrogênio"
+      ],
+      "correct": 0,
+      "fb": "É liberado <b>gás carbônico</b> no interior da massa — são as bolhinhas que fazem o pão crescer."
+    },
+    {
+      "tema": "Pão e fermento",
+      "q": "Como fica a massa do pão por causa desse gás?",
+      "opts": [
+        "Mais macia e porosa",
+        "Mais dura e pesada",
+        "Mais seca e quebradiça",
+        "Mais líquida"
+      ],
+      "correct": 0,
+      "fb": "O gás carbônico deixa a massa <b>macia e porosa</b> — por isso o pão tem buraquinhos por dentro."
+    },
+    {
+      "tema": "Queijo",
+      "q": "No processo de fazer queijo, as bactérias transformam o leite em uma massa mais sólida chamada:",
+      "opts": [
+        "Coalhada",
+        "Nata",
+        "Soro",
+        "Manteiga"
+      ],
+      "correct": 0,
+      "fb": "A <b>coalhada</b>. Além disso, as bactérias dão o <b>sabor</b> característico do queijo."
+    },
+    {
+      "tema": "Queijo",
+      "q": "Qual queijo de <b>mofo azul</b> é citado no livro?",
+      "opts": [
+        "Gorgonzola",
+        "Mussarela",
+        "Prato",
+        "Minas"
+      ],
+      "correct": 0,
+      "fb": "O <b>gorgonzola</b>. Os fungos crescem na casca ou dentro do queijo e dão um sabor especial."
+    },
+    {
+      "tema": "Queijo",
+      "q": "Por que as bactérias e os fungos usados nos queijos são <b>cuidadosamente controlados</b>?",
+      "opts": [
+        "Para garantir que o queijo seja seguro para comer",
+        "Para o queijo ficar mais barato",
+        "Para o queijo durar menos",
+        "Para mudar a cor do queijo"
+      ],
+      "correct": 0,
+      "fb": "Mesmo sendo úteis, precisam de controle para o queijo ser <b>seguro para comer</b> — é a parte “E a higiene?” do livro."
+    },
+    {
+      "tema": "Biocombustíveis",
+      "q": "O que são <em>biocombustíveis</em>?",
+      "opts": [
+        "Uma fonte de energia feita de materiais naturais, como plantas",
+        "Um tipo de petróleo mais limpo",
+        "Um gás encontrado no subsolo",
+        "Um remédio feito de plantas"
+      ],
+      "correct": 0,
+      "fb": "São energia feita a partir de materiais naturais, principalmente plantas — e microrganismos ajudam a produzi-los."
+    },
+    {
+      "tema": "Biocombustíveis",
+      "q": "Quais são os <b>dois principais</b> tipos de biocombustível citados?",
+      "opts": [
+        "Etanol e biodiesel",
+        "Gasolina e diesel",
+        "Querosene e álcool",
+        "Carvão e gás natural"
+      ],
+      "correct": 0,
+      "fb": "<b>Etanol</b> e <b>biodiesel</b>. Gasolina, diesel e carvão são combustíveis fósseis, o contrário disso."
+    },
+    {
+      "tema": "Biocombustíveis",
+      "q": "Plantas como o milho e a cana-de-açúcar são colhidas e transformadas em algo chamado:",
+      "opts": [
+        "Biomassa",
+        "Biosfera",
+        "Bioma",
+        "Biodiesel"
+      ],
+      "correct": 0,
+      "fb": "Viram <b>biomassa</b>. Depois, microrganismos especiais “comem” essa biomassa e a transformam em etanol."
+    },
+    {
+      "tema": "Biocombustíveis",
+      "q": "Por que os biocombustíveis são importantes?",
+      "opts": [
+        "São uma alternativa aos combustíveis fósseis, como o petróleo, que poluem mais",
+        "São mais baratos que a água",
+        "Não precisam de plantas para serem feitos",
+        "Fazem os motores durarem para sempre"
+      ],
+      "correct": 0,
+      "fb": "Produzir energia com microrganismos é mais <b>sustentável</b> e polui menos que usar petróleo."
+    },
+    {
+      "tema": "Defesas do corpo",
+      "q": "Como se chama o sistema especial que protege nosso corpo contra doenças e invasores?",
+      "opts": [
+        "Sistema imunológico",
+        "Sistema digestório",
+        "Sistema respiratório",
+        "Sistema nervoso"
+      ],
+      "correct": 0,
+      "fb": "<b>Sistema imunológico</b> — está destacado no livro. “Nosso corpo é como uma fortaleza.”"
+    },
+    {
+      "tema": "Defesas do corpo",
+      "q": "Qual é a <b>primeira</b> defesa do corpo?",
+      "opts": [
+        "A pele",
+        "O muco",
+        "A febre",
+        "Os glóbulos brancos"
+      ],
+      "correct": 0,
+      "fb": "A <b>pele</b> é a primeira defesa: funciona como um escudo que impede os germes de entrarem."
+    },
+    {
+      "tema": "Defesas do corpo",
+      "q": "O que o <em>muco</em> do nariz e da garganta faz?",
+      "opts": [
+        "Prende a poeira e os microrganismos, mantendo-os longe dos pulmões",
+        "Esquenta o ar que respiramos",
+        "Produz glóbulos brancos",
+        "Mata os vírus com calor"
+      ],
+      "correct": 0,
+      "fb": "O muco é uma substância <b>pegajosa</b> que prende poeira e microrganismos antes que cheguem aos <b>pulmões</b>."
+    },
+    {
+      "tema": "Defesas do corpo",
+      "q": "Complete: <em>As ___ ajudam a limpar os olhos e a proteger contra germes.</em>",
+      "opts": [
+        "lágrimas",
+        "laringes",
+        "narinas",
+        "pálpebras"
+      ],
+      "correct": 0,
+      "fb": "São as <b>LÁGRIMAS</b> (junto com a saliva). Cuidado para não confundir com “laringe”, que é parte da garganta e não tem esse papel!"
+    },
+    {
+      "tema": "Defesas do corpo",
+      "q": "O que fazem as <em>lágrimas</em> e a <em>saliva</em>?",
+      "opts": [
+        "Limpam os olhos e a boca, expulsando bactérias que tentem entrar",
+        "Produzem febre",
+        "Digerem os alimentos no estômago",
+        "Formam o muco do nariz"
+      ],
+      "correct": 0,
+      "fb": "Quando piscamos ou engolimos, lágrimas e saliva limpam olhos e boca, <b>expulsando bactérias</b>."
+    },
+    {
+      "tema": "Defesas do corpo",
+      "q": "Os <em>glóbulos brancos</em> são comparados no livro a:",
+      "opts": [
+        "Soldados que patrulham o corpo",
+        "Escudos que cobrem a pele",
+        "Portões que fecham a boca",
+        "Esponjas que absorvem água"
+      ],
+      "correct": 0,
+      "fb": "São “<b>soldados que patrulham o corpo</b>”, procurando e atacando qualquer bactéria ou vírus que entre."
+    },
+    {
+      "tema": "Defesas do corpo",
+      "q": "Por que o corpo produz <em>febre</em>?",
+      "opts": [
+        "Para tentar matar os invasores com o calor",
+        "Para gastar menos energia",
+        "Para avisar que estamos com fome",
+        "Para esfriar o sangue"
+      ],
+      "correct": 0,
+      "fb": "O corpo aumenta a temperatura porque <b>muitos invasores não gostam de temperaturas altas</b>."
+    },
+    {
+      "tema": "Defesas do corpo",
+      "q": "Quais hábitos o livro indica para manter as defesas fortes?",
+      "opts": [
+        "Alimentação saudável, beber bastante água, dormir bem, praticar exercícios e lavar as mãos",
+        "Dormir pouco e comer rápido",
+        "Tomar antibiótico toda semana",
+        "Evitar sair de casa"
+      ],
+      "correct": 0,
+      "fb": "São os cinco hábitos citados no final do texto. Lavar as mãos ajuda a pele a se manter limpa e protegida."
+    },
+    {
+      "tema": "Vacinas",
+      "q": "As vacinas são produzidas com:",
+      "opts": [
+        "Vírus ou bactérias enfraquecidos",
+        "Vírus e bactérias bem fortes",
+        "Antibióticos concentrados",
+        "Vitaminas e minerais"
+      ],
+      "correct": 0,
+      "fb": "Com vírus ou bactérias <b>enfraquecidos</b> — essa palavra é a chave. Assim o corpo aprende a se defender sem adoecer."
+    },
+    {
+      "tema": "Vacinas",
+      "q": "Por que crianças e adultos precisam ser vacinados?",
+      "opts": [
+        "Para prevenir doenças, ajudando o corpo a se defender de agentes infecciosos",
+        "Para curar doenças já instaladas",
+        "Para não precisar lavar as mãos",
+        "Para ficarem mais fortes fisicamente"
+      ],
+      "correct": 0,
+      "fb": "A vacina <b>previne</b>. Se a pessoa depois entrar em contato com o agente causador, o sistema imune já combate rapidamente."
+    },
+    {
+      "tema": "Vacinas",
+      "q": "Segundo o calendário de vacinação, qual vacina é dada <b>ao nascer</b>?",
+      "opts": [
+        "BCG (contra tuberculose) e Hepatite B",
+        "Tríplice viral",
+        "Febre amarela",
+        "HPV"
+      ],
+      "correct": 0,
+      "fb": "Ao nascer: <b>BCG-ID</b>, que previne as formas graves de tuberculose, e <b>Hepatite B</b> — ambas em dose única."
+    },
+    {
+      "tema": "Vacinas",
+      "q": "A <em>tríplice viral</em>, aplicada aos 12 meses, previne quais doenças?",
+      "opts": [
+        "Sarampo, caxumba e rubéola",
+        "Difteria, tétano e coqueluche",
+        "Hepatite A, B e C",
+        "Dengue, zika e chikungunya"
+      ],
+      "correct": 0,
+      "fb": "Tríplice <b>viral</b> (SCR) = <b>S</b>arampo, <b>C</b>axumba e <b>R</b>ubéola. Já a tríplice bacteriana (DTP) previne difteria, tétano e coqueluche."
+    },
+    {
+      "tema": "Vacinas",
+      "q": "Com que idade a vacina contra a <em>febre amarela</em> é aplicada pela primeira vez?",
+      "opts": [
+        "9 meses",
+        "Ao nascer",
+        "4 anos",
+        "9 anos"
+      ],
+      "correct": 0,
+      "fb": "A 1ª dose da febre amarela é aos <b>9 meses</b>, com reforço aos 4 anos."
+    },
+    {
+      "tema": "Decompositores",
+      "q": "Na composteira, qual é o papel dos microrganismos?",
+      "opts": [
+        "Decompor a matéria orgânica, ajudando na formação do solo fértil",
+        "Deixar os restos de comida mais bonitos",
+        "Produzir água para as plantas",
+        "Espantar insetos do jardim"
+      ],
+      "correct": 0,
+      "fb": "Eles decompõem restos de alimentos e folhas secas, transformando tudo em nutrientes — é assim que se forma o <b>solo fértil</b>."
+    }
   ]
 }

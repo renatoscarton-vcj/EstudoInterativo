@@ -6,7 +6,7 @@
   "cor": "#7B2CBF",
   "lingua": "en",
   "ano": 4,
-  "topics": "Nouns · Verbs · Adjectives · Simple past · Plurals · Punctuation · Synonyms & antonyms",
+  "topics": "Some / Any · A few / A little · Too much / Too many · Enough · Simple past · Food containers",
   "licoes": [
     {
       "tema": "Nouns",
@@ -94,35 +94,425 @@
     }
   ],
   "questions": [
-    {"tema": "Nouns", "q": "Which word is a <b>proper noun</b>?", "opts": ["city", "Mia", "dog", "school"], "correct": 1, "fb": "Mia is a special name, so it is a proper noun and starts with a capital letter. (Substantivo próprio.)"},
-    {"tema": "Nouns", "q": "Find the <b>noun</b>: <em>The happy cat sleeps.</em>", "opts": ["happy", "cat", "sleeps", "the"], "correct": 1, "fb": "“Cat” is an animal, so it is a noun. “Happy” is an adjective and “sleeps” is a verb."},
-    {"tema": "Verbs", "q": "Find the <b>verb</b>: <em>Théo kicks the ball.</em>", "opts": ["Théo", "kicks", "ball", "the"], "correct": 1, "fb": "“Kicks” is the action Théo does, so it is the verb."},
-    {"tema": "Verbs", "q": "Which word is an <b>action verb</b>?", "opts": ["swim", "blue", "table", "slowly"], "correct": 0, "fb": "“Swim” is something you do. Blue is an adjective, table is a noun."},
-    {"tema": "Adjectives", "q": "Find the <b>adjective</b>: <em>Joana has a beautiful garden.</em>", "opts": ["Joana", "has", "beautiful", "garden"], "correct": 2, "fb": "“Beautiful” describes the garden, so it is an adjective."},
-    {"tema": "Adjectives", "q": "Complete: <em>An elephant is ___ than a mouse.</em>", "opts": ["big", "bigger", "biggest", "more big"], "correct": 1, "fb": "To compare two things we use -er: bigger. (Big doubles the g: big → bigger.)"},
-    {"tema": "Adjectives", "q": "Complete: <em>Gael is the ___ runner in the class.</em>", "opts": ["fast", "faster", "fastest", "more fast"], "correct": 2, "fb": "Comparing one with the whole group, we use -est: the fastest."},
-    {"tema": "Simple past", "q": "What is the past of <b>play</b>?", "opts": ["plays", "played", "playing", "plaied"], "correct": 1, "fb": "Play is a regular verb: just add -ed → played."},
-    {"tema": "Simple past", "q": "What is the past of <b>go</b>?", "opts": ["goed", "went", "goes", "going"], "correct": 1, "fb": "Go is irregular: go → went. Example: We went to the zoo."},
-    {"tema": "Simple past", "q": "Complete: <em>Yesterday, Elise ___ a big pizza.</em>", "opts": ["eat", "eats", "ate", "eating"], "correct": 2, "fb": "“Yesterday” tells us it is the past. Eat is irregular: eat → ate."},
-    {"tema": "Simple past", "q": "Complete: <em>Nico and Manu ___ at the museum last Saturday.</em>", "opts": ["was", "were", "is", "am"], "correct": 1, "fb": "Nico and Manu = they. With they, we use were."},
-    {"tema": "Simple past", "q": "Complete: <em>The weather ___ sunny yesterday.</em>", "opts": ["were", "was", "are", "be"], "correct": 1, "fb": "The weather = it. With it, the past is was."},
-    {"tema": "Simple past", "q": "What is the past of <b>study</b>?", "opts": ["studyed", "studied", "studed", "studies"], "correct": 1, "fb": "Consonant + y: change y to i and add -ed → studied."},
-    {"tema": "Plurals", "q": "What is the plural of <b>box</b>?", "opts": ["boxs", "boxes", "boxies", "box"], "correct": 1, "fb": "Words ending in x add -es: boxes."},
-    {"tema": "Plurals", "q": "What is the plural of <b>child</b>?", "opts": ["childs", "children", "childes", "childrens"], "correct": 1, "fb": "Child is irregular: one child, two children."},
-    {"tema": "Plurals", "q": "What is the plural of <b>baby</b>?", "opts": ["babys", "babies", "babyes", "babis"], "correct": 1, "fb": "Consonant + y: change to -ies → babies."},
-    {"tema": "Plurals", "q": "What is the plural of <b>tooth</b>?", "opts": ["tooths", "teeth", "toothes", "teeths"], "correct": 1, "fb": "Tooth is irregular: one tooth, many teeth (like foot → feet)."},
-    {"tema": "Punctuation and capitals", "q": "Which sentence is written correctly?", "opts": ["on monday, liz went to school.", "On Monday, Lis went to school.", "On monday, Lis went to School.", "on Monday, liz went to school."], "correct": 1, "fb": "Capital letters: the first word, names (Lis) and days of the week (Monday)."},
-    {"tema": "Punctuation and capitals", "q": "Which word must <b>always</b> start with a capital letter in English?", "opts": ["dog", "October", "school", "happy"], "correct": 1, "fb": "Months and days always start with a capital in English: October, Monday."},
-    {"tema": "Punctuation and capitals", "q": "Which end mark goes here? <em>Where is my backpack</em>", "opts": [".", "?", "!", ","], "correct": 1, "fb": "It is a question, so it ends with a question mark."},
-    {"tema": "Punctuation and capitals", "q": "<em>Wow, we won the game</em> — which end mark shows strong feeling?", "opts": [".", "?", "!", ","], "correct": 2, "fb": "The exclamation mark shows strong feeling: Wow, we won the game!"},
-    {"tema": "Punctuation and capitals", "q": "<em>Close the door, please.</em> What kind of sentence is this?", "opts": ["A question", "A command", "An exclamation", "A poem"], "correct": 1, "fb": "It tells someone to do something, so it is a command."},
-    {"tema": "Synonyms and antonyms", "q": "Which word is a <b>synonym</b> for <em>happy</em>?", "opts": ["sad", "glad", "angry", "tired"], "correct": 1, "fb": "Synonyms mean almost the same: happy = glad. Sad is the antonym."},
-    {"tema": "Synonyms and antonyms", "q": "What is the <b>antonym</b> of <em>hot</em>?", "opts": ["warm", "cold", "sunny", "big"], "correct": 1, "fb": "Antonyms are opposites: hot × cold."},
-    {"tema": "Synonyms and antonyms", "q": "What is the opposite of <em>early</em>?", "opts": ["late", "soon", "fast", "first"], "correct": 0, "fb": "Early × late. (Cedo × tarde.)"},
-    {"tema": "Synonyms and antonyms", "q": "Complete: <em>Bia stayed home ___ it was raining a lot.</em>", "opts": ["but", "because", "or", "so"], "correct": 1, "fb": "“Because” gives the reason: Bia stayed home because it was raining."},
-    {"tema": "Synonyms and antonyms", "q": "Complete: <em>I like apples, ___ I don't like bananas.</em>", "opts": ["because", "but", "so", "or"], "correct": 1, "fb": "“But” shows a contrast between two ideas."},
-    {"tema": "Reading", "q": "Read: <em>Lis has a small garden. Every morning, Lis waters the tomatoes and the sunflowers. The sunflowers are taller than Lis!</em> What does Lis do every morning?", "opts": ["Plays soccer", "Waters the plants", "Eats tomatoes", "Paints sunflowers"], "correct": 1, "fb": "The text says: “Every morning, Lis waters the tomatoes and the sunflowers.”"},
-    {"tema": "Reading", "q": "Read again: <em>The sunflowers are taller than Lis!</em> Which is taller?", "opts": ["Lis", "The sunflowers", "The tomatoes", "The garden"], "correct": 1, "fb": "“Taller than Lis” means the sunflowers are taller."},
-    {"tema": "Reading", "q": "<em>do not</em> can be written as:", "opts": ["don't", "doesn't", "didn't", "dont"], "correct": 0, "fb": "Contraction: do + not = don't. The apostrophe (') takes the place of the letter o."}
+    {
+      "tema": "Some / Any",
+      "q": "Complete: <em>I have ___ bread in my bag.</em>",
+      "opts": [
+        "some",
+        "any",
+        "a few",
+        "many"
+      ],
+      "correct": 0,
+      "fb": "Usamos <b>some</b> em frases afirmativas. “Bread” é incontável, então não usamos “a few”."
+    },
+    {
+      "tema": "Some / Any",
+      "q": "Complete: <em>We don't have ___ milk in the fridge.</em>",
+      "opts": [
+        "some",
+        "any",
+        "a few",
+        "much of"
+      ],
+      "correct": 1,
+      "fb": "Em frases <b>negativas</b> usamos <b>any</b>: don't have any, isn't any, can't find any."
+    },
+    {
+      "tema": "Some / Any",
+      "q": "Complete the question: <em>Do you have ___ eggs?</em>",
+      "opts": [
+        "any",
+        "some",
+        "a little",
+        "too much"
+      ],
+      "correct": 0,
+      "fb": "Em <b>perguntas</b> normalmente usamos <b>any</b>. A exceção é quando oferecemos algo: “Would you like some juice?”"
+    },
+    {
+      "tema": "Some / Any",
+      "q": "Which sentence is <b>correct</b>?",
+      "opts": [
+        "There is some cheese on the table.",
+        "There is any cheese on the table.",
+        "There are some cheese on the table.",
+        "There is a few cheese on the table."
+      ],
+      "correct": 0,
+      "fb": "“Cheese” é incontável: usa <b>is</b> (singular) e <b>some</b> na afirmativa."
+    },
+    {
+      "tema": "A few / A little",
+      "q": "Complete: <em>There are ___ apples in the basket.</em>",
+      "opts": [
+        "a few",
+        "a little",
+        "much",
+        "any"
+      ],
+      "correct": 0,
+      "fb": "<b>A few</b> acompanha substantivos <b>contáveis</b> no plural: a few apples, a few eggs, a few friends."
+    },
+    {
+      "tema": "A few / A little",
+      "q": "Complete: <em>I need ___ water, please.</em>",
+      "opts": [
+        "a little",
+        "a few",
+        "many",
+        "too many"
+      ],
+      "correct": 0,
+      "fb": "<b>A little</b> acompanha substantivos <b>incontáveis</b>: a little water, a little sugar, a little milk."
+    },
+    {
+      "tema": "A few / A little",
+      "q": "Which word goes with <b>countable</b> nouns like “cookies”?",
+      "opts": [
+        "a few",
+        "a little",
+        "much",
+        "enough of"
+      ],
+      "correct": 0,
+      "fb": "Dá para contar cookies (1, 2, 3…), então usamos <b>a few</b>. Para leite, açúcar e arroz, que não contamos um a um, usamos <b>a little</b>."
+    },
+    {
+      "tema": "Too much / Too many",
+      "q": "Complete: <em>You ate ___ cookies! Your stomach hurts.</em>",
+      "opts": [
+        "too many",
+        "too much",
+        "a little",
+        "enough"
+      ],
+      "correct": 0,
+      "fb": "<b>Too many</b> vai com contáveis no plural (cookies, sweets, chips). <b>Too much</b> vai com incontáveis."
+    },
+    {
+      "tema": "Too much / Too many",
+      "q": "Complete: <em>This cake has ___ sugar.</em>",
+      "opts": [
+        "too much",
+        "too many",
+        "a few",
+        "enough of"
+      ],
+      "correct": 0,
+      "fb": "“Sugar” é incontável, então usamos <b>too much</b>. E “too” indica exagero — mais do que deveria."
+    },
+    {
+      "tema": "Too much / Too many",
+      "q": "What does <em>“too much”</em> mean?",
+      "opts": [
+        "More than you need or more than is good",
+        "Exactly the right amount",
+        "Very little",
+        "Nothing at all"
+      ],
+      "correct": 0,
+      "fb": "“Too” sempre indica excesso, algo negativo: too much salt, too many people. Já “enough” é a quantidade certa."
+    },
+    {
+      "tema": "Enough",
+      "q": "Complete: <em>We have ___ chairs for everyone. Nobody will stand.</em>",
+      "opts": [
+        "enough",
+        "too many",
+        "a little",
+        "any"
+      ],
+      "correct": 0,
+      "fb": "<b>Enough</b> = a quantidade suficiente, nem pouco nem demais. Vem antes do substantivo: enough chairs, enough water."
+    },
+    {
+      "tema": "Enough",
+      "q": "Which sentence shows a <b>healthy habit</b>?",
+      "opts": [
+        "I drink enough water every day.",
+        "I eat too much candy every day.",
+        "I don't eat any vegetables.",
+        "I drink too many sodas."
+      ],
+      "correct": 0,
+      "fb": "“Enough water” é a quantidade certa. As outras mostram exagero (too much/too many) ou falta (don't eat any)."
+    },
+    {
+      "tema": "Simple past",
+      "q": "Complete the question: <em>___ you eat breakfast this morning?</em>",
+      "opts": [
+        "Did",
+        "Do",
+        "Does",
+        "Was"
+      ],
+      "correct": 0,
+      "fb": "Para perguntas no passado usamos <b>Did</b> + verbo na forma base: Did you eat? Did she go?"
+    },
+    {
+      "tema": "Simple past",
+      "q": "Which question is <b>correct</b>?",
+      "opts": [
+        "Did you go to the park?",
+        "Did you went to the park?",
+        "Do you went to the park?",
+        "Did you going to the park?"
+      ],
+      "correct": 0,
+      "fb": "Depois de <b>did</b>, o verbo fica na forma base: “go”, não “went”. O “did” já marca o passado sozinho."
+    },
+    {
+      "tema": "Simple past",
+      "q": "Give the <b>short answer</b>: “Did they build a house?” — Yes, ___",
+      "opts": [
+        "they did.",
+        "they do.",
+        "they was.",
+        "they built."
+      ],
+      "correct": 0,
+      "fb": "A short answer repete o auxiliar: Yes, they did. / No, they didn't."
+    },
+    {
+      "tema": "Simple past",
+      "q": "Give the <b>negative short answer</b>: “Did he help you?” — No, ___",
+      "opts": [
+        "he didn't.",
+        "he doesn't.",
+        "he wasn't.",
+        "he not did."
+      ],
+      "correct": 0,
+      "fb": "No + sujeito + didn't. Lembre: didn't = did not."
+    },
+    {
+      "tema": "Simple past",
+      "q": "Complete: <em>___ she at home yesterday?</em>",
+      "opts": [
+        "Was",
+        "Did",
+        "Were",
+        "Is"
+      ],
+      "correct": 0,
+      "fb": "Com o verbo <b>to be</b> não usamos “did”. Para he/she/it no passado usamos <b>was</b>; para you/we/they, <b>were</b>."
+    },
+    {
+      "tema": "Food containers",
+      "q": "Complete: <em>a ___ of milk</em>",
+      "opts": [
+        "carton",
+        "bar",
+        "loaf",
+        "slice"
+      ],
+      "correct": 0,
+      "fb": "<b>A carton of milk</b> — a caixinha. Leite também pode vir em <i>a bottle of milk</i>."
+    },
+    {
+      "tema": "Food containers",
+      "q": "Complete: <em>a ___ of bread</em>",
+      "opts": [
+        "loaf",
+        "carton",
+        "can",
+        "bar"
+      ],
+      "correct": 0,
+      "fb": "<b>A loaf of bread</b> = um pão de forma inteiro. Uma fatia é <i>a slice of bread</i>."
+    },
+    {
+      "tema": "Food containers",
+      "q": "Complete: <em>a ___ of chocolate</em>",
+      "opts": [
+        "bar",
+        "jar",
+        "bag",
+        "carton"
+      ],
+      "correct": 0,
+      "fb": "<b>A bar of chocolate</b> = uma barra de chocolate."
+    },
+    {
+      "tema": "Food containers",
+      "q": "Complete: <em>a ___ of jam</em>",
+      "opts": [
+        "jar",
+        "loaf",
+        "bar",
+        "slice"
+      ],
+      "correct": 0,
+      "fb": "<b>A jar of jam</b> = um pote de geleia. <i>Jar</i> é o pote de vidro com tampa."
+    },
+    {
+      "tema": "Food containers",
+      "q": "Complete: <em>a ___ of soup</em>",
+      "opts": [
+        "can",
+        "loaf",
+        "slice",
+        "bar"
+      ],
+      "correct": 0,
+      "fb": "<b>A can of soup</b> = uma lata de sopa. <i>Can</i> também serve para refrigerante: a can of soda."
+    },
+    {
+      "tema": "Food containers",
+      "q": "Complete: <em>a ___ of rice</em>",
+      "opts": [
+        "bag",
+        "bar",
+        "carton",
+        "slice"
+      ],
+      "correct": 0,
+      "fb": "<b>A bag of rice</b> = um saco de arroz. Biscoitos vêm em <i>a packet of biscuits</i>."
+    },
+    {
+      "tema": "Countable / Uncountable",
+      "q": "Which word is <b>uncountable</b> (não dá para contar um a um)?",
+      "opts": [
+        "water",
+        "apples",
+        "eggs",
+        "sandwiches"
+      ],
+      "correct": 0,
+      "fb": "<b>Water</b> é incontável — por isso dizemos <i>a little water</i>, nunca “two waters”. Os outros são contáveis."
+    },
+    {
+      "tema": "Countable / Uncountable",
+      "q": "Which question is <b>correct</b> for uncountable nouns?",
+      "opts": [
+        "How much sugar do you need?",
+        "How many sugar do you need?",
+        "How much apples do you need?",
+        "How many sugars do you want to count?"
+      ],
+      "correct": 0,
+      "fb": "<b>How much</b> + incontável (sugar, water, rice). <b>How many</b> + contável no plural (apples, eggs)."
+    },
+    {
+      "tema": "Countable / Uncountable",
+      "q": "Complete: <em>___ eggs are there in the fridge?</em>",
+      "opts": [
+        "How many",
+        "How much",
+        "How long",
+        "How often"
+      ],
+      "correct": 0,
+      "fb": "“Eggs” é contável no plural → <b>How many</b>."
+    },
+    {
+      "tema": "Simple past",
+      "q": "What is the simple past of <em>go</em>?",
+      "opts": [
+        "went",
+        "goed",
+        "gone",
+        "going"
+      ],
+      "correct": 0,
+      "fb": "<b>Went</b>. “Go” é irregular — não ganha “-ed”."
+    },
+    {
+      "tema": "Simple past",
+      "q": "What is the simple past of <em>eat</em>?",
+      "opts": [
+        "ate",
+        "eated",
+        "eaten",
+        "eating"
+      ],
+      "correct": 0,
+      "fb": "<b>Ate</b>. Outro verbo irregular comum na prova."
+    },
+    {
+      "tema": "Simple past",
+      "q": "What is the simple past of <em>build</em>?",
+      "opts": [
+        "built",
+        "builded",
+        "buildt",
+        "building"
+      ],
+      "correct": 0,
+      "fb": "<b>Built</b> — útil na unidade sobre casas: “They built a house.”"
+    },
+    {
+      "tema": "Simple past",
+      "q": "What is the simple past of <em>live</em>?",
+      "opts": [
+        "lived",
+        "live",
+        "liveed",
+        "living"
+      ],
+      "correct": 0,
+      "fb": "<b>Lived</b>. Verbos regulares ganham <b>-ed</b> (ou só -d quando já terminam em e)."
+    },
+    {
+      "tema": "Simple past",
+      "q": "Complete: <em>Where ___ you live last year?</em>",
+      "opts": [
+        "did",
+        "do",
+        "does",
+        "was"
+      ],
+      "correct": 0,
+      "fb": "Pergunta no passado com palavra interrogativa: <b>Where did you live?</b>"
+    },
+    {
+      "tema": "Simple past",
+      "q": "Give the short answer: “Were they at school?” — Yes, ___",
+      "opts": [
+        "they were.",
+        "they was.",
+        "they did.",
+        "they are."
+      ],
+      "correct": 0,
+      "fb": "Com o verbo <b>to be</b>, a short answer repete was/were: Yes, they <b>were</b>."
+    },
+    {
+      "tema": "Paragraph writing",
+      "q": "What does a good <em>paragraph</em> usually start with?",
+      "opts": [
+        "A topic sentence that says what the paragraph is about",
+        "The conclusion",
+        "A question only",
+        "A list of names"
+      ],
+      "correct": 0,
+      "fb": "A <b>topic sentence</b> abre o parágrafo e anuncia o assunto. Depois vêm as frases de apoio (supporting sentences)."
+    },
+    {
+      "tema": "Paragraph writing",
+      "q": "How do we start every <b>sentence</b> in English?",
+      "opts": [
+        "With a capital letter",
+        "With a small letter",
+        "With a number",
+        "With a comma"
+      ],
+      "correct": 0,
+      "fb": "Letra maiúscula no começo e ponto final no fim — regra básica que vale nota na prova."
+    },
+    {
+      "tema": "Paragraph writing",
+      "q": "Which words help <b>connect</b> ideas in a paragraph?",
+      "opts": [
+        "and, but, because, also",
+        "cat, dog, house",
+        "red, blue, green",
+        "one, two, three"
+      ],
+      "correct": 0,
+      "fb": "São os <b>connectors</b>: and (adiciona), but (contrasta), because (explica), also (acrescenta)."
+    }
   ]
 }

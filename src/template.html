@@ -48,6 +48,7 @@
     --ceu:#3B82F6;
 
     /* tipos do calendário */
+    --t-sistematizada:#BE123C;
     --t-avaliacao:#E11D48;
     --t-atividade:#2563EB;
     --t-trabalho:#059669;
@@ -744,6 +745,7 @@ function hash(t){ let h = 0; for(const c of String(t)) h = (h*31 + c.charCodeAt(
 //  TIPOS DO CALENDÁRIO E DATAS
 // =========================================================
 const TIPOS = {
+  sistematizada:{nome:'Avaliação Sistematizada', curto:'Sistematizada', icon:'🎯'},
   avaliacao:{nome:'Avaliação Diversificada', curto:'Avaliação', icon:'📝'},
   atividade:{nome:'Atividade Avaliativa',    curto:'Atividade', icon:'✏️'},
   trabalho: {nome:'Trabalho em grupo',       curto:'Trabalho',  icon:'👥'},
@@ -751,7 +753,7 @@ const TIPOS = {
   evento:   {nome:'Evento da escola',        curto:'Evento',    icon:'🎉'},
   feriado:  {nome:'Feriado',                 curto:'Feriado',   icon:'🌴'}
 };
-const TIPOS_ESTUDO = ['avaliacao','atividade','trabalho','entrega'];
+const TIPOS_ESTUDO = ['sistematizada','avaliacao','atividade','trabalho','entrega'];
 const MESES = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
 const SEMANA = ['domingo','segunda','terça','quarta','quinta','sexta','sábado'];
 
