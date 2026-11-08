@@ -594,6 +594,43 @@
   .pino.certa{background:#E7FBF2; border-color:var(--menta);}
   .pino.errada{background:#FFECEF; border-color:var(--coral);}
 
+  /* ---------- Dois passaportes (dois jogadores) ---------- */
+  .duelo-placar{display:grid; grid-template-columns:1fr auto 1fr; gap:8px; margin-bottom:12px;}
+  .dj{
+    background:#fff; border:2px solid var(--line-2); border-radius:16px;
+    padding:9px 8px; text-align:center; box-shadow:0 3px 0 var(--line); min-width:0;
+  }
+  .dj.vez{border-color:var(--violeta); box-shadow:0 3px 0 var(--violeta); background:#F3F0FF;}
+  .dj-ic{font-size:25px; line-height:1;}
+  .dj-nome{font-weight:900; font-size:13.5px; margin-top:1px; overflow-wrap:anywhere; line-height:1.2;}
+  .dj-pts{font-family:var(--fd); font-size:31px; font-weight:800; line-height:1.05; color:var(--violeta);}
+  .dj-seq{font-size:11.5px; font-weight:800; color:var(--ink-3); min-height:15px;}
+  .duelo-vs{display:grid; place-items:center; font-weight:900; color:var(--ink-3); font-size:12.5px; padding:0 2px;}
+  .duelo-vez{
+    background:var(--violeta); color:#fff; border-radius:14px; padding:9px 12px;
+    font-weight:900; font-size:15.5px; text-align:center; margin-bottom:12px;
+    display:flex; align-items:center; justify-content:center; gap:7px;
+  }
+  .duelo-jog{display:flex; gap:10px; align-items:center; margin-bottom:10px;}
+  .duelo-jog .avatar{flex-shrink:0;}
+  .duelo-jog .campo{margin:0;}
+  .duelo-mats{display:grid; grid-template-columns:repeat(auto-fill,minmax(104px,1fr)); gap:7px;}
+  .duelo-mat{
+    cursor:pointer; background:#fff; border:2px solid var(--line-2); border-radius:13px;
+    box-shadow:0 3px 0 var(--line); padding:9px 7px; font-weight:800; font-size:13.5px;
+    color:var(--ink); text-align:center; line-height:1.25;
+  }
+  .duelo-mat.sel{border-color:var(--violeta); box-shadow:0 3px 0 var(--violeta); background:#F3F0FF;}
+  .duelo-mat span{display:block; font-size:20px; line-height:1.1; margin-bottom:2px;}
+  .podio{display:flex; justify-content:center; align-items:flex-end; gap:14px; margin:6px 0 14px;}
+  .podio-j{text-align:center; min-width:96px;}
+  .podio-ic{font-size:44px; line-height:1;}
+  .podio-ic.perdeu{opacity:.55; font-size:36px;}
+  .podio-nome{font-weight:900; font-size:15px; margin-top:2px; overflow-wrap:anywhere;}
+  .podio-pts{font-family:var(--fd); font-size:38px; font-weight:800; line-height:1; color:var(--violeta);}
+  .podio-j.perdeu .podio-pts{color:var(--ink-3); font-size:30px;}
+  .coroa{font-size:22px; line-height:1;}
+
   .card.treme{animation:treme .45s ease;}
   @keyframes treme{0%,100%{transform:translateX(0);}20%{transform:translateX(-8px);}40%{transform:translateX(8px);}60%{transform:translateX(-5px);}80%{transform:translateX(5px);}}
   @keyframes pulsa{0%{transform:scale(1);}50%{transform:scale(1.15);}100%{transform:scale(1);}}
@@ -832,7 +869,7 @@
     <button class="versao-selo" id="versaoSelo" onclick="copiarVersao()"
             title="Toque para copiar o código da versão">
       <span class="versao-rotulo">versão</span>
-      <span class="versao-cod">v2026.11.08·B44242</span>
+      <span class="versao-cod">v2026.11.08·B6A648</span>
       <span class="versao-copiar" id="versaoCopiar">⧉</span>
     </button>
   </footer>
@@ -7998,7 +8035,7 @@ function limparProgresso(subjectId){
 
 // guarda o estado atual da partida para poder retomar
 function persistirPartida(){
-  if(!current || !order.length || temaJogo || revendo) return;
+  if(!current || !order.length || temaJogo || revendo || duelo) return;
   const anterior = lerProgresso()[current.id] || {};
   salvarProgresso(current.id, {
     ...anterior,
@@ -8377,6 +8414,7 @@ function renderMenu(manterRolagem){
     <div class="atalhos">
       <button class="atalho" onclick="renderPassaporte()"><span class="a-ic" style="background:#EDE9FF" aria-hidden="true">🛂</span><span><b>Meu Passaporte</b><small>carimbos e conquistas</small></span></button>
       <button class="atalho" onclick="jogarSurpresa()"><span class="a-ic" style="background:#FFF1C9" aria-hidden="true">🎲</span><span><b>Desafio surpresa</b><small>10 perguntas misturadas</small></span></button>
+      <button class="atalho" onclick="renderDuelo()"><span class="a-ic" style="background:#DFF6EC" aria-hidden="true">🛂</span><span><b>Dois passaportes</b><small>disputa entre dois viajantes</small></span></button>
     </div>
 
     ${htmlProximo()}
@@ -8624,6 +8662,7 @@ function embaralharOpcoes(q, semente){
 }
 
 function novaPartida(perguntas, semente){
+  duelo = null;   // quem começa um duelo religa isto logo depois
   semeadura = semente || (Date.now() >>> 0) || 1;
   order = perguntas.map(q => embaralharOpcoes(q, semeadura));
   answers = new Array(order.length).fill(null);
@@ -8765,7 +8804,9 @@ function renderQuestion(){
   }
 
   const isLast = idx === order.length - 1;
-  const sair = current.id === 'surpresa' ? 'backToMenu()' : `renderMateria('${current.id}')`;
+  const sair = duelo ? 'renderDuelo()'
+             : current.id === 'surpresa' ? 'backToMenu()'
+             : `renderMateria('${current.id}')`;
   const titulo = temaJogo && temaJogo !== 'Surpresa' ? `${current.icon} ${temaJogo}` : `${current.icon} ${current.name}`;
 
   tela(`
@@ -8775,11 +8816,12 @@ function renderQuestion(){
       <button class="voltar-ic" onclick="${sair}" aria-label="Pausar e sair">←</button>
       <div class="progresso" role="progressbar" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso"><div class="progresso-barra" style="width:${pct}%"></div></div>
       <span class="contador">${idx+1}/${order.length}</span>
-      <span class="combo ${seq >= 3 && animarResposta === 'ok' ? 'quente' : ''}" aria-label="Sequência de acertos">🔥 ${seq}</span>
+      ${duelo ? '' : `<span class="combo ${seq >= 3 && animarResposta === 'ok' ? 'quente' : ''}" aria-label="Sequência de acertos">🔥 ${seq}</span>`}
     </div>
 
-    ${justEvolved ? `<div class="evoluiu-banner">🎉 Evoluiu! Agora você viaja ${v.name.toLowerCase()} ${v.icon}</div>` : ''}
-    <div class="veiculo">
+    ${duelo ? cabecalhoDuelo() : ''}
+    ${!duelo && justEvolved ? `<div class="evoluiu-banner">🎉 Evoluiu! Agora você viaja ${v.name.toLowerCase()} ${v.icon}</div>` : ''}
+    <div class="veiculo" ${duelo ? 'hidden' : ''}>
       <div class="veiculo-ic ${justEvolved ? 'evoluiu' : ''}" aria-hidden="true">${v.icon}</div>
       <div class="veiculo-info">
         <div class="veiculo-nome">${v.name} · ${score} acerto${score===1?'':'s'}</div>
@@ -8817,6 +8859,22 @@ function fecharQuestao(resposta, el){
   if(answers[idx] !== null || revendo) return;
   answers[idx] = resposta;
   const ok = respostaCerta(idx);
+
+  // No duelo o ponto é do jogador da vez, não do perfil do aparelho.
+  // Sai daqui antes de mexer em XP, carimbos e progresso: as respostas
+  // são de duas pessoas e creditar tudo a um perfil falsearia o histórico.
+  if(duelo){
+    const j = duelo.jogadores[duelo.vez];
+    if(ok){ j.pontos++; j.seq++; } else { j.seq = 0; }
+    animarResposta = ok ? 'ok' : 'nao';
+    if(ok){ xpVoando(el, '+1'); somAcerto(j.seq); if(j.seq >= 3) confete(18); }
+    else somErro();
+    renderQuestion();
+    const rd = document.querySelector('.retorno');
+    if(rd && rd.scrollIntoView) rd.scrollIntoView({behavior: reduzMovimento ? 'auto' : 'smooth', block:'nearest'});
+    return;
+  }
+
   const oldVi = vehicleIndex;
   vehicleIndex = getVehicleIndex(getScore());
   justEvolved = vehicleIndex > oldVi;
@@ -9006,9 +9064,169 @@ function corpoLigar(q, given, respondida){
   `;
 }
 
-function prevQuestion(){ if(idx > 0){ idx--; renderQuestion(); } }
+// =========================================================
+//  DOIS PASSAPORTES (dois jogadores no mesmo aparelho)
+//
+//  Revezam uma pergunta cada, com placar próprio e sequência de
+//  acertos própria — então a trilha sonora de cada um sobe sozinha.
+//  A partida não mexe em XP, carimbos nem progresso de perfil: as
+//  respostas são de duas pessoas, creditar tudo a um perfil seria
+//  mentira no histórico.
+// =========================================================
+let duelo = null;
+let dueloCfg = {a:{nome:'', icone:'🦊'}, b:{nome:'', icone:'🐼'}, materia:'misto', quantas:10};
+const ICONES_DUELO = ['🦊','🐼','🐯','🐨','🦁','🐵','🐸','🦉','🐙','🦄'];
+
+function renderDuelo(){
+  persistirPartida();
+  const p = perfilAtual();
+  if(!dueloCfg.a.nome && p.nome) dueloCfg.a.nome = p.nome;
+  if(!dueloCfg.a.nome && p.icone) dueloCfg.a.icone = p.icone;
+
+  const jogador = (lado, rotulo) => {
+    const j = dueloCfg[lado];
+    return `
+      <div class="rotulo">${rotulo}</div>
+      <div class="duelo-jog">
+        <div class="avatar" aria-hidden="true">${j.icone}</div>
+        <input type="text" class="campo" maxlength="14" autocomplete="off" placeholder="Nome"
+               value="${esc(j.nome)}" oninput="dueloNome('${lado}', this.value)">
+      </div>
+      <div class="icones">
+        ${ICONES_DUELO.map(ic => `<button class="icone-op ${ic === j.icone ? 'sel' : ''}" onclick="dueloIcone('${lado}','${ic}')" aria-label="Ícone ${ic}">${ic}</button>`).join('')}
+      </div>`;
+  };
+
+  const mats = [{id:'misto', icon:'🎲', name:'Misturado'}].concat(subjects.map(s => ({id:s.id, icon:s.icon, name:s.name})));
+  const pronto = dueloCfg.a.nome.trim() && dueloCfg.b.nome.trim();
+
+  tela(`
+    <button class="voltar" onclick="backToMenu()">← Início</button>
+    <h2 class="secao-titulo" style="margin-top:0">🛂🛂 Dois passaportes</h2>
+    <p class="texto-ajuda">Dois viajantes revezam no mesmo aparelho, uma pergunta cada.
+    Quem tiver mais carimbos no fim leva a viagem.</p>
+
+    <section class="card">${jogador('a', '1º viajante')}</section>
+    <section class="card">${jogador('b', '2º viajante')}</section>
+
+    <section class="card">
+      <h3 class="secao-titulo" style="margin-top:0">📚 Sobre o quê?</h3>
+      <div class="duelo-mats">
+        ${mats.map(m => `<button class="duelo-mat ${dueloCfg.materia === m.id ? 'sel' : ''}" onclick="dueloMateria('${m.id}')"><span aria-hidden="true">${m.icon}</span>${m.name}</button>`).join('')}
+      </div>
+      <div class="rotulo" style="margin-top:12px">Quantas perguntas</div>
+      <div class="duelo-mats">
+        ${[6, 10, 16, 20].map(n => `<button class="duelo-mat ${dueloCfg.quantas === n ? 'sel' : ''}" onclick="dueloQuantas(${n})">${n}</button>`).join('')}
+      </div>
+    </section>
+
+    <button class="btn btn-primario btn-bloco" onclick="comecarDuelo()" ${pronto ? '' : 'disabled'}>
+      ${pronto ? '🏁 Começar a disputa' : 'Escreva os dois nomes'}
+    </button>
+  `);
+}
+function dueloNome(lado, v){
+  dueloCfg[lado].nome = v;
+  // só liga ou desliga o botão: redesenhar aqui faria o teclado fechar a cada letra
+  const b = document.querySelector('button[onclick="comecarDuelo()"]');
+  const pronto = dueloCfg.a.nome.trim() && dueloCfg.b.nome.trim();
+  if(b){ b.disabled = !pronto; b.textContent = pronto ? '🏁 Começar a disputa' : 'Escreva os dois nomes'; }
+}
+function dueloIcone(lado, ic){ dueloCfg[lado].icone = ic; renderDuelo(); }
+function dueloMateria(id){ dueloCfg.materia = id; renderDuelo(); }
+function dueloQuantas(n){ dueloCfg.quantas = n; renderDuelo(); }
+
+function comecarDuelo(){
+  const a = dueloCfg.a.nome.trim(), b = dueloCfg.b.nome.trim();
+  if(!a || !b) return;
+
+  let fonte;
+  if(dueloCfg.materia === 'misto'){
+    fonte = shuffle(subjects.flatMap(s => s.questions.map(q => Object.assign({}, q, {_mat: s.id}))));
+    current = {id:'duelo', name:'Dois passaportes', icon:'🛂', cor:'#6C4DFF', lingua:'pt', questions:[]};
+  } else {
+    const m = materia(dueloCfg.materia);
+    if(!m) return;
+    fonte = shuffle(m.questions.slice());
+    current = Object.assign({}, m, {id:'duelo', name:m.name, icon:m.icon});
+  }
+  // número par: os dois jogam a mesma quantidade de perguntas
+  const quantas = Math.min(fonte.length - (fonte.length % 2), dueloCfg.quantas);
+  if(quantas < 2) return;
+
+  const novo = {
+    jogadores: [
+      {nome:a, icone:dueloCfg.a.icone, pontos:0, seq:0},
+      {nome:b, icone:dueloCfg.b.icone, pontos:0, seq:0}
+    ],
+    vez: 0
+  };
+  modoRevisao = false; temaJogo = null;
+  novaPartida(fonte.slice(0, quantas));   // limpa o duelo anterior e desenha
+  duelo = novo;
+  renderQuestion();                       // redesenha já com o placar
+}
+
+function cabecalhoDuelo(){
+  const [x, y] = duelo.jogadores;
+  const cartao = (j, i) => `
+    <div class="dj ${duelo.vez === i ? 'vez' : ''}">
+      <div class="dj-ic" aria-hidden="true">${j.icone}</div>
+      <div class="dj-nome">${esc(j.nome)}</div>
+      <div class="dj-pts">${j.pontos}</div>
+      <div class="dj-seq">${j.seq >= 2 ? '🔥 ' + j.seq + ' seguidas' : ''}</div>
+    </div>`;
+  const vez = duelo.jogadores[duelo.vez];
+  return `
+    <div class="duelo-placar">${cartao(x, 0)}<div class="duelo-vs">vs</div>${cartao(y, 1)}</div>
+    <div class="duelo-vez" role="status">${vez.icone} É a vez de ${esc(vez.nome)}!</div>`;
+}
+
+function renderDueloFim(){
+  const [x, y] = duelo.jogadores;
+  const empate = x.pontos === y.pontos;
+  const venceu = x.pontos > y.pontos ? x : y;
+  const perdeu = x.pontos > y.pontos ? y : x;
+
+  somVitoria(100);
+  confete(empate ? 40 : 80);
+
+  const cartao = (j, campeao) => `
+    <div class="podio-j ${campeao ? '' : 'perdeu'}">
+      ${campeao && !empate ? '<div class="coroa" aria-hidden="true">👑</div>' : '<div class="coroa">&nbsp;</div>'}
+      <div class="podio-ic ${campeao ? '' : 'perdeu'}" aria-hidden="true">${j.icone}</div>
+      <div class="podio-nome">${esc(j.nome)}</div>
+      <div class="podio-pts">${j.pontos}</div>
+    </div>`;
+
+  tela(`
+    <div class="card fim">
+      <h2 style="margin-top:0">${empate ? '🤝 Empate!' : '🏆 ' + esc(venceu.nome) + ' venceu!'}</h2>
+      <div class="podio">
+        ${empate ? cartao(x, true) + cartao(y, true) : cartao(venceu, true) + cartao(perdeu, false)}
+      </div>
+      <p class="texto-ajuda" style="text-align:center">
+        ${empate
+          ? 'Os dois acertaram a mesma coisa. Joguem de novo para desempatar!'
+          : `${esc(venceu.nome)} acertou ${venceu.pontos} das ${order.length / 2} perguntas que respondeu. Revanche?`}
+      </p>
+      <div class="acoes">
+        <button class="btn btn-primario" onclick="comecarDuelo()">🔁 Revanche</button>
+        <button class="btn btn-claro" onclick="renderDuelo()">👥 Trocar jogadores</button>
+        <button class="btn btn-sol" onclick="duelo=null; backToMenu()">← Início</button>
+      </div>
+    </div>
+  `);
+}
+
+function prevQuestion(){ if(idx > 0 && !duelo){ idx--; renderQuestion(); } }
 function nextQuestion(){
   if(answers[idx] === null) return;
+  if(duelo){
+    if(idx < order.length - 1){ duelo.vez = 1 - duelo.vez; idx++; renderQuestion(); }
+    else renderDueloFim();
+    return;
+  }
   if(idx < order.length - 1){ idx++; renderQuestion(); }
   else renderEnd();
 }
@@ -9148,7 +9366,7 @@ function renderPassaporte(){
 //  Código visível no rodapé para conferir que todos estão
 //  na mesma versão. Também fica em window.PASSAPORTE_VERSAO.
 // =========================================================
-const PASSAPORTE_VERSAO = 'v2026.11.08·B44242';
+const PASSAPORTE_VERSAO = 'v2026.11.08·B6A648';
 window.PASSAPORTE_VERSAO = PASSAPORTE_VERSAO;
 console.info('Passaporte do Saber ' + PASSAPORTE_VERSAO);
 
