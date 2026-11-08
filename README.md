@@ -2,8 +2,14 @@
 
 > Desenvolvido por **Alaris IA**
 
+### ▶️ Jogue agora: **https://renatoscarton-vcj.github.io/EstudoInterativo/**
+
 Jogo de revisão para provas do ensino fundamental. Funciona **offline**, em qualquer
 navegador — celular, tablet, Chromebook ou computador. Sem instalação, sem conta, sem servidor.
+
+> Cada versão tem um código no rodapé (por exemplo `v2026.11.08·B6A648`). Ele é uma impressão
+> digital do próprio arquivo: duas pessoas que veem o mesmo código estão com exatamente a mesma
+> versão. Se o seu estiver diferente, recarregue a página segurando `Ctrl` + `Shift` + `R`.
 
 Feito para o **4º ano do Ensino Fundamental**: mostra o calendário de avaliações da escola,
 ensina cada assunto com lições curtas contadas pela turma (Caio, Joana, Manu, Elise, Théo, Lis,
@@ -18,15 +24,15 @@ Abra o arquivo `index.html` no navegador. É só isso.
 
 - **No computador/Chromebook:** clique duas vezes no arquivo, ou arraste para uma aba do navegador.
 - **No celular/tablet:** salve o arquivo e abra com o navegador.
-- **Online:** acesse pelo GitHub Pages (link nas configurações do repositório).
+- **Online:** https://renatoscarton-vcj.github.io/EstudoInterativo/
 
 O progresso fica salvo no próprio navegador — dá para fechar e continuar depois.
 
 ### O que ele faz
 
-- **Calendário de avaliações** (setembro e outubro de 2026) com cores por tipo:
-  📝 Avaliação Diversificada · ✏️ Atividade Avaliativa · 👥 Trabalho em grupo ·
-  📦 Entrega de trabalho · 🎉 Evento · 🌴 Feriado
+- **Calendário de avaliações** com cores por tipo:
+  🎯 Avaliação Sistematizada · 📝 Avaliação Diversificada · ✏️ Atividade Avaliativa ·
+  👥 Trabalho em grupo · 📦 Entrega de trabalho · 🎉 Evento · 🌴 Feriado
 - **Próximo desafio** com contagem regressiva e atalho para treinar as matérias daquela data
 - **8 matérias**: Língua Portuguesa, Matemática, Ciências, História e Geografia,
   Language Arts, Math, Science e Social Studies
@@ -34,6 +40,10 @@ O progresso fica salvo no próprio navegador — dá para fechar e continuar dep
 - **Cartas de estudo**: vire a carta e veja a resposta com explicação
 - **Desafio completo** ou **por tema**, com estrelas, XP, sequência de acertos 🔥, sons e confete
 - **Desafio surpresa**: 10 perguntas misturadas, puxando mais das próximas avaliações
+- **Três tipos de exercício**: escolher a alternativa, 🧭 **montar a rota** (pôr as etapas na
+  ordem certa) e 🖃 **carimbar o par** (ligar as duas colunas)
+- **Dois passaportes**: disputa entre dois jogadores no mesmo aparelho, revezando uma pergunta
+  cada, com placar, trilha sonora própria para cada um e pódio no fim
 - **Continuar** de onde parou e **revisar só os erros**
 - **Passaporte de carimbos** (conquistas), **perfis** por aluno e **backup** do progresso
 
@@ -155,6 +165,57 @@ Cada matéria é um arquivo em `data/materias/`:
 | `fb` | explicação mostrada após responder |
 
 > ⚠️ `correct` conta a partir do zero: `0` é a primeira alternativa, `1` a segunda, e assim por diante.
+>
+> Não se preocupe em variar a posição da resposta certa na hora de escrever — **o jogo embaralha
+> as alternativas a cada partida**. Mas evite deixar o arquivo inteiro com a certa em primeiro
+> lugar: o build recusa gerar se mais de 50% das respostas ficarem na mesma posição.
+
+### Os outros dois tipos de exercício
+
+Sem o campo `tipo`, a pergunta é de múltipla escolha. Com ele, viram outra coisa:
+
+**🧭 Montar a rota** — a criança põe as etapas na ordem certa. Escreva `itens` **já na ordem
+correta**; quem embaralha na tela é o jogo.
+
+```json
+{
+  "tipo": "ordenar",
+  "tema": "Pão e fermento",
+  "q": "Monte a ordem do que acontece quando o pão cresce",
+  "itens": [
+    "O fermento biológico é misturado à massa",
+    "O fungo se alimenta do amido da farinha de trigo",
+    "O fungo libera gás carbônico dentro da massa",
+    "A massa fica mais macia e porosa"
+  ],
+  "fb": "O fermento é um fungo..."
+}
+```
+
+**🖃 Carimbar o par** — duas colunas para ligar. Cada par é `["esquerda", "direita"]`.
+
+```json
+{
+  "tipo": "ligar",
+  "tema": "Microrganismos",
+  "q": "Ligue cada microrganismo à doença que ele causa",
+  "pares": [
+    ["Bactéria", "Infecção na garganta"],
+    ["Fungo", "Micose"],
+    ["Vírus", "Dengue"]
+  ],
+  "fb": "Antibiótico só funciona contra bactéria..."
+}
+```
+
+| Campo | Vale para | Regra |
+|---|---|---|
+| `tipo` | todos | `escolha` (padrão), `ordenar` ou `ligar` |
+| `itens` | `ordenar` | de 3 a 6, na ordem certa, sem repetir |
+| `pares` | `ligar` | de 3 a 6 pares, sem repetir **dos dois lados** |
+
+> ⚠️ Em `ligar`, repetir um texto em qualquer das colunas deixa a questão sem resposta única —
+> por isso o build recusa.
 
 Depois de editar, rode o build:
 
