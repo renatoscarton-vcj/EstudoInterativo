@@ -109,36 +109,36 @@
       "tema": "Ordinal numbers",
       "q": "Which is the ordinal number for <em>5</em>?",
       "opts": [
-        "fifth",
         "fiveth",
+        "fifth",
         "fifeth",
         "fivth"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "Five → <b>fifth</b> (o “ve” vira “f”). O mesmo acontece com twelve → twelfth."
     },
     {
       "tema": "Ordinal numbers",
       "q": "Which is the ordinal number for <em>9</em>?",
       "opts": [
-        "ninth",
         "nineth",
         "ninenth",
+        "ninth",
         "nineeth"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "Nine → <b>ninth</b>: o “e” cai antes do “-th”. É uma das poucas exceções, vale decorar."
     },
     {
       "tema": "Ordinal numbers",
       "q": "My birthday is on the <em>21st</em> of May. How do you say it?",
       "opts": [
-        "twenty-first",
         "twenty-oneth",
         "twentieth-one",
-        "two-one-th"
+        "two-one-th",
+        "twenty-first"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "Em números compostos, só a última parte vira ordinal: twenty-<b>first</b>, thirty-<b>second</b>, forty-<b>third</b>."
     },
     {
@@ -157,36 +157,36 @@
       "tema": "Fractions",
       "q": "What fraction of this shape is shaded if <b>1 of 4 equal parts</b> is coloured?",
       "opts": [
-        "1/4",
         "1/2",
+        "1/4",
         "3/4",
         "4/1"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "O número de baixo diz em quantas partes dividimos (4) e o de cima quantas pintamos (1): one quarter."
     },
     {
       "tema": "Fractions",
       "q": "How do you read the fraction <em>3/4</em> in English?",
       "opts": [
-        "three quarters",
         "three fours",
         "third four",
+        "three quarters",
         "four thirds"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "3/4 = <b>three quarters</b> (ou three fourths). 1/2 = one half e 1/3 = one third."
     },
     {
       "tema": "Fractions",
       "q": "Which fraction is <b>equivalent</b> to 1/2?",
       "opts": [
-        "2/4",
         "1/4",
         "3/4",
-        "2/3"
+        "2/3",
+        "2/4"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "Frações equivalentes representam a mesma quantidade: 1/2 = 2/4 = 3/6 = 4/8. Dividir em mais partes e pegar mais delas dá no mesmo."
     },
     {
@@ -205,36 +205,36 @@
       "tema": "Fractions",
       "q": "There are 20 windows in a building and <em>3/4</em> of them are open. How many are open?",
       "opts": [
-        "15",
         "5",
+        "15",
         "12",
         "16"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "Primeiro ache 1/4: 20 ÷ 4 = 5. Depois multiplique por 3: 5 × 3 = 15 windows."
     },
     {
       "tema": "Fractions",
       "q": "Which fraction is <b>bigger</b>: 1/3 or 1/6?",
       "opts": [
-        "1/3",
         "1/6",
         "They are equal",
+        "1/3",
         "You cannot compare"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "Quanto mais partes, menor cada pedaço. Dividir em 3 dá pedaços maiores do que dividir em 6."
     },
     {
       "tema": "Bar graph",
       "q": "In a bar graph, what does the <b>tallest bar</b> show?",
       "opts": [
-        "The greatest quantity",
         "The smallest quantity",
         "The average",
-        "The title of the graph"
+        "The title of the graph",
+        "The greatest quantity"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "Quanto mais alta a barra, maior a quantidade. A barra mais baixa mostra a menor."
     },
     {
@@ -253,36 +253,36 @@
       "tema": "Bar graph",
       "q": "Using the same graph (brick 12, wood 8, straw 5), <b>how many more</b> children chose brick than straw?",
       "opts": [
-        "7",
         "5",
+        "7",
         "12",
         "17"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "“How many more” pede subtração: 12 − 5 = 7 children."
     },
     {
       "tema": "Bar graph",
       "q": "Why does a bar graph need a <b>title</b> and <b>labels</b>?",
       "opts": [
-        "So the reader knows what the data is about",
         "Only to make it look nice",
         "To show who drew it",
+        "So the reader knows what the data is about",
         "To fill the empty space"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "Sem título e sem os nomes dos eixos, as barras viram números soltos. Eles dizem o que está sendo contado e em que unidade."
     },
     {
       "tema": "Word problems",
       "q": "Each wall needs 250 bricks. How many bricks for <em>4 walls</em>?",
       "opts": [
-        "1,000",
         "750",
         "900",
-        "1,250"
+        "1,250",
+        "1,000"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "É multiplicação: 250 × 4 = 1.000 bricks."
     },
     {
@@ -301,36 +301,36 @@
       "tema": "Word problems",
       "q": "You have R$ 500 to build a wall. You spend R$ 320. How much is <b>left</b>?",
       "opts": [
-        "R$ 180",
         "R$ 280",
+        "R$ 180",
         "R$ 120",
         "R$ 220"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "500 − 320 = 180. Controlar quanto sobra é exatamente o que se faz num orçamento (budget)."
     },
     {
       "tema": "Word problems",
       "q": "144 tiles will cover 12 equal floors. How many tiles <b>per floor</b>?",
       "opts": [
-        "12",
         "14",
         "16",
+        "12",
         "10"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "Dividir igualmente: 144 ÷ 12 = 12 tiles. Conferindo: 12 × 12 = 144 ✓"
     },
     {
       "tema": "Ordinal numbers",
       "q": "Which is the ordinal number for <em>2</em>?",
       "opts": [
-        "second",
         "twoth",
         "twond",
-        "twice"
+        "twice",
+        "second"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "1st <b>first</b> · 2nd <b>second</b> · 3rd <b>third</b> — os três irregulares que é preciso decorar."
     },
     {
@@ -349,36 +349,36 @@
       "tema": "Ordinal numbers",
       "q": "Which is the ordinal number for <em>20</em>?",
       "opts": [
-        "twentieth",
         "twentyth",
+        "twentieth",
         "twenteeth",
         "twentyeth"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "Twenty → <b>twentieth</b>: o “y” vira “ie” antes do -th. O mesmo em thirty → thirtieth."
     },
     {
       "tema": "Ordinal numbers",
       "q": "Which is the ordinal number for <em>30</em>?",
       "opts": [
-        "thirtieth",
         "thirtyth",
         "thirteenth",
+        "thirtieth",
         "thirdieth"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "<b>Thirtieth</b> (30º). Cuidado para não confundir com <i>thirteenth</i>, que é 13º!"
     },
     {
       "tema": "Ordinal numbers",
       "q": "In a race, the runner who arrives <b>right after</b> the third one is in which place?",
       "opts": [
-        "fourth",
         "fifth",
         "second",
-        "third"
+        "third",
+        "fourth"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "Depois do third (3º) vem o <b>fourth</b> (4º). Note: four perde nada, só ganha -th."
     },
     {
@@ -397,36 +397,36 @@
       "tema": "Fractions",
       "q": "How do you read the fraction <em>1/3</em> in English?",
       "opts": [
-        "one third",
         "one three",
+        "one third",
         "one threeth",
         "third one"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "<b>One third</b>. Em inglês, os denominadores usam os números ordinais: third, fourth, fifth…"
     },
     {
       "tema": "Fractions",
       "q": "How do you read <em>2/5</em>?",
       "opts": [
-        "two fifths",
         "two five",
         "two fifth",
+        "two fifths",
         "five seconds"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "<b>Two fifths</b> — com <b>s</b> no final, porque é mais de uma parte."
     },
     {
       "tema": "Fractions",
       "q": "A pizza is cut into <b>8 equal slices</b> and <b>5 are eaten</b>. What fraction was eaten?",
       "opts": [
-        "5/8",
         "3/8",
         "8/5",
-        "5/3"
+        "5/3",
+        "5/8"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "⚠️ A pergunta é sobre o que foi <b>comido</b>: 5 de 8 → <b>5/8</b>. Se contar o que sobrou dá 3/8 — outra pergunta!"
     },
     {
@@ -445,36 +445,36 @@
       "tema": "Fractions",
       "q": "There are 24 bricks and <em>1/4</em> of them are red. How many are red?",
       "opts": [
-        "6",
         "4",
+        "6",
         "8",
         "12"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "24 ÷ 4 = <b>6 bricks</b>."
     },
     {
       "tema": "Fractions",
       "q": "Which is <b>more</b>: 3/4 or 1/2 of the same cake?",
       "opts": [
-        "3/4",
         "1/2",
         "They are equal",
+        "3/4",
         "You cannot tell"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "1/2 = 2/4, e 3/4 é mais que 2/4. Então <b>3/4</b> é o pedaço maior."
     },
     {
       "tema": "Bar graph",
       "q": "In a bar graph, what does the <b>vertical axis</b> usually show?",
       "opts": [
-        "The quantity or number of items",
         "The names of the categories",
         "The title",
-        "The date"
+        "The date",
+        "The quantity or number of items"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "O eixo vertical (de pé) traz os <b>números</b>; o horizontal traz as <b>categorias</b>."
     },
     {
@@ -493,36 +493,36 @@
       "tema": "Bar graph",
       "q": "Using the same graph (15, 20 and 12), how many houses were built <b>altogether</b>?",
       "opts": [
-        "47",
         "45",
+        "47",
         "35",
         "32"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "15 + 20 + 12 = <b>47 houses</b>. “Altogether” pede a soma de tudo."
     },
     {
       "tema": "Bar graph",
       "q": "If each square on the graph stands for <b>2 houses</b>, how many houses does a bar of <b>6 squares</b> show?",
       "opts": [
-        "12",
         "6",
         "8",
+        "12",
         "3"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "6 × 2 = <b>12 houses</b>. Sempre confira a <b>escala</b> antes de ler o gráfico!"
     },
     {
       "tema": "Word problems",
       "q": "A builder has 96 tiles and uses 48. How many are <b>left</b>?",
       "opts": [
-        "48",
         "44",
         "144",
-        "52"
+        "52",
+        "48"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "96 − 48 = <b>48 tiles</b> left."
     },
     {
@@ -541,36 +541,36 @@
       "tema": "Word problems",
       "q": "There are 156 bricks to share equally between <em>4 walls</em>. How many per wall?",
       "opts": [
-        "39",
         "36",
+        "39",
         "42",
         "38"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "156 ÷ 4 = <b>39 bricks</b>. Conferindo: 4 × 39 = 156 ✓"
     },
     {
       "tema": "Word problems",
       "q": "A house has 3 floors with 4 rooms on each floor. How many rooms <b>in total</b>?",
       "opts": [
-        "12",
         "7",
         "9",
+        "12",
         "16"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "3 × 4 = <b>12 rooms</b>."
     },
     {
       "tema": "Word problems",
       "q": "What does the word <em>“altogether”</em> tell you to do?",
       "opts": [
-        "Add",
         "Subtract",
         "Divide",
-        "Compare"
+        "Compare",
+        "Add"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "<b>Altogether</b> e <i>in total</i> pedem <b>soma</b>. Já “how many more” e “left” pedem subtração."
     }
   ]

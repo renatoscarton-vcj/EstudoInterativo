@@ -116,36 +116,36 @@
       "tema": "Materials",
       "q": "Why is <em>brick</em> a good material for walls?",
       "opts": [
-        "It is strong and lasts a long time",
         "It is transparent",
+        "It is strong and lasts a long time",
         "It floats on water",
         "It melts in the sun"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "O tijolo é resistente e durável, suportando o peso da construção e protegendo do vento e da chuva."
     },
     {
       "tema": "Materials",
       "q": "Which property does a <b>roof material</b> most need?",
       "opts": [
-        "To be waterproof",
         "To be transparent",
         "To be very heavy",
+        "To be waterproof",
         "To be soft"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "O telhado precisa ser impermeável (waterproof) para a chuva não entrar. Telhas e metal cumprem bem esse papel."
     },
     {
       "tema": "Materials",
       "q": "What is an <em>adobe brick</em> made of?",
       "opts": [
-        "Soil (clay), water and straw, dried in the sun",
         "Cement and steel",
         "Ice and snow",
-        "Plastic and glass"
+        "Plastic and glass",
+        "Soil (clay), water and straw, dried in the sun"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "A receita do adobe: terra (argila) + água + palha. Mistura-se, molda-se e deixa secar ao sol até endurecer."
     },
     {
@@ -164,36 +164,36 @@
       "tema": "Materials",
       "q": "Which material would be a <b>bad</b> choice for a house in a very rainy place?",
       "opts": [
-        "Straw walls",
         "Brick walls",
+        "Straw walls",
         "Concrete walls",
         "Stone walls"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "A palha absorve água e apodrece com a chuva constante. Por isso casas de palha aparecem mais em climas secos."
     },
     {
       "tema": "Eco-home",
       "q": "What do <em>solar panels</em> on a roof do?",
       "opts": [
-        "They turn sunlight into electricity",
         "They collect rainwater",
         "They keep birds away",
+        "They turn sunlight into electricity",
         "They make the house taller"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "Os painéis solares transformam a luz do sol em eletricidade, reduzindo o uso de energia da rede."
     },
     {
       "tema": "Eco-home",
       "q": "Why do eco-homes <b>collect rainwater</b>?",
       "opts": [
-        "To reuse it for cleaning, the garden and the toilet, saving water",
         "To make the house heavier",
         "Because rainwater is always safe to drink",
-        "To cool the walls down"
+        "To cool the walls down",
+        "To reuse it for cleaning, the garden and the toilet, saving water"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "A água da chuva é guardada e reutilizada em tarefas que não precisam de água potável, economizando água tratada."
     },
     {
@@ -212,36 +212,36 @@
       "tema": "Safety at home",
       "q": "Which of these is a <b>dangerous item</b> in a house?",
       "opts": [
-        "Cleaning products and bleach",
         "A cushion on the sofa",
+        "Cleaning products and bleach",
         "A picture on the wall",
         "A cotton towel"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "Produtos de limpeza são tóxicos e devem ficar guardados longe do alcance de crianças, sempre nos frascos originais."
     },
     {
       "tema": "Safety at home",
       "q": "Which room usually has the <b>most</b> dangerous items?",
       "opts": [
-        "The kitchen, with knives, the stove and hot pans",
         "The bedroom",
         "The living room",
+        "The kitchen, with knives, the stove and hot pans",
         "The hallway"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "A cozinha reúne facas, fogo, panelas quentes e eletricidade — por isso exige mais atenção e supervisão."
     },
     {
       "tema": "Safety at home",
       "q": "What should you do to make a house <b>safer</b>?",
       "opts": [
-        "Keep medicines and matches out of reach and cover electrical sockets",
         "Leave the floor wet after cleaning",
         "Store knives at the edge of the table",
-        "Play near the stove while cooking"
+        "Play near the stove while cooking",
+        "Keep medicines and matches out of reach and cover electrical sockets"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "Guardar remédios e fósforos em lugar alto, proteger tomadas e secar o chão molhado evitam a maior parte dos acidentes domésticos."
     },
     {
@@ -260,36 +260,36 @@
       "tema": "Materials",
       "q": "Which material is the <b>strongest</b> for building tall buildings?",
       "opts": [
-        "Steel and concrete",
         "Paper",
+        "Steel and concrete",
         "Straw",
         "Cloth"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "<b>Steel</b> (aço) e <b>concrete</b> (concreto) aguentam muito peso — por isso são usados em arranha-céus."
     },
     {
       "tema": "Materials",
       "q": "Why is <em>wood</em> a popular building material?",
       "opts": [
-        "It is light, easy to cut and comes from trees",
         "It never burns",
         "It is transparent",
+        "It is light, easy to cut and comes from trees",
         "It is the heaviest material"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "Leve e fácil de cortar. A desvantagem é que pode queimar e apodrecer com a umidade."
     },
     {
       "tema": "Materials",
       "q": "What does <em>waterproof</em> mean?",
       "opts": [
-        "Water cannot pass through it",
         "It floats on water",
         "It absorbs a lot of water",
-        "It is made of water"
+        "It is made of water",
+        "Water cannot pass through it"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "<b>Waterproof</b> = à prova d'água. Telhados e capas de chuva precisam dessa propriedade."
     },
     {
@@ -308,36 +308,36 @@
       "tema": "House design",
       "q": "What is a <em>floor plan</em>?",
       "opts": [
-        "A drawing that shows the rooms of a house seen from above",
         "The type of floor material",
+        "A drawing that shows the rooms of a house seen from above",
         "A list of furniture",
         "The price of the house"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "A <b>floor plan</b> (planta baixa) mostra os cômodos vistos de cima, como um mapa da casa."
     },
     {
       "tema": "House design",
       "q": "Why do houses in <b>very rainy</b> places often have steep (sloping) roofs?",
       "opts": [
-        "So the rain runs off quickly",
         "To look taller",
         "To store more things",
+        "So the rain runs off quickly",
         "To keep birds away"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "O telhado inclinado faz a água escorrer rápido, evitando infiltração e o peso da água parada."
     },
     {
       "tema": "House design",
       "q": "Why do houses in <b>very hot</b> places often have thick walls and small windows?",
       "opts": [
-        "To keep the inside cool",
         "To look modern",
         "To save glass",
-        "To make them taller"
+        "To make them taller",
+        "To keep the inside cool"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "Paredes grossas seguram o calor fora e janelas pequenas reduzem a entrada de sol — a casa fica fresca."
     },
     {
@@ -356,36 +356,36 @@
       "tema": "Eco-home",
       "q": "What does <em>insulation</em> do in a house?",
       "opts": [
-        "Keeps heat inside in winter and outside in summer",
         "Makes the house taller",
+        "Keeps heat inside in winter and outside in summer",
         "Cleans the water",
         "Produces electricity"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "O <b>insulation</b> (isolamento) nas paredes e no telhado reduz a perda de calor — a casa gasta menos energia."
     },
     {
       "tema": "Eco-home",
       "q": "Why is it good to use <em>local materials</em> to build a house?",
       "opts": [
-        "They do not need to travel far, so less fuel and pollution",
         "They are always prettier",
         "They are always stronger",
+        "They do not need to travel far, so less fuel and pollution",
         "They never cost anything"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "Materiais locais percorrem menos distância, gastando menos combustível no transporte."
     },
     {
       "tema": "Eco-home",
       "q": "What does <em>recycled material</em> mean?",
       "opts": [
-        "Material made from things that were used before",
         "Material that is brand new",
         "Material that cannot be used again",
-        "Material made only of wood"
+        "Material made only of wood",
+        "Material made from things that were used before"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "Reciclado = feito a partir de algo já usado, poupando recursos naturais."
     },
     {
@@ -404,24 +404,24 @@
       "tema": "Safety at home",
       "q": "What should you do if you see a <b>broken electrical wire</b>?",
       "opts": [
-        "Do not touch it and tell an adult",
         "Try to fix it yourself",
+        "Do not touch it and tell an adult",
         "Pull it hard",
         "Pour water on it"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "Nunca toque — eletricidade é perigosa. Avise sempre um adulto."
     },
     {
       "tema": "Safety at home",
       "q": "Why should medicines be kept <b>locked away</b>?",
       "opts": [
-        "Because small children could take them by mistake",
         "Because they look nice in a box",
         "Because they melt",
+        "Because small children could take them by mistake",
         "Because they are heavy"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "Remédios parecem balas para uma criança pequena. Guardar em lugar alto e trancado evita acidentes graves."
     }
   ]

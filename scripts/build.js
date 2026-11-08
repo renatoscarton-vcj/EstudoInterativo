@@ -101,6 +101,24 @@ arquivos.forEach(arq => {
     enunciados.add(q.q);
   });
 
+  // Quem escreve conteúdo digita a resposta certa primeiro, sem perceber.
+  // Com isso a criança gabarita escolhendo sempre "A" e não aprende nada.
+  // O jogo embaralha as alternativas na hora de jogar, mas um arquivo
+  // viciado continua sendo um defeito — então aqui ele barra o build.
+  const porPosicao = {};
+  dados.questions.forEach(q => {
+    if (typeof q.correct === 'number') porPosicao[q.correct] = (porPosicao[q.correct] || 0) + 1;
+  });
+  const concentracao = Math.max(0, ...Object.values(porPosicao));
+  if (dados.questions.length >= 8 && concentracao / dados.questions.length > 0.5) {
+    const letra = 'ABCDE'[Object.keys(porPosicao).find(k => porPosicao[k] === concentracao)] || '?';
+    const pct = Math.round((concentracao / dados.questions.length) * 100);
+    problemas.push(
+      `${arq}: ${pct}% das respostas certas estão na alternativa "${letra}". ` +
+      `Espalhe o gabarito entre as alternativas (o limite é 50%).`
+    );
+  }
+
   (dados.licoes || []).forEach((l, i) => {
     const ref = `${arq} · lição ${i + 1}`;
     if (!l.titulo) problemas.push(`${ref}: sem título`);

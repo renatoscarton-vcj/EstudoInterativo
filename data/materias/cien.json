@@ -129,36 +129,36 @@
       "tema": "Microrganismos",
       "q": "Como se chamam os microrganismos que <b>causam doenças</b>?",
       "opts": [
-        "Microrganismos patogênicos",
         "Microrganismos decompositores",
+        "Microrganismos patogênicos",
         "Microrganismos benéficos",
         "Microrganismos fermentados"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "<b>Patogênicos</b> é o nome dos que causam doença. Essa palavra aparece no livro e pode cair na prova."
     },
     {
       "tema": "Microrganismos",
       "q": "Onde os microrganismos podem ser encontrados?",
       "opts": [
-        "Na água, no solo e no corpo de outros seres vivos",
         "Apenas em lugares sujos",
         "Apenas dentro de hospitais",
+        "Na água, no solo e no corpo de outros seres vivos",
         "Somente no fundo do mar"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "O livro diz: na água, no solo e no corpo de outros seres vivos. Eles estão praticamente em toda parte."
     },
     {
       "tema": "Microrganismos",
       "q": "Qual invenção permitiu que os estudos sobre microrganismos ganhassem destaque?",
       "opts": [
-        "O microscópio",
         "O telescópio",
         "A vacina",
-        "O termômetro"
+        "O termômetro",
+        "O microscópio"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "Como não podem ser vistos a olho nu, só foi possível estudá-los depois da invenção do <b>microscópio</b>, que amplia as imagens."
     },
     {
@@ -177,36 +177,36 @@
       "tema": "Cientistas",
       "q": "Quem foi um dos primeiros a testar, em 1796, a <b>técnica de vacinação</b>?",
       "opts": [
-        "Edward Jenner",
         "Anton van Leeuwenhoek",
+        "Edward Jenner",
         "Alexander Fleming",
         "Oswaldo Cruz"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "<b>Edward Jenner</b> (1749-1823). Decore ligando: Jenner → vacina, em 1796."
     },
     {
       "tema": "Cientistas",
       "q": "Quem descobriu a <b>penicilina</b>?",
       "opts": [
-        "Alexander Fleming",
         "Edward Jenner",
         "Anton van Leeuwenhoek",
+        "Alexander Fleming",
         "Carlos Chagas"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "<b>Alexander Fleming</b> (1881-1955). Decore ligando: Fleming → penicilina → antibiótico."
     },
     {
       "tema": "Cientistas",
       "q": "O que foi a <em>penicilina</em>?",
       "opts": [
-        "A primeira substância utilizada como antibiótico",
         "A primeira vacina do mundo",
         "O primeiro microscópio",
-        "Um tipo de bactéria"
+        "Um tipo de bactéria",
+        "A primeira substância utilizada como antibiótico"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "A penicilina foi a <b>primeira substância usada como antibiótico</b> — descoberta por Fleming, mudou a história da medicina."
     },
     {
@@ -225,36 +225,36 @@
       "tema": "Bactérias",
       "q": "Como se chamam os <b>grupos</b> que as bactérias formam quando vivem juntas?",
       "opts": [
-        "Colônias",
         "Bandos",
+        "Colônias",
         "Cardumes",
         "Enxames"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "Bactérias podem viver sozinhas ou em grupos, formando <b>colônias</b> — palavra que está no livro."
     },
     {
       "tema": "Bactérias",
       "q": "Segundo o livro, quais doenças algumas bactérias podem causar?",
       "opts": [
-        "Infecções na garganta ou na pele",
         "Gripe e dengue",
         "Malária e doença de Chagas",
+        "Infecções na garganta ou na pele",
         "Micose nas unhas"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "O livro cita infecções na garganta e na pele. Gripe e dengue são vírus; malária e Chagas, protozoários; micose, fungo."
     },
     {
       "tema": "Bactérias",
       "q": "Como as bactérias provocam a <em>cárie</em>?",
       "opts": [
-        "Encontram restos de alimentos, utilizam esse alimento e liberam uma substância que corrói os dentes",
         "Fazem um buraco com os dentinhos delas",
         "Deixam o dente mole com água",
-        "Comem o esmalte diretamente"
+        "Comem o esmalte diretamente",
+        "Encontram restos de alimentos, utilizam esse alimento e liberam uma substância que corrói os dentes"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "Exatamente como está no livro: as bactérias da boca usam os restos de alimento e <b>liberam uma substância que corrói os dentes</b>."
     },
     {
@@ -273,36 +273,36 @@
       "tema": "Fungos",
       "q": "Quais destes são exemplos de <em>fungos</em>?",
       "opts": [
-        "Os bolores do pão e os cogumelos",
         "As minhocas e as formigas",
+        "Os bolores do pão e os cogumelos",
         "Os musgos e as samambaias",
         "As algas e os corais"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "Fungos podem ser pequenos, como os bolores do pão, ou maiores, como os cogumelos que vemos na natureza."
     },
     {
       "tema": "Fungos",
       "q": "O <em>fermento biológico</em>, usado para fazer o pão crescer, é composto de:",
       "opts": [
-        "Fungos muito pequenos, visíveis apenas com microscópio",
         "Bactérias grandes",
         "Vírus",
+        "Fungos muito pequenos, visíveis apenas com microscópio",
         "Protozoários"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "O fermento biológico é formado por <b>fungos</b> minúsculos — só dá para vê-los no microscópio."
     },
     {
       "tema": "Fungos",
       "q": "Qual doença é causada por <b>fungos</b>, segundo o livro?",
       "opts": [
-        "A micose",
         "A gripe",
         "A malária",
-        "A cárie"
+        "A cárie",
+        "A micose"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "A <b>micose</b>, que ataca unhas e pele, é causada por fungos. Por isso a higiene é tão importante."
     },
     {
@@ -321,36 +321,36 @@
       "tema": "Fungos",
       "q": "Na cadeia alimentar, as bactérias e os fungos são chamados de:",
       "opts": [
-        "Decompositores",
         "Produtores",
+        "Decompositores",
         "Consumidores",
         "Predadores"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "<b>Decompositores</b> — foi a resposta 5 do diagrama do livro. Eles fecham o ciclo devolvendo nutrientes ao solo."
     },
     {
       "tema": "Vírus",
       "q": "Por que os vírus <b>não conseguem viver sozinhos</b>?",
       "opts": [
-        "Porque precisam invadir as células de outros seres vivos para se multiplicar",
         "Porque morrem em menos de um minuto",
         "Porque não suportam a luz do sol",
+        "Porque precisam invadir as células de outros seres vivos para se multiplicar",
         "Porque precisam de água o tempo todo"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "Diferente dos outros microrganismos, o vírus precisa invadir a célula de outro ser vivo para se multiplicar."
     },
     {
       "tema": "Vírus",
       "q": "Como se chamam as doenças causadas por vírus?",
       "opts": [
-        "Viroses",
         "Bacterioses",
         "Micoses",
-        "Infecções"
+        "Infecções",
+        "Viroses"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "<b>Viroses</b>. Micose é de fungo — cuidado para não trocar os nomes na prova."
     },
     {
@@ -369,36 +369,36 @@
       "tema": "Vírus",
       "q": "Como se previne a <em>gripe</em>, segundo o livro?",
       "opts": [
-        "Evitando o contato com pessoas infectadas",
         "Tomando antibiótico todos os dias",
+        "Evitando o contato com pessoas infectadas",
         "Bebendo água gelada",
         "Ficando no sol"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "O vírus da gripe é transmitido pelo ar e pelo contato, então evitar contato com pessoas infectadas é a principal prevenção."
     },
     {
       "tema": "Vírus",
       "q": "A <em>raiva</em> é uma doença causada por vírus e transmitida por:",
       "opts": [
-        "Mamíferos, através de mordidas ou saliva contaminada",
         "Mosquitos",
         "Água parada",
+        "Mamíferos, através de mordidas ou saliva contaminada",
         "Alimentos mal lavados"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "A raiva é transmitida por mamíferos, por mordida ou contato com a saliva contaminada. <b>Vacinar cães e gatos previne a doença.</b>"
     },
     {
       "tema": "Vírus",
       "q": "<em>Dengue</em> e <em>febre amarela</em> são doenças causadas por:",
       "opts": [
-        "Vírus",
         "Bactérias",
         "Fungos",
-        "Protozoários"
+        "Protozoários",
+        "Vírus"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "São causadas por <b>vírus</b> e transmitidas por mosquitos — resposta 2 do diagrama do livro."
     },
     {
@@ -417,36 +417,36 @@
       "tema": "Protozoários",
       "q": "Os protozoários são constituídos de:",
       "opts": [
-        "Uma única célula",
         "Duas células",
+        "Uma única célula",
         "Milhares de células",
         "Nenhuma célula"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "São seres muito pequenos e formados por <b>uma única célula</b>."
     },
     {
       "tema": "Protozoários",
       "q": "<em>Malária</em> e <em>doença de Chagas</em> são causadas por:",
       "opts": [
-        "Protozoários",
         "Vírus",
         "Bactérias",
+        "Protozoários",
         "Fungos"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "Por <b>protozoários</b> — resposta 6 do diagrama. Na malária, o protozoário é transmitido por mosquitos contaminados pelo parasita."
     },
     {
       "tema": "Antibiótico",
       "q": "Qual é o medicamento utilizado no combate à <b>infecção bacteriana</b>?",
       "opts": [
-        "Antibiótico",
         "Vacina",
         "Xarope",
-        "Soro"
+        "Soro",
+        "Antibiótico"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "<b>Antibiótico</b> — resposta 3 do diagrama. Atenção à escrita: antibió<b>t</b>ico, com T e com acento no O."
     },
     {
@@ -465,36 +465,36 @@
       "tema": "Pão e fermento",
       "q": "Que gás é liberado dentro da massa do pão nesse processo?",
       "opts": [
-        "Gás carbônico",
         "Oxigênio",
+        "Gás carbônico",
         "Hidrogênio",
         "Nitrogênio"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "É liberado <b>gás carbônico</b> no interior da massa — são as bolhinhas que fazem o pão crescer."
     },
     {
       "tema": "Pão e fermento",
       "q": "Como fica a massa do pão por causa desse gás?",
       "opts": [
-        "Mais macia e porosa",
         "Mais dura e pesada",
         "Mais seca e quebradiça",
+        "Mais macia e porosa",
         "Mais líquida"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "O gás carbônico deixa a massa <b>macia e porosa</b> — por isso o pão tem buraquinhos por dentro."
     },
     {
       "tema": "Queijo",
       "q": "No processo de fazer queijo, as bactérias transformam o leite em uma massa mais sólida chamada:",
       "opts": [
-        "Coalhada",
         "Nata",
         "Soro",
-        "Manteiga"
+        "Manteiga",
+        "Coalhada"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "A <b>coalhada</b>. Além disso, as bactérias dão o <b>sabor</b> característico do queijo."
     },
     {
@@ -513,36 +513,36 @@
       "tema": "Queijo",
       "q": "Por que as bactérias e os fungos usados nos queijos são <b>cuidadosamente controlados</b>?",
       "opts": [
-        "Para garantir que o queijo seja seguro para comer",
         "Para o queijo ficar mais barato",
+        "Para garantir que o queijo seja seguro para comer",
         "Para o queijo durar menos",
         "Para mudar a cor do queijo"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "Mesmo sendo úteis, precisam de controle para o queijo ser <b>seguro para comer</b> — é a parte “E a higiene?” do livro."
     },
     {
       "tema": "Biocombustíveis",
       "q": "O que são <em>biocombustíveis</em>?",
       "opts": [
-        "Uma fonte de energia feita de materiais naturais, como plantas",
         "Um tipo de petróleo mais limpo",
         "Um gás encontrado no subsolo",
+        "Uma fonte de energia feita de materiais naturais, como plantas",
         "Um remédio feito de plantas"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "São energia feita a partir de materiais naturais, principalmente plantas — e microrganismos ajudam a produzi-los."
     },
     {
       "tema": "Biocombustíveis",
       "q": "Quais são os <b>dois principais</b> tipos de biocombustível citados?",
       "opts": [
-        "Etanol e biodiesel",
         "Gasolina e diesel",
         "Querosene e álcool",
-        "Carvão e gás natural"
+        "Carvão e gás natural",
+        "Etanol e biodiesel"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "<b>Etanol</b> e <b>biodiesel</b>. Gasolina, diesel e carvão são combustíveis fósseis, o contrário disso."
     },
     {
@@ -561,36 +561,36 @@
       "tema": "Biocombustíveis",
       "q": "Por que os biocombustíveis são importantes?",
       "opts": [
-        "São uma alternativa aos combustíveis fósseis, como o petróleo, que poluem mais",
         "São mais baratos que a água",
+        "São uma alternativa aos combustíveis fósseis, como o petróleo, que poluem mais",
         "Não precisam de plantas para serem feitos",
         "Fazem os motores durarem para sempre"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "Produzir energia com microrganismos é mais <b>sustentável</b> e polui menos que usar petróleo."
     },
     {
       "tema": "Defesas do corpo",
       "q": "Como se chama o sistema especial que protege nosso corpo contra doenças e invasores?",
       "opts": [
-        "Sistema imunológico",
         "Sistema digestório",
         "Sistema respiratório",
+        "Sistema imunológico",
         "Sistema nervoso"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "<b>Sistema imunológico</b> — está destacado no livro. “Nosso corpo é como uma fortaleza.”"
     },
     {
       "tema": "Defesas do corpo",
       "q": "Qual é a <b>primeira</b> defesa do corpo?",
       "opts": [
-        "A pele",
         "O muco",
         "A febre",
-        "Os glóbulos brancos"
+        "Os glóbulos brancos",
+        "A pele"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "A <b>pele</b> é a primeira defesa: funciona como um escudo que impede os germes de entrarem."
     },
     {
@@ -609,36 +609,36 @@
       "tema": "Defesas do corpo",
       "q": "Complete: <em>As ___ ajudam a limpar os olhos e a proteger contra germes.</em>",
       "opts": [
-        "lágrimas",
         "laringes",
+        "lágrimas",
         "narinas",
         "pálpebras"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "São as <b>LÁGRIMAS</b> (junto com a saliva). Cuidado para não confundir com “laringe”, que é parte da garganta e não tem esse papel!"
     },
     {
       "tema": "Defesas do corpo",
       "q": "O que fazem as <em>lágrimas</em> e a <em>saliva</em>?",
       "opts": [
-        "Limpam os olhos e a boca, expulsando bactérias que tentem entrar",
         "Produzem febre",
         "Digerem os alimentos no estômago",
+        "Limpam os olhos e a boca, expulsando bactérias que tentem entrar",
         "Formam o muco do nariz"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "Quando piscamos ou engolimos, lágrimas e saliva limpam olhos e boca, <b>expulsando bactérias</b>."
     },
     {
       "tema": "Defesas do corpo",
       "q": "Os <em>glóbulos brancos</em> são comparados no livro a:",
       "opts": [
-        "Soldados que patrulham o corpo",
         "Escudos que cobrem a pele",
         "Portões que fecham a boca",
-        "Esponjas que absorvem água"
+        "Esponjas que absorvem água",
+        "Soldados que patrulham o corpo"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "São “<b>soldados que patrulham o corpo</b>”, procurando e atacando qualquer bactéria ou vírus que entre."
     },
     {
@@ -657,36 +657,36 @@
       "tema": "Defesas do corpo",
       "q": "Quais hábitos o livro indica para manter as defesas fortes?",
       "opts": [
-        "Alimentação saudável, beber bastante água, dormir bem, praticar exercícios e lavar as mãos",
         "Dormir pouco e comer rápido",
+        "Alimentação saudável, beber bastante água, dormir bem, praticar exercícios e lavar as mãos",
         "Tomar antibiótico toda semana",
         "Evitar sair de casa"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "São os cinco hábitos citados no final do texto. Lavar as mãos ajuda a pele a se manter limpa e protegida."
     },
     {
       "tema": "Vacinas",
       "q": "As vacinas são produzidas com:",
       "opts": [
-        "Vírus ou bactérias enfraquecidos",
         "Vírus e bactérias bem fortes",
         "Antibióticos concentrados",
+        "Vírus ou bactérias enfraquecidos",
         "Vitaminas e minerais"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "Com vírus ou bactérias <b>enfraquecidos</b> — essa palavra é a chave. Assim o corpo aprende a se defender sem adoecer."
     },
     {
       "tema": "Vacinas",
       "q": "Por que crianças e adultos precisam ser vacinados?",
       "opts": [
-        "Para prevenir doenças, ajudando o corpo a se defender de agentes infecciosos",
         "Para curar doenças já instaladas",
         "Para não precisar lavar as mãos",
-        "Para ficarem mais fortes fisicamente"
+        "Para ficarem mais fortes fisicamente",
+        "Para prevenir doenças, ajudando o corpo a se defender de agentes infecciosos"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "A vacina <b>previne</b>. Se a pessoa depois entrar em contato com o agente causador, o sistema imune já combate rapidamente."
     },
     {
@@ -705,36 +705,36 @@
       "tema": "Vacinas",
       "q": "A <em>tríplice viral</em>, aplicada aos 12 meses, previne quais doenças?",
       "opts": [
-        "Sarampo, caxumba e rubéola",
         "Difteria, tétano e coqueluche",
+        "Sarampo, caxumba e rubéola",
         "Hepatite A, B e C",
         "Dengue, zika e chikungunya"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "Tríplice <b>viral</b> (SCR) = <b>S</b>arampo, <b>C</b>axumba e <b>R</b>ubéola. Já a tríplice bacteriana (DTP) previne difteria, tétano e coqueluche."
     },
     {
       "tema": "Vacinas",
       "q": "Com que idade a vacina contra a <em>febre amarela</em> é aplicada pela primeira vez?",
       "opts": [
-        "9 meses",
         "Ao nascer",
         "4 anos",
+        "9 meses",
         "9 anos"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "A 1ª dose da febre amarela é aos <b>9 meses</b>, com reforço aos 4 anos."
     },
     {
       "tema": "Decompositores",
       "q": "Na composteira, qual é o papel dos microrganismos?",
       "opts": [
-        "Decompor a matéria orgânica, ajudando na formação do solo fértil",
         "Deixar os restos de comida mais bonitos",
         "Produzir água para as plantas",
-        "Espantar insetos do jardim"
+        "Espantar insetos do jardim",
+        "Decompor a matéria orgânica, ajudando na formação do solo fértil"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "Eles decompõem restos de alimentos e folhas secas, transformando tudo em nutrientes — é assim que se forma o <b>solo fértil</b>."
     }
   ]

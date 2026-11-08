@@ -1288,7 +1288,7 @@ function sequenciaDias(){
 function maiorSequencia(){
   let max = 0, atual = 0;
   order.forEach((q,i)=>{
-    if(answers[i] !== null && answers[i] === q.correct){ atual++; max = Math.max(max,atual); }
+    if(answers[i] !== null && respostaCerta(i)){ atual++; max = Math.max(max,atual); }
     else if(answers[i] !== null){ atual = 0; }
   });
   return max;
@@ -1329,6 +1329,7 @@ let current = null;
 let order = [];
 let answers = [];
 let idx = 0;
+let semeadura = 0;           // identifica o embaralhamento das alternativas desta partida
 let vehicleIndex = 0;
 let justEvolved = false;
 let modoRevisao = false;
@@ -1377,6 +1378,7 @@ function persistirPartida(){
     answers: answers,
     idx: idx,
     modoRevisao: modoRevisao,
+    semeadura: semeadura,   // sem isso, ao retomar as alternativas trocariam de lugar
     quando: Date.now()
   });
 }
@@ -1390,12 +1392,12 @@ function registrarResultado(){
   const novo = {...anterior, answers: [], concluidoEm: Date.now()};
   if(!modoRevisao){
     novo.erradas = order
-      .map((q,i) => (answers[i] !== null && answers[i] !== q.correct) ? q.q : null)
+      .map((q,i) => (answers[i] !== null && !respostaCerta(i)) ? q.q : null)
       .filter(Boolean);
     novo.melhor = Math.max(anterior.melhor || 0, pct);
   } else {
     // na revisão, tira da lista o que acertou agora
-    const acertou = new Set(order.filter((q,i) => answers[i] === q.correct).map(q => q.q));
+    const acertou = new Set(order.filter((q,i) => respostaCerta(i)).map(q => q.q));
     novo.erradas = (anterior.erradas || []).filter(t => !acertou.has(t));
   }
   salvarProgresso(current.id, novo);
@@ -1432,8 +1434,46 @@ function shuffle(arr){
   }
   return a;
 }
+// =========================================================
+//  TIPOS DE QUESTÃO
+//
+//  Uma resposta guardada em answers[i] pode ter três formatos:
+//    escolha → o número da alternativa escolhida        (ex.: 2)
+//    ordenar → {ordem: [...]}   a sequência que a criança montou
+//    ligar   → {pares: {esq: dir}}  as ligações que ela fez
+//  null continua significando "ainda não respondeu", em todos eles.
+//
+//  Tudo que precisa saber se a questão foi acertada passa por
+//  respostaCerta(), para não existir uma regra diferente em cada tela.
+// =========================================================
+function tipoDe(q){ return (q && q.tipo) || 'escolha'; }
+
+function respostaCerta(i){
+  const q = order[i], a = answers[i];
+  if(q == null || a == null) return false;
+  switch(tipoDe(q)){
+    case 'ordenar':
+      return Array.isArray(a.ordem)
+          && a.ordem.length === q.itens.length
+          && a.ordem.every((t, k) => t === q.itens[k]);
+    case 'ligar':
+      return a.pares && q.pares.every(([e, d]) => a.pares[e] === d);
+    default:
+      return a === q.correct;
+  }
+}
+
+/** O gabarito em texto — serve para as cartas de estudo e para a revisão. */
+function respostaTexto(q){
+  switch(tipoDe(q)){
+    case 'ordenar': return q.itens.map((t, i) => `${i + 1}. ${t}`).join('<br>');
+    case 'ligar':   return q.pares.map(([e, d]) => `${e} → ${d}`).join('<br>');
+    default:        return q.opts[q.correct];
+  }
+}
+
 function getScore(){
-  return answers.reduce((acc,ans,i) => acc + (ans !== null && ans === order[i].correct ? 1 : 0), 0);
+  return answers.reduce((acc, ans, i) => acc + (ans !== null && respostaCerta(i) ? 1 : 0), 0);
 }
 
 // =========================================================
@@ -1890,7 +1930,7 @@ function renderEstudo(){
       <span class="tag-tema" style="background:${current.cor}">${q.tema}</span>
       <span class="pergunta" style="display:block">${q.q}</span>
       ${estudoVirado ? `
-        <span class="resposta" style="display:block"><small>Resposta</small><span class="rt">${q.opts[q.correct]}</span></span>
+        <span class="resposta" style="display:block"><small>Resposta</small><span class="rt">${respostaTexto(q)}</span></span>
         <span class="explica" style="display:block">💡 ${q.fb}</span>
       ` : `<span class="virar">👆 Toque na carta para ver a resposta</span>`}
     </button>
@@ -1920,8 +1960,44 @@ function renderEstudoFim(){
 // =========================================================
 //  INÍCIO DE PARTIDAS
 // =========================================================
-function novaPartida(perguntas){
-  order = perguntas;
+/**
+ * Embaralhador com semente: a mesma semente devolve sempre o mesmo
+ * resultado. Isso permite retomar uma partida salva e reencontrar as
+ * alternativas exatamente onde estavam.
+ */
+function embaralharCom(lista, semente){
+  const a = lista.slice();
+  let s = (semente >>> 0) || 1;
+  for(let i = a.length - 1; i > 0; i--){
+    s = (Math.imul(s, 1664525) + 1013904223) >>> 0;
+    const j = s % (i + 1);
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+/**
+ * As alternativas corretas vinham quase sempre em primeiro lugar, porque
+ * quem escreve o conteúdo digita a resposta certa antes das outras. Dava
+ * para gabaritar escolhendo "A" sem ler nada.
+ *
+ * Embaralhar aqui, na hora de jogar, resolve de vez: a posição muda a cada
+ * partida, então nem a criança decora posição nem conteúdo novo escrito
+ * por outra pessoa reintroduz o padrão.
+ */
+function embaralharOpcoes(q, semente){
+  // semente 0 = partida salva antes desta mudança. Mantém a ordem original,
+  // senão as respostas já gravadas passariam a apontar para a alternativa errada.
+  if(!semente) return q;
+  if(tipoDe(q) !== 'escolha' || !Array.isArray(q.opts)) return q;
+  const certa = q.opts[q.correct];
+  const opts = embaralharCom(q.opts, hash(q.q) ^ semente);
+  return {...q, opts, correct: opts.indexOf(certa)};
+}
+
+function novaPartida(perguntas, semente){
+  semeadura = semente || (Date.now() >>> 0) || 1;
+  order = perguntas.map(q => embaralharOpcoes(q, semeadura));
   answers = new Array(order.length).fill(null);
   idx = 0; vehicleIndex = 0; justEvolved = false; xpPartida = 0; animarResposta = null; revendo = false;
   carimbosNovos = [];
@@ -1962,7 +2038,8 @@ function retomar(id){
   if(!remontada.length || remontada.length !== (p.perguntas||[]).length){
     limparProgresso(id); startSubject(id); return;
   }
-  order = remontada;
+  semeadura = p.semeadura || 0;
+  order = remontada.map(q => embaralharOpcoes(q, semeadura));
   answers = p.answers.slice(0, order.length);
   while(answers.length < order.length) answers.push(null);
   idx = Math.min(p.idx || 0, order.length - 1);
@@ -2006,7 +2083,7 @@ function combo(){
   let n = 0;
   for(let i = idx; i >= 0; i--){
     if(answers[i] === null) continue;
-    if(answers[i] === order[i].correct) n++; else break;
+    if(respostaCerta(i)) n++; else break;
   }
   return n;
 }
@@ -2142,7 +2219,7 @@ function desempenhoPorTema(){
     if(answers[i] === null) return;
     if(!mapa[q.tema]) mapa[q.tema] = {tema:q.tema, mat:q._mat || current.id, acertos:0, total:0};
     mapa[q.tema].total++;
-    if(answers[i] === q.correct) mapa[q.tema].acertos++;
+    if(respostaCerta(i)) mapa[q.tema].acertos++;
   });
   return Object.values(mapa)
     .map(t => ({...t, pct: t.total ? t.acertos/t.total : 0}))
@@ -2212,7 +2289,7 @@ function renderEnd(){
       <h2 class="secao-titulo">🔍 Suas respostas</h2>
       <div class="revisao">
         ${order.map((q, i) => {
-          const ok = answers[i] === q.correct;
+          const ok = respostaCerta(i);
           return `<div class="rv"><span class="rv-m ${ok ? 'ok' : 'no'}" aria-label="${ok ? 'acertou' : 'errou'}">${ok ? '✓' : '✕'}</span><span><b>${q.tema}</b> · ${q.q.replace(/<[^>]*>/g,'')}</span></div>`;
         }).join('')}
       </div>

@@ -128,36 +128,36 @@
       "tema": "Different houses",
       "q": "Why are <em>stilt houses</em> built on tall wooden poles?",
       "opts": [
-        "To protect the house from floods and water",
         "To make the house look taller",
+        "To protect the house from floods and water",
         "To keep the house warm in the snow",
         "To save money on materials"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "As palafitas ficam erguidas sobre estacas para a água das cheias passar por baixo — comuns em rios e áreas alagadas."
     },
     {
       "tema": "Different houses",
       "q": "An <em>adobe house</em> is made of:",
       "opts": [
-        "Mud, water and straw dried in the sun",
         "Glass and steel",
         "Snow blocks",
+        "Mud, water and straw dried in the sun",
         "Plastic sheets"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "O adobe é um tijolo de barro, água e palha, seco ao sol. Mantém a casa fresca em regiões quentes e secas."
     },
     {
       "tema": "Different houses",
       "q": "Why are houses <b>different</b> around the world?",
       "opts": [
-        "Because of the climate, the available materials and the local culture",
         "Because people like different colours",
         "Because some countries have no builders",
-        "Because of the day they were built"
+        "Because of the day they were built",
+        "Because of the climate, the available materials and the local culture"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "O clima, os materiais que existem no lugar e a cultura decidem o formato da casa. Por isso o igloo e a palafita são tão diferentes."
     },
     {
@@ -176,36 +176,36 @@
       "tema": "Jobs and communities",
       "q": "Who <b>designs</b> a house before it is built?",
       "opts": [
-        "An architect",
         "A plumber",
+        "An architect",
         "An electrician",
         "A painter"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "O arquiteto desenha a planta. Depois o builder constrói, o electrician faz a parte elétrica e o plumber cuida da água."
     },
     {
       "tema": "Jobs and communities",
       "q": "Who works with <b>water pipes</b> in a house?",
       "opts": [
-        "A plumber",
         "An electrician",
         "A carpenter",
+        "A plumber",
         "An architect"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "O plumber (encanador) instala e conserta os canos. O electrician cuida da fiação e o carpenter trabalha com madeira."
     },
     {
       "tema": "City and countryside",
       "q": "What does <em>urban</em> mean?",
       "opts": [
-        "Related to the city",
         "Related to the countryside",
         "Related to the sea",
-        "Related to the mountains"
+        "Related to the mountains",
+        "Related to the city"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "<b>Urban</b> = da cidade (muitos prédios, trânsito, lojas). <b>Rural</b> = do campo (fazendas, mais natureza, menos gente)."
     },
     {
@@ -224,36 +224,36 @@
       "tema": "Migration and refugees",
       "q": "What is <em>migration</em>?",
       "opts": [
-        "When people move from one place to another to live",
         "When people travel on holiday and come back",
+        "When people move from one place to another to live",
         "When people build a new house in the same street",
         "When people change jobs"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "Migração é mudar de lugar para viver. Pode ser dentro do próprio país ou para outro país."
     },
     {
       "tema": "Migration and refugees",
       "q": "Who is a <em>refugee</em>?",
       "opts": [
-        "Someone who had to leave their home because of war, danger or disaster",
         "Someone who travels for fun",
         "Someone who builds houses",
+        "Someone who had to leave their home because of war, danger or disaster",
         "Someone who lives in the countryside"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "O refugiado não escolheu sair: foi forçado por guerra, perseguição ou desastre. Por isso precisa de proteção e acolhimento."
     },
     {
       "tema": "Migration and refugees",
       "q": "Why do people migrate to another place?",
       "opts": [
-        "To look for work, safety, study or a better life",
         "Only because they are bored",
         "Only to see snow",
-        "Because houses are all the same everywhere"
+        "Because houses are all the same everywhere",
+        "To look for work, safety, study or a better life"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "As razões mais comuns são trabalho, segurança, estudo e saúde — a busca por uma vida melhor."
     },
     {
@@ -272,36 +272,36 @@
       "tema": "Different houses",
       "q": "What is a <em>bungalow</em>?",
       "opts": [
-        "A house with only one floor",
         "A very tall building",
+        "A house with only one floor",
         "A house on water",
         "A house made of snow"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "<b>Bungalow</b> é a casa térrea, de um andar só."
     },
     {
       "tema": "Different houses",
       "q": "What is a <em>block of flats</em> (apartment building)?",
       "opts": [
-        "A tall building where many families live in separate homes",
         "A house for one family only",
         "A house that floats",
+        "A tall building where many families live in separate homes",
         "A tent"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "Em inglês britânico é <b>block of flats</b>; em americano, <i>apartment building</i>."
     },
     {
       "tema": "Different houses",
       "q": "Where would you find a <em>houseboat</em>?",
       "opts": [
-        "On a river or canal",
         "On a mountain",
         "In the desert",
-        "Under the ground"
+        "Under the ground",
+        "On a river or canal"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "A <b>houseboat</b> é uma casa-barco, ancorada em rios e canais."
     },
     {
@@ -320,36 +320,36 @@
       "tema": "Different houses",
       "q": "Which people traditionally build <em>igloos</em>?",
       "opts": [
-        "The Inuit",
         "The Maasai",
+        "The Inuit",
         "The Mongols",
         "The Aborigines"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "Os <b>Inuit</b>, povos do Ártico, constroem igloos com blocos de neve."
     },
     {
       "tema": "Jobs and communities",
       "q": "Who works with <b>wood</b>, making doors, floors and furniture?",
       "opts": [
-        "A carpenter",
         "A plumber",
         "An electrician",
+        "A carpenter",
         "A painter"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "O <b>carpenter</b> (marceneiro) trabalha com madeira."
     },
     {
       "tema": "Jobs and communities",
       "q": "Who lays the bricks to build the walls?",
       "opts": [
-        "A bricklayer",
         "An architect",
         "A plumber",
-        "A teacher"
+        "A teacher",
+        "A bricklayer"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "O <b>bricklayer</b> assenta os tijolos. O <i>builder</i> é o termo geral para quem constrói."
     },
     {
@@ -368,36 +368,36 @@
       "tema": "Jobs and communities",
       "q": "What is a <em>community</em>?",
       "opts": [
-        "A group of people who live in the same place and help each other",
         "A single family",
+        "A group of people who live in the same place and help each other",
         "A type of house",
         "A kind of job"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "Comunidade é o grupo de pessoas que vive num mesmo lugar e depende umas das outras."
     },
     {
       "tema": "City and countryside",
       "q": "Which of these is usually found in a <b>city</b>?",
       "opts": [
-        "Shops, offices, buses and tall buildings",
         "Only farms",
         "Only forests",
+        "Shops, offices, buses and tall buildings",
         "Only rivers"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "A cidade (urban area) tem comércio, escritórios, transporte e muitos prédios."
     },
     {
       "tema": "City and countryside",
       "q": "What is one <b>advantage</b> of living in the countryside?",
       "opts": [
-        "There is more space, fresh air and less noise",
         "There are more shops",
         "There is more traffic",
-        "There are taller buildings"
+        "There are taller buildings",
+        "There is more space, fresh air and less noise"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "Espaço, ar puro e tranquilidade. Por outro lado, há menos serviços e lojas por perto."
     },
     {
@@ -416,36 +416,36 @@
       "tema": "Migration and refugees",
       "q": "What is the difference between a <em>migrant</em> and a <em>refugee</em>?",
       "opts": [
-        "A migrant chooses to move; a refugee is forced to leave",
         "There is no difference",
+        "A migrant chooses to move; a refugee is forced to leave",
         "A refugee always comes back",
         "A migrant never changes country"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "A diferença está na <b>escolha</b>: o migrante decide mudar; o refugiado foi obrigado a fugir."
     },
     {
       "tema": "Migration and refugees",
       "q": "How can a community <b>help</b> refugees?",
       "opts": [
-        "By welcoming them, helping with language, school and housing",
         "By ignoring them",
         "By sending them away",
+        "By welcoming them, helping with language, school and housing",
         "By charging them money"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "Acolher, ensinar a língua, garantir escola e moradia — é assim que uma comunidade recebe quem chega."
     },
     {
       "tema": "Migration and refugees",
       "q": "What might a refugee family <b>lose</b> when they leave home?",
       "opts": [
-        "Their house, their school, their friends and sometimes their language",
         "Nothing at all",
         "Only their clothes",
-        "Only their money"
+        "Only their money",
+        "Their house, their school, their friends and sometimes their language"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "Perde-se muito mais do que a casa: escola, amigos, vizinhos e, às vezes, o convívio com a própria língua."
     }
   ]

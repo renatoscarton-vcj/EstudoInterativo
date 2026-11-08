@@ -122,24 +122,24 @@
       "tema": "Some / Any",
       "q": "Complete the question: <em>Do you have ___ eggs?</em>",
       "opts": [
-        "any",
         "some",
         "a little",
+        "any",
         "too much"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "Em <b>perguntas</b> normalmente usamos <b>any</b>. A exceção é quando oferecemos algo: “Would you like some juice?”"
     },
     {
       "tema": "Some / Any",
       "q": "Which sentence is <b>correct</b>?",
       "opts": [
-        "There is some cheese on the table.",
         "There is any cheese on the table.",
         "There are some cheese on the table.",
-        "There is a few cheese on the table."
+        "There is a few cheese on the table.",
+        "There is some cheese on the table."
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "“Cheese” é incontável: usa <b>is</b> (singular) e <b>some</b> na afirmativa."
     },
     {
@@ -158,36 +158,36 @@
       "tema": "A few / A little",
       "q": "Complete: <em>I need ___ water, please.</em>",
       "opts": [
-        "a little",
         "a few",
+        "a little",
         "many",
         "too many"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "<b>A little</b> acompanha substantivos <b>incontáveis</b>: a little water, a little sugar, a little milk."
     },
     {
       "tema": "A few / A little",
       "q": "Which word goes with <b>countable</b> nouns like “cookies”?",
       "opts": [
-        "a few",
         "a little",
         "much",
+        "a few",
         "enough of"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "Dá para contar cookies (1, 2, 3…), então usamos <b>a few</b>. Para leite, açúcar e arroz, que não contamos um a um, usamos <b>a little</b>."
     },
     {
       "tema": "Too much / Too many",
       "q": "Complete: <em>You ate ___ cookies! Your stomach hurts.</em>",
       "opts": [
-        "too many",
         "too much",
         "a little",
-        "enough"
+        "enough",
+        "too many"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "<b>Too many</b> vai com contáveis no plural (cookies, sweets, chips). <b>Too much</b> vai com incontáveis."
     },
     {
@@ -206,36 +206,36 @@
       "tema": "Too much / Too many",
       "q": "What does <em>“too much”</em> mean?",
       "opts": [
-        "More than you need or more than is good",
         "Exactly the right amount",
+        "More than you need or more than is good",
         "Very little",
         "Nothing at all"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "“Too” sempre indica excesso, algo negativo: too much salt, too many people. Já “enough” é a quantidade certa."
     },
     {
       "tema": "Enough",
       "q": "Complete: <em>We have ___ chairs for everyone. Nobody will stand.</em>",
       "opts": [
-        "enough",
         "too many",
         "a little",
+        "enough",
         "any"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "<b>Enough</b> = a quantidade suficiente, nem pouco nem demais. Vem antes do substantivo: enough chairs, enough water."
     },
     {
       "tema": "Enough",
       "q": "Which sentence shows a <b>healthy habit</b>?",
       "opts": [
-        "I drink enough water every day.",
         "I eat too much candy every day.",
         "I don't eat any vegetables.",
-        "I drink too many sodas."
+        "I drink too many sodas.",
+        "I drink enough water every day."
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "“Enough water” é a quantidade certa. As outras mostram exagero (too much/too many) ou falta (don't eat any)."
     },
     {
@@ -254,36 +254,36 @@
       "tema": "Simple past",
       "q": "Which question is <b>correct</b>?",
       "opts": [
-        "Did you go to the park?",
         "Did you went to the park?",
+        "Did you go to the park?",
         "Do you went to the park?",
         "Did you going to the park?"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "Depois de <b>did</b>, o verbo fica na forma base: “go”, não “went”. O “did” já marca o passado sozinho."
     },
     {
       "tema": "Simple past",
       "q": "Give the <b>short answer</b>: “Did they build a house?” — Yes, ___",
       "opts": [
-        "they did.",
         "they do.",
         "they was.",
+        "they did.",
         "they built."
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "A short answer repete o auxiliar: Yes, they did. / No, they didn't."
     },
     {
       "tema": "Simple past",
       "q": "Give the <b>negative short answer</b>: “Did he help you?” — No, ___",
       "opts": [
-        "he didn't.",
         "he doesn't.",
         "he wasn't.",
-        "he not did."
+        "he not did.",
+        "he didn't."
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "No + sujeito + didn't. Lembre: didn't = did not."
     },
     {
@@ -302,36 +302,36 @@
       "tema": "Food containers",
       "q": "Complete: <em>a ___ of milk</em>",
       "opts": [
-        "carton",
         "bar",
+        "carton",
         "loaf",
         "slice"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "<b>A carton of milk</b> — a caixinha. Leite também pode vir em <i>a bottle of milk</i>."
     },
     {
       "tema": "Food containers",
       "q": "Complete: <em>a ___ of bread</em>",
       "opts": [
-        "loaf",
         "carton",
         "can",
+        "loaf",
         "bar"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "<b>A loaf of bread</b> = um pão de forma inteiro. Uma fatia é <i>a slice of bread</i>."
     },
     {
       "tema": "Food containers",
       "q": "Complete: <em>a ___ of chocolate</em>",
       "opts": [
-        "bar",
         "jar",
         "bag",
-        "carton"
+        "carton",
+        "bar"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "<b>A bar of chocolate</b> = uma barra de chocolate."
     },
     {
@@ -350,36 +350,36 @@
       "tema": "Food containers",
       "q": "Complete: <em>a ___ of soup</em>",
       "opts": [
-        "can",
         "loaf",
+        "can",
         "slice",
         "bar"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "<b>A can of soup</b> = uma lata de sopa. <i>Can</i> também serve para refrigerante: a can of soda."
     },
     {
       "tema": "Food containers",
       "q": "Complete: <em>a ___ of rice</em>",
       "opts": [
-        "bag",
         "bar",
         "carton",
+        "bag",
         "slice"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "<b>A bag of rice</b> = um saco de arroz. Biscoitos vêm em <i>a packet of biscuits</i>."
     },
     {
       "tema": "Countable / Uncountable",
       "q": "Which word is <b>uncountable</b> (não dá para contar um a um)?",
       "opts": [
-        "water",
         "apples",
         "eggs",
-        "sandwiches"
+        "sandwiches",
+        "water"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "<b>Water</b> é incontável — por isso dizemos <i>a little water</i>, nunca “two waters”. Os outros são contáveis."
     },
     {
@@ -398,36 +398,36 @@
       "tema": "Countable / Uncountable",
       "q": "Complete: <em>___ eggs are there in the fridge?</em>",
       "opts": [
-        "How many",
         "How much",
+        "How many",
         "How long",
         "How often"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "“Eggs” é contável no plural → <b>How many</b>."
     },
     {
       "tema": "Simple past",
       "q": "What is the simple past of <em>go</em>?",
       "opts": [
-        "went",
         "goed",
         "gone",
+        "went",
         "going"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "<b>Went</b>. “Go” é irregular — não ganha “-ed”."
     },
     {
       "tema": "Simple past",
       "q": "What is the simple past of <em>eat</em>?",
       "opts": [
-        "ate",
         "eated",
         "eaten",
-        "eating"
+        "eating",
+        "ate"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "<b>Ate</b>. Outro verbo irregular comum na prova."
     },
     {
@@ -446,36 +446,36 @@
       "tema": "Simple past",
       "q": "What is the simple past of <em>live</em>?",
       "opts": [
-        "lived",
         "live",
+        "lived",
         "liveed",
         "living"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "<b>Lived</b>. Verbos regulares ganham <b>-ed</b> (ou só -d quando já terminam em e)."
     },
     {
       "tema": "Simple past",
       "q": "Complete: <em>Where ___ you live last year?</em>",
       "opts": [
-        "did",
         "do",
         "does",
+        "did",
         "was"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "Pergunta no passado com palavra interrogativa: <b>Where did you live?</b>"
     },
     {
       "tema": "Simple past",
       "q": "Give the short answer: “Were they at school?” — Yes, ___",
       "opts": [
-        "they were.",
         "they was.",
         "they did.",
-        "they are."
+        "they are.",
+        "they were."
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "Com o verbo <b>to be</b>, a short answer repete was/were: Yes, they <b>were</b>."
     },
     {
@@ -494,24 +494,24 @@
       "tema": "Paragraph writing",
       "q": "How do we start every <b>sentence</b> in English?",
       "opts": [
-        "With a capital letter",
         "With a small letter",
+        "With a capital letter",
         "With a number",
         "With a comma"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "Letra maiúscula no começo e ponto final no fim — regra básica que vale nota na prova."
     },
     {
       "tema": "Paragraph writing",
       "q": "Which words help <b>connect</b> ideas in a paragraph?",
       "opts": [
-        "and, but, because, also",
         "cat, dog, house",
         "red, blue, green",
+        "and, but, because, also",
         "one, two, three"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "São os <b>connectors</b>: and (adiciona), but (contrasta), because (explica), also (acrescenta)."
     }
   ]

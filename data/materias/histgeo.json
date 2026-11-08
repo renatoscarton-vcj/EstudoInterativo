@@ -125,36 +125,36 @@
       "tema": "Grandes Navegações",
       "q": "Em quais <b>séculos</b> aconteceram as Grandes Navegações portuguesas?",
       "opts": [
-        "Séculos XV e XVI",
         "Séculos X e XI",
+        "Séculos XV e XVI",
         "Séculos XVIII e XIX",
         "Século XX"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "Séculos <b>XV e XVI</b> (15 e 16). Foram viagens longas e perigosas por mares desconhecidos."
     },
     {
       "tema": "Grandes Navegações",
       "q": "Quais dificuldades os navegantes enfrentavam naquela época?",
       "opts": [
-        "Ventos desfavoráveis, mapas cheios de erros, fome, doenças e sede",
         "Trânsito de navios e falta de portos",
         "Excesso de chuva apenas",
+        "Ventos desfavoráveis, mapas cheios de erros, fome, doenças e sede",
         "Falta de tripulantes voluntários"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "São cinco dificuldades citadas no livro: <b>ventos desfavoráveis, mapas errados, fome, doenças e sede</b>."
     },
     {
       "tema": "Grandes Navegações",
       "q": "O que os europeus acreditavam sobre o <b>formato da Terra</b>?",
       "opts": [
-        "Que era achatada como uma pizza e quem se afastasse do litoral caía em um abismo",
         "Que era redonda como uma bola",
         "Que era quadrada",
-        "Que era oca por dentro"
+        "Que era oca por dentro",
+        "Que era achatada como uma pizza e quem se afastasse do litoral caía em um abismo"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "Achavam que a Terra era <b>achatada como uma pizza</b> e que havia um abismo na borda — por isso tinham tanto medo de se afastar da costa."
     },
     {
@@ -173,36 +173,36 @@
       "tema": "Motivos das navegações",
       "q": "Quais foram os <b>dois principais motivos</b> das navegações portuguesas?",
       "opts": [
-        "A busca por especiarias e artigos de luxo, e a intenção de converter outros povos ao Cristianismo",
         "Encontrar novas terras para morar e fugir de guerras",
+        "A busca por especiarias e artigos de luxo, e a intenção de converter outros povos ao Cristianismo",
         "Procurar ouro e treinar marinheiros",
         "Mapear o mundo e estudar os oceanos"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "Motivo <b>a)</b> especiarias e artigos de luxo, para enriquecimento rápido. Motivo <b>b)</b> converter povos ao Cristianismo."
     },
     {
       "tema": "Motivos das navegações",
       "q": "As navegações portuguesas tiveram motivações de que tipo?",
       "opts": [
-        "Econômica e religiosa",
         "Esportiva e científica",
         "Artística e militar",
+        "Econômica e religiosa",
         "Apenas econômica"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "<b>Econômica</b> (riqueza com especiarias) e <b>religiosa</b> (converter povos ao Cristianismo). Essa dupla cai muito em prova."
     },
     {
       "tema": "Especiarias",
       "q": "O que eram as <em>especiarias</em>, segundo o livro?",
       "opts": [
-        "Temperos como pimenta, cravo, canela e gengibre, trazidos das Índias",
         "Pedras preciosas da África",
         "Tecidos finos da Europa",
-        "Remédios fabricados em Portugal"
+        "Remédios fabricados em Portugal",
+        "Temperos como pimenta, cravo, canela e gengibre, trazidos das Índias"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "Eram <b>temperos</b> vindos das Índias: pimenta, cravo, canela e gengibre."
     },
     {
@@ -221,36 +221,36 @@
       "tema": "Especiarias",
       "q": "O que os europeus chamavam de “<em>Índias</em>”?",
       "opts": [
-        "As ricas regiões da Ásia, como Índia, China e Japão",
         "As ilhas do Caribe",
+        "As ricas regiões da Ásia, como Índia, China e Japão",
         "A costa da África",
         "O interior do Brasil"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "“Índias” era o nome dado às <b>ricas regiões da Ásia</b> — Índia, China e Japão."
     },
     {
       "tema": "Especiarias",
       "q": "Quais eram os <em>artigos de luxo</em> buscados pelos europeus?",
       "opts": [
-        "Tecidos de algodão da Índia, tapetes da Pérsia, seda e porcelana da China e pérolas do Japão",
         "Ouro e prata da América",
         "Madeira e peles da Europa",
+        "Tecidos de algodão da Índia, tapetes da Pérsia, seda e porcelana da China e pérolas do Japão",
         "Café e açúcar do Brasil"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "Cada produto tem sua origem: algodão (Índia), tapetes (Pérsia), seda e porcelana (China), pérolas (Japão)."
     },
     {
       "tema": "Especiarias",
       "q": "Qual é a especiaria <b>mais cara do mundo</b>, usada também para tingir roupas?",
       "opts": [
-        "O açafrão",
         "A canela",
         "O cravo",
-        "A noz-moscada"
+        "A noz-moscada",
+        "O açafrão"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "O <b>açafrão</b> é a especiaria mais cara do mundo — e serve de tempero e de corante para tecidos."
     },
     {
@@ -269,36 +269,36 @@
       "tema": "Especiarias",
       "q": "Qual especiaria é usada no <b>tratamento das cáries</b>?",
       "opts": [
-        "O cravo",
         "A canela",
+        "O cravo",
         "O gengibre",
         "O açafrão"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "O <b>cravo</b> — usado como tempero em doces e salgados e também no tratamento de cáries."
     },
     {
       "tema": "Especiarias",
       "q": "Qual especiaria é usada na fabricação de <b>pastas de dentes e chicletes</b>?",
       "opts": [
-        "O gengibre",
         "A noz-moscada",
         "O cravo",
+        "O gengibre",
         "A pimenta"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "O <b>gengibre</b>, que também entra em pães, doces e molhos."
     },
     {
       "tema": "Portugal pioneiro",
       "q": "Por que Portugal foi o <b>primeiro país europeu</b> a fazer viagens de longa distância?",
       "opts": [
-        "Porque possuía um reino organizado muito antes de outros países europeus",
         "Porque era o maior país da Europa",
         "Porque tinha mais habitantes",
-        "Porque ficava no centro da Europa"
+        "Porque ficava no centro da Europa",
+        "Porque possuía um reino organizado muito antes de outros países europeus"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "O livro dá cinco razões, e essa é a primeira: um <b>reino organizado</b> muito antes dos outros."
     },
     {
@@ -317,36 +317,36 @@
       "tema": "Portugal pioneiro",
       "q": "Como funciona a <em>bússola</em>?",
       "opts": [
-        "Tem uma agulha magnética permanentemente apontada para o Norte",
         "Mostra as horas do dia",
+        "Tem uma agulha magnética permanentemente apontada para o Norte",
         "Mede a altura das estrelas",
         "Indica a profundidade do mar"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "A agulha magnética aponta sempre para o <b>Norte</b>, permitindo manobrar o navio na direção desejada."
     },
     {
       "tema": "Portugal pioneiro",
       "q": "Quem <b>inventou</b> a bússola e quem a levou para a Europa?",
       "opts": [
-        "Foi inventada pelos chineses e levada para a Europa pelos árabes",
         "Foi inventada pelos portugueses",
         "Foi inventada pelos gregos e levada pelos romanos",
+        "Foi inventada pelos chineses e levada para a Europa pelos árabes",
         "Foi inventada pelos árabes e levada pelos chineses"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "Inventada pelos <b>chineses</b> e trazida pelos <b>árabes</b>. Portugal apenas <b>aperfeiçoou</b> o seu uso."
     },
     {
       "tema": "Portugal pioneiro",
       "q": "Além da bússola e da caravela, o que mais ajudou Portugal a ser pioneiro?",
       "opts": [
-        "Ter reis que apoiavam o comércio marítimo e comerciantes ativos e ricos",
         "Ter o maior exército da Europa",
         "Ter muitas universidades",
-        "Ter minas de ouro no próprio território"
+        "Ter minas de ouro no próprio território",
+        "Ter reis que apoiavam o comércio marítimo e comerciantes ativos e ricos"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "O apoio dos <b>reis</b> ao comércio marítimo e a existência de <b>comerciantes ricos</b> financiaram as viagens."
     },
     {
@@ -365,36 +365,36 @@
       "tema": "A caravela",
       "q": "Qual era a grande vantagem da <em>vela triangular</em> da caravela?",
       "opts": [
-        "Facilitava ao piloto manter o rumo mesmo com ventos desfavoráveis",
         "Deixava o navio mais bonito",
+        "Facilitava ao piloto manter o rumo mesmo com ventos desfavoráveis",
         "Fazia o navio flutuar melhor",
         "Protegia da chuva"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "A vela triangular permitia navegar mesmo quando o vento não estava a favor — vantagem enorme em viagens longas."
     },
     {
       "tema": "A caravela",
       "q": "Quem era o <em>capitão-mor</em> na caravela?",
       "opts": [
-        "O representante do rei no mar, comandante da esquadra",
         "O responsável por cozinhar",
         "Quem rezava a missa",
+        "O representante do rei no mar, comandante da esquadra",
         "Quem cuidava das velas"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "O capitão-mor representava o rei e comandava toda a esquadra. Já o <b>capitão da embarcação</b> era a autoridade máxima de cada navio."
     },
     {
       "tema": "A caravela",
       "q": "O que fazia o <em>escrivão</em> da caravela?",
       "opts": [
-        "Registrava tudo o que acontecia na viagem e pudesse interessar ao rei",
         "Comandava os marinheiros",
         "Decidia a rota do navio",
-        "Julgava os malfeitores"
+        "Julgava os malfeitores",
+        "Registrava tudo o que acontecia na viagem e pudesse interessar ao rei"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "O escrivão era o “repórter” da viagem: anotava tudo que interessasse ao rei. Quem julgava os malfeitores era o <b>meirinho</b>."
     },
     {
@@ -413,36 +413,36 @@
       "tema": "A caravela",
       "q": "O que fazia o <em>meirinho</em> a bordo?",
       "opts": [
-        "Julgava os malfeitores e às vezes mandava prendê-los com argola de ferro nos pés",
         "Rezava a missa aos domingos",
+        "Julgava os malfeitores e às vezes mandava prendê-los com argola de ferro nos pés",
         "Cuidava do leme",
         "Fazia os mapas"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "O meirinho era a “justiça” do navio. O <b>sacerdote</b> rezava missa nos domingos e dias santos."
     },
     {
       "tema": "Navegações portuguesas",
       "q": "No início das Grandes Navegações, qual era um problema dos tripulantes?",
       "opts": [
-        "A maioria não sabia nem mesmo nadar",
         "Todos já eram marinheiros experientes",
         "Havia gente demais querendo embarcar",
+        "A maioria não sabia nem mesmo nadar",
         "Os navios eram grandes demais"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "Poucas pessoas estavam preparadas e a maioria não sabia nadar. Às vezes o navio afundava perto da costa e os tripulantes morriam afogados."
     },
     {
       "tema": "Navegações portuguesas",
       "q": "O que era uma <em>feitoria</em>?",
       "opts": [
-        "Um armazém fortificado onde se comerciavam ouro, marfim, sal, pólvora, pimenta e escravos",
         "Uma fábrica de caravelas",
         "Uma igreja construída na costa",
-        "Um tipo de mapa"
+        "Um tipo de mapa",
+        "Um armazém fortificado onde se comerciavam ouro, marfim, sal, pólvora, pimenta e escravos"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "A feitoria era armazém e fortaleza ao mesmo tempo — base do comércio português na costa africana."
     },
     {
@@ -461,36 +461,36 @@
       "tema": "Navegações portuguesas",
       "q": "Em <b>1488</b>, quem contornou o <em>Cabo das Tormentas</em>?",
       "opts": [
-        "Bartolomeu Dias",
         "Vasco da Gama",
+        "Bartolomeu Dias",
         "Pedro Álvares Cabral",
         "Cristóvão Colombo"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "<b>Bartolomeu Dias</b>, em 1488. Decore ligando: Dias → Cabo (1488)."
     },
     {
       "tema": "Navegações portuguesas",
       "q": "Quem mudou o nome de <em>Cabo das Tormentas</em> para <em>Cabo da Boa Esperança</em>?",
       "opts": [
-        "O rei de Portugal D. João II",
         "Bartolomeu Dias",
         "Vasco da Gama",
+        "O rei de Portugal D. João II",
         "O papa"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "O rei <b>D. João II</b> trocou o nome: “tormentas” assustava, “boa esperança” animava quem ia navegar por ali."
     },
     {
       "tema": "Navegações portuguesas",
       "q": "Em <b>1498</b>, Vasco da Gama chegou a qual cidade da Índia?",
       "opts": [
-        "Calicute",
         "Lisboa",
         "Goa",
-        "Bombaim"
+        "Bombaim",
+        "Calicute"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "Chegou a <b>Calicute</b>, de onde voltou com navios carregados de <b>pimenta</b>. O lucro dos portugueses foi enorme."
     },
     {
@@ -509,36 +509,36 @@
       "tema": "Navegações portuguesas",
       "q": "Em <b>1482</b>, os portugueses ergueram o castelo de São Jorge da Mina e iniciaram a exploração de qual região?",
       "opts": [
-        "Do Congo",
         "Da Índia",
+        "Do Congo",
         "Do Brasil",
         "Da China"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "O castelo de São Jorge da Mina marcou o início da exploração do <b>Congo</b>."
     },
     {
       "tema": "Navegações portuguesas",
       "q": "Com as navegações, Portugal formou um império com terras em quais <b>três continentes</b>?",
       "opts": [
-        "África, Ásia e América",
         "Europa, Ásia e Oceania",
         "América, Europa e Antártida",
+        "África, Ásia e América",
         "África, Europa e Oceania"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "<b>África, Ásia e América</b> — um império espalhado por três continentes."
     },
     {
       "tema": "A concorrência espanhola",
       "q": "Em <b>1492</b>, quem velejou em direção ao Ocidente com apoio dos reis espanhóis?",
       "opts": [
-        "Cristóvão Colombo",
         "Vasco da Gama",
         "Bartolomeu Dias",
-        "Fernão de Magalhães"
+        "Fernão de Magalhães",
+        "Cristóvão Colombo"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "<b>Cristóvão Colombo</b>, em <b>12 de outubro de 1492</b>, avistou as terras onde hoje é a América."
     },
     {
@@ -557,36 +557,36 @@
       "tema": "Tratado de Tordesilhas",
       "q": "Em que ano foi assinado o <em>Tratado de Tordesilhas</em>?",
       "opts": [
-        "1494",
         "1492",
+        "1494",
         "1500",
         "1488"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "Em <b>1494</b> — seis anos antes de Cabral chegar ao Brasil. O Brasil já estava dividido antes de os portugueses pisarem aqui."
     },
     {
       "tema": "Tratado de Tordesilhas",
       "q": "A linha imaginária do Tratado de Tordesilhas ficava a quantas léguas das ilhas do Cabo Verde?",
       "opts": [
-        "370 léguas",
         "100 léguas",
         "500 léguas",
+        "370 léguas",
         "1.000 léguas"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "<b>370 léguas</b> a oeste das ilhas do Cabo Verde — um número que vale decorar."
     },
     {
       "tema": "Tratado de Tordesilhas",
       "q": "Pelo tratado, as terras a <b>leste</b> da linha pertenceriam a quem?",
       "opts": [
-        "A Portugal",
         "À Espanha",
         "À Inglaterra",
-        "A ninguém"
+        "A ninguém",
+        "A Portugal"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "A <b>leste</b> → Portugal. A <b>oeste</b> → Espanha. Dica: Portugal fica mais a leste no mapa da Europa."
     },
     {
@@ -605,36 +605,36 @@
       "tema": "África",
       "q": "A África é um país ou um continente?",
       "opts": [
-        "Um continente, com 54 países e muitos povos",
         "Um país muito grande",
+        "Um continente, com 54 países e muitos povos",
         "Um conjunto de 10 países",
         "Uma ilha gigante"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "A África <b>não</b> é um país! É um continente com <b>54 países</b>, cada um com vários povos, línguas e costumes."
     },
     {
       "tema": "África",
       "q": "Quais <b>dois oceanos</b> banham a África?",
       "opts": [
-        "Atlântico e Índico",
         "Pacífico e Ártico",
         "Atlântico e Pacífico",
+        "Atlântico e Índico",
         "Índico e Antártico"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "Oceano <b>Atlântico</b> (a oeste) e Oceano <b>Índico</b> (a leste)."
     },
     {
       "tema": "África",
       "q": "Grande número de brasileiros descende de africanos que viviam onde hoje é:",
       "opts": [
-        "Nigéria, República Democrática do Congo, Angola e Moçambique",
         "Egito, Marrocos e Tunísia",
         "África do Sul e Namíbia",
-        "Quênia e Etiópia"
+        "Quênia e Etiópia",
+        "Nigéria, República Democrática do Congo, Angola e Moçambique"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "São esses quatro: <b>Nigéria, Rep. Dem. do Congo, Angola e Moçambique</b> — por isso estudar a história da África é estudar a nossa própria história."
     },
     {
@@ -653,36 +653,36 @@
       "tema": "Os bantos",
       "q": "Qual técnica importante os bantos dominavam?",
       "opts": [
-        "A produção do ferro",
         "A fabricação de vidro",
+        "A produção do ferro",
         "A construção de navios a vapor",
         "A produção de papel"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "Dominaram a técnica do <b>ferro</b>, usada em instrumentos de trabalho (pás e enxadas) e armas (espadas e lanças)."
     },
     {
       "tema": "Os bantos",
       "q": "Além do ferro, quais atividades os bantos desenvolveram?",
       "opts": [
-        "A agricultura e a pecuária",
         "A pesca em alto-mar apenas",
         "O comércio de automóveis",
+        "A agricultura e a pecuária",
         "A mineração de petróleo"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "Agricultura e pecuária. Com isso construíram cidades e <b>reinos prósperos</b>."
     },
     {
       "tema": "Reino do Congo",
       "q": "Quem fundou o Reino do Congo, segundo contam os mais velhos?",
       "opts": [
-        "Nimi-a-Lukeni",
         "Mani Congo",
         "Nzimbu",
-        "Mbanza"
+        "Mbanza",
+        "Nimi-a-Lukeni"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "<b>Nimi-a-Lukeni</b>. Ele e seu grupo atravessaram o <b>rio Zaire</b>, conquistaram terras e ergueram a capital."
     },
     {
@@ -701,36 +701,36 @@
       "tema": "Reino do Congo",
       "q": "Qual era o <em>título</em> do rei do Congo?",
       "opts": [
-        "Mani Congo (senhor do Congo)",
         "Faraó do Congo",
+        "Mani Congo (senhor do Congo)",
         "Imperador bantu",
         "Rei de Luanda"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "<b>Mani Congo</b> significa “senhor do Congo”."
     },
     {
       "tema": "Reino do Congo",
       "q": "Quantos habitantes tinha Mbanza Congo?",
       "opts": [
-        "Cerca de cem mil — do tamanho das capitais europeias da época",
         "Cerca de mil",
         "Cerca de dez milhões",
+        "Cerca de cem mil — do tamanho das capitais europeias da época",
         "Menos de cem"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "Cerca de <b>cem mil habitantes</b>, no alto de uma colina. Era tão grande quanto as capitais europeias daquele tempo."
     },
     {
       "tema": "Reino do Congo",
       "q": "O centro histórico de Mbanza Congo foi considerado pela Unesco como:",
       "opts": [
-        "Patrimônio Mundial da Humanidade",
         "Capital Mundial do Comércio",
         "Reserva Natural",
-        "Cidade Nova"
+        "Cidade Nova",
+        "Patrimônio Mundial da Humanidade"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "<b>Patrimônio Mundial da Humanidade</b> — reconhecimento da Unesco pela importância histórica do lugar."
     },
     {
@@ -749,36 +749,36 @@
       "tema": "Reino do Congo",
       "q": "Qual era o nome da <em>moeda</em> usada no Reino do Congo?",
       "opts": [
-        "Nzimbu",
         "Real",
+        "Nzimbu",
         "Escudo",
         "Marfim"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "O <b>nzimbu</b>, uma espécie de <b>concha marinha</b> pescada na ilha de Luanda. Sua exploração era exclusiva do rei."
     },
     {
       "tema": "Reino do Congo",
       "q": "Como as aldeias e cidades pagavam <b>impostos</b> ao rei?",
       "opts": [
-        "Com produtos como metais, alimentos, marfim e peles de animais",
         "Apenas com moedas de ouro",
         "Com dias de trabalho no palácio",
+        "Com produtos como metais, alimentos, marfim e peles de animais",
         "Não pagavam impostos"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "Pagavam em produtos e, em troca, recebiam <b>proteção</b>. Com esses recursos o rei mantinha sua corte e seus servidores."
     },
     {
       "tema": "Reino do Congo",
       "q": "Quais produtos tinham destaque nas <em>caravanas</em> que partiam de Mbanza Congo?",
       "opts": [
-        "O ferro e o sal",
         "O ouro e o diamante",
         "O café e o açúcar",
-        "A seda e o algodão"
+        "A seda e o algodão",
+        "O ferro e o sal"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "<b>Ferro</b> e <b>sal</b>. O comércio no Congo era intenso, com caravanas indo e voltando do interior."
     },
     {
@@ -797,36 +797,36 @@
       "tema": "Paisagens vegetais",
       "q": "Qual é a <b>maior floresta tropical do mundo</b>?",
       "opts": [
-        "Floresta Amazônica",
         "Mata Atlântica",
+        "Floresta Amazônica",
         "Mata dos cocais",
         "Mata de araucárias"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "A <b>Floresta Amazônica</b>, com clima quente e úmido e árvores muito altas, como as <b>castanheiras</b>."
     },
     {
       "tema": "Paisagens vegetais",
       "q": "O que mais ameaça a Floresta Amazônica, segundo o livro?",
       "opts": [
-        "O desmatamento, promovido pela expansão do extrativismo e da agropecuária",
         "A falta de chuvas",
         "O excesso de turistas",
+        "O desmatamento, promovido pela expansão do extrativismo e da agropecuária",
         "O frio intenso"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "O <b>desmatamento</b>, causado pelo avanço do extrativismo e da agropecuária."
     },
     {
       "tema": "Paisagens vegetais",
       "q": "Qual vegetação apresenta <b>árvores baixas com troncos retorcidos e galhos sinuosos</b>?",
       "opts": [
-        "Cerrado",
         "Caatinga",
         "Campos",
-        "Mata dos cocais"
+        "Mata dos cocais",
+        "Cerrado"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "O <b>Cerrado</b>, que ocupava originalmente vasta área do Brasil central. Hoje sofre com o avanço da agropecuária, em especial da <b>soja</b>."
     },
     {
@@ -845,36 +845,36 @@
       "tema": "Paisagens vegetais",
       "q": "A <em>Mata dos cocais</em> fica entre quais estados e é composta de quê?",
       "opts": [
-        "Entre Maranhão e Piauí, composta de palmeiras como o babaçu e a carnaúba",
         "Entre Bahia e Sergipe, composta de cactos",
+        "Entre Maranhão e Piauí, composta de palmeiras como o babaçu e a carnaúba",
         "Entre Paraná e Santa Catarina, composta de araucárias",
         "Entre Amazonas e Pará, composta de castanheiras"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "Entre <b>Maranhão e Piauí</b>. É chamada de <b>mata de transição</b> por ficar entre a caatinga do Sertão e a Amazônia."
     },
     {
       "tema": "Paisagens vegetais",
       "q": "Originalmente, as <em>Matas Atlânticas</em> se estendiam de onde até onde?",
       "opts": [
-        "Do litoral do Rio Grande do Norte até o do Rio Grande do Sul",
         "Do Amazonas até o Mato Grosso",
         "Do Ceará até Goiás",
+        "Do litoral do Rio Grande do Norte até o do Rio Grande do Sul",
         "Só no estado de São Paulo"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "Do <b>Rio Grande do Norte</b> ao <b>Rio Grande do Sul</b>. Resta pouco porque a maior parte da população brasileira vive justamente onde ela existia."
     },
     {
       "tema": "Paisagens vegetais",
       "q": "A <em>Mata de araucárias</em> também é conhecida como:",
       "opts": [
-        "Mata de pinhais",
         "Mata dos cocais",
         "Mata de transição",
-        "Mata ciliar"
+        "Mata ciliar",
+        "Mata de pinhais"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "<b>Mata de pinhais</b>. Ocupa parte do <b>sul</b> do país, em clima subtropical e altitudes mais elevadas."
     },
     {
@@ -893,36 +893,36 @@
       "tema": "Paisagens vegetais",
       "q": "O <em>Complexo do Pantanal</em> é uma planície alagada pelas águas de qual bacia?",
       "opts": [
-        "Bacia do Rio Paraguai",
         "Bacia do Rio Amazonas",
+        "Bacia do Rio Paraguai",
         "Bacia do Rio São Francisco",
         "Bacia do Rio Tietê"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "Bacia do <b>Rio Paraguai</b>. A vegetação é um emaranhado de matas, cerrados e plantas aquáticas."
     },
     {
       "tema": "Paisagens vegetais",
       "q": "O que caracteriza os <em>manguezais</em>?",
       "opts": [
-        "Raízes submersas nas cheias e marés altas, e aparentes nas marés baixas",
         "Árvores de mais de 50 metros",
         "Cactos e plantas espinhosas",
+        "Raízes submersas nas cheias e marés altas, e aparentes nas marés baixas",
         "Campos de gramíneas"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "As raízes do mangue ficam <b>submersas</b> quando a maré sobe e <b>aparentes</b> quando a maré baixa. É parte da vegetação litorânea."
     },
     {
       "tema": "Paisagens vegetais",
       "q": "As <em>Campinaranas</em> ocorrem em que tipo de lugar?",
       "opts": [
-        "Em planícies amazônicas onde não há floresta, com presença de grama",
         "No litoral do Nordeste",
         "No alto das montanhas do Sul",
-        "No sertão da Bahia"
+        "No sertão da Bahia",
+        "Em planícies amazônicas onde não há floresta, com presença de grama"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "São áreas dentro da Amazônia onde não há floresta — caracterizadas pela presença de <b>grama</b>."
     },
     {
@@ -941,36 +941,36 @@
       "tema": "Paisagens vegetais",
       "q": "Um animal que vive em Pernambuco, Ceará, Bahia e Piauí (região nordeste) pertence a qual bioma?",
       "opts": [
-        "Caatinga",
         "Amazônia",
+        "Caatinga",
         "Mata Atlântica",
         "Pampa"
       ],
-      "correct": 0,
+      "correct": 1,
       "fb": "⚠️ Nordeste seco = <b>Caatinga</b>. A Amazônia fica no Norte. Dica: pense no mapa antes de responder!"
     },
     {
       "tema": "Paisagens vegetais",
       "q": "O <em>tatu-bola</em>, típico do semiárido nordestino, vive em qual bioma?",
       "opts": [
-        "Caatinga",
         "Amazônia",
         "Pantanal",
+        "Caatinga",
         "Mata de araucárias"
       ],
-      "correct": 0,
+      "correct": 2,
       "fb": "O tatu-bola é símbolo da <b>Caatinga</b>. Já o tamanduá-bandeira é típico do Cerrado, e o boto-cor-de-rosa da Amazônia."
     },
     {
       "tema": "Paisagens vegetais",
       "q": "Qual vegetação predomina no estado de <b>São Paulo</b>?",
       "opts": [
-        "Mata Atlântica, com áreas de Cerrado no interior",
         "Caatinga",
         "Floresta Amazônica",
-        "Pantanal"
+        "Pantanal",
+        "Mata Atlântica, com áreas de Cerrado no interior"
       ],
-      "correct": 0,
+      "correct": 3,
       "fb": "São Paulo é originalmente de <b>Mata Atlântica</b>, com manchas de <b>Cerrado</b> no interior e <b>araucárias</b> no sul do estado."
     }
   ]
