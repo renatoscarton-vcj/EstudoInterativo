@@ -40,6 +40,38 @@ function codigoVersao(htmlSemVersao) {
 }
 
 const ROOT = path.join(__dirname, '..');
+const FONTES_DIR = path.join(__dirname, '..', 'assets', 'fontes');
+
+// Os arquivos em assets/fontes/ seguem o padrão <apelido>-<peso>.woff2.
+// Este mapa liga o apelido ao nome que o CSS usa em font-family.
+const FAMILIAS = { nunito: 'Nunito', baloo2: 'Baloo 2', montserrat: 'Montserrat' };
+
+/**
+ * Transforma os .woff2 de assets/fontes/ em regras @font-face com o arquivo
+ * embutido em base64. É o que mantém a identidade visual sem internet.
+ */
+function fontesEmbutidas() {
+  if (!fs.existsSync(FONTES_DIR)) return { css: '', kb: 0, n: 0 };
+  const arquivos = fs.readdirSync(FONTES_DIR).filter(f => f.endsWith('.woff2')).sort();
+  let bytes = 0;
+  const css = arquivos.map(arq => {
+    const m = arq.match(/^(.+)-(\d{3})\.woff2$/);
+    if (!m) {
+      console.warn(`   ⚠️  ${arq}: fora do padrão <apelido>-<peso>.woff2, ignorado`);
+      return '';
+    }
+    const familia = FAMILIAS[m[1]];
+    if (!familia) {
+      console.warn(`   ⚠️  ${arq}: apelido "${m[1]}" não está no mapa FAMILIAS, ignorado`);
+      return '';
+    }
+    const dados = fs.readFileSync(path.join(FONTES_DIR, arq));
+    bytes += dados.length;
+    return `@font-face{font-family:'${familia}';font-style:normal;font-weight:${m[2]};` +
+           `font-display:swap;src:url(data:font/woff2;base64,${dados.toString('base64')}) format('woff2');}`;
+  }).filter(Boolean).join('\n');
+  return { css, kb: Math.round(bytes / 1024), n: css ? css.split('\n').length : 0 };
+}
 const MATERIAS_DIR = path.join(ROOT, 'data', 'materias');
 const CALENDARIO = path.join(ROOT, 'data', 'calendario.json');
 const TEMPLATE = path.join(ROOT, 'src', 'template.html');
@@ -215,6 +247,11 @@ const bloco =
   'const subjects = ' + JSON.stringify(subjects, null, 1) + ';\n' +
   'const calendario = ' + JSON.stringify(calendario, null, 1) + ';';
 html = html.replace('// __DADOS__', () => bloco);
+
+const fontes = fontesEmbutidas();
+if (!html.includes('/* __FONTES__ */')) erro('O template não tem o marcador "/* __FONTES__ */".');
+if (!fontes.css) erro('Nenhuma fonte .woff2 encontrada em assets/fontes/ — o jogo ficaria sem identidade visual offline.');
+html = html.replace('/* __FONTES__ */', () => fontes.css);
 html = html.replace(/__BUILD_DATE__/g, new Date().toLocaleDateString('pt-BR'));
 html = html.replace(/__BUILD_YEAR__/g, String(new Date().getFullYear()));
 
@@ -234,4 +271,5 @@ subjects.forEach(s => {
 });
 console.log(`\n   Total: ${licoes} lições e ${total} perguntas em ${subjects.length} matérias`);
 console.log(`   Calendário: ${calendario.eventos.length} eventos`);
+console.log(`   Fontes embutidas: ${fontes.n} (${fontes.kb} KB) — funciona offline`);
 console.log(`   Tamanho: ${(fs.statSync(OUTPUT).size / 1024).toFixed(0)} KB\n`);
