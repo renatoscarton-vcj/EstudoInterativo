@@ -319,6 +319,7 @@
     color:#fff; min-height:19px; max-width:100%; overflow:hidden; white-space:nowrap;
   }
   .chip .chip-txt{display:none; overflow:hidden; text-overflow:ellipsis;}
+  .tipo-sistematizada{background:var(--t-sistematizada); color:#fff;}
   .tipo-avaliacao{background:var(--t-avaliacao); color:#fff;}
   .tipo-atividade{background:var(--t-atividade); color:#fff;}
   .tipo-trabalho{background:var(--t-trabalho); color:#fff;}
@@ -626,6 +627,28 @@
   .alaris-txt b span{color:#A79FFF;}
   .rodape-sub{font-size:12.5px; font-weight:800; color:var(--muted); margin-top:12px; line-height:1.6;}
 
+  /* ---------- SELO DE VERSÃO ---------- */
+  .versao-selo{
+    display:inline-flex; align-items:center; gap:8px;
+    margin-top:12px; padding:7px 14px;
+    background:#141A2E; color:#E8EAF2;
+    border:2px solid #2B3450; border-radius:999px;
+    font-family:var(--fb); font-size:12.5px; font-weight:800;
+    cursor:pointer; transition:transform .12s ease, border-color .15s ease;
+  }
+  .versao-selo:hover{border-color:#6F63FF;}
+  .versao-selo:active{transform:scale(0.97);}
+  .versao-rotulo{
+    font-size:10px; letter-spacing:1.4px; text-transform:uppercase; color:#8E97B4;
+  }
+  .versao-cod{
+    font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+    font-size:13px; letter-spacing:0.2px; color:#fff;
+  }
+  .versao-copiar{font-size:13px; color:#8E97B4;}
+  .versao-selo.copiado{border-color:#22C55E;}
+  .versao-selo.copiado .versao-copiar{color:#22C55E;}
+
   /* ---------- CELULAR ---------- */
   @media (max-width:599px){
     body{padding-left:max(12px, env(safe-area-inset-left)); padding-right:max(12px, env(safe-area-inset-right));}
@@ -715,6 +738,12 @@
       Passaporte do Saber™ · atualizado em 08/11/2026<br>
       © 2026 Alaris IA · Todos os direitos reservados
     </div>
+    <button class="versao-selo" id="versaoSelo" onclick="copiarVersao()"
+            title="Toque para copiar o código da versão">
+      <span class="versao-rotulo">versão</span>
+      <span class="versao-cod">v2026.11.08·13AF7B</span>
+      <span class="versao-copiar" id="versaoCopiar">⧉</span>
+    </button>
   </footer>
 </div>
 
@@ -6658,7 +6687,7 @@ function hash(t){ let h = 0; for(const c of String(t)) h = (h*31 + c.charCodeAt(
 //  TIPOS DO CALENDÁRIO E DATAS
 // =========================================================
 const TIPOS = {
-  sistematizada:{nome:'Avaliação Sistematizada', curto:'Sistematizada', icon:'🎯'},
+  sistematizada:{nome:'Avaliação Sistematizada', curto:'Prova', icon:'🎯'},
   avaliacao:{nome:'Avaliação Diversificada', curto:'Avaliação', icon:'📝'},
   atividade:{nome:'Atividade Avaliativa',    curto:'Atividade', icon:'✏️'},
   trabalho: {nome:'Trabalho em grupo',       curto:'Trabalho',  icon:'👥'},
@@ -7987,6 +8016,49 @@ function renderPassaporte(){
       }).join('')}
     </div>
   `);
+}
+
+// =========================================================
+//  VERSÃO
+//  Código visível no rodapé para conferir que todos estão
+//  na mesma versão. Também fica em window.PASSAPORTE_VERSAO.
+// =========================================================
+const PASSAPORTE_VERSAO = 'v2026.11.08·13AF7B';
+window.PASSAPORTE_VERSAO = PASSAPORTE_VERSAO;
+console.info('Passaporte do Saber ' + PASSAPORTE_VERSAO);
+
+function copiarVersao(){
+  const selo = document.getElementById('versaoSelo');
+  const marca = document.getElementById('versaoCopiar');
+  const texto = 'Passaporte do Saber ' + PASSAPORTE_VERSAO;
+
+  const confirmar = () => {
+    if(!selo || !marca) return;
+    selo.classList.add('copiado');
+    marca.textContent = '✓';
+    setTimeout(() => {
+      selo.classList.remove('copiado');
+      marca.textContent = '⧉';
+    }, 1800);
+  };
+
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(texto).then(confirmar).catch(() => selecionarVersao());
+  } else {
+    selecionarVersao();
+  }
+
+  // sem acesso à área de transferência, deixa o texto selecionado para copiar à mão
+  function selecionarVersao(){
+    try{
+      const alvo = document.querySelector('.versao-cod');
+      const faixa = document.createRange();
+      faixa.selectNodeContents(alvo);
+      const sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(faixa);
+    }catch(e){}
+  }
 }
 
 // =========================================================

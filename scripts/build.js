@@ -11,6 +11,33 @@
 
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
+
+/**
+ * Código de versão: data da geração + impressão digital do próprio conteúdo.
+ *
+ * O código é calculado a partir do HTML já montado (com as perguntas, as lições
+ * e o calendário dentro), então duas pessoas que veem o mesmo código estão
+ * necessariamente com o mesmo arquivo. Não depende do git nem da ordem entre
+ * gerar e commitar.
+ */
+function codigoVersao(htmlSemVersao) {
+  const d = new Date();
+  const data = [
+    d.getFullYear(),
+    String(d.getMonth() + 1).padStart(2, '0'),
+    String(d.getDate()).padStart(2, '0')
+  ].join('.');
+
+  const impressao = crypto
+    .createHash('sha256')
+    .update(htmlSemVersao, 'utf8')
+    .digest('hex')
+    .slice(0, 6)
+    .toUpperCase();
+
+  return `v${data}·${impressao}`;
+}
 
 const ROOT = path.join(__dirname, '..');
 const MATERIAS_DIR = path.join(ROOT, 'data', 'materias');
@@ -131,6 +158,11 @@ const bloco =
 html = html.replace('// __DADOS__', () => bloco);
 html = html.replace(/__BUILD_DATE__/g, new Date().toLocaleDateString('pt-BR'));
 html = html.replace(/__BUILD_YEAR__/g, String(new Date().getFullYear()));
+
+// a impressão digital é calculada sobre o HTML já pronto, com os placeholders
+// de versão ainda no lugar — assim o mesmo conteúdo gera sempre o mesmo código
+const VERSAO = codigoVersao(html);
+html = html.replace(/__BUILD_VERSION__/g, VERSAO);
 
 fs.writeFileSync(OUTPUT, html, 'utf8');
 
