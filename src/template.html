@@ -867,33 +867,187 @@ function esc(t){
 }
 
 // =========================================================
-//  SOM (efeitos simples com WebAudio, sem arquivos)
+//  SOM — a trilha reage ao desempenho
+//
+//  Nada de arquivos de áudio: tudo é sintetizado no próprio navegador,
+//  então o jogo continua sendo um arquivo só e funcionando offline.
+//
+//  A ideia central é que o acerto NÃO toque sempre a mesma nota. Ela
+//  sobe numa escala conforme a sequência de acertos cresce, como as
+//  moedas de um jogo de plataforma. A criança escuta que está indo
+//  bem antes mesmo de ler o retorno na tela — e escuta a queda quando
+//  erra e a sequência zera. O som vira placar.
 // =========================================================
 const SOM_KEY = 'passaporte-som-v1';
 let somLigado = (function(){ try{ return localStorage.getItem(SOM_KEY) !== '0'; }catch(e){ return true; } })();
-let audioCtx = null;
-function tocar(notas){
-  if(!somLigado) return;
+let audioCtx = null, somMaster = null;
+
+/** Prepara (ou destrava) o áudio. Navegadores só liberam som depois do primeiro toque. */
+function audio(){
+  if(!somLigado) return null;
   try{
-    audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
-    let t = audioCtx.currentTime;
-    notas.forEach(([freq, dur, tipo]) => {
-      const o = audioCtx.createOscillator(), g = audioCtx.createGain();
-      o.type = tipo || 'triangle'; o.frequency.value = freq;
-      g.gain.setValueAtTime(0.18, t); g.gain.exponentialRampToValueAtTime(0.001, t + dur);
-      o.connect(g); g.connect(audioCtx.destination); o.start(t); o.stop(t + dur);
-      t += dur * 0.8;
-    });
-  }catch(e){}
+    if(!audioCtx){
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      somMaster = audioCtx.createGain();
+      somMaster.gain.value = 0.9;
+      // compressor suave: várias camadas ao mesmo tempo não estouram
+      // no alto-falante pequeno do Chromebook ou do tablet
+      const comp = audioCtx.createDynamicsCompressor();
+      comp.threshold.value = -14; comp.ratio.value = 6;
+      comp.attack.value = 0.003; comp.release.value = 0.25;
+      somMaster.connect(comp); comp.connect(audioCtx.destination);
+    }
+    if(audioCtx.state === 'suspended') audioCtx.resume();
+    return audioCtx;
+  }catch(e){ return null; }
 }
-const somAcerto = () => tocar([[660,.12],[880,.18]]);
-const somErro   = () => tocar([[220,.2,'square'],[180,.25,'square']]);
-const somVitoria= () => tocar([[523,.14],[659,.14],[784,.14],[1047,.3]]);
+
+/**
+ * Uma nota com corpo: fundamental mais um harmônico uma oitava acima,
+ * com ataque curto no lugar do estalo e cauda que decai sozinha.
+ * É o que separa "bipe de micro-ondas" de "sininho".
+ */
+function nota(freq, inicio, dur, opc){
+  const ctx = audioCtx; if(!ctx) return;
+  const o = opc || {};
+  const vol = o.vol == null ? 0.22 : o.vol;
+  const t = ctx.currentTime + inicio;
+
+  const g = ctx.createGain();
+  g.gain.setValueAtTime(0.0001, t);
+  g.gain.exponentialRampToValueAtTime(vol, t + (o.ataque || 0.012));
+  g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+  g.connect(somMaster);
+
+  const base = ctx.createOscillator();
+  base.type = o.tipo || 'triangle';
+  base.frequency.setValueAtTime(freq, t);
+  if(o.glide) base.frequency.exponentialRampToValueAtTime(o.glide, t + dur);
+  base.connect(g); base.start(t); base.stop(t + dur + 0.02);
+
+  // brilho: oitava acima e bem mais baixa — dá o "sino" sem pesar
+  if(o.brilho !== false){
+    const g2 = ctx.createGain();
+    g2.gain.setValueAtTime(0.0001, t);
+    g2.gain.exponentialRampToValueAtTime(vol * 0.3, t + 0.01);
+    g2.gain.exponentialRampToValueAtTime(0.0001, t + dur * 0.7);
+    g2.connect(somMaster);
+    const alt = ctx.createOscillator();
+    alt.type = 'sine';
+    alt.frequency.setValueAtTime(freq * 2, t);
+    alt.connect(g2); alt.start(t); alt.stop(t + dur * 0.7 + 0.02);
+  }
+}
+
+function frase(notas){
+  if(!audio()) return;
+  notas.forEach(n => nota(n[0], n[1], n[2], n[3]));
+}
+
+/** Vibração curta no celular/tablet. No Chromebook o navegador ignora sem erro. */
+function vibrar(padrao){
+  try{ if(navigator.vibrate && !reduzMovimento) navigator.vibrate(padrao); }catch(e){}
+}
+
+// Escala pentatônica maior de dó: não existe combinação feia dentro dela,
+// então a sequência sobe sempre soando bem, por mais longa que fique.
+const ESCALA = [523.25, 587.33, 659.25, 783.99, 880.00,
+                1046.50, 1174.66, 1318.51, 1567.98, 1760.00];
+
+/**
+ * Acerto. Quanto maior a sequência, mais aguda a nota — e nos marcos
+ * (3, 5, 10 e de 5 em 5) entra um arremate por cima.
+ */
+const VOLTA = 8;   // degraus da escala antes de recomeçar
+
+function somAcerto(seq){
+  if(!audio()) return;
+  const n = Math.max(1, seq || 1);
+  const ciclo = Math.floor((n - 1) / VOLTA);   // quantas voltas já deu
+  const passo = (n - 1) % VOLTA;
+  const f = ESCALA[passo];
+
+  frase([
+    [f,       0,    0.16, {vol: 0.20}],
+    [f * 1.5, 0.07, 0.22, {vol: 0.16}]   // a quinta acima: soa "resolvido"
+  ]);
+
+  // Em vez de subir para sempre — o que vira apito e cansa o ouvido —
+  // a melodia volta ao começo a cada 8 acertos, mas ganha um grave novo
+  // por baixo. Soa mais encorpada a cada volta, não mais aguda.
+  if(ciclo > 0){
+    frase([[ciclo === 1 ? 261.63 : 130.81, 0, 0.38,
+            {vol: 0.13, tipo: 'sine', brilho: false}]]);
+  }
+
+  const marco = n === 3 || n === 5 || n === 10 || (n > 10 && n % 5 === 0);
+  if(marco){
+    frase([
+      [ESCALA[passo + 1] || 1760,                       0.17, 0.12, {vol: 0.14, tipo: 'sine'}],
+      [ESCALA[Math.min(passo + 2, ESCALA.length - 1)],  0.25, 0.28, {vol: 0.16, tipo: 'sine'}]
+    ]);
+    vibrar([18, 40, 26]);
+  } else {
+    vibrar(14);
+  }
+}
+
+/**
+ * Erro. Suave de propósito: dois tons descendo, sem onda quadrada e sem
+ * brilho. Erro não é punição — é o que mostra o que estudar.
+ */
+function somErro(){
+  frase([
+    [330, 0,    0.14, {vol: 0.13, tipo: 'sine', brilho: false}],
+    [247, 0.09, 0.26, {vol: 0.13, tipo: 'sine', brilho: false, glide: 233}]
+  ]);
+  vibrar(28);
+}
+
+/** Fim de rodada: o tamanho da fanfarra depende da nota que a criança tirou. */
+function somVitoria(pct){
+  const p = pct == null ? 100 : pct;
+  if(p >= 90){
+    frase([[523,0,.13],[659,.11,.13],[784,.22,.13],
+           [1047,.33,.55,{vol:.24}],[1319,.36,.5,{vol:.13}],[1568,.40,.6,{vol:.10}]]);
+    vibrar([22, 60, 22, 60, 50]);
+  } else if(p >= 60){
+    frase([[523,0,.14],[659,.12,.14],[784,.26,.42,{vol:.22}]]);
+    vibrar([20, 50, 36]);
+  } else {
+    frase([[440,0,.16],[523,.14,.36,{vol:.18}]]);
+    vibrar(24);
+  }
+}
+
+/** Carimbo novo no passaporte: o baque do carimbo e o brilho depois. */
+function somCarimbo(){
+  frase([
+    [160,  0,    0.11, {vol: 0.26, tipo: 'sine', brilho: false, glide: 90, ataque: 0.004}],
+    [880,  0.07, 0.30, {vol: 0.14, tipo: 'sine'}],
+    [1319, 0.13, 0.34, {vol: 0.11, tipo: 'sine'}]
+  ]);
+  vibrar([30, 50, 20]);
+}
+
+/** Evoluiu de veículo: subida curta, o momento mais alto da partida. */
+function somEvoluiu(){
+  frase([[392,0,.1],[523,.08,.1],[659,.16,.1],[784,.24,.1],
+         [1047,.32,.5,{vol:.24}],[1319,.34,.45,{vol:.12}]]);
+  vibrar([18, 40, 18, 40, 18, 40, 60]);
+}
+
+/** Toque leve de interface, para escolhas que não são certo/errado. */
+function somToque(){
+  frase([[880, 0, 0.05, {vol: 0.07, tipo: 'sine', brilho: false}]]);
+}
+
 function alternarSom(){
   somLigado = !somLigado;
   try{ localStorage.setItem(SOM_KEY, somLigado ? '1' : '0'); }catch(e){}
   atualizarTopo();
-  if(somLigado) somAcerto();
+  // confirmação neutra, não o som de acerto — senão parece que pontuou
+  if(somLigado) frase([[659, 0, 0.1], [988, 0.08, 0.24]]);
 }
 
 // =========================================================
@@ -1118,7 +1272,7 @@ function checarMissao(){
   s.xp = (s.xp || 0) + 30;
   salvarStats(s);
   darCarimbo('missao');
-  somVitoria(); confete(60);
+  somCarimbo(); confete(60);
   toast('🏹 Missão de hoje cumprida! +30 XP');
 }
 function sequenciaDias(){
@@ -1689,7 +1843,7 @@ function licaoAnterior(){ if(licaoIdx > 0){ licaoIdx--; renderLicao(); } }
 function licaoProxima(){
   if(licaoIdx < current.licoes.length - 1){ licaoIdx++; renderLicao(); return; }
   darCarimbo('aprendiz');
-  somVitoria(); confete(40);
+  somVitoria(100); confete(40);
   tela(`
     <div class="card fim">
       <div class="fim-estrelas" aria-hidden="true">🎓</div>
@@ -1874,7 +2028,8 @@ function renderQuestion(){
   let vpct = 100, sub = 'Nível máximo de transporte!';
   if(next){
     vpct = Math.max(0, Math.min(100, Math.round(((score - v.min) / (next.min - v.min)) * 100)));
-    sub = `Mais ${Math.max(0, next.min - score)} acerto(s) para viajar ${next.name.toLowerCase()} ${next.icon}`;
+    const faltam = Math.max(0, next.min - score);
+    sub = `${faltam === 1 ? 'Falta 1 acerto' : 'Faltam ' + faltam + ' acertos'} para viajar ${next.name.toLowerCase()} ${next.icon}`;
   }
 
   const opts = q.opts.map((opt, i) => {
@@ -1950,13 +2105,16 @@ function selectAnswer(i, el){
   animarResposta = ok ? 'ok' : 'nao';
 
   if(ok){
-    const bonus = combo() >= 3 ? 5 : 0;
+    const seq = combo();
+    const bonus = seq >= 3 ? 5 : 0;
     const ganho = 10 + bonus;
     xpPartida += ganho;
     const stats = lerStats(); stats.xp = (stats.xp || 0) + ganho; salvarStats(stats);
     xpVoando(el, `+${ganho} XP`);
-    somAcerto();
-    if(justEvolved) confete(30);
+    // evoluir de veículo é o momento maior: toca a fanfarra no lugar
+    // do acerto comum, para os dois sons não se atropelarem
+    if(justEvolved){ somEvoluiu(); confete(30); }
+    else somAcerto(seq);
   } else {
     somErro();
   }
@@ -2019,7 +2177,7 @@ function renderEnd(){
   else if(pct >= 60){ titulo = 'Boa viagem!'; msg = 'Vale revisar os temas marcados abaixo.'; }
   else { titulo = 'Viagem de treino!'; msg = 'Cada erro mostra o que estudar. Use as lições e tente de novo!'; }
 
-  if(pct >= 60 && !revendo){ somVitoria(); confete(pct === 100 ? 90 : 50); }
+  if(pct >= 60 && !revendo){ somVitoria(pct); confete(pct === 100 ? 90 : 50); }
 
   const v = vehicles[getVehicleIndex(score)];
   const temas = desempenhoPorTema();
