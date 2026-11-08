@@ -973,6 +973,78 @@
       ],
       "correct": 3,
       "fb": "É uma <b>entrevista</b>: perguntas em destaque e respostas do entrevistado, publicada no jornal Correio."
+    },
+    {
+      "tipo": "ordenar",
+      "tema": "Título e subtítulo",
+      "q": "Monte a ordem das partes de uma notícia, de cima para baixo",
+      "itens": [
+        "Título: destaca o fato principal",
+        "Subtítulo: vem logo depois do título",
+        "Corpo da notícia: conta o fato em detalhe",
+        "Fotografia com legenda: mostra que o fato é real"
+      ],
+      "fb": "O título apresenta o assunto, não conta a história toda — contar a história é tarefa do corpo da notícia."
+    },
+    {
+      "tipo": "ligar",
+      "tema": "Sons da letra X",
+      "q": "Ligue cada grupo de palavras ao som que o X tem nelas",
+      "pares": [
+        [
+          "exercício, exame, exemplo",
+          "Som de Z"
+        ],
+        [
+          "experiência, extrato, exposição",
+          "Som de S"
+        ],
+        [
+          "caixa, enxaguar, queixo",
+          "Som de CH"
+        ]
+      ],
+      "fb": "⚠️ A dica: X entre vogais soa Z; X no fim da sílaba, antes de consoante, soa S; depois de ai/ei ou da sílaba en, soa CH."
+    },
+    {
+      "tipo": "ligar",
+      "tema": "Tempos verbais",
+      "q": "Ligue cada frase ao tempo do verbo",
+      "pares": [
+        [
+          "Um filhote de jacaré foi capturado",
+          "Passado"
+        ],
+        [
+          "O jacaré-do-papo-amarelo vive nas lagoas",
+          "Presente"
+        ],
+        [
+          "A campanha será dividida em cinco etapas",
+          "Futuro"
+        ]
+      ],
+      "fb": "Uma notícia mistura os tempos porque relata o que já aconteceu e também o que ainda vai acontecer."
+    },
+    {
+      "tipo": "ligar",
+      "tema": "Uso das aspas",
+      "q": "Ligue cada elemento da citação ao seu papel",
+      "pares": [
+        [
+          "As aspas",
+          "Mostram a reprodução exata da fala"
+        ],
+        [
+          "O verbo (afirma, explica)",
+          "Anuncia quem falou"
+        ],
+        [
+          "O nome completo",
+          "Apresenta a pessoa na primeira vez"
+        ]
+      ],
+      "fb": "⚠️ Atenção: nem toda aspa é fala. Em ONG “Costelinha”, as aspas destacam um apelido, não uma citação."
     }
   ]
 }

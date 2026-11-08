@@ -47,6 +47,10 @@ const OUTPUT = path.join(ROOT, 'index.html');
 
 const TIPOS = ['sistematizada', 'avaliacao', 'atividade', 'trabalho', 'entrega', 'evento', 'feriado'];
 
+// Tipos de questão. "escolha" é o padrão quando o campo "tipo" não aparece,
+// então todo o conteúdo antigo continua valendo sem precisar ser mexido.
+const TIPOS_QUESTAO = ['escolha', 'ordenar', 'ligar'];
+
 function erro(msg) {
   console.error('\n❌ ' + msg + '\n');
   process.exit(1);
@@ -85,14 +89,50 @@ arquivos.forEach(arq => {
 
   dados.questions.forEach((q, i) => {
     const ref = `${arq} · pergunta ${i + 1}`;
+    const tipo = q.tipo || 'escolha';
     if (!q.q) problemas.push(`${ref}: sem enunciado`);
+    if (!q.fb) problemas.push(`${ref}: sem explicação (campo "fb")`);
+    if (!q.tema) problemas.push(`${ref}: sem tema`);
+    if (!TIPOS_QUESTAO.includes(tipo)) {
+      problemas.push(`${ref}: tipo "${tipo}" inválido (use: ${TIPOS_QUESTAO.join(', ')})`);
+      return;
+    }
+
+    if (tipo === 'ordenar') {
+      // "itens" já vem NA ORDEM CERTA; o jogo é que embaralha na tela
+      if (!Array.isArray(q.itens) || q.itens.length < 3) {
+        problemas.push(`${ref}: "ordenar" precisa de ao menos 3 itens em "itens"`);
+      } else {
+        if (q.itens.length > 6) problemas.push(`${ref}: "ordenar" com ${q.itens.length} itens é demais para criança (máximo 6)`);
+        if (new Set(q.itens).size !== q.itens.length) problemas.push(`${ref}: itens repetidos`);
+        if (q.itens.some(t => typeof t !== 'string' || !t.trim())) problemas.push(`${ref}: item vazio`);
+      }
+      return;
+    }
+
+    if (tipo === 'ligar') {
+      if (!Array.isArray(q.pares) || q.pares.length < 3) {
+        problemas.push(`${ref}: "ligar" precisa de ao menos 3 pares`);
+      } else {
+        if (q.pares.length > 6) problemas.push(`${ref}: "ligar" com ${q.pares.length} pares é demais para criança (máximo 6)`);
+        if (q.pares.some(p => !Array.isArray(p) || p.length !== 2 || !p[0] || !p[1])) {
+          problemas.push(`${ref}: cada par precisa ser uma lista de dois textos`);
+        } else {
+          // repetição dos dois lados torna a questão ambígua: o mesmo
+          // destino serviria para duas ligações diferentes
+          if (new Set(q.pares.map(p => p[0])).size !== q.pares.length) problemas.push(`${ref}: item repetido na coluna da esquerda`);
+          if (new Set(q.pares.map(p => p[1])).size !== q.pares.length) problemas.push(`${ref}: item repetido na coluna da direita`);
+        }
+      }
+      return;
+    }
+
+    // escolha simples
     if (!Array.isArray(q.opts) || q.opts.length < 2) problemas.push(`${ref}: precisa de ao menos 2 alternativas`);
     if (typeof q.correct !== 'number' || q.correct < 0 || (q.opts && q.correct >= q.opts.length)) {
       problemas.push(`${ref}: campo "correct" aponta para alternativa inexistente`);
     }
     if (q.opts && new Set(q.opts).size !== q.opts.length) problemas.push(`${ref}: alternativas repetidas`);
-    if (!q.fb) problemas.push(`${ref}: sem explicação (campo "fb")`);
-    if (!q.tema) problemas.push(`${ref}: sem tema`);
   });
 
   const enunciados = new Set();
@@ -105,14 +145,15 @@ arquivos.forEach(arq => {
   // Com isso a criança gabarita escolhendo sempre "A" e não aprende nada.
   // O jogo embaralha as alternativas na hora de jogar, mas um arquivo
   // viciado continua sendo um defeito — então aqui ele barra o build.
+  const escolhas = dados.questions.filter(q => (q.tipo || 'escolha') === 'escolha');
   const porPosicao = {};
-  dados.questions.forEach(q => {
+  escolhas.forEach(q => {
     if (typeof q.correct === 'number') porPosicao[q.correct] = (porPosicao[q.correct] || 0) + 1;
   });
   const concentracao = Math.max(0, ...Object.values(porPosicao));
-  if (dados.questions.length >= 8 && concentracao / dados.questions.length > 0.5) {
+  if (escolhas.length >= 8 && concentracao / escolhas.length > 0.5) {
     const letra = 'ABCDE'[Object.keys(porPosicao).find(k => porPosicao[k] === concentracao)] || '?';
-    const pct = Math.round((concentracao / dados.questions.length) * 100);
+    const pct = Math.round((concentracao / escolhas.length) * 100);
     problemas.push(
       `${arq}: ${pct}% das respostas certas estão na alternativa "${letra}". ` +
       `Espalhe o gabarito entre as alternativas (o limite é 50%).`

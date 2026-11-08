@@ -503,6 +503,88 @@
   .marca-resp{margin-left:auto; font-size:18px; font-weight:900; flex-shrink:0;}
   .opcao.certa .marca-resp{color:var(--menta-esc);}
   .opcao.errada .marca-resp{color:var(--coral-esc);}
+  /* ---------- Montar a rota (ordenar) ---------- */
+  .rota{
+    background:linear-gradient(180deg,#F6F4FF,#FFFFFF); border:2px dashed var(--line-2);
+    border-radius:18px; padding:12px; margin-bottom:12px; min-height:84px;
+  }
+  .rota.cheia{border-style:solid; border-color:var(--violeta);}
+  .rota-cab{display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:9px;}
+  .rota-cab b{font-family:var(--fd); font-size:15.5px; color:var(--ink);}
+  .rota-cab small{font-weight:800; font-size:12.5px; color:var(--ink-3);}
+  .rota-lista{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:7px;}
+  .rota-dica{
+    text-align:center; color:var(--ink-3); font-weight:800; font-size:14.5px;
+    padding:14px 6px; line-height:1.4;
+  }
+  .parada{
+    display:flex; align-items:center; gap:10px; background:#fff; border:2px solid var(--line-2);
+    border-radius:13px; padding:8px 10px; font-weight:800; font-size:15.5px; line-height:1.3;
+    animation:cai .22s ease;
+  }
+  .parada-n{
+    width:27px; height:27px; border-radius:9px; flex-shrink:0; display:grid; place-items:center;
+    background:var(--violeta); color:#fff; font-weight:900; font-size:13.5px;
+  }
+  .parada-txt{flex:1; min-width:0;}
+  .parada-tira{
+    flex-shrink:0; width:29px; height:29px; border-radius:9px; cursor:pointer;
+    border:2px solid var(--line-2); background:#fff; color:var(--ink-3);
+    font-weight:900; font-size:13px; line-height:1;
+  }
+  .parada-tira:active{transform:translateY(1px);}
+  .parada.certa{background:#E7FBF2; border-color:var(--menta);}
+  .parada.certa .parada-n{background:var(--menta-esc);}
+  .parada.errada{background:#FFECEF; border-color:var(--coral);}
+  .parada.errada .parada-n{background:var(--coral-esc);}
+  .parada-marca{margin-left:auto; font-size:17px; font-weight:900; flex-shrink:0;}
+  .parada.certa .parada-marca{color:var(--menta-esc);}
+  .parada.errada .parada-marca{color:var(--coral-esc);}
+  .pecas{display:flex; flex-wrap:wrap; gap:8px;}
+  .peca{
+    cursor:pointer; background:#fff; border:2px solid var(--line-2); border-radius:13px;
+    box-shadow:0 3px 0 var(--line); color:var(--ink);
+    padding:10px 13px; font-weight:800; font-size:15.5px; line-height:1.3;
+    min-height:46px; text-align:left;
+  }
+  .peca:active{transform:translateY(2px); box-shadow:0 1px 0 var(--line);}
+  .gabarito{
+    margin-top:11px; background:#F6F4FF; border:2px solid var(--line-2); border-radius:14px;
+    padding:10px 12px; font-weight:800; font-size:14.5px; line-height:1.55; color:var(--ink-2);
+  }
+  .gabarito b{color:var(--ink); display:block; margin-bottom:4px; font-family:var(--fd);}
+
+  /* ---------- Carimbar o par (ligar) ---------- */
+  .ligar{display:grid; grid-template-columns:1fr 1fr; gap:8px;}
+  .ligar-col{display:flex; flex-direction:column; gap:7px; min-width:0;}
+  .ligar-tit{
+    font-weight:900; font-size:12.5px; color:var(--ink-3);
+    text-transform:uppercase; letter-spacing:.04em; padding-left:2px;
+  }
+  .pino{
+    display:flex; align-items:center; gap:7px; width:100%; text-align:left; cursor:pointer;
+    background:#fff; border:2px solid var(--line-2); border-radius:13px; color:var(--ink);
+    padding:9px 10px; font-weight:800; font-size:15px; line-height:1.25; min-height:48px;
+    box-shadow:0 3px 0 var(--line); transition:transform .08s ease;
+  }
+  .pino:not([disabled]):active{transform:translateY(2px); box-shadow:0 1px 0 var(--line);}
+  .pino[disabled]{cursor:default;}
+  .pino-txt{flex:1; min-width:0; overflow-wrap:anywhere;}
+  .pino-sel{border-color:var(--violeta); background:#F1EDFF; box-shadow:0 3px 0 var(--violeta);}
+  /* o selo colorido é o que mostra quem está ligado a quem */
+  .selo{
+    width:23px; height:23px; border-radius:7px; flex-shrink:0; display:grid; place-items:center;
+    font-size:12px; font-weight:900; color:#fff; background:var(--line-2);
+  }
+  .selo.vazio{background:transparent; border:2px dashed var(--line-2);}
+  /* paleta sem verde nem vermelho: essas duas cores já querem dizer
+     "acertou" e "errou" no resto do jogo, e um selo vermelho numa
+     ligação correta confunde a criança */
+  .selo.c0{background:#6C4DFF;} .selo.c1{background:#0284C7;} .selo.c2{background:#C026D3;}
+  .selo.c3{background:#B45309;} .selo.c4{background:#0F766E;} .selo.c5{background:#DB2777;}
+  .pino.certa{background:#E7FBF2; border-color:var(--menta);}
+  .pino.errada{background:#FFECEF; border-color:var(--coral);}
+
   .card.treme{animation:treme .45s ease;}
   @keyframes treme{0%,100%{transform:translateX(0);}20%{transform:translateX(-8px);}40%{transform:translateX(8px);}60%{transform:translateX(-5px);}80%{transform:translateX(5px);}}
   @keyframes pulsa{0%{transform:scale(1);}50%{transform:scale(1.15);}100%{transform:scale(1);}}
@@ -741,7 +823,7 @@
     <button class="versao-selo" id="versaoSelo" onclick="copiarVersao()"
             title="Toque para copiar o código da versão">
       <span class="versao-rotulo">versão</span>
-      <span class="versao-cod">v2026.11.08·E6D037</span>
+      <span class="versao-cod">v2026.11.08·F6ABF1</span>
       <span class="versao-copiar" id="versaoCopiar">⧉</span>
     </button>
   </footer>
@@ -1725,6 +1807,78 @@ const subjects = [
     ],
     "correct": 3,
     "fb": "É uma <b>entrevista</b>: perguntas em destaque e respostas do entrevistado, publicada no jornal Correio."
+   },
+   {
+    "tipo": "ordenar",
+    "tema": "Título e subtítulo",
+    "q": "Monte a ordem das partes de uma notícia, de cima para baixo",
+    "itens": [
+     "Título: destaca o fato principal",
+     "Subtítulo: vem logo depois do título",
+     "Corpo da notícia: conta o fato em detalhe",
+     "Fotografia com legenda: mostra que o fato é real"
+    ],
+    "fb": "O título apresenta o assunto, não conta a história toda — contar a história é tarefa do corpo da notícia."
+   },
+   {
+    "tipo": "ligar",
+    "tema": "Sons da letra X",
+    "q": "Ligue cada grupo de palavras ao som que o X tem nelas",
+    "pares": [
+     [
+      "exercício, exame, exemplo",
+      "Som de Z"
+     ],
+     [
+      "experiência, extrato, exposição",
+      "Som de S"
+     ],
+     [
+      "caixa, enxaguar, queixo",
+      "Som de CH"
+     ]
+    ],
+    "fb": "⚠️ A dica: X entre vogais soa Z; X no fim da sílaba, antes de consoante, soa S; depois de ai/ei ou da sílaba en, soa CH."
+   },
+   {
+    "tipo": "ligar",
+    "tema": "Tempos verbais",
+    "q": "Ligue cada frase ao tempo do verbo",
+    "pares": [
+     [
+      "Um filhote de jacaré foi capturado",
+      "Passado"
+     ],
+     [
+      "O jacaré-do-papo-amarelo vive nas lagoas",
+      "Presente"
+     ],
+     [
+      "A campanha será dividida em cinco etapas",
+      "Futuro"
+     ]
+    ],
+    "fb": "Uma notícia mistura os tempos porque relata o que já aconteceu e também o que ainda vai acontecer."
+   },
+   {
+    "tipo": "ligar",
+    "tema": "Uso das aspas",
+    "q": "Ligue cada elemento da citação ao seu papel",
+    "pares": [
+     [
+      "As aspas",
+      "Mostram a reprodução exata da fala"
+     ],
+     [
+      "O verbo (afirma, explica)",
+      "Anuncia quem falou"
+     ],
+     [
+      "O nome completo",
+      "Apresenta a pessoa na primeira vez"
+     ]
+    ],
+    "fb": "⚠️ Atenção: nem toda aspa é fala. Em ONG “Costelinha”, as aspas destacam um apelido, não uma citação."
    }
   ]
  },
@@ -2895,6 +3049,102 @@ const subjects = [
     ],
     "correct": 3,
     "fb": "469 − 247 = <b>222 reais</b> na segunda parcela."
+   },
+   {
+    "tipo": "ordenar",
+    "tema": "Frações",
+    "q": "Monte as frações em ordem, da menor para a maior",
+    "itens": [
+     "1/4",
+     "1/2",
+     "3/4",
+     "1 inteiro"
+    ],
+    "fb": "Com o mesmo denominador, basta olhar o numerador: 1/4, 2/4 (que é 1/2), 3/4 e 4/4 (que é 1 inteiro)."
+   },
+   {
+    "tipo": "ordenar",
+    "tema": "Números decimais",
+    "q": "Monte os números decimais em ordem, do menor para o maior",
+    "itens": [
+     "0,5",
+     "0,75",
+     "1,2",
+     "2,05"
+    ],
+    "fb": "⚠️ Compare primeiro a parte inteira. Só quando ela empata é que se olha para depois da vírgula: 0,75 é maior que 0,5 porque 75 centésimos é mais que 50."
+   },
+   {
+    "tipo": "ligar",
+    "tema": "Nomes das operações",
+    "q": "Ligue cada operação ao nome do seu resultado",
+    "pares": [
+     [
+      "Adição",
+      "Soma ou total"
+     ],
+     [
+      "Subtração",
+      "Diferença ou resto"
+     ],
+     [
+      "Multiplicação",
+      "Produto"
+     ],
+     [
+      "Divisão",
+      "Quociente"
+     ]
+    ],
+    "fb": "Esses nomes aparecem nos enunciados das provas: \"qual é o produto\" quer dizer \"multiplique\"."
+   },
+   {
+    "tipo": "ligar",
+    "tema": "Ângulos",
+    "q": "Ligue cada ângulo à sua medida",
+    "pares": [
+     [
+      "Ângulo reto",
+      "Exatamente 90°"
+     ],
+     [
+      "Ângulo agudo",
+      "Menor que 90°"
+     ],
+     [
+      "Ângulo obtuso",
+      "Maior que 90° e menor que 180°"
+     ],
+     [
+      "Ângulo raso",
+      "Exatamente 180°"
+     ]
+    ],
+    "fb": "O canto de uma folha de papel é um ângulo reto. Agudo é mais fechado que ele; obtuso é mais aberto."
+   },
+   {
+    "tipo": "ligar",
+    "tema": "Dobro, metade e triplo",
+    "q": "Ligue cada expressão ao resultado, pensando no número 12",
+    "pares": [
+     [
+      "O dobro de 12",
+      "24"
+     ],
+     [
+      "A metade de 12",
+      "6"
+     ],
+     [
+      "O triplo de 12",
+      "36"
+     ],
+     [
+      "A terça parte de 12",
+      "4"
+     ]
+    ],
+    "fb": "Dobro multiplica por 2, triplo por 3. Metade divide por 2, terça parte divide por 3."
    }
   ]
  },
@@ -3636,6 +3886,157 @@ const subjects = [
     ],
     "correct": 3,
     "fb": "Eles decompõem restos de alimentos e folhas secas, transformando tudo em nutrientes — é assim que se forma o <b>solo fértil</b>."
+   },
+   {
+    "tipo": "ordenar",
+    "tema": "Pão e fermento",
+    "q": "Monte a ordem do que acontece quando o pão cresce",
+    "itens": [
+     "O fermento biológico é misturado à massa",
+     "O fungo se alimenta do amido da farinha de trigo",
+     "O fungo libera gás carbônico dentro da massa",
+     "A massa fica mais macia e porosa"
+    ],
+    "fb": "O fermento é um fungo. Ele come o amido da farinha e solta gás carbônico — são as bolhas desse gás que deixam o pão macio e cheio de furinhos."
+   },
+   {
+    "tipo": "ordenar",
+    "tema": "Bactérias",
+    "q": "Monte a ordem de como a bactéria provoca a cárie",
+    "itens": [
+     "A bactéria encontra restos de alimentos nos dentes",
+     "Ela utiliza esses restos como alimento",
+     "Ela libera uma substância",
+     "A substância corrói o dente"
+    ],
+    "fb": "Por isso escovar os dentes funciona: sem restos de alimento, a bactéria fica sem o que comer e não produz a substância que corrói."
+   },
+   {
+    "tipo": "ordenar",
+    "tema": "Vacinas",
+    "q": "Monte o calendário de vacinação na ordem, da mais cedo para a mais tarde",
+    "itens": [
+     "Ao nascer: BCG e Hepatite B",
+     "Aos 9 meses: febre amarela",
+     "Aos 12 meses: tríplice viral"
+    ],
+    "fb": "A tríplice viral, aos 12 meses, previne sarampo, caxumba e rubéola — três doenças numa vacina só."
+   },
+   {
+    "tipo": "ligar",
+    "tema": "Microrganismos",
+    "q": "Ligue cada microrganismo à doença que ele causa",
+    "pares": [
+     [
+      "Bactéria",
+      "Infecção na garganta"
+     ],
+     [
+      "Fungo",
+      "Micose"
+     ],
+     [
+      "Vírus",
+      "Dengue"
+     ],
+     [
+      "Protozoário",
+      "Malária"
+     ]
+    ],
+    "fb": "Atenção nessa: antibiótico só funciona contra bactéria. Contra vírus, como o da dengue, ele não faz efeito nenhum."
+   },
+   {
+    "tipo": "ligar",
+    "tema": "Cientistas",
+    "q": "Ligue cada cientista ao que ele fez",
+    "pares": [
+     [
+      "Anton van Leeuwenhoek",
+      "Inventou o microscópio"
+     ],
+     [
+      "Edward Jenner",
+      "Testou a vacinação em 1796"
+     ],
+     [
+      "Alexander Fleming",
+      "Descobriu a penicilina"
+     ]
+    ],
+    "fb": "A penicilina foi a primeira substância usada como antibiótico."
+   },
+   {
+    "tipo": "ligar",
+    "tema": "Microrganismos",
+    "q": "Ligue cada microrganismo ao alimento que ele ajuda a fazer",
+    "pares": [
+     [
+      "Fermento biológico",
+      "Faz o pão crescer"
+     ],
+     [
+      "Bactérias do iogurte",
+      "Transformam o leite em iogurte"
+     ],
+     [
+      "Bactérias do queijo",
+      "Transformam o leite em coalhada"
+     ],
+     [
+      "Fungo do gorgonzola",
+      "Faz o mofo azul do queijo"
+     ]
+    ],
+    "fb": "Nem todo microrganismo faz mal. Esses são controlados com cuidado justamente para o alimento ficar seguro."
+   },
+   {
+    "tipo": "ligar",
+    "tema": "Defesas do corpo",
+    "q": "Ligue cada defesa do corpo ao que ela faz",
+    "pares": [
+     [
+      "A pele",
+      "É a primeira barreira do corpo"
+     ],
+     [
+      "O muco do nariz",
+      "Prende a poeira e os microrganismos"
+     ],
+     [
+      "As lágrimas",
+      "Limpam os olhos contra os germes"
+     ],
+     [
+      "Os glóbulos brancos",
+      "Patrulham o corpo como soldados"
+     ],
+     [
+      "A febre",
+      "Tenta matar os invasores com o calor"
+     ]
+    ],
+    "fb": "Tudo isso junto é o sistema imunológico. A febre incomoda, mas é o corpo trabalhando."
+   },
+   {
+    "tipo": "ligar",
+    "tema": "Biocombustíveis",
+    "q": "Ligue cada item ao que ele é",
+    "pares": [
+     [
+      "Etanol e biodiesel",
+      "Os dois tipos de biocombustível"
+     ],
+     [
+      "Milho e cana-de-açúcar",
+      "Plantas transformadas em biomassa"
+     ],
+     [
+      "Petróleo",
+      "Combustível fóssil que polui mais"
+     ]
+    ],
+    "fb": "Biocombustível vem de planta; combustível fóssil vem do subsolo e polui mais."
    }
   ]
  },
@@ -4613,6 +5014,118 @@ const subjects = [
     ],
     "correct": 3,
     "fb": "São Paulo é originalmente de <b>Mata Atlântica</b>, com manchas de <b>Cerrado</b> no interior e <b>araucárias</b> no sul do estado."
+   },
+   {
+    "tipo": "ordenar",
+    "tema": "Tratado de Tordesilhas",
+    "q": "Monte a ordem dos acontecimentos das Grandes Navegações",
+    "itens": [
+     "Os europeus queriam especiarias das Índias",
+     "Portugal inventa a caravela, com vela triangular",
+     "Portugal e Espanha disputam as terras da América",
+     "Em 1494, os dois assinam o Tratado de Tordesilhas"
+    ],
+    "fb": "A disputa quase virou guerra. O tratado traçou uma linha imaginária a 370 léguas: o que ficasse a leste era de Portugal."
+   },
+   {
+    "tipo": "ligar",
+    "tema": "A caravela",
+    "q": "Ligue cada tripulante da caravela à sua função",
+    "pares": [
+     [
+      "Capitão-mor",
+      "Representante do rei, comandava a esquadra"
+     ],
+     [
+      "Escrivão",
+      "Registrava tudo o que acontecia na viagem"
+     ],
+     [
+      "Piloto",
+      "Decidia sobre tudo que se referia à navegação"
+     ],
+     [
+      "Meirinho",
+      "Julgava os malfeitores a bordo"
+     ]
+    ],
+    "fb": "A caravela era uma invenção portuguesa, e a vela triangular dela deixava navegar até com vento contra."
+   },
+   {
+    "tipo": "ligar",
+    "tema": "Especiarias",
+    "q": "Ligue cada especiaria à sua característica",
+    "pares": [
+     [
+      "Açafrão",
+      "A especiaria mais cara do mundo"
+     ],
+     [
+      "Canela",
+      "A mais antiga das especiarias"
+     ],
+     [
+      "Cravo",
+      "Usado no tratamento das cáries"
+     ],
+     [
+      "Gengibre",
+      "Usado em pastas de dentes e chicletes"
+     ]
+    ],
+    "fb": "As especiarias serviam para conservar alimentos — naquela época ainda não existia geladeira."
+   },
+   {
+    "tipo": "ligar",
+    "tema": "Paisagens vegetais",
+    "q": "Ligue cada paisagem vegetal à sua característica",
+    "pares": [
+     [
+      "Floresta Amazônica",
+      "A maior floresta tropical do mundo"
+     ],
+     [
+      "Cerrado",
+      "Árvores baixas de troncos retorcidos"
+     ],
+     [
+      "Caatinga",
+      "Mandacaru, facheiro e xiquexique"
+     ],
+     [
+      "Mata de araucárias",
+      "Também chamada de mata de pinhais"
+     ],
+     [
+      "Campos",
+      "Também chamados de pampas ou coxilhas"
+     ]
+    ],
+    "fb": "⚠️ Cuidado para não trocar Cerrado e Caatinga: o Cerrado tem troncos retorcidos, a Caatinga tem os cactos do semiárido."
+   },
+   {
+    "tipo": "ligar",
+    "tema": "Reino do Congo",
+    "q": "Ligue cada item ao Reino do Congo",
+    "pares": [
+     [
+      "Nimi-a-Lukeni",
+      "Fundador do reino"
+     ],
+     [
+      "Mbanza Congo",
+      "A capital do reino"
+     ],
+     [
+      "Mani Congo",
+      "O título do rei"
+     ],
+     [
+      "Nzimbu",
+      "A moeda usada no reino"
+     ]
+    ],
+    "fb": "Mbanza Congo tinha cerca de cem mil habitantes — do tamanho das capitais europeias da época."
    }
   ]
  },
@@ -5131,6 +5644,78 @@ const subjects = [
     ],
     "correct": 2,
     "fb": "São os <b>connectors</b>: and (adiciona), but (contrasta), because (explica), also (acrescenta)."
+   },
+   {
+    "tipo": "ligar",
+    "tema": "Simple past",
+    "q": "Match each verb to its simple past",
+    "pares": [
+     [
+      "go",
+      "went"
+     ],
+     [
+      "eat",
+      "ate"
+     ],
+     [
+      "buy",
+      "bought"
+     ],
+     [
+      "drink",
+      "drank"
+     ]
+    ],
+    "fb": "These are irregular verbs — they do not take -ed, so they have to be memorised one by one."
+   },
+   {
+    "tipo": "ligar",
+    "tema": "Food containers",
+    "q": "Match each food to its container",
+    "pares": [
+     [
+      "milk",
+      "a carton of"
+     ],
+     [
+      "jam",
+      "a jar of"
+     ],
+     [
+      "soup",
+      "a can of"
+     ],
+     [
+      "crisps",
+      "a packet of"
+     ]
+    ],
+    "fb": "In English the container word changes with the food, even when the amount is the same."
+   },
+   {
+    "tipo": "ligar",
+    "tema": "Countable / Uncountable",
+    "q": "Match each word to countable or uncountable",
+    "pares": [
+     [
+      "apples",
+      "Countable"
+     ],
+     [
+      "water",
+      "Uncountable"
+     ],
+     [
+      "eggs",
+      "Countable — use \"a few\""
+     ],
+     [
+      "sugar",
+      "Uncountable — use \"a little\""
+     ]
+    ],
+    "fb": "⚠️ \"A few\" goes with things you can count; \"a little\" goes with things you cannot count."
    }
   ]
  },
@@ -5708,6 +6293,55 @@ const subjects = [
     ],
     "correct": 3,
     "fb": "<b>Altogether</b> e <i>in total</i> pedem <b>soma</b>. Já “how many more” e “left” pedem subtração."
+   },
+   {
+    "tipo": "ordenar",
+    "tema": "Ordinal numbers",
+    "q": "Put the ordinal numbers in order",
+    "itens": [
+     "first",
+     "second",
+     "third",
+     "fourth",
+     "fifth"
+    ],
+    "fb": "⚠️ Watch the spelling: it is fifth, not \"fiveth\"."
+   },
+   {
+    "tipo": "ligar",
+    "tema": "Ordinal numbers",
+    "q": "Match each number to its ordinal",
+    "pares": [
+     [
+      "1",
+      "first"
+     ],
+     [
+      "2",
+      "second"
+     ],
+     [
+      "3",
+      "third"
+     ],
+     [
+      "5",
+      "fifth"
+     ]
+    ],
+    "fb": "1, 2 and 3 are the irregular ones. From 4 on, most just add -th."
+   },
+   {
+    "tipo": "ordenar",
+    "tema": "Fractions",
+    "q": "Put the fractions in order, from smallest to biggest",
+    "itens": [
+     "1/4",
+     "1/3",
+     "1/2",
+     "3/4"
+    ],
+    "fb": "⚠️ Careful: with the same numerator, the bigger the denominator, the SMALLER the fraction. 1/4 is smaller than 1/3."
    }
   ]
  },
@@ -6136,6 +6770,30 @@ const subjects = [
     ],
     "correct": 2,
     "fb": "Remédios parecem balas para uma criança pequena. Guardar em lugar alto e trancado evita acidentes graves."
+   },
+   {
+    "tipo": "ligar",
+    "tema": "Materials",
+    "q": "Match each material to its property",
+    "pares": [
+     [
+      "Glass",
+      "Transparent"
+     ],
+     [
+      "Wood",
+      "Strong and natural"
+     ],
+     [
+      "Plastic",
+      "Light and waterproof"
+     ],
+     [
+      "Metal",
+      "Hard and conducts heat"
+     ]
+    ],
+    "fb": "Choosing the right material for each part of a house is what house design is about."
    }
   ]
  },
@@ -6588,6 +7246,54 @@ const subjects = [
     ],
     "correct": 3,
     "fb": "Perde-se muito mais do que a casa: escola, amigos, vizinhos e, às vezes, o convívio com a própria língua."
+   },
+   {
+    "tipo": "ligar",
+    "tema": "Different houses",
+    "q": "Match each house to where you find it",
+    "pares": [
+     [
+      "Igloo",
+      "Very cold places"
+     ],
+     [
+      "Stilt house",
+      "Places that flood"
+     ],
+     [
+      "Flat",
+      "Big cities"
+     ],
+     [
+      "Tent",
+      "Places people move around"
+     ]
+    ],
+    "fb": "Houses change with the weather and with how people live in each place."
+   },
+   {
+    "tipo": "ligar",
+    "tema": "Jobs and communities",
+    "q": "Match each job to where the person works",
+    "pares": [
+     [
+      "Farmer",
+      "Countryside"
+     ],
+     [
+      "Fisherman",
+      "By the sea"
+     ],
+     [
+      "Office worker",
+      "City centre"
+     ],
+     [
+      "Teacher",
+      "School"
+     ]
+    ],
+    "fb": "The jobs in a community depend on what that place has around it."
    }
   ]
  }
@@ -8022,21 +8728,29 @@ function renderQuestion(){
     sub = `${faltam === 1 ? 'Falta 1 acerto' : 'Faltam ' + faltam + ' acertos'} para viajar ${next.name.toLowerCase()} ${next.icon}`;
   }
 
-  const opts = q.opts.map((opt, i) => {
-    let cls = 'opcao', marca = '';
-    if(respondida){
-      if(i === q.correct){ cls += ' certa'; marca = '✓'; }
-      else if(i === given){ cls += ' errada'; marca = '✕'; }
-      else cls += ' apagada';
-    }
-    return `<button class="${cls}" ${respondida ? 'disabled' : ''} onclick="selectAnswer(${i}, this)">
-      <span class="letra l${i}" aria-hidden="true">${'ABCDE'[i]}</span><span>${opt}</span>${marca ? `<span class="marca-resp" aria-hidden="true">${marca}</span>` : ''}
-    </button>`;
-  }).join('');
+  // cada tipo de questão desenha o seu próprio corpo
+  let corpo;
+  if(tipoDe(q) === 'ordenar'){
+    corpo = corpoOrdenar(q, given, respondida);
+  } else if(tipoDe(q) === 'ligar'){
+    corpo = corpoLigar(q, given, respondida);
+  } else {
+    corpo = '<div class="opcoes">' + q.opts.map((opt, i) => {
+      let cls = 'opcao', marca = '';
+      if(respondida){
+        if(i === q.correct){ cls += ' certa'; marca = '✓'; }
+        else if(i === given){ cls += ' errada'; marca = '✕'; }
+        else cls += ' apagada';
+      }
+      return `<button class="${cls}" ${respondida ? 'disabled' : ''} onclick="selectAnswer(${i}, this)">
+        <span class="letra l${i}" aria-hidden="true">${'ABCDE'[i]}</span><span>${opt}</span>${marca ? `<span class="marca-resp" aria-hidden="true">${marca}</span>` : ''}
+      </button>`;
+    }).join('') + '</div>';
+  }
 
   let retorno = '';
   if(respondida){
-    const ok = given === q.correct;
+    const ok = respostaCerta(idx);
     const lista = REACOES[lingua][ok ? 'ok' : 'nao'];
     retorno = `<div class="retorno ${ok ? 'ok' : 'nao'}" role="status">${avatarHtml(host)}<div><b>${ok ? '🎉' : '💡'} ${lista[hash(q.q) % lista.length]}</b>${q.fb}</div></div>`;
   }
@@ -8071,7 +8785,7 @@ function renderQuestion(){
         <div class="host-txt">${host.nome} ${lingua === 'en' ? 'asks' : 'pergunta'}:<small>${matQ.icon} ${matQ.name} · ${q.tema}</small></div>
       </div>
       <p class="pergunta">${q.q}</p>
-      <div class="opcoes">${opts}</div>
+      ${corpo}
       ${retorno}
     </div>
 
@@ -8085,10 +8799,15 @@ function renderQuestion(){
   animarResposta = null;
 }
 
-function selectAnswer(i, el){
+/**
+ * Fecha a questão atual, seja ela de escolha, de ordenar ou de ligar:
+ * guarda a resposta, pontua, toca o som, grava e redesenha.
+ * Os três tipos passam por aqui para não existirem três regras de pontuação.
+ */
+function fecharQuestao(resposta, el){
   if(answers[idx] !== null || revendo) return;
-  answers[idx] = i;
-  const ok = i === order[idx].correct;
+  answers[idx] = resposta;
+  const ok = respostaCerta(idx);
   const oldVi = vehicleIndex;
   vehicleIndex = getVehicleIndex(getScore());
   justEvolved = vehicleIndex > oldVi;
@@ -8114,6 +8833,168 @@ function selectAnswer(i, el){
   // mantém o retorno visível sem precisar rolar
   const r = document.querySelector('.retorno');
   if(r && r.scrollIntoView) r.scrollIntoView({behavior: reduzMovimento ? 'auto' : 'smooth', block:'nearest'});
+}
+
+function selectAnswer(i, el){ fecharQuestao(i, el); }
+
+// =========================================================
+//  MODO "MONTAR A ROTA" (ordenar)
+//
+//  A criança toca nas paradas na ordem certa em vez de arrastar.
+//  Tocar funciona igual no dedo, no mouse e no teclado — arrastar não
+//  funciona bem em nenhum dos três quando a tela é pequena.
+// =========================================================
+let rotaMontada = {idx: -1, lista: []};
+
+/** A rota em construção desta questão. Troca de questão, começa limpa. */
+function rotaDaQuestao(){
+  if(rotaMontada.idx !== idx) rotaMontada = {idx: idx, lista: []};
+  return rotaMontada.lista;
+}
+
+/** As paradas fora de ordem. Estável entre redesenhos, muda a cada partida. */
+function baralhoDe(q){
+  const b = embaralharCom(q.itens, hash(q.q) ^ (semeadura || 1));
+  // se o sorteio saiu já na ordem certa, não há exercício nenhum
+  if(b.length > 1 && b.every((t, i) => t === q.itens[i])){
+    const a = b.slice(); [a[0], a[1]] = [a[1], a[0]]; return a;
+  }
+  return b;
+}
+
+function porNaRota(i){
+  if(answers[idx] !== null || revendo) return;
+  const t = baralhoDe(order[idx])[i];
+  const r = rotaDaQuestao();
+  if(t == null || r.indexOf(t) !== -1) return;
+  r.push(t); somToque(); renderQuestion();
+}
+
+function tirarDaRota(i){
+  if(answers[idx] !== null || revendo) return;
+  rotaDaQuestao().splice(i, 1);
+  somToque(); renderQuestion();
+}
+
+function confirmarOrdem(el){
+  if(rotaDaQuestao().length !== order[idx].itens.length) return;
+  fecharQuestao({ordem: rotaDaQuestao().slice()}, el);
+}
+
+function corpoOrdenar(q, given, respondida){
+  const baralho = baralhoDe(q);
+  const montada = respondida ? ((given && given.ordem) || []) : rotaDaQuestao();
+  const soltas  = baralho.filter(t => montada.indexOf(t) === -1);
+  const completa = montada.length === q.itens.length;
+  const errou = respondida && !respostaCerta(idx);
+
+  const paradas = montada.map((t, i) => {
+    let cls = 'parada';
+    let fim = `<button class="parada-tira" onclick="tirarDaRota(${i})" aria-label="Tirar a parada ${i + 1} da rota">✕</button>`;
+    if(respondida){
+      const certo = q.itens[i] === t;
+      cls += certo ? ' certa' : ' errada';
+      fim = `<span class="parada-marca" aria-hidden="true">${certo ? '✓' : '✕'}</span>`;
+    }
+    return `<li class="${cls}"><span class="parada-n" aria-hidden="true">${i + 1}</span><span class="parada-txt">${t}</span>${fim}</li>`;
+  }).join('');
+
+  const pecas = soltas.map(t =>
+    `<button class="peca" onclick="porNaRota(${baralho.indexOf(t)})">${t}</button>`
+  ).join('');
+
+  return `
+    <div class="rota ${completa ? 'cheia' : ''}">
+      <div class="rota-cab"><b>🧭 Sua rota</b><small>${montada.length} de ${q.itens.length}</small></div>
+      ${montada.length
+        ? `<ol class="rota-lista">${paradas}</ol>`
+        : `<div class="rota-dica">Toque nas paradas abaixo<br>na ordem que você acha certa</div>`}
+    </div>
+    ${respondida ? '' : `<div class="pecas">${pecas}</div>
+      <button class="btn btn-primario" style="width:100%;margin-top:12px" onclick="confirmarOrdem(this)" ${completa ? '' : 'disabled'}>
+        ${completa ? '🧭 Conferir a rota' : `Faltam ${q.itens.length - montada.length}`}
+      </button>`}
+    ${errou ? `<div class="gabarito"><b>A rota certa era:</b>${q.itens.map((t, i) => `${i + 1}. ${t}`).join('<br>')}</div>` : ''}
+  `;
+}
+
+// =========================================================
+//  MODO "CARIMBAR O PAR" (ligar)
+//
+//  Toca num item da esquerda, depois no par dele na direita. Cada
+//  ligação ganha um selo colorido e numerado, que é o que mostra
+//  quem está ligado a quem sem precisar desenhar linha na tela.
+// =========================================================
+let ligacoesFeitas = {idx: -1, pares: {}, sel: null};
+
+function ligacoesDaQuestao(){
+  if(ligacoesFeitas.idx !== idx) ligacoesFeitas = {idx: idx, pares: {}, sel: null};
+  return ligacoesFeitas;
+}
+
+function colunaEsq(q){ return embaralharCom(q.pares.map(p => p[0]), hash(q.q + '·e') ^ (semeadura || 1)); }
+function colunaDir(q){ return embaralharCom(q.pares.map(p => p[1]), hash(q.q + '·d') ^ (semeadura || 1)); }
+
+function tocarEsq(i){
+  if(answers[idx] !== null || revendo) return;
+  const st = ligacoesDaQuestao();
+  const e = colunaEsq(order[idx])[i];
+  if(st.pares[e]){ delete st.pares[e]; st.sel = null; }   // tocar num já ligado desfaz
+  else st.sel = (st.sel === e ? null : e);
+  somToque(); renderQuestion();
+}
+
+function tocarDir(i){
+  if(answers[idx] !== null || revendo) return;
+  const st = ligacoesDaQuestao();
+  const d = colunaDir(order[idx])[i];
+  const dono = Object.keys(st.pares).find(k => st.pares[k] === d);
+  if(dono) delete st.pares[dono];                          // um destino só aceita uma ligação
+  if(st.sel && st.sel !== dono){ st.pares[st.sel] = d; st.sel = null; }
+  somToque(); renderQuestion();
+}
+
+function confirmarLigacoes(el){
+  const st = ligacoesDaQuestao();
+  if(Object.keys(st.pares).length !== order[idx].pares.length) return;
+  fecharQuestao({pares: Object.assign({}, st.pares)}, el);
+}
+
+function corpoLigar(q, given, respondida){
+  const esq = colunaEsq(q), dir = colunaDir(q);
+  const st  = ligacoesDaQuestao();
+  const feitas = respondida ? ((given && given.pares) || {}) : st.pares;
+  const gab = {}; q.pares.forEach(([e, d]) => { gab[e] = d; });
+  const completa = Object.keys(feitas).length === q.pares.length;
+  const errou = respondida && !respostaCerta(idx);
+  const selo = e => `<span class="selo c${esq.indexOf(e) % 6}" aria-hidden="true">${esq.indexOf(e) + 1}</span>`;
+  const vazio = '<span class="selo vazio" aria-hidden="true"></span>';
+
+  const colE = esq.map((e, i) => {
+    let cls = 'pino';
+    if(respondida) cls += feitas[e] === gab[e] ? ' certa' : ' errada';
+    else if(st.sel === e) cls += ' pino-sel';
+    return `<button class="${cls}" ${respondida ? 'disabled' : ''} onclick="tocarEsq(${i})">${feitas[e] ? selo(e) : vazio}<span class="pino-txt">${e}</span></button>`;
+  }).join('');
+
+  const colD = dir.map((d, i) => {
+    const dono = Object.keys(feitas).find(k => feitas[k] === d);
+    let cls = 'pino';
+    if(respondida && dono) cls += gab[dono] === d ? ' certa' : ' errada';
+    return `<button class="${cls}" ${respondida ? 'disabled' : ''} onclick="tocarDir(${i})">${dono ? selo(dono) : vazio}<span class="pino-txt">${d}</span></button>`;
+  }).join('');
+
+  return `
+    <div class="ligar">
+      <div class="ligar-col"><span class="ligar-tit">Toque aqui</span>${colE}</div>
+      <div class="ligar-col"><span class="ligar-tit">Depois aqui</span>${colD}</div>
+    </div>
+    ${respondida ? '' : `
+      <button class="btn btn-primario" style="width:100%;margin-top:12px" onclick="confirmarLigacoes(this)" ${completa ? '' : 'disabled'}>
+        ${completa ? '🖃 Carimbar os pares' : `Faltam ${q.pares.length - Object.keys(feitas).length}`}
+      </button>`}
+    ${errou ? `<div class="gabarito"><b>Os pares certos eram:</b>${q.pares.map(([e, d]) => `${e} → ${d}`).join('<br>')}</div>` : ''}
+  `;
 }
 
 function prevQuestion(){ if(idx > 0){ idx--; renderQuestion(); } }
@@ -8258,7 +9139,7 @@ function renderPassaporte(){
 //  Código visível no rodapé para conferir que todos estão
 //  na mesma versão. Também fica em window.PASSAPORTE_VERSAO.
 // =========================================================
-const PASSAPORTE_VERSAO = 'v2026.11.08·E6D037';
+const PASSAPORTE_VERSAO = 'v2026.11.08·F6ABF1';
 window.PASSAPORTE_VERSAO = PASSAPORTE_VERSAO;
 console.info('Passaporte do Saber ' + PASSAPORTE_VERSAO);
 

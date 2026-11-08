@@ -736,6 +736,157 @@
       ],
       "correct": 3,
       "fb": "Eles decompõem restos de alimentos e folhas secas, transformando tudo em nutrientes — é assim que se forma o <b>solo fértil</b>."
+    },
+    {
+      "tipo": "ordenar",
+      "tema": "Pão e fermento",
+      "q": "Monte a ordem do que acontece quando o pão cresce",
+      "itens": [
+        "O fermento biológico é misturado à massa",
+        "O fungo se alimenta do amido da farinha de trigo",
+        "O fungo libera gás carbônico dentro da massa",
+        "A massa fica mais macia e porosa"
+      ],
+      "fb": "O fermento é um fungo. Ele come o amido da farinha e solta gás carbônico — são as bolhas desse gás que deixam o pão macio e cheio de furinhos."
+    },
+    {
+      "tipo": "ordenar",
+      "tema": "Bactérias",
+      "q": "Monte a ordem de como a bactéria provoca a cárie",
+      "itens": [
+        "A bactéria encontra restos de alimentos nos dentes",
+        "Ela utiliza esses restos como alimento",
+        "Ela libera uma substância",
+        "A substância corrói o dente"
+      ],
+      "fb": "Por isso escovar os dentes funciona: sem restos de alimento, a bactéria fica sem o que comer e não produz a substância que corrói."
+    },
+    {
+      "tipo": "ordenar",
+      "tema": "Vacinas",
+      "q": "Monte o calendário de vacinação na ordem, da mais cedo para a mais tarde",
+      "itens": [
+        "Ao nascer: BCG e Hepatite B",
+        "Aos 9 meses: febre amarela",
+        "Aos 12 meses: tríplice viral"
+      ],
+      "fb": "A tríplice viral, aos 12 meses, previne sarampo, caxumba e rubéola — três doenças numa vacina só."
+    },
+    {
+      "tipo": "ligar",
+      "tema": "Microrganismos",
+      "q": "Ligue cada microrganismo à doença que ele causa",
+      "pares": [
+        [
+          "Bactéria",
+          "Infecção na garganta"
+        ],
+        [
+          "Fungo",
+          "Micose"
+        ],
+        [
+          "Vírus",
+          "Dengue"
+        ],
+        [
+          "Protozoário",
+          "Malária"
+        ]
+      ],
+      "fb": "Atenção nessa: antibiótico só funciona contra bactéria. Contra vírus, como o da dengue, ele não faz efeito nenhum."
+    },
+    {
+      "tipo": "ligar",
+      "tema": "Cientistas",
+      "q": "Ligue cada cientista ao que ele fez",
+      "pares": [
+        [
+          "Anton van Leeuwenhoek",
+          "Inventou o microscópio"
+        ],
+        [
+          "Edward Jenner",
+          "Testou a vacinação em 1796"
+        ],
+        [
+          "Alexander Fleming",
+          "Descobriu a penicilina"
+        ]
+      ],
+      "fb": "A penicilina foi a primeira substância usada como antibiótico."
+    },
+    {
+      "tipo": "ligar",
+      "tema": "Microrganismos",
+      "q": "Ligue cada microrganismo ao alimento que ele ajuda a fazer",
+      "pares": [
+        [
+          "Fermento biológico",
+          "Faz o pão crescer"
+        ],
+        [
+          "Bactérias do iogurte",
+          "Transformam o leite em iogurte"
+        ],
+        [
+          "Bactérias do queijo",
+          "Transformam o leite em coalhada"
+        ],
+        [
+          "Fungo do gorgonzola",
+          "Faz o mofo azul do queijo"
+        ]
+      ],
+      "fb": "Nem todo microrganismo faz mal. Esses são controlados com cuidado justamente para o alimento ficar seguro."
+    },
+    {
+      "tipo": "ligar",
+      "tema": "Defesas do corpo",
+      "q": "Ligue cada defesa do corpo ao que ela faz",
+      "pares": [
+        [
+          "A pele",
+          "É a primeira barreira do corpo"
+        ],
+        [
+          "O muco do nariz",
+          "Prende a poeira e os microrganismos"
+        ],
+        [
+          "As lágrimas",
+          "Limpam os olhos contra os germes"
+        ],
+        [
+          "Os glóbulos brancos",
+          "Patrulham o corpo como soldados"
+        ],
+        [
+          "A febre",
+          "Tenta matar os invasores com o calor"
+        ]
+      ],
+      "fb": "Tudo isso junto é o sistema imunológico. A febre incomoda, mas é o corpo trabalhando."
+    },
+    {
+      "tipo": "ligar",
+      "tema": "Biocombustíveis",
+      "q": "Ligue cada item ao que ele é",
+      "pares": [
+        [
+          "Etanol e biodiesel",
+          "Os dois tipos de biocombustível"
+        ],
+        [
+          "Milho e cana-de-açúcar",
+          "Plantas transformadas em biomassa"
+        ],
+        [
+          "Petróleo",
+          "Combustível fóssil que polui mais"
+        ]
+      ],
+      "fb": "Biocombustível vem de planta; combustível fóssil vem do subsolo e polui mais."
     }
   ]
 }

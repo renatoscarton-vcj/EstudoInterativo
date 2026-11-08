@@ -513,6 +513,78 @@
       ],
       "correct": 2,
       "fb": "São os <b>connectors</b>: and (adiciona), but (contrasta), because (explica), also (acrescenta)."
+    },
+    {
+      "tipo": "ligar",
+      "tema": "Simple past",
+      "q": "Match each verb to its simple past",
+      "pares": [
+        [
+          "go",
+          "went"
+        ],
+        [
+          "eat",
+          "ate"
+        ],
+        [
+          "buy",
+          "bought"
+        ],
+        [
+          "drink",
+          "drank"
+        ]
+      ],
+      "fb": "These are irregular verbs — they do not take -ed, so they have to be memorised one by one."
+    },
+    {
+      "tipo": "ligar",
+      "tema": "Food containers",
+      "q": "Match each food to its container",
+      "pares": [
+        [
+          "milk",
+          "a carton of"
+        ],
+        [
+          "jam",
+          "a jar of"
+        ],
+        [
+          "soup",
+          "a can of"
+        ],
+        [
+          "crisps",
+          "a packet of"
+        ]
+      ],
+      "fb": "In English the container word changes with the food, even when the amount is the same."
+    },
+    {
+      "tipo": "ligar",
+      "tema": "Countable / Uncountable",
+      "q": "Match each word to countable or uncountable",
+      "pares": [
+        [
+          "apples",
+          "Countable"
+        ],
+        [
+          "water",
+          "Uncountable"
+        ],
+        [
+          "eggs",
+          "Countable — use \"a few\""
+        ],
+        [
+          "sugar",
+          "Uncountable — use \"a little\""
+        ]
+      ],
+      "fb": "⚠️ \"A few\" goes with things you can count; \"a little\" goes with things you cannot count."
     }
   ]
 }

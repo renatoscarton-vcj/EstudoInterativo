@@ -423,6 +423,30 @@
       ],
       "correct": 2,
       "fb": "Remédios parecem balas para uma criança pequena. Guardar em lugar alto e trancado evita acidentes graves."
+    },
+    {
+      "tipo": "ligar",
+      "tema": "Materials",
+      "q": "Match each material to its property",
+      "pares": [
+        [
+          "Glass",
+          "Transparent"
+        ],
+        [
+          "Wood",
+          "Strong and natural"
+        ],
+        [
+          "Plastic",
+          "Light and waterproof"
+        ],
+        [
+          "Metal",
+          "Hard and conducts heat"
+        ]
+      ],
+      "fb": "Choosing the right material for each part of a house is what house design is about."
     }
   ]
 }

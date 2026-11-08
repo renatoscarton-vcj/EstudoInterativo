@@ -447,6 +447,54 @@
       ],
       "correct": 3,
       "fb": "Perde-se muito mais do que a casa: escola, amigos, vizinhos e, às vezes, o convívio com a própria língua."
+    },
+    {
+      "tipo": "ligar",
+      "tema": "Different houses",
+      "q": "Match each house to where you find it",
+      "pares": [
+        [
+          "Igloo",
+          "Very cold places"
+        ],
+        [
+          "Stilt house",
+          "Places that flood"
+        ],
+        [
+          "Flat",
+          "Big cities"
+        ],
+        [
+          "Tent",
+          "Places people move around"
+        ]
+      ],
+      "fb": "Houses change with the weather and with how people live in each place."
+    },
+    {
+      "tipo": "ligar",
+      "tema": "Jobs and communities",
+      "q": "Match each job to where the person works",
+      "pares": [
+        [
+          "Farmer",
+          "Countryside"
+        ],
+        [
+          "Fisherman",
+          "By the sea"
+        ],
+        [
+          "Office worker",
+          "City centre"
+        ],
+        [
+          "Teacher",
+          "School"
+        ]
+      ],
+      "fb": "The jobs in a community depend on what that place has around it."
     }
   ]
 }

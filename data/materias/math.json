@@ -572,6 +572,55 @@
       ],
       "correct": 3,
       "fb": "<b>Altogether</b> e <i>in total</i> pedem <b>soma</b>. Já “how many more” e “left” pedem subtração."
+    },
+    {
+      "tipo": "ordenar",
+      "tema": "Ordinal numbers",
+      "q": "Put the ordinal numbers in order",
+      "itens": [
+        "first",
+        "second",
+        "third",
+        "fourth",
+        "fifth"
+      ],
+      "fb": "⚠️ Watch the spelling: it is fifth, not \"fiveth\"."
+    },
+    {
+      "tipo": "ligar",
+      "tema": "Ordinal numbers",
+      "q": "Match each number to its ordinal",
+      "pares": [
+        [
+          "1",
+          "first"
+        ],
+        [
+          "2",
+          "second"
+        ],
+        [
+          "3",
+          "third"
+        ],
+        [
+          "5",
+          "fifth"
+        ]
+      ],
+      "fb": "1, 2 and 3 are the irregular ones. From 4 on, most just add -th."
+    },
+    {
+      "tipo": "ordenar",
+      "tema": "Fractions",
+      "q": "Put the fractions in order, from smallest to biggest",
+      "itens": [
+        "1/4",
+        "1/3",
+        "1/2",
+        "3/4"
+      ],
+      "fb": "⚠️ Careful: with the same numerator, the bigger the denominator, the SMALLER the fraction. 1/4 is smaller than 1/3."
     }
   ]
 }

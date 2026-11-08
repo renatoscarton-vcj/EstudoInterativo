@@ -972,6 +972,118 @@
       ],
       "correct": 3,
       "fb": "São Paulo é originalmente de <b>Mata Atlântica</b>, com manchas de <b>Cerrado</b> no interior e <b>araucárias</b> no sul do estado."
+    },
+    {
+      "tipo": "ordenar",
+      "tema": "Tratado de Tordesilhas",
+      "q": "Monte a ordem dos acontecimentos das Grandes Navegações",
+      "itens": [
+        "Os europeus queriam especiarias das Índias",
+        "Portugal inventa a caravela, com vela triangular",
+        "Portugal e Espanha disputam as terras da América",
+        "Em 1494, os dois assinam o Tratado de Tordesilhas"
+      ],
+      "fb": "A disputa quase virou guerra. O tratado traçou uma linha imaginária a 370 léguas: o que ficasse a leste era de Portugal."
+    },
+    {
+      "tipo": "ligar",
+      "tema": "A caravela",
+      "q": "Ligue cada tripulante da caravela à sua função",
+      "pares": [
+        [
+          "Capitão-mor",
+          "Representante do rei, comandava a esquadra"
+        ],
+        [
+          "Escrivão",
+          "Registrava tudo o que acontecia na viagem"
+        ],
+        [
+          "Piloto",
+          "Decidia sobre tudo que se referia à navegação"
+        ],
+        [
+          "Meirinho",
+          "Julgava os malfeitores a bordo"
+        ]
+      ],
+      "fb": "A caravela era uma invenção portuguesa, e a vela triangular dela deixava navegar até com vento contra."
+    },
+    {
+      "tipo": "ligar",
+      "tema": "Especiarias",
+      "q": "Ligue cada especiaria à sua característica",
+      "pares": [
+        [
+          "Açafrão",
+          "A especiaria mais cara do mundo"
+        ],
+        [
+          "Canela",
+          "A mais antiga das especiarias"
+        ],
+        [
+          "Cravo",
+          "Usado no tratamento das cáries"
+        ],
+        [
+          "Gengibre",
+          "Usado em pastas de dentes e chicletes"
+        ]
+      ],
+      "fb": "As especiarias serviam para conservar alimentos — naquela época ainda não existia geladeira."
+    },
+    {
+      "tipo": "ligar",
+      "tema": "Paisagens vegetais",
+      "q": "Ligue cada paisagem vegetal à sua característica",
+      "pares": [
+        [
+          "Floresta Amazônica",
+          "A maior floresta tropical do mundo"
+        ],
+        [
+          "Cerrado",
+          "Árvores baixas de troncos retorcidos"
+        ],
+        [
+          "Caatinga",
+          "Mandacaru, facheiro e xiquexique"
+        ],
+        [
+          "Mata de araucárias",
+          "Também chamada de mata de pinhais"
+        ],
+        [
+          "Campos",
+          "Também chamados de pampas ou coxilhas"
+        ]
+      ],
+      "fb": "⚠️ Cuidado para não trocar Cerrado e Caatinga: o Cerrado tem troncos retorcidos, a Caatinga tem os cactos do semiárido."
+    },
+    {
+      "tipo": "ligar",
+      "tema": "Reino do Congo",
+      "q": "Ligue cada item ao Reino do Congo",
+      "pares": [
+        [
+          "Nimi-a-Lukeni",
+          "Fundador do reino"
+        ],
+        [
+          "Mbanza Congo",
+          "A capital do reino"
+        ],
+        [
+          "Mani Congo",
+          "O título do rei"
+        ],
+        [
+          "Nzimbu",
+          "A moeda usada no reino"
+        ]
+      ],
+      "fb": "Mbanza Congo tinha cerca de cem mil habitantes — do tamanho das capitais europeias da época."
     }
   ]
 }

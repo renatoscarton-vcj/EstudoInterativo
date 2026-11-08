@@ -1165,6 +1165,102 @@
       ],
       "correct": 3,
       "fb": "469 − 247 = <b>222 reais</b> na segunda parcela."
+    },
+    {
+      "tipo": "ordenar",
+      "tema": "Frações",
+      "q": "Monte as frações em ordem, da menor para a maior",
+      "itens": [
+        "1/4",
+        "1/2",
+        "3/4",
+        "1 inteiro"
+      ],
+      "fb": "Com o mesmo denominador, basta olhar o numerador: 1/4, 2/4 (que é 1/2), 3/4 e 4/4 (que é 1 inteiro)."
+    },
+    {
+      "tipo": "ordenar",
+      "tema": "Números decimais",
+      "q": "Monte os números decimais em ordem, do menor para o maior",
+      "itens": [
+        "0,5",
+        "0,75",
+        "1,2",
+        "2,05"
+      ],
+      "fb": "⚠️ Compare primeiro a parte inteira. Só quando ela empata é que se olha para depois da vírgula: 0,75 é maior que 0,5 porque 75 centésimos é mais que 50."
+    },
+    {
+      "tipo": "ligar",
+      "tema": "Nomes das operações",
+      "q": "Ligue cada operação ao nome do seu resultado",
+      "pares": [
+        [
+          "Adição",
+          "Soma ou total"
+        ],
+        [
+          "Subtração",
+          "Diferença ou resto"
+        ],
+        [
+          "Multiplicação",
+          "Produto"
+        ],
+        [
+          "Divisão",
+          "Quociente"
+        ]
+      ],
+      "fb": "Esses nomes aparecem nos enunciados das provas: \"qual é o produto\" quer dizer \"multiplique\"."
+    },
+    {
+      "tipo": "ligar",
+      "tema": "Ângulos",
+      "q": "Ligue cada ângulo à sua medida",
+      "pares": [
+        [
+          "Ângulo reto",
+          "Exatamente 90°"
+        ],
+        [
+          "Ângulo agudo",
+          "Menor que 90°"
+        ],
+        [
+          "Ângulo obtuso",
+          "Maior que 90° e menor que 180°"
+        ],
+        [
+          "Ângulo raso",
+          "Exatamente 180°"
+        ]
+      ],
+      "fb": "O canto de uma folha de papel é um ângulo reto. Agudo é mais fechado que ele; obtuso é mais aberto."
+    },
+    {
+      "tipo": "ligar",
+      "tema": "Dobro, metade e triplo",
+      "q": "Ligue cada expressão ao resultado, pensando no número 12",
+      "pares": [
+        [
+          "O dobro de 12",
+          "24"
+        ],
+        [
+          "A metade de 12",
+          "6"
+        ],
+        [
+          "O triplo de 12",
+          "36"
+        ],
+        [
+          "A terça parte de 12",
+          "4"
+        ]
+      ],
+      "fb": "Dobro multiplica por 2, triplo por 3. Metade divide por 2, terça parte divide por 3."
     }
   ]
 }

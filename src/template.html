@@ -503,6 +503,88 @@
   .marca-resp{margin-left:auto; font-size:18px; font-weight:900; flex-shrink:0;}
   .opcao.certa .marca-resp{color:var(--menta-esc);}
   .opcao.errada .marca-resp{color:var(--coral-esc);}
+  /* ---------- Montar a rota (ordenar) ---------- */
+  .rota{
+    background:linear-gradient(180deg,#F6F4FF,#FFFFFF); border:2px dashed var(--line-2);
+    border-radius:18px; padding:12px; margin-bottom:12px; min-height:84px;
+  }
+  .rota.cheia{border-style:solid; border-color:var(--violeta);}
+  .rota-cab{display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:9px;}
+  .rota-cab b{font-family:var(--fd); font-size:15.5px; color:var(--ink);}
+  .rota-cab small{font-weight:800; font-size:12.5px; color:var(--ink-3);}
+  .rota-lista{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:7px;}
+  .rota-dica{
+    text-align:center; color:var(--ink-3); font-weight:800; font-size:14.5px;
+    padding:14px 6px; line-height:1.4;
+  }
+  .parada{
+    display:flex; align-items:center; gap:10px; background:#fff; border:2px solid var(--line-2);
+    border-radius:13px; padding:8px 10px; font-weight:800; font-size:15.5px; line-height:1.3;
+    animation:cai .22s ease;
+  }
+  .parada-n{
+    width:27px; height:27px; border-radius:9px; flex-shrink:0; display:grid; place-items:center;
+    background:var(--violeta); color:#fff; font-weight:900; font-size:13.5px;
+  }
+  .parada-txt{flex:1; min-width:0;}
+  .parada-tira{
+    flex-shrink:0; width:29px; height:29px; border-radius:9px; cursor:pointer;
+    border:2px solid var(--line-2); background:#fff; color:var(--ink-3);
+    font-weight:900; font-size:13px; line-height:1;
+  }
+  .parada-tira:active{transform:translateY(1px);}
+  .parada.certa{background:#E7FBF2; border-color:var(--menta);}
+  .parada.certa .parada-n{background:var(--menta-esc);}
+  .parada.errada{background:#FFECEF; border-color:var(--coral);}
+  .parada.errada .parada-n{background:var(--coral-esc);}
+  .parada-marca{margin-left:auto; font-size:17px; font-weight:900; flex-shrink:0;}
+  .parada.certa .parada-marca{color:var(--menta-esc);}
+  .parada.errada .parada-marca{color:var(--coral-esc);}
+  .pecas{display:flex; flex-wrap:wrap; gap:8px;}
+  .peca{
+    cursor:pointer; background:#fff; border:2px solid var(--line-2); border-radius:13px;
+    box-shadow:0 3px 0 var(--line); color:var(--ink);
+    padding:10px 13px; font-weight:800; font-size:15.5px; line-height:1.3;
+    min-height:46px; text-align:left;
+  }
+  .peca:active{transform:translateY(2px); box-shadow:0 1px 0 var(--line);}
+  .gabarito{
+    margin-top:11px; background:#F6F4FF; border:2px solid var(--line-2); border-radius:14px;
+    padding:10px 12px; font-weight:800; font-size:14.5px; line-height:1.55; color:var(--ink-2);
+  }
+  .gabarito b{color:var(--ink); display:block; margin-bottom:4px; font-family:var(--fd);}
+
+  /* ---------- Carimbar o par (ligar) ---------- */
+  .ligar{display:grid; grid-template-columns:1fr 1fr; gap:8px;}
+  .ligar-col{display:flex; flex-direction:column; gap:7px; min-width:0;}
+  .ligar-tit{
+    font-weight:900; font-size:12.5px; color:var(--ink-3);
+    text-transform:uppercase; letter-spacing:.04em; padding-left:2px;
+  }
+  .pino{
+    display:flex; align-items:center; gap:7px; width:100%; text-align:left; cursor:pointer;
+    background:#fff; border:2px solid var(--line-2); border-radius:13px; color:var(--ink);
+    padding:9px 10px; font-weight:800; font-size:15px; line-height:1.25; min-height:48px;
+    box-shadow:0 3px 0 var(--line); transition:transform .08s ease;
+  }
+  .pino:not([disabled]):active{transform:translateY(2px); box-shadow:0 1px 0 var(--line);}
+  .pino[disabled]{cursor:default;}
+  .pino-txt{flex:1; min-width:0; overflow-wrap:anywhere;}
+  .pino-sel{border-color:var(--violeta); background:#F1EDFF; box-shadow:0 3px 0 var(--violeta);}
+  /* o selo colorido é o que mostra quem está ligado a quem */
+  .selo{
+    width:23px; height:23px; border-radius:7px; flex-shrink:0; display:grid; place-items:center;
+    font-size:12px; font-weight:900; color:#fff; background:var(--line-2);
+  }
+  .selo.vazio{background:transparent; border:2px dashed var(--line-2);}
+  /* paleta sem verde nem vermelho: essas duas cores já querem dizer
+     "acertou" e "errou" no resto do jogo, e um selo vermelho numa
+     ligação correta confunde a criança */
+  .selo.c0{background:#6C4DFF;} .selo.c1{background:#0284C7;} .selo.c2{background:#C026D3;}
+  .selo.c3{background:#B45309;} .selo.c4{background:#0F766E;} .selo.c5{background:#DB2777;}
+  .pino.certa{background:#E7FBF2; border-color:var(--menta);}
+  .pino.errada{background:#FFECEF; border-color:var(--coral);}
+
   .card.treme{animation:treme .45s ease;}
   @keyframes treme{0%,100%{transform:translateX(0);}20%{transform:translateX(-8px);}40%{transform:translateX(8px);}60%{transform:translateX(-5px);}80%{transform:translateX(5px);}}
   @keyframes pulsa{0%{transform:scale(1);}50%{transform:scale(1.15);}100%{transform:scale(1);}}
@@ -2109,21 +2191,29 @@ function renderQuestion(){
     sub = `${faltam === 1 ? 'Falta 1 acerto' : 'Faltam ' + faltam + ' acertos'} para viajar ${next.name.toLowerCase()} ${next.icon}`;
   }
 
-  const opts = q.opts.map((opt, i) => {
-    let cls = 'opcao', marca = '';
-    if(respondida){
-      if(i === q.correct){ cls += ' certa'; marca = '✓'; }
-      else if(i === given){ cls += ' errada'; marca = '✕'; }
-      else cls += ' apagada';
-    }
-    return `<button class="${cls}" ${respondida ? 'disabled' : ''} onclick="selectAnswer(${i}, this)">
-      <span class="letra l${i}" aria-hidden="true">${'ABCDE'[i]}</span><span>${opt}</span>${marca ? `<span class="marca-resp" aria-hidden="true">${marca}</span>` : ''}
-    </button>`;
-  }).join('');
+  // cada tipo de questão desenha o seu próprio corpo
+  let corpo;
+  if(tipoDe(q) === 'ordenar'){
+    corpo = corpoOrdenar(q, given, respondida);
+  } else if(tipoDe(q) === 'ligar'){
+    corpo = corpoLigar(q, given, respondida);
+  } else {
+    corpo = '<div class="opcoes">' + q.opts.map((opt, i) => {
+      let cls = 'opcao', marca = '';
+      if(respondida){
+        if(i === q.correct){ cls += ' certa'; marca = '✓'; }
+        else if(i === given){ cls += ' errada'; marca = '✕'; }
+        else cls += ' apagada';
+      }
+      return `<button class="${cls}" ${respondida ? 'disabled' : ''} onclick="selectAnswer(${i}, this)">
+        <span class="letra l${i}" aria-hidden="true">${'ABCDE'[i]}</span><span>${opt}</span>${marca ? `<span class="marca-resp" aria-hidden="true">${marca}</span>` : ''}
+      </button>`;
+    }).join('') + '</div>';
+  }
 
   let retorno = '';
   if(respondida){
-    const ok = given === q.correct;
+    const ok = respostaCerta(idx);
     const lista = REACOES[lingua][ok ? 'ok' : 'nao'];
     retorno = `<div class="retorno ${ok ? 'ok' : 'nao'}" role="status">${avatarHtml(host)}<div><b>${ok ? '🎉' : '💡'} ${lista[hash(q.q) % lista.length]}</b>${q.fb}</div></div>`;
   }
@@ -2158,7 +2248,7 @@ function renderQuestion(){
         <div class="host-txt">${host.nome} ${lingua === 'en' ? 'asks' : 'pergunta'}:<small>${matQ.icon} ${matQ.name} · ${q.tema}</small></div>
       </div>
       <p class="pergunta">${q.q}</p>
-      <div class="opcoes">${opts}</div>
+      ${corpo}
       ${retorno}
     </div>
 
@@ -2172,10 +2262,15 @@ function renderQuestion(){
   animarResposta = null;
 }
 
-function selectAnswer(i, el){
+/**
+ * Fecha a questão atual, seja ela de escolha, de ordenar ou de ligar:
+ * guarda a resposta, pontua, toca o som, grava e redesenha.
+ * Os três tipos passam por aqui para não existirem três regras de pontuação.
+ */
+function fecharQuestao(resposta, el){
   if(answers[idx] !== null || revendo) return;
-  answers[idx] = i;
-  const ok = i === order[idx].correct;
+  answers[idx] = resposta;
+  const ok = respostaCerta(idx);
   const oldVi = vehicleIndex;
   vehicleIndex = getVehicleIndex(getScore());
   justEvolved = vehicleIndex > oldVi;
@@ -2201,6 +2296,168 @@ function selectAnswer(i, el){
   // mantém o retorno visível sem precisar rolar
   const r = document.querySelector('.retorno');
   if(r && r.scrollIntoView) r.scrollIntoView({behavior: reduzMovimento ? 'auto' : 'smooth', block:'nearest'});
+}
+
+function selectAnswer(i, el){ fecharQuestao(i, el); }
+
+// =========================================================
+//  MODO "MONTAR A ROTA" (ordenar)
+//
+//  A criança toca nas paradas na ordem certa em vez de arrastar.
+//  Tocar funciona igual no dedo, no mouse e no teclado — arrastar não
+//  funciona bem em nenhum dos três quando a tela é pequena.
+// =========================================================
+let rotaMontada = {idx: -1, lista: []};
+
+/** A rota em construção desta questão. Troca de questão, começa limpa. */
+function rotaDaQuestao(){
+  if(rotaMontada.idx !== idx) rotaMontada = {idx: idx, lista: []};
+  return rotaMontada.lista;
+}
+
+/** As paradas fora de ordem. Estável entre redesenhos, muda a cada partida. */
+function baralhoDe(q){
+  const b = embaralharCom(q.itens, hash(q.q) ^ (semeadura || 1));
+  // se o sorteio saiu já na ordem certa, não há exercício nenhum
+  if(b.length > 1 && b.every((t, i) => t === q.itens[i])){
+    const a = b.slice(); [a[0], a[1]] = [a[1], a[0]]; return a;
+  }
+  return b;
+}
+
+function porNaRota(i){
+  if(answers[idx] !== null || revendo) return;
+  const t = baralhoDe(order[idx])[i];
+  const r = rotaDaQuestao();
+  if(t == null || r.indexOf(t) !== -1) return;
+  r.push(t); somToque(); renderQuestion();
+}
+
+function tirarDaRota(i){
+  if(answers[idx] !== null || revendo) return;
+  rotaDaQuestao().splice(i, 1);
+  somToque(); renderQuestion();
+}
+
+function confirmarOrdem(el){
+  if(rotaDaQuestao().length !== order[idx].itens.length) return;
+  fecharQuestao({ordem: rotaDaQuestao().slice()}, el);
+}
+
+function corpoOrdenar(q, given, respondida){
+  const baralho = baralhoDe(q);
+  const montada = respondida ? ((given && given.ordem) || []) : rotaDaQuestao();
+  const soltas  = baralho.filter(t => montada.indexOf(t) === -1);
+  const completa = montada.length === q.itens.length;
+  const errou = respondida && !respostaCerta(idx);
+
+  const paradas = montada.map((t, i) => {
+    let cls = 'parada';
+    let fim = `<button class="parada-tira" onclick="tirarDaRota(${i})" aria-label="Tirar a parada ${i + 1} da rota">✕</button>`;
+    if(respondida){
+      const certo = q.itens[i] === t;
+      cls += certo ? ' certa' : ' errada';
+      fim = `<span class="parada-marca" aria-hidden="true">${certo ? '✓' : '✕'}</span>`;
+    }
+    return `<li class="${cls}"><span class="parada-n" aria-hidden="true">${i + 1}</span><span class="parada-txt">${t}</span>${fim}</li>`;
+  }).join('');
+
+  const pecas = soltas.map(t =>
+    `<button class="peca" onclick="porNaRota(${baralho.indexOf(t)})">${t}</button>`
+  ).join('');
+
+  return `
+    <div class="rota ${completa ? 'cheia' : ''}">
+      <div class="rota-cab"><b>🧭 Sua rota</b><small>${montada.length} de ${q.itens.length}</small></div>
+      ${montada.length
+        ? `<ol class="rota-lista">${paradas}</ol>`
+        : `<div class="rota-dica">Toque nas paradas abaixo<br>na ordem que você acha certa</div>`}
+    </div>
+    ${respondida ? '' : `<div class="pecas">${pecas}</div>
+      <button class="btn btn-primario" style="width:100%;margin-top:12px" onclick="confirmarOrdem(this)" ${completa ? '' : 'disabled'}>
+        ${completa ? '🧭 Conferir a rota' : `Faltam ${q.itens.length - montada.length}`}
+      </button>`}
+    ${errou ? `<div class="gabarito"><b>A rota certa era:</b>${q.itens.map((t, i) => `${i + 1}. ${t}`).join('<br>')}</div>` : ''}
+  `;
+}
+
+// =========================================================
+//  MODO "CARIMBAR O PAR" (ligar)
+//
+//  Toca num item da esquerda, depois no par dele na direita. Cada
+//  ligação ganha um selo colorido e numerado, que é o que mostra
+//  quem está ligado a quem sem precisar desenhar linha na tela.
+// =========================================================
+let ligacoesFeitas = {idx: -1, pares: {}, sel: null};
+
+function ligacoesDaQuestao(){
+  if(ligacoesFeitas.idx !== idx) ligacoesFeitas = {idx: idx, pares: {}, sel: null};
+  return ligacoesFeitas;
+}
+
+function colunaEsq(q){ return embaralharCom(q.pares.map(p => p[0]), hash(q.q + '·e') ^ (semeadura || 1)); }
+function colunaDir(q){ return embaralharCom(q.pares.map(p => p[1]), hash(q.q + '·d') ^ (semeadura || 1)); }
+
+function tocarEsq(i){
+  if(answers[idx] !== null || revendo) return;
+  const st = ligacoesDaQuestao();
+  const e = colunaEsq(order[idx])[i];
+  if(st.pares[e]){ delete st.pares[e]; st.sel = null; }   // tocar num já ligado desfaz
+  else st.sel = (st.sel === e ? null : e);
+  somToque(); renderQuestion();
+}
+
+function tocarDir(i){
+  if(answers[idx] !== null || revendo) return;
+  const st = ligacoesDaQuestao();
+  const d = colunaDir(order[idx])[i];
+  const dono = Object.keys(st.pares).find(k => st.pares[k] === d);
+  if(dono) delete st.pares[dono];                          // um destino só aceita uma ligação
+  if(st.sel && st.sel !== dono){ st.pares[st.sel] = d; st.sel = null; }
+  somToque(); renderQuestion();
+}
+
+function confirmarLigacoes(el){
+  const st = ligacoesDaQuestao();
+  if(Object.keys(st.pares).length !== order[idx].pares.length) return;
+  fecharQuestao({pares: Object.assign({}, st.pares)}, el);
+}
+
+function corpoLigar(q, given, respondida){
+  const esq = colunaEsq(q), dir = colunaDir(q);
+  const st  = ligacoesDaQuestao();
+  const feitas = respondida ? ((given && given.pares) || {}) : st.pares;
+  const gab = {}; q.pares.forEach(([e, d]) => { gab[e] = d; });
+  const completa = Object.keys(feitas).length === q.pares.length;
+  const errou = respondida && !respostaCerta(idx);
+  const selo = e => `<span class="selo c${esq.indexOf(e) % 6}" aria-hidden="true">${esq.indexOf(e) + 1}</span>`;
+  const vazio = '<span class="selo vazio" aria-hidden="true"></span>';
+
+  const colE = esq.map((e, i) => {
+    let cls = 'pino';
+    if(respondida) cls += feitas[e] === gab[e] ? ' certa' : ' errada';
+    else if(st.sel === e) cls += ' pino-sel';
+    return `<button class="${cls}" ${respondida ? 'disabled' : ''} onclick="tocarEsq(${i})">${feitas[e] ? selo(e) : vazio}<span class="pino-txt">${e}</span></button>`;
+  }).join('');
+
+  const colD = dir.map((d, i) => {
+    const dono = Object.keys(feitas).find(k => feitas[k] === d);
+    let cls = 'pino';
+    if(respondida && dono) cls += gab[dono] === d ? ' certa' : ' errada';
+    return `<button class="${cls}" ${respondida ? 'disabled' : ''} onclick="tocarDir(${i})">${dono ? selo(dono) : vazio}<span class="pino-txt">${d}</span></button>`;
+  }).join('');
+
+  return `
+    <div class="ligar">
+      <div class="ligar-col"><span class="ligar-tit">Toque aqui</span>${colE}</div>
+      <div class="ligar-col"><span class="ligar-tit">Depois aqui</span>${colD}</div>
+    </div>
+    ${respondida ? '' : `
+      <button class="btn btn-primario" style="width:100%;margin-top:12px" onclick="confirmarLigacoes(this)" ${completa ? '' : 'disabled'}>
+        ${completa ? '🖃 Carimbar os pares' : `Faltam ${q.pares.length - Object.keys(feitas).length}`}
+      </button>`}
+    ${errou ? `<div class="gabarito"><b>Os pares certos eram:</b>${q.pares.map(([e, d]) => `${e} → ${d}`).join('<br>')}</div>` : ''}
+  `;
 }
 
 function prevQuestion(){ if(idx > 0){ idx--; renderQuestion(); } }
